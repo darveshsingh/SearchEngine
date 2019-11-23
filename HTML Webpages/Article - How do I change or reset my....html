@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/TDPortal/Content/Scripts/jquery/1.11.2/jquery.min.js?v=20191115204103"></script>
+  <script src="/TDPortal/Content/Scripts/jquery-migrate/1.2.1/jquery-migrate.min.js?v=20191115204103"></script>
+  <script src="/TDPortal/Content/Scripts/jquery-ui/1.11.4/jquery-ui-1.11.4.custom.timepicker.min.js?v=20191115204101"></script>
+  <link href="/TDPortal/Content/Styles/jquery-ui/1.11.4/jquery-ui.compiled.min.css?v=20191115204033" rel="stylesheet" type="text/css">
+  <link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20191115204033" rel="stylesheet" type="text/css" id="lnkBootstrapCSS">
+  <script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20191115204034"></script>
+  <link href="/TDPortal/Content/Styles/font-awesome.min.css?v=20191115204033" rel="stylesheet" type="text/css" id="lnkFontAwesome">
+  <script src="/TDClient/Scripts/json2.min.js?v=20191115204010"></script> 
+  <script src="/TDClient/Scripts/underscore-min.js?v=20191115204010"></script> 
+  <script src="/TDClient/Scripts/TDJSFramework.compiled.min.js?v=20191115204008"></script> 
+  <script src="/TDClient/Scripts/clientOS.min.js?v=20191115204009"></script> 
+  <script src="/TDClient/Scripts/collapseMe.min.js?v=20191115204009"></script> 
+  <script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20191115204009"></script> 
+  <script src="/TDClient/Scripts/SiteSearch.min.js?v=20191115204009"></script> 
+  <link href="/TDClient/Styles/bootstrap_custom.min.css?v=20191115204006" rel="stylesheet" type="text/css">
+  <link href="/TDClient/Styles/TDStyles.min.css?v=20191115204006" rel="stylesheet" type="text/css">
+  <link href="https://uwindsor.teamdynamix.com/TDPortal/BE/Style/93/TDClient/1975?v=20171025204019" rel="stylesheet" type="text/css">
+  <link id="ctl00_ctl00_lnkFavicon" rel="shortcut icon" href="https://uwindsor.teamdynamix.com/TDPortal/BE/Icon/93/1975?v=20150226204704"> 
+  <script async src="//www.googletagmanager.com/gtag/js?id=UA-67479808-1"></script> 
+  <script>
+
+      $(function () {
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        // Be sure to set the proper cookie domain to the customer's full subdomain when sending the pageview hit.
+        gtag('config', 'UA-67479808-1', { 'cookie_domain': 'uwindsor.teamdynamix.com' });
+
+        });
+
+    </script> 
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+        baseUrl: '/TDClient/',
+        isTdGoogleAnalyticsEnabled: true,
+        isAuthenticated: false
+        });
+
+      $('#collapseMe').collapseMe({
+        toggleVisibilitySelector: '.navbar-toggle'
+      });
+
+    });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script> 
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20191115204104"></script>
+  <link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20191115204104" rel="stylesheet" type="text/css" id="lnkSelect2"> 
+  <style type="text/css">
+    .honey-pot-div {
+      display: none;
+    }
+  </style> 
+  <script>
+
+    
+
+    function checkRecipients() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#divShareModal').modal('toggle')
+      }
+    }
+
+    function toggleFeedback(isHelpful) {
+      $('#divHelpfulComments').show();
+      $('#divHelpfulYesNo').hide();
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsHelpful').val(isHelpful);
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').focus();
+    }
+
+    function toggleFeedbackResult() {
+      $('#divWasHelpful, #divFeedbackRecorded, #divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    // The following two functions were added as a result of ticket ID: 1392522. We are generating these buttons dynamically to 
+    // prevent bots from clicking them and posting feedback on an article. Additionally, we have an input that is hidden from
+    // the user. If a bot enters text in that input, which it likely will (bots love filling out forms), then we don't accept the
+    // form submission
+    function generateFeedbackButtons() {
+      var $btnHelpfulYes = $('<button id="btnHelpfulYes" type="button" class="btn btn-primary gutter-left" onclick="toggleFeedback(1);">Yes</button>');
+      var $btnHelpfulNo = $('<button id="btnHelpfulNo" type="button" class="btn btn-primary gutter-left-sm" onclick="toggleFeedback(0);">No</button>');
+
+      $('#divWasHelpful').append($btnHelpfulYes);
+      $('#divWasHelpful').append($btnHelpfulNo);
+    }
+    function attemptAddFeedback(e) {
+      if ($('#honeyPot').val() !== '') {
+        e.preventDefault();
+        window.location.reload();
+      }
+    }
+
+    $(function () {
+      
+
+      generateFeedbackButtons();
+      $('[data-toggle="popover"]').popover();
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divBody table:not(.SkipTableFixup)').each(function () {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function () { $(this).css('padding', padding + 'px') });
+      });
+
+      
+    });
+
+    
+  </script> 
+  <link rel="stylesheet" type="text/css" href="/TDClient/WebResource.axd?d=W635ydP1zPpneCzu2xYPRxBVzOuwjMhqDC05HApv5S9qGe3BFof4lBm7tnXyPzx6kUYjdwGmfJDlVNT-ifGW-enOMVCxRbKkEjXWMC3x3O9JzaYhjq3Qo4rwL6df2H9pMXb0dQ2&amp;t=637094295786185142">
+  <meta property="og:title" content="How do I change or reset my Active Directory password?"> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:url" content="https://uwindsor.teamdynamix.com/TDClient/1975/Portal/KB/ArticleDet?ID=9351"> 
+  <meta property="og:image" content="https://uwindsor.teamdynamix.com/TDPortal/BE/Logo/93/1975"> 
+  <meta property="og:description" content="It is not possible to change Active Directory password on its own. To change it, you have to change your UWin password."> 
+  <meta property="og:site_name" content="University of Windsor - Knowledge Base"> 
+  <meta property="article:section" content="Accounts &amp; Passwords"> 
+  <meta property="article:published_time" content="2015-11-02T15:22Z"> 
+  <meta property="article:modified_time" content="2018-01-19T20:54Z"> 
+  <meta property="article:tag" content="active-directory-ad"> 
+  <meta property="article:tag" content="uwinid">
+  <title>
+	Article - How do I change or reset my...
+</title>
+ </head> 
+ <body> 
+  <form method="post" action="/TDClient/1975/Portal/KB/ArticleDet?ID=9351" id="aspnetForm"> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""> 
+    <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""> 
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="BgPlH1ged8Utdc9oOY3r11a/IO6d99xyJXBObseROp67D04eggvUno0olJkYW3JeVsQr6GJwrSND9oqGTncFd7IruwEfrjRQp9Zlno2EAKE5WPOjwAd6NQ/T3kpoxqgKn/48CssYif1Z30QuppL3S8jFVX5AeEirZBGoqARDwQqq8pe11sFH01Qz5iwFfHPo8Bs9C3xiohmnH3ByaZq1o2g40mByEBzueNkqhWRRYfNwMYu5SXYzKOoRshUizF2Frcce9XiNaVF2s3yJ5xypfMPL0EKCMmOV8jZRqf04BlSQRUGIdRmaosJAL3OWM4K77RJRS3GRPrL/ddBhEuTx3Tc6oZ37bRQM9ykaPF5QPqyYO0K7dzqQq82tnWrqfD918Wj6anM8MEdCZ7FAN0bmflZELellh70IP54KUOHy4076cg/EfDRSfheW8F4gue6Ci+yi8OtRERtwg86ElEfAJyWySuG32QD2dTdMdn5bkXzNSIsktUj0heSZmpQCdfr+tQFXM6+/uSUrRa3/Qd39DJcL+zN6n5fcLDFF5EW5qtIugvNSBbnpv9G/TQB1LRDGv0MrFENeJwSSILtl7hMIaXhr+FP5mPZfcMAqkrnLEa4hSVrdQOKzKXO2fEAqVqIwQQaBeowb4grepwLP7kNxds/4oxgXMYvDLcNZ9nWJ89RiRTXbxX4vWY3QyQ8MuE/zMzVgFBXdsNfDIOmk1yjus0/5cuGFJOXA0ajL7DA24K1Ic5SVecnG+H3lYQSYD3fi+1Y/6tmDgMyd4umaOCK/AbEbTZ3/QIOasTumshH14GA1OIDVOXtASihPN52jv/W5bFES1hiXomc6aLtuTyfb/SxRDcTjdBkNNcYSPmkumFSmjbk8eel7No9KOYadM+Y2yksd+ktQyRONauZD+tbyC3BuJROudq/fP30BQtDx1cRGfVwLLekpVBwg9FWLwwgIJCeVisWk6Mb/gTJQW9BGJInC74nMqAPqYQp+ej1vl/RgqD4TY1bj85ZOpZRjMpYR1hOOakQz7Gvw38ve1CZb9JKXounkEXB7ZcMXRoRWcPXuAEAx2+FABXzxvB2qm3COcht9N9zgzrO3bJTlU+BIvEkofMUco31FH/ABSWiZ41kSayw/pppydlleeMGZci81Hvdzhck4hjjyk5T2XWwAvBmXB5EejorbPDyb7eStFDwPhpDCKEG1swPB4FgT7CkkTVfIpuyFT5KPydz9kv7qSx5KJDy+r0s7pO9lccx0kq2PaaIpcwrma9mmJrgTvfBu0X5xenGDpY0ZFT9+5zRGVnAGHMwPr8PBrI3beak4F1dqCgTgIL4LEPwK2AZZAdXndwEAkGB4n7Dm4cH9LFsd56XIAMdhmWswfJsKNPmJAF62MLjjX4DnQ30ZqcmgYtYKk+0oC+bXbz8FLu47aar7ufGUO6lslf/PSLkkXSBORNcw/t54UreWce075os3VexL0sW05J5daDwGsxgv6AvWb+hA8e5GIgm1zh4xm7mNmaik1nXpe+TzHouLWZAKtLO3N3ekF9/DNGnM2C7aWW0WRYoQo20kQai/omiQRwPlUOZQH2aEYSlRn5DFcx4EOUaRS/WICjcoR1YnI0PAF/PeuOCdSYrCMN2id1GnvMeE4bhQauAWmy9bUIF12jsuRw+Vrr/8aGK8NyG9x2gX20ZOSqgVx6uctO5lKIYZKWGFZA3VY+Fvd66FscdiEsQu4JE121B0jW2/OqfVn3huXxfimX+PjzByTsm1rNEj1LUeTodmTHM0LMjqfwA6SClHzgeFmRbmuhkZARghdjkLo6FLnKPehHoUC1y/Z04qc9Fh+CkjKLRu5sDHqBsQW+iMpQfv3ZUBNEzLzd6CX+eMoQH9h/xXD9T1f1aHZx0Jok3ID1KM7gGJiuiywLsHCHny6s9S4TZIWfgdvyQgQ0F2enKMwzZ65LKEGNN67Mm6Y9badg8kteSDZNgJq3f5Hr2R0K3EG3NaHw=="> 
+   </div> 
+   <script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script> 
+   <script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=636939809766230707" type="text/javascript"></script> 
+   <script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=ffffffffa580202a" type="text/javascript"></script> 
+   <script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=ffffffffa580202a" type="text/javascript"></script> 
+   <script src="/TDClient/WebResource.axd?d=5nB8CG0WfggiiLl9i90T5jyLUi_adV-Nbz5BHUxfJ92OiPi7r5J8ONuFFbHA6jjqZX0cT8H_DbC2qBUBD7R1mGqZ0sFXVczfloHVQP0R9esYoFIgFglQpTHFmNhE1DfB6TYnA9eJHHskINa4m56Z3I8PaTM1&amp;t=637094295786185142" type="text/javascript"></script> 
+   <script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=637094295786185142" type="text/javascript"></script> 
+   <script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=637094295786185142" type="text/javascript"></script> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="784CA02E"> 
+   </div> 
+   <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel1','','tctl00$ctl00$cpContent$cpContent$upFeedbackGrid','','tctl00$ctl00$cpContent$cpContent$upFeed','','tctl00$ctl00$cpContent$cpContent$UpdatePanel2','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnSubmitComments','','ctl00$ctl00$cpContent$cpContent$btnToggleFavorite',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script> 
+   <div id="ctl00_ctl00_upMain" style="display:none;"> 
+    <div id="ctl00_ctl00_pbMain" style="position: fixed; top: 50%; left: 0px; width: 100%; height: 1px; overflow: visible; z-index: 2000; display: block;">
+     <div style="margin-left: -125px; position: fixed; top: 50%; left: 50%; width: 250px; height: 90px;">
+      <div class="well shadow">
+       <h2 class="h4 gutter-top-none">Updating...</h2>
+       <div class="progress" style="margin-bottom: 0;">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+       </div>
+      </div>
+     </div>
+    </div> 
+   </div> 
+   <header role="banner"> 
+    <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;"> 
+     <div class="logo-header-full hidden-xs"> 
+      <div class="pull-left"> 
+       <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a> 
+      </div> 
+      <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;"> 
+       <div id="divLogo" class="pull-left logo-container"> 
+        <a href="http://www.uwindsor.ca" target="_blank"> <img src="/TDPortal/BE/Logo/93/1975" alt="University of Windsor Logo" class="js-logo img-responsive"> </a> 
+       </div> 
+       <div class="master-header-right pull-right padding-top padding-bottom"> 
+        <div class="pull-left topLevelSearch input-group"> 
+         <div id="SiteSearch-5dcb06c4fd62438986f343ab37517a57" class="gutter-bottom input-group site-search" style="max-width: 400px;"> 
+          <div id="SiteSearch-dropdown-5dcb06c4fd62438986f343ab37517a57" class="input-group-btn"> 
+           <button type="button" id="SiteSearch-filter-5dcb06c4fd62438986f343ab37517a57" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Filter your search by categories" data-component="all"> <span class="fa fa-globe"></span><span class="fa fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span> <span class="sr-only">Filter your search by categories</span> </button> 
+           <ul class="dropdown-menu"> 
+            <li> <a href="javascript:void(0);" data-component="all" data-component-icon="fa-globe" title="Search all areas"> <span class="fa fa-fw fa-nopad fa-globe" aria-hidden="true"></span> All </a> </li> 
+            <li role="separator" class="divider"></li> 
+            <li> <a href="javascript:void(0);" data-component="kb" data-component-icon="fa-lightbulb-o" title="Search Knowledge Base"> <span class="fa fa-fw fa-nopad fa-lightbulb-o" aria-hidden="true"></span> Knowledge Base </a> </li> 
+            <li> <a href="javascript:void(0);" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog"> <span class="fa fa-fw fa-nopad fa-compass" aria-hidden="true"></span> Service Catalog </a> </li> 
+            <li> <a href="javascript:void(0);" data-component="q" data-component-icon="fa-comments" title="Search Questions"> <span class="fa fa-fw fa-nopad fa-comments" aria-hidden="true"></span> Questions </a> </li> 
+           </ul> 
+          </div> 
+          <input id="SiteSearch-text-5dcb06c4fd62438986f343ab37517a57" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" aria-label="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag."> 
+          <span class="input-group-btn"> <button id="SiteSearch-button-5dcb06c4fd62438986f343ab37517a57" class="btn btn-default" type="button" title="Search"> <span class="fa fa-fw fa-nopad fa-search blue" aria-hidden="true"></span> <span class="sr-only">Search</span> </button> </span> 
+         </div> 
+         <script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/1975/Portal/Shared/Search",
+      tagLookupServiceUrl: "/TDClient/1975/Portal/WebServices/JSON/TagLookupService.asmx/GetItems",
+      searchTextBoxSelector: '#SiteSearch-text-5dcb06c4fd62438986f343ab37517a57',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-5dcb06c4fd62438986f343ab37517a57',
+      searchButtonSelector: '#SiteSearch-button-5dcb06c4fd62438986f343ab37517a57',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-5dcb06c4fd62438986f343ab37517a57',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: true,
+      autoFocusSearch: false
+    });
+  });
+</script> 
+        </div> 
+        <div title="Sign In" class="pull-right gutter-top-sm"> 
+         <a href="/TDClient/1975/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1975%2fPortal%2fKB%2fArticleDet%3fID%3d9351">Sign In </a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary"> 
+      <div id="navContainer" class="container"> 
+       <div class="navbar-header"> 
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse"> <span class="tdbar-button-anchored icon-bar"></span> <span class="tdbar-button-anchored icon-bar"></span> <span class="tdbar-button-anchored icon-bar"></span> <span class="sr-only">Show Applications Menu</span> </button> 
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#"> Client Portal </a> 
+       </div> 
+       <div id="td-navbar-collapse" class="collapse navbar-collapse"> 
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe"> 
+         <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg"> <a href="/TDClient/1975/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1975%2fPortal%2fKB%2fArticleDet%3fID%3d9351">Sign In</a> </li> 
+         <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg"> <a href="/TDClient/1975/Portal/Shared/Search" title="search">Search</a> </li> 
+         <li id="divDesktopc6761c8c-7ac3-49af-a678-485e8a47f4fe" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/">Home</a> </li> 
+         <li id="divDesktop6752d70c-2547-4111-b28d-55e8a0f26f3d" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=6752d70c-2547-4111-b28d-55e8a0f26f3d">|</a> </li> 
+         <li id="divDesktopec55dfbf-78f6-48cf-86ae-b4b4cf201a44" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=ec55dfbf-78f6-48cf-86ae-b4b4cf201a44">Help</a> </li> 
+         <li id="divDesktop37b7390b-cc5d-4a6a-aa5c-49b8924066de" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=37b7390b-cc5d-4a6a-aa5c-49b8924066de">|</a> </li> 
+         <li id="divDesktopc5b8214f-8f71-4492-bb14-64e2db562678" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=c5b8214f-8f71-4492-bb14-64e2db562678">Notifications</a> </li> 
+         <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable"> <a href="/TDClient/1975/Portal/Requests/ServiceCatalog">Services</a> </li> 
+         <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable"> <a href="/TDClient/1975/Portal/KB/">Knowledge Base</a> </li> 
+         <li id="divTDQuestions" class="themed tdbar-button-anchored sr-focusable"> <a href="/TDClient/1975/Portal/Forums/Questions/?Filter=all">Questions</a> </li> 
+         <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu"> <a class="dropdown-toggle" data-toggle="dropdown" title="More Applications" href="#"> <span class="sr-only">More Applications</span> <span class="fa fa-ellipsis-h" aria-hidden="true"></span> </a> 
+          <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul> </li> 
+        </ul> 
+       </div> 
+      </div> 
+     </nav> 
+    </div> 
+   </header> 
+   <div id="navShim" class="hidden-xs hidden-sm"></div> 
+   <main role="main"> 
+    <div id="content" tabindex="-1"> 
+     <nav id="divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base"> 
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a> 
+      <div class="container clearfix"> 
+       <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;"> 
+        <li> <a href="/TDClient/1975/Portal/KB/Search">Search <span class="sr-only">Articles</span></a> </li> 
+       </ul> 
+      </div> 
+     </nav> 
+     <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;"> 
+      <span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red"></span></span> 
+      <div class="clearfix"> 
+       <ol class="breadcrumb pull-left"> 
+        <li><a href="/TDClient/1975/Portal/KB/">Knowledge Base</a></li>
+        <li class="active"><a href="/TDClient/1975/Portal/KB/?CategoryID=2276">Accounts &amp; Passwords</a></li>
+        <li class="active">How do I change or reset my Active Directory password?</li> 
+       </ol> 
+       <span class="js-open-monitor" style="display: none;"></span> 
+      </div> 
+      <div class="row gutter-top"> 
+       <div id="divMainContent" class="col-md-8"> 
+        <h1 class="gutter-top" style="-ms-word-wrap: break-word; word-wrap: break-word;"> How do I change or reset my Active Directory password? </h1> 
+        <div id="ctl00_ctl00_cpContent_cpContent_divTags"> 
+         <span class="sr-only">Tags</span> 
+         <span class="fa fa-tags gray gutter-right-sm" aria-hidden="true" title="Tags"></span> 
+         <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23active-directory-ad" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl00_TagControl1_lnkDisplay" title="active-directory-ad">active-directory-ad</a> 
+         <span class="fa fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span> 
+         <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23uwinid" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl02_TagControl1_lnkDisplay" title="uwinid">uwinid</a> 
+        </div> 
+        <div id="ctl00_ctl00_cpContent_cpContent_divBody" class="gutter-top break-word ckeShim clearfix">
+         <p>Active Directory account is integrated into your UWin Account. It is not possible for to change your Active Directory password on its own. You can only do so by <a href="https://uwindsor.teamdynamix.com/TDClient/KB/ArticleDet?ID=10393">changing your UWin Account password</a>, which will also change all other passwords that are aggregated under&nbsp;UWin Account.</p> 
+         <p>For more information, please see <strong>Related Articles</strong> section on the right.</p>
+        </div> 
+        <div id="divFeedback2" class="well gutter-top-lg"> 
+         <div class="row" id="divHelpfulYesNo"> 
+          <div class="col-sm-7"> 
+           <div> 
+            <a href="/TDClient/1975/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1975%2fPortal%2fKB%2fArticleDet%3fID%3d9351">Sign in to leave feedback</a> 
+           </div> 
+          </div> 
+          <div class="col-sm-5 text-right"> 
+           <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel1" aria-live="polite" aria-atomic="true">
+             0 reviews 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="tab-content gutter-top gutter-bottom"> 
+         <div id="ctl00_ctl00_cpContent_cpContent_upFeedbackGrid"> 
+         </div> 
+         <div id="ctl00_ctl00_cpContent_cpContent_upFeed"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-md-4"> 
+        <a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:__doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','')"></a> 
+        <div id="divDetails" class="panel panel-default"> 
+         <div class="panel-heading"> 
+          <h3 class="panel-title">Details</h3> 
+         </div> 
+         <div class="panel-body"> 
+          <div id="ArticleID"> 
+           <span class="control-label gutter-bottom-xs">Article ID: </span> 9351 
+          </div> 
+          <div id="divAuthor" class="disp-group"> 
+           <span class="control-label gutter-bottom-xs"> Created </span> 
+           <div> 
+            <span id="ctl00_ctl00_cpContent_cpContent_udtCreatedDate">Mon 11/2/15 10:22 AM</span>
+            <span id="ctl00_ctl00_cpContent_cpContent_lblCreatedBy"></span> 
+           </div> 
+          </div> 
+          <div id="ctl00_ctl00_cpContent_cpContent_divModified" class="disp-group"> 
+           <span class="control-label gutter-bottom-xs"> Modified </span> 
+           <div> 
+            <span id="ctl00_ctl00_cpContent_cpContent_udtModifiedDate">Fri 1/19/18 3:54 PM</span>
+            <span id="ctl00_ctl00_cpContent_cpContent_lblModifiedBy"></span> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div id="ctl00_ctl00_cpContent_cpContent_divKB" class="panel panel-default"> 
+         <div class="panel-heading"> 
+          <h3 class="panel-title">Related Articles (4)</h3> 
+         </div> 
+         <div class="panel-body"> 
+          <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg"> 
+           <div class="clearfix"> 
+            <div class="pull-left font-md"> 
+             <a target="_blank" href="https://uwindsor.teamdynamix.com/TDClient/1975/Portal/KB/ArticleDet?ID=9125">How do I activate my UWin Account?</a> 
+            </div> 
+            <div class="pull-right"> 
+            </div> 
+           </div> 
+          </div> 
+          <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl01_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg"> 
+           <div class="clearfix"> 
+            <div class="pull-left font-md"> 
+             <a target="_blank" href="https://uwindsor.teamdynamix.com/TDClient/1975/Portal/KB/ArticleDet?ID=10393">How do I change my UWin Account password?</a> 
+            </div> 
+            <div class="pull-right"> 
+            </div> 
+           </div> 
+          </div> 
+          <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl02_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg"> 
+           <div class="clearfix"> 
+            <div class="pull-left font-md"> 
+             <a target="_blank" href="https://uwindsor.teamdynamix.com/TDClient/1975/Portal/KB/ArticleDet?ID=10394">What to do if I forgot my UWin Account password?</a> 
+            </div> 
+            <div class="pull-right"> 
+            </div> 
+           </div> 
+          </div> 
+          <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl03_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg"> 
+           <div class="clearfix"> 
+            <div class="pull-left font-md"> 
+             <a target="_blank" href="https://uwindsor.teamdynamix.com/TDClient/1975/Portal/KB/ArticleDet?ID=11799">Why am I unable to sign into Microsoft Office 365 Portal?</a> 
+            </div> 
+            <div class="pull-right"> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="ctl00_ctl00_cpContent_cpContent_divProgress" style="display: none; z-index: 60;"> 
+       <div id="ctl00_ctl00_cpContent_cpContent_pbMain" style="position: fixed; top: 50%; left: 0px; width: 100%; height: 1px; overflow: visible; z-index: 2000; display: block;">
+        <div style="margin-left: -125px; position: fixed; top: 50%; left: 50%; width: 250px; height: 90px;">
+         <div class="well shadow">
+          <h2 class="h4 gutter-top-none">Deleting...</h2>
+          <div class="progress" style="margin-bottom: 0;">
+           <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+          </div>
+         </div>
+        </div>
+       </div> 
+      </div> 
+      <div class="modal fade" id="divShareModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> 
+       <div class="modal-dialog"> 
+        <div class="modal-content"> 
+         <div class="modal-header"> 
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> 
+          <h4 class="modal-title" id="myModalLabel"> <span class="fa fa-share-alt fa-fw" aria-hidden="true"></span>Share </h4> 
+         </div> 
+         <div class="modal-body"> 
+          <div class="form-group"> 
+           <label class="control-label" for="ctl00_ctl00_cpContent_cpContent_shareRecipients">Recipient(s) <small>- separate email addresses with a comma</small></label> 
+           <input name="ctl00$ctl00$cpContent$cpContent$shareRecipients" type="text" id="ctl00_ctl00_cpContent_cpContent_shareRecipients" class="form-control"> 
+          </div> 
+          <div class="form-group"> 
+           <label for="ctl00_ctl00_cpContent_cpContent_shareBody" class="control-label">Message</label> 
+           <textarea name="ctl00$ctl00$cpContent$cpContent$shareBody" id="ctl00_ctl00_cpContent_cpContent_shareBody" class="form-control" style="height: 175px;">Check out this knowledge base article I found in the University of Windsor knowledge base.
+
+https://uwindsor.teamdynamix.com/TDClient/1975/Portal/KB/ArticleDet?ID=9351
+
+How do I change or reset my Active Directory password?
+
+It is not possible to change Active Directory password on its own. To change it, you have to change your UWin password.</textarea> 
+          </div> 
+         </div> 
+         <div class="modal-footer text-left"> 
+          <button onclick="checkRecipients(); __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare','')" id="ctl00_ctl00_cpContent_cpContent_btnSendShare" type="button" class="btn btn-primary"> <span class="fa fa-paper-plane-o" aria-hidden="true"></span> Send </button> 
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </main> 
+   <script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script> 
+  </form> 
+  <footer role="contentinfo"> 
+  </footer> 
+  <script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        })
+          .blur(function () {
+            $beLogo.removeClass('accessibility-focus-on-logo');
+          })
+      })(jQuery);
+
+  </script>   
+ </body>
+</html>

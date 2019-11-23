@@ -1,0 +1,842 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- dynamic_layout.jsp begin -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end -->
+<!-- begin resolveLocale.jsp -->
+<!-- taglibsIncludeAll.jspf begin -->
+<!-- taglibsIncludeAll.jspf end -->
+<!-- locale=en_US -->
+<!-- end resolveLocale.jsp -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" xml:lang="en-US" lang="en-US">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta http-equiv="Content-Style-Type" content="text/css"> 
+  <meta http-equiv="Content-Script-Type" content="text/javascript"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=3.0; user-scalable=1;"> 
+  <!-- Facebook tags --> 
+  <meta property="og:url" content="http://primo.uwindsor.ca/primo_library/libweb/action/dlDisplay.do?vid=UWINDSOR&amp;afterPDS=true&amp;docId="> 
+  <meta property="og:title" content=""> 
+  <meta property="og:image" content="http://primo.uwindsor.ca:80/primo_library/libweb/images/primo_logo.png"> 
+  <!-- End of Facebook tags --> 
+  <link rel="canonical" href="http://primo.uwindsor.ca/primo_library/libweb/action/dlDisplay.do?vid=UWINDSOR&amp;docId=&amp;fromSitemap=1&amp;afterPDS=true"> 
+  <!-- custom_home_page_header_info.jsp begin --> 
+  <!-- taglibsIncludeAll.jspf begin --> 
+  <!-- taglibsIncludeAll.jspf end -->
+  <!-- custom_tile_variables.jsp begin --> 
+  <!-- taglibsIncludeAll.jspf begin --> 
+  <!-- taglibsIncludeAll.jspf end -->
+  <!-- custom_tile_variables.jsp end --> 
+  <!-- advancedCssAdder.jsp begin --> 
+  <!-- taglibsIncludeAll.jspf begin --> 
+  <!-- taglibsIncludeAll.jspf end -->
+  <!-- cssAdder.jsp begin --> 
+  <!-- taglibsIncludeAll.jspf begin --> 
+  <!-- taglibsIncludeAll.jspf end -->
+  <!-- This is just for dev mode - it preserves old css behaviour to allow the customers to understand the css hierarchy  --> 
+  <link rel="stylesheet" type="text/css" href="../wro/primo_library_wro_UWINDSOR_en_US.css?"> 
+  <script type="text/javascript" src="../wro/primo_library_wro_UWINDSOR_en_US.js"></script> 
+  <link rel="apple-touch-icon" href="../images/favicon.png"> 
+  <!-- cssAdder.jsp end --> 
+  <!-- advancedCssAdder.jsp end -->
+  <script type="text/javascript" src="../wro/primo_library_web.js"></script> 
+  <title>University of Windsor Primo</title> 
+  <!-- mobile scripts begin --> 
+  <script type="text/javascript">
+
+var addToHomeMessage = 'Install this web app on your %device: tap %icon and then \'Add to Home Screen\'.';
+var addToHomeConfig = {
+	expire:40000,
+	touchIcon:true,
+	message:addToHomeMessage
+};
+</script> 
+  <script type="application/javascript" src="../javascript/add2home.js"></script> 
+  <link rel="stylesheet" href="../css/add2home.css"> 
+  <!-- mobile scripts end --> 
+  <!-- custom_home_page_header_info.jsp end --> 
+  <!-- begin javascriptTextIncludes.jsp --> 
+  <!-- taglibsIncludeAll.jspf begin --> 
+  <!-- taglibsIncludeAll.jspf end -->
+  <script type="text/javascript">
+
+var exlTabReloadMessage = 'Your content seems like it is taking a long time to load. If you would like to try reloading it,';
+
+
+var exlTabReloadLinkText = 'click here';
+
+
+var exlTabLoadErrorMessage = 'There was an error loading the tab.';
+
+
+var exlDelayTabProcessingYourRequest = 'Processing your request...'; //Processing your request...
+
+
+var exlFdbReloadMessage = 'Your content seems like it is taking a long time to load. To return to the previous page,';
+
+
+var exlFdbReloadLinkText = 'click here';
+
+
+var exlFdbNoInfoMessage = 'No Available Information';
+
+
+var exlFdbSubCategoryLabel = 'Sub-category';
+
+
+var exlTabSignInMessage = 'Sign in to Post Your Review';
+
+
+var facetsTitleLabel = 'Refine My Results';
+
+
+var updatingMessage = 'updating...';
+
+</script> 
+  <!-- end javascriptTextIncludes.jsp --> 
+ </head> 
+ <body class=" EXLCurrentLang_en_US">
+  <script type="text/javascript">
+(function() { var z="";var b="2866756e6374696f6e2829207b0d0a2066756e6374696f6e2067657453657373696f6e436f6f6b6965732829207b0d0a0976617220636f6f6b69654172726179203d206e657720417272617928293b0d0a0976617220634e616d65203d206e65772052656745787028275e5c5c733f696e6361705f7365735f27293b0d0a097661722063203d20646f63756d656e742e636f6f6b69652e73706c697428223b22293b0d0a09666f7220287661722069203d20303b2069203c20632e6c656e6774683b20692b2b29207b0d0a0909766172206b6579203d20635b695d2e73756273747228302c20635b695d2e696e6465784f6628223d2229293b0d0a09097661722076616c7565203d20635b695d2e73756273747228635b695d2e696e6465784f6628223d2229202b20312c20635b695d2e6c656e677468293b0d0a090969662028634e616d652e74657374286b65792929207b0d0a090909636f6f6b696541727261795b636f6f6b696541727261792e6c656e6774685d203d2076616c75653b0d0a09097d0d0a097d0d0a0972657475726e20636f6f6b696541727261793b0d0a207d0d0a2066756e6374696f6e20736574496e636170436f6f6b69652876417272617929207b0d0a09766172207265733b0d0a09747279207b0d0a090976617220636f6f6b696573203d2067657453657373696f6e436f6f6b69657328293b0d0a09097661722064696765737473203d206e657720417272617928636f6f6b6965732e6c656e677468293b0d0a0909666f7220287661722069203d20303b2069203c20636f6f6b6965732e6c656e6774683b20692b2b29207b0d0a090909646967657374735b695d203d2073696d706c6544696765737428764172726179202b20636f6f6b6965735b695d293b0d0a09097d0d0a0909726573203d20764172726179202b20222c6469676573743d22202b20646967657374732e6a6f696e28293b0d0a097d20636174636820286529207b0d0a0909726573203d20764172726179202b20222c6469676573743d22202b20656e636f6465555249436f6d706f6e656e7428652e746f537472696e672829293b0d0a097d0d0a09637265617465436f6f6b696528225f5f5f75746d7663222c207265732c203230293b0d0a207d0d0a2066756e6374696f6e2073696d706c65446967657374286d7973747229207b0d0a0976617220726573203d20303b0d0a09666f7220287661722069203d20303b2069203c206d797374722e6c656e6774683b20692b2b29207b0d0a0909726573202b3d206d797374722e63686172436f646541742869293b0d0a097d0d0a0972657475726e207265733b0d0a207d0d0a2066756e6374696f6e20637265617465436f6f6b6965286e616d652c2076616c75652c207365636f6e647329207b0d0a097661722065787069726573203d2022223b0d0a09696620287365636f6e647329207b0d0a09097661722064617465203d206e6577204461746528293b0d0a0909646174652e73657454696d6528646174652e67657454696d652829202b20287365636f6e6473202a203130303029293b0d0a09097661722065787069726573203d20223b20657870697265733d22202b20646174652e746f474d54537472696e6728293b0d0a097d0d0a09646f63756d656e742e636f6f6b6965203d206e616d65202b20223d22202b2076616c7565202b2065787069726573202b20223b20706174683d2f223b0d0a207d0d0a2066756e6374696f6e2074657374286f29207b0d0a0976617220726573203d2022223b0d0a0976617220764172726179203d206e657720417272617928293b0d0a09666f722028766172206a203d20303b206a203c206f2e6c656e6774683b206a2b2b29207b0d0a09207661722074657374203d206f5b6a5d5b305d3b0d0a092073776974636820286f5b6a5d5b315d29207b0d0a092009636173652022657869737473223a0d0a0909747279207b0d0a090909696628747970656f66286576616c2874657374292920213d3d2022756e646566696e656422297b0d0a090909097641727261795b7641727261792e6c656e6774685d203d20656e636f6465555249436f6d706f6e656e742874657374202b20223d7472756522293b0d0a0909097d0d0a090909656c73657b0d0a090909097641727261795b7641727261792e6c656e6774685d203d20656e636f6465555249436f6d706f6e656e742874657374202b20223d66616c736522293b0d0a0909097d0d0a09097d20636174636820286529207b0d0a0909097641727261795b7641727261792e6c656e6774685d203d20656e636f6465555249436f6d706f6e656e742874657374202b20223d66616c736522293b0d0a09097d0d0a0909627265616b3b0d0a090963617365202276616c7565223a0d0a09097472797b0d0a090909747279207b0d0a09090909726573203d206576616c2874657374293b0d0a09090909696628747970656f662872657329203d3d3d2022756e646566696e656422297b0d0a09090909097641727261795b7641727261792e6c656e6774685d203d20656e636f6465555249436f6d706f6e656e742874657374202b20223d756e646566696e656422293b0d0a090909097d0d0a09090909656c736520696628726573203d3d3d206e756c6c297b0d0a09090909097641727261795b7641727261792e6c656e6774685d203d20656e636f6465555249436f6d706f6e656e742874657374202b20223d6e756c6c22293b0d0a090909097d0d0a09090909656c7365207b0d0a09090909097641727261795b7641727261792e6c656e6774685d203d20656e636f6465555249436f6d706f6e656e742874657374202b20223d22202b207265732e746f537472696e672829293b0d0a090909097d0909090d0a0909097d20636174636820286529207b0d0a090909097641727261795b7641727261792e6c656e6774685d203d20656e636f6465555249436f6d706f6e656e742874657374202b20223d63616e6e6f74206576616c7561746522293b0d0a09090909627265616b3b0d0a0909097d0d0a090909627265616b3b0d0a09097d0d0a0909636174636820286529207b0d0a0909097641727261795b7641727261792e6c656e6774685d203d20656e636f6465555249436f6d706f6e656e742874657374202b20223d22202b2065293b0d0a09097d0d0a0909627265616b3b0d0a0909636173652022706c7567696e5f657874656e74696f6e73223a0d0a0909747279207b0d0a09090976617220657874656e74696f6e73203d205b5d3b0d0a090909747279207b0d0a0909090969203d20657874656e74696f6e732e696e6465784f6628226922293b0d0a0909097d20636174636820286529207b0d0a090909097641727261795b7641727261792e6c656e6774685d203d20656e636f6465555249436f6d706f6e656e742822706c7567696e5f6578743d696e6465784f66206973206e6f7420612066756e6374696f6e22293b0d0a09090909627265616b3b0d0a0909097d0d0a090909747279207b0d0a09090909766172206e756d203d206e6176696761746f722e706c7567696e732e6c656e6774683b0d0a09090909696620286e756d203d3d2030207c7c206e756d203d3d206e756c6c29207b0d0a09090909097641727261795b7641727261792e6c656e6774685d203d20656e636f6465555249436f6d706f6e656e742822706c7567696e5f6578743d6e6f20706c7567696e7322293b0d0a0909090909627265616b3b0d0a090909097d0d0a0909097d20636174636820286529207b0d0a090909097641727261795b7641727261792e6c656e6774685d203d20656e636f6465555249436f6d706f6e656e742822706c7567696e5f6578743d63616e6e6f74206576616c7561746522293b0d0a09090909627265616b3b0d0a0909097d0d0a0909090d0a090909666f72202876617220693d303b693c6e6176696761746f722e706c7567696e732e6c656e6774683b692b2b29207b0d0a0909090969662028747970656f66286e6176696761746f722e706c7567696e735b695d29203d3d3d2022756e646566696e65642229207b0d0a09090909097641727261795b7641727261792e6c656e6774685d203d20656e636f6465555249436f6d706f6e656e742822706c7567696e5f6578743d706c7567696e735b695d20697320756e646566696e656422293b0d0a0909090909627265616b3b0d0a090909097d0d0a0d0a090909097661722066696c656e616d65203d206e6176696761746f722e706c7567696e735b695d2e66696c656e616d653b0d0a0909090976617220657874203d20226e6f20657874656e74696f6e223b0d0a0909090969662028747970656f662866696c656e616d6529203d3d3d2022756e646566696e65642229207b0d0a0909090909657874203d202266696c656e616d6520697320756e646566696e6564223b0d0a090909097d0d0a09090909656c7365206966202866696c656e616d652e73706c697428222e22292e6c656e677468203e203129207b0d0a0909090909657874203d2066696c656e616d652e73706c697428272e27292e706f7028293b0d0a090909097d0d0a0d0a0909090969662028657874656e74696f6e732e696e6465784f662865787429203c203029207b0d0a0909090909657874656e74696f6e732e7075736828657874293b0d0a090909097d090d0a0909097d0d0a0909090d0a090909666f7209287661722069203d20303b2069203c20657874656e74696f6e732e6c656e6774683b20692b2b29207b0d0a090909097641727261795b7641727261792e6c656e6774685d203d20656e636f6465555249436f6d706f6e656e742822706c7567696e5f6578743d22202b20657874656e74696f6e735b695d293b0d0a0909097d0d0a09097d0d0a0909636174636820286529207b0d0a0909097641727261795b7641727261792e6c656e6774685d203d20656e636f6465555249436f6d706f6e656e742822706c7567696e5f6578743d22202b2065293b0d0a09097d0d0a0909627265616b3b0d0a09207d0d0a097d0d0a0972657475726e207641727261792e6a6f696e28293b0d0a207d0d0a20766172206f203d205b0d0a095b226e6176696761746f72222c2022657869737473225d2c0d0a095b226e6176696761746f722e76656e646f72222c202276616c7565225d2c0d0a095b226e6176696761746f722e6170704e616d65222c202276616c7565225d2c0d0a095b226e6176696761746f722e706c7567696e732e6c656e6774683d3d30222c202276616c7565225d2c0d0a095b226e6176696761746f722e706c6174666f726d222c202276616c7565225d2c0d0a095b226e6176696761746f722e776562647269766572222c202276616c7565225d2c0d0a095b22706c6174666f726d222c2022706c7567696e5f657874656e74696f6e73225d2c0d0a095b22416374697665584f626a656374222c2022657869737473225d2c0d0a095b227765626b697455524c222c2022657869737473225d2c0d0a095b225f7068616e746f6d222c2022657869737473225d2c0d0a095b2263616c6c5068616e746f6d222c2022657869737473225d2c0d0a095b226368726f6d65222c2022657869737473225d2c0d0a095b2279616e646578222c2022657869737473225d2c0d0a095b226f70657261222c2022657869737473225d2c0d0a095b226f7072222c2022657869737473225d2c0d0a095b22736166617269222c2022657869737473225d2c0d0a095b22617765736f6d69756d222c2022657869737473225d2c0d0a095b2270756666696e446576696365222c2022657869737473225d2c0d0a095b225f5f6e696768746d617265222c2022657869737473225d2c0d0a095b22646f6d4175746f6d6174696f6e222c2022657869737473225d2c0d0a095b22646f6d4175746f6d6174696f6e436f6e74726f6c6c6572222c2022657869737473225d2c0d0a095b225f53656c656e69756d5f4944455f5265636f72646572222c2022657869737473225d2c0d0a095b22646f63756d656e742e5f5f7765626472697665725f7363726970745f666e222c2022657869737473225d2c0d0a095b22646f63756d656e742e246364635f6173646a666c617375746f70666876635a4c6d63666c5f222c2022657869737473225d2c0d0a095b2270726f636573732e76657273696f6e222c2022657869737473225d2c0d0a095b226e6176696761746f722e637075436c617373222c2022657869737473225d2c0d0a095b226e6176696761746f722e6f73637075222c2022657869737473225d2c0d0a095b226e6176696761746f722e636f6e6e656374696f6e222c2022657869737473225d2c0d0a095b226e6176696761746f722e6c616e67756167653d3d274327222c202276616c7565225d2c0d0a095b2277696e646f772e6f7574657257696474683d3d30222c202276616c7565225d2c0d0a095b2277696e646f772e6f757465724865696768743d3d30222c202276616c7565225d2c0d0a095b2277696e646f772e576562474c52656e646572696e67436f6e74657874222c2022657869737473225d2c0d0a095b22646f63756d656e742e646f63756d656e744d6f6465222c202276616c7565225d2c0d0a095b226576616c2e746f537472696e6728292e6c656e677468222c202276616c7565225d0d0a5d3b0d0a20747279207b0d0a09736574496e636170436f6f6b69652874657374286f29293b0d0a09646f63756d656e742e637265617465456c656d656e742822696d6722292e737263203d20222f5f496e63617073756c615f5265736f757263653f53574b4d544653523d3126653d22202b204d6174682e72616e646f6d28293b0d0a207d20636174636820286529207b0d0a09696d67203d20646f63756d656e742e637265617465456c656d656e742822696d6722293b0d0a09696d672e737263203d20222f5f496e63617073756c615f5265736f757263653f53574b4d544653523d3126653d22202b20653b0d0a207d0d0a7d2928293b0d0a";eval((function(){for (var i=0;i<b.length;i+=2){z+=String.fromCharCode(parseInt(b.substring(i,i+2),16));} return z;})());})();
+</script> 
+  <!-- dynamic_recursion.jsp begin --> 
+  <!-- taglibsIncludeAll.jspf begin --> 
+  <!-- taglibsIncludeAll.jspf end -->
+  <div id="contentEXL" class="EXLCustomLayoutContainer EXLContent EXLBriefDisplay"> 
+   <!-- dynamic_recursion.jsp begin --> 
+   <!-- taglibsIncludeAll.jspf begin --> 
+   <!-- taglibsIncludeAll.jspf end -->
+   <div id="exlidSkipToContent" class="EXLCustomLayoutTile EXLSkipToContent"> 
+    <!-- begin ../tiles/skipToContentTile.jsp --> 
+    <!-- taglibsIncludeAll.jspf begin --> 
+    <!-- taglibsIncludeAll.jspf end -->
+    <a id="exliidSkipToMainContent" href="#exlidResultsContainer">skip to main content</a>
+    <!-- end ../tiles/skipToContentTile.jsp --> 
+   </div> 
+   <!-- dynamic_recursion.jsp end --> 
+   <!-- dynamic_recursion.jsp begin --> 
+   <!-- taglibsIncludeAll.jspf begin --> 
+   <!-- taglibsIncludeAll.jspf end -->
+   <div id="exlidHeaderContainer" class="EXLCustomLayoutContainer EXLHeader"> 
+    <!-- dynamic_recursion.jsp begin --> 
+    <!-- taglibsIncludeAll.jspf begin --> 
+    <!-- taglibsIncludeAll.jspf end -->
+    <div id="exlidHeaderTile" class="EXLCustomLayoutTile EXLLogo"> 
+     <!-- begin ../tiles/headerTile.jsp --> 
+     <!-- taglibsIncludeAll.jspf begin --> 
+     <!-- taglibsIncludeAll.jspf end -->
+     <!-- includeStaticHTML.jspf begin (/uploaded_files/UWINDSOR/header.html) --> 
+     <!-- taglibsIncludeAll.jspf begin --> 
+     <!-- taglibsIncludeAll.jspf end -->
+     <!--NB: When translating a static html page that includes images, the link of the image must be replaced as follows:
+The existing link: "../images/imageName.gif" must be changed into: "../locale/specifcLocaleCode/images/imageName.gif" where "specifcLocaleCode" represents the relevant locale of the language (e.g en_US for English USA, zh_CH for Chinese).
+--> 
+     <a href="http://leddy.uwindsor.ca/" title="University of Windsor"><img src="../uploaded_files/UWINDSOR/logo.png" alt="logo"></a> 
+     <!-- includeStaticHTML.jspf end (/uploaded_files/UWINDSOR/header.html) -->
+     <!-- end ../tiles/headerTile.jsp --> 
+    </div> 
+    <!-- dynamic_recursion.jsp end --> 
+    <!-- dynamic_recursion.jsp begin --> 
+    <!-- taglibsIncludeAll.jspf begin --> 
+    <!-- taglibsIncludeAll.jspf end -->
+    <div id="exlidUserAreaTile" class="EXLCustomLayoutTile EXLUserMenu"> 
+     <!-- begin ../tiles/userAreaTile.jsp --> 
+     <!-- taglibsIncludeAll.jspf begin --> 
+     <!-- taglibsIncludeAll.jspf end -->
+     <!-- setSearchForm.jspf begin --> 
+     <!-- taglibsIncludeAll.jspf begin --> 
+     <!-- taglibsIncludeAll.jspf end -->
+     <!-- setSearchForm.jspf end -->
+     <!-- this feedback unnecesary
+
+--> 
+     <input type="hidden" class="gatherpagestat" value="true"> 
+     <input type="hidden" class="EXLTabBoomId" id="SignInStatUserArea" value="A=Primo_Local&amp;I=UWINDSOR&amp;S=98CA66AA3DEC9A8B5CCE802C0CD536AA&amp;G=&amp;IP=10.28.120.59&amp;SRVR=fe0101.prod.pmt.dc04.hosted.exlibrisgroup.com&amp;P=sign-in&amp;OP=click&amp;TYP=Page_View_4.9.18.0&amp;O=%26%26%26%26UWINDSOR%26UWINDSOR - University of Windsor%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=&amp;O5=01UTON-UW.UWINDSOR.PSTG&amp;O6=&amp;O7=0&amp;O8=&amp;O9=UWINDSOR&amp;O10=&amp;O11=&amp;O12=0&amp;O13=&amp;O14=&amp;O15=&amp;O16=&amp;O17=default_tab&amp;O18=&amp;O19=&amp;O20=&amp;O23=&amp;"> 
+     <input type="hidden" class="boombaseurl" value="https://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif"> 
+     <input type="hidden" class="gatherpagestat" value="true"> 
+     <input type="hidden" class="EXLTabBoomId" id="SignOutStat" value="A=Primo_Local&amp;I=UWINDSOR&amp;S=98CA66AA3DEC9A8B5CCE802C0CD536AA&amp;G=&amp;IP=10.28.120.59&amp;SRVR=fe0101.prod.pmt.dc04.hosted.exlibrisgroup.com&amp;P=sign-out&amp;OP=click&amp;TYP=Page_View_4.9.18.0&amp;O=%26%26%26%26UWINDSOR%26UWINDSOR - University of Windsor%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=&amp;O5=01UTON-UW.UWINDSOR.PSTG&amp;O6=&amp;O7=0&amp;O8=&amp;O9=UWINDSOR&amp;O10=&amp;O11=&amp;O12=0&amp;O13=&amp;O14=&amp;O15=&amp;O16=&amp;O17=default_tab&amp;O18=&amp;O19=&amp;O20=&amp;O23=&amp;"> 
+     <input type="hidden" class="boombaseurl" value="https://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif"> 
+     <ul id="exlidUserAreaRibbon" class="EXLEShelfTileGuest"> 
+      <li id="exlidUserName" class="EXLUserName"> <span class="EXLUserAreaStart"></span> <span class="EXLUserNameDisplay"> Guest</span> <span class="EXLUserAreaStartRtl"></span> </li> 
+      <li id="exlidMyShelf" class="EXLMyShelf"><a href="basket.do;jsessionid=98CA66AA3DEC9A8B5CCE802C0CD536AA?fn=display&amp;fromUserArea=true&amp;vid=UWINDSOR&amp;fromPreferences=true&amp;fromLink=gotoeShelfUI"><span class="EXLMyShelfStarSelected"></span>e-Shelf</a></li> 
+      <li id="exlidMyAccount" class="EXLMyAccount"><a href="myAccountMenu.do;jsessionid=98CA66AA3DEC9A8B5CCE802C0CD536AA?vid=UWINDSOR&amp;fromLink=gotoMyAccountUI">My Account</a></li> 
+      <li id="exlidSignOut" class="EXLSignOut EXLLastItem EXLHidden"><a href="logout.do;jsessionid=98CA66AA3DEC9A8B5CCE802C0CD536AA?loginFn=signout&amp;vid=UWINDSOR&amp;targetURL=http%3a%2f%2fprimo.uwindsor.ca%2fprimo_library%2flibweb%2faction%2fsearch.do%3fvid%3dUWINDSOR" onclick="boomCallToRum('SignOutStat',false);">Sign out</a></li> 
+      <li id="exlidSignIn" class="EXLSignOut EXLLastItem "> <a href="login.do;jsessionid=98CA66AA3DEC9A8B5CCE802C0CD536AA?loginFn=signin&amp;vid=UWINDSOR&amp;targetURL=http%3a%2f%2fprimo.uwindsor.ca%2fprimo_library%2flibweb%2faction%2fsearch.do%3fvid%3dUWINDSOR%26amp%3bmode%3dAdvanced%26amp%3bct%3dAdvancedSearch%26amp%3bdscnt%3d0%26amp%3bdstmp%3d1574468024793%26amp%3binitializeIndex%3dtrue" onclick="boomCallToRum('SignInStatUserArea',false);addResolutionParam(this);">Sign in</a> &nbsp; </li> 
+     </ul> 
+     <!-- end ../tiles/userAreaTile.jsp --> 
+    </div> 
+    <!-- dynamic_recursion.jsp end --> 
+    <!-- dynamic_recursion.jsp begin --> 
+    <!-- taglibsIncludeAll.jspf begin --> 
+    <!-- taglibsIncludeAll.jspf end -->
+    <div id="exlidMainMenuTile" class="EXLCustomLayoutTile EXLMainMenu"> 
+     <!-- begin ../tiles/mainMenuTile.jsp --> 
+     <!-- taglibsIncludeAll.jspf begin --> 
+     <!-- taglibsIncludeAll.jspf end -->
+     <script type="text/javascript">
+//<![CDATA[
+function loadSearchDbPage(){
+	var fn;
+	addLightBoxDivs();
+	fn='loadSearchDbPage';
+	var timestamp = new Date().getTime();
+	var url = "searchDB.do"+"?fn="+fn+"&ts="+timestamp;
+	var data;
+	$.ajax({
+	    url:url,
+		data:data,
+		global:false,
+		beforeSend: function(request){
+			setAjaxRequestHeader(request);
+		},
+		error: function(request,errorType,exceptionOcurred){
+			if (errorType=='timeout'){
+				notifyAjaxTimeout();
+			}else{
+				generalAjaxError();
+			}
+			document.getElementById('exliLoadingFdb').style.display='none';
+			document.getElementById('exliGreyOverlay').style.display='none';
+			document.getElementById('exliWhiteContent').style.display='none';
+			return false;
+		},
+		success: function(data){
+			if (isAjaxXmlRedirect(data)){
+				handleAjaxXmlRedirect(data);
+			}
+			var elm = $(data).find('searchDbXml');
+			var cdata = $(elm).text();
+			$('span[id=exliLoadingFdbSpan]').remove();
+			var n;
+			n = document.getElementById("exliWhiteContent");
+			var xmlText = cdata.replace(/\n\n/g, "\n").replace(/&lt;/g,"<").replace(/&gt;/g,">");
+			var newdiv = document.createElement("div");
+			newdiv.innerHTML = xmlText;
+			n.innerHTML='';
+			$(n).append(newdiv);
+		}
+	});
+}
+
+
+
+
+
+
+// ]]>
+</script> 
+     <noscript>
+      This feature requires javascript
+     </noscript>
+     <!--  include setSearchForm.jspf before --> 
+     <!-- setSearchForm.jspf begin --> 
+     <!-- taglibsIncludeAll.jspf begin --> 
+     <!-- taglibsIncludeAll.jspf end -->
+     <!-- setSearchForm.jspf end -->
+     <!--  include setSearchForm.jspf after   --> 
+     <div id="exlidMainMenuContainer" class="EXLMainMenuContainer EXLFirstItem"> 
+      <ul id="exlidMainMenuRibbon"> 
+       <li id="exlidMainMenuItem1" class="EXLMainMenuItem"> <span><a title="New Search" href="/primo_library/libweb/action/search.do;jsessionid=98CA66AA3DEC9A8B5CCE802C0CD536AA?menuitem=0&amp;fromTop=true&amp;fromPreferences=true&amp;fromEshelf=false&amp;vid=UWINDSOR" class="selected EXLMainMenuSelected EXLMainMenuITEMlibrary_search" target="_self"> New Search</a></span> </li> 
+       <li id="exlidMainMenuItem2" class="EXLMainMenuItem"> <span> 
+         <!-- Alma A-Z should be opened in the current window --> <a title="A to Z" href="dlSearch.do;jsessionid=98CA66AA3DEC9A8B5CCE802C0CD536AA?institution=UWINDSOR&amp;vid=UWINDSOR&amp;query=facet_atoz%2cexact%2cA&amp;indx=1&amp;bulkSize=30&amp;dym=false&amp;loc=local%2cscope%3a(AZUWINDSOR)&amp;fn=goAlmaAz&amp;sortField=stitle&amp;almaAzSearch=true&amp;azSearch=true&amp;selectedAzAlmaLetter=A" class=" EXLMainMenuITEMATOZ"> Journal List</a> </span> </li> 
+       <li id="exlidMainMenuItem3" class="EXLMainMenuItem"> <span><a title="Citation Linker" href="/primo_library/libweb/action/citationLinker.do;jsessionid=98CA66AA3DEC9A8B5CCE802C0CD536AA?menuitem=2&amp;openInSeperateWindow=Y&amp;isCitationLinker=Y&amp;spvid=UWINDSOR_SERVICES&amp;vid=UWINDSOR" class="EXLMainMenuITEMcitationlinker" target="_self"> Citation Linker</a></span> </li> 
+       <li id="exlidMainMenuItem6" class="EXLMainMenuItem EXLLastItem"> <span><a title="Get help using this portal" href="helpHandler.do;jsessionid=98CA66AA3DEC9A8B5CCE802C0CD536AA?helpId=search" class="EXLMainMenuITEMHelp" target="popup" onclick="boomCallToRum('help',false); openWindow(this.href, this.target, 'top=100,left=50,width=600,height=500,resizable=1,scrollbars=1'); return false;"> Help</a></span> </li> 
+      </ul> 
+     </div> 
+     <input type="hidden" class="gatherpagestat" value="true"> 
+     <input type="hidden" class="EXLTabBoomId" id="FindDbStat" value="A=Primo_Local&amp;I=UWINDSOR&amp;S=98CA66AA3DEC9A8B5CCE802C0CD536AA&amp;G=&amp;IP=10.28.120.59&amp;SRVR=fe0101.prod.pmt.dc04.hosted.exlibrisgroup.com&amp;P=find-database&amp;OP=databaseClick&amp;TYP=Page_View_4.9.18.0&amp;O=%26%26%26%26UWINDSOR%26UWINDSOR - University of Windsor%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=&amp;O5=01UTON-UW.UWINDSOR.PSTG&amp;O6=&amp;O7=0&amp;O8=&amp;O9=UWINDSOR&amp;O10=&amp;O11=&amp;O12=0&amp;O13=&amp;O14=&amp;O15=&amp;O16=&amp;O17=default_tab&amp;O18=&amp;O19=&amp;O20=&amp;O23=&amp;"> 
+     <input type="hidden" class="boombaseurl" value="https://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif"> 
+     <input type="hidden" class="gatherpagestat" value="true"> 
+     <input type="hidden" class="EXLTabBoomId" id="CitationLinkerStat" value="A=Primo_Local&amp;I=UWINDSOR&amp;S=98CA66AA3DEC9A8B5CCE802C0CD536AA&amp;G=&amp;IP=10.28.120.59&amp;SRVR=fe0101.prod.pmt.dc04.hosted.exlibrisgroup.com&amp;P=citation-linker&amp;OP=citationLinkerClick&amp;TYP=Page_View_4.9.18.0&amp;O=%26%26%26%26UWINDSOR%26UWINDSOR - University of Windsor%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=&amp;O5=01UTON-UW.UWINDSOR.PSTG&amp;O6=&amp;O7=0&amp;O8=&amp;O9=UWINDSOR&amp;O10=&amp;O11=&amp;O12=0&amp;O13=&amp;O14=&amp;O15=&amp;O16=&amp;O17=default_tab&amp;O18=&amp;O19=&amp;O20=&amp;O23=&amp;"> 
+     <input type="hidden" class="boombaseurl" value="https://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif"> 
+     <input type="hidden" class="gatherpagestat" value="true"> 
+     <input type="hidden" class="EXLTabBoomId" id="gotoAZ" value="A=Primo_Local&amp;I=UWINDSOR&amp;S=98CA66AA3DEC9A8B5CCE802C0CD536AA&amp;G=&amp;IP=10.28.120.59&amp;SRVR=fe0101.prod.pmt.dc04.hosted.exlibrisgroup.com&amp;P=general&amp;OP=gotoAZ&amp;TYP=Page_View_4.9.18.0&amp;O=%26%26%26%26UWINDSOR%26UWINDSOR - University of Windsor%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=&amp;O5=01UTON-UW.UWINDSOR.PSTG&amp;O6=&amp;O7=0&amp;O8=&amp;O9=UWINDSOR&amp;O10=&amp;O12=0&amp;O18=&amp;O23=&amp;"> 
+     <input type="hidden" class="boombaseurl" value="https://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif"> 
+     <input type="hidden" class="gatherpagestat" value="true"> 
+     <input type="hidden" class="EXLTabBoomId" id="help" value="A=Primo_Local&amp;I=UWINDSOR&amp;S=98CA66AA3DEC9A8B5CCE802C0CD536AA&amp;G=&amp;IP=10.28.120.59&amp;SRVR=fe0101.prod.pmt.dc04.hosted.exlibrisgroup.com&amp;P=general&amp;OP=help&amp;TYP=Page_View_4.9.18.0&amp;O=%26%26%26%26UWINDSOR%26UWINDSOR - University of Windsor%26%26&amp;O1=&amp;O2=&amp;O3=&amp;O4=&amp;O5=01UTON-UW.UWINDSOR.PSTG&amp;O6=&amp;O7=0&amp;O8=&amp;O9=UWINDSOR&amp;O10=&amp;O12=0&amp;O18=&amp;O23=&amp;"> 
+     <input type="hidden" class="boombaseurl" value="https://beacon01.alma.exlibrisgroup.com/boom/apache_pb.gif"> 
+     <!--Languages menu--> 
+     <div class="EXLLanguagesContainer"> 
+      <span class="EXLLanguagesLabel">Language:</span> 
+      <div class="EXLLanguagesMenu"> 
+       <ul id="exlidLanguages" class="EXLLanguageMenuShow EXLLanguageMenuHide ">
+        <!--remove EXLLanguageMenuHide to show menu items--> 
+        <li id="exlidSelectedLanguage" class="EXLLanguageLink"><a href="#">English<img src="../images/icon_arrow_sendTo.png" alt="Show More Options"></a></li> 
+        <li class="EXLLanguageLink EXLLanguageLinkHide"><a href="preferences.do;jsessionid=98CA66AA3DEC9A8B5CCE802C0CD536AA?fn=change_lang&amp;vid=UWINDSOR&amp;prefLang=fr_FR&amp;prefBackUrl=http:%2F%2Fprimo.uwindsor.ca%2Fprimo_library%2Flibweb%2Faction%2Fsearch.do?vid=UWINDSOR%26mode=Advanced%26ct=AdvancedSearch%26dscnt=0%26dstmp=1574468024793%26vid=UWINDSOR" class="EXLLanguageOptionLANGfr_FR" title="change interface language to">Français</a></li> 
+        <li class="EXLLanguageLink EXLLanguageLinkHide"><a href="preferences.do;jsessionid=98CA66AA3DEC9A8B5CCE802C0CD536AA?fn=change_lang&amp;vid=UWINDSOR&amp;prefLang=de_DE&amp;prefBackUrl=http:%2F%2Fprimo.uwindsor.ca%2Fprimo_library%2Flibweb%2Faction%2Fsearch.do?vid=UWINDSOR%26mode=Advanced%26ct=AdvancedSearch%26dscnt=0%26dstmp=1574468024793%26vid=UWINDSOR" class="EXLLanguageOptionLANGde_DE" title="change interface language to">Deutsch</a></li> 
+        <li class="EXLLanguageLink EXLLanguageLinkHide"><a href="preferences.do;jsessionid=98CA66AA3DEC9A8B5CCE802C0CD536AA?fn=change_lang&amp;vid=UWINDSOR&amp;prefLang=pt_BR&amp;prefBackUrl=http:%2F%2Fprimo.uwindsor.ca%2Fprimo_library%2Flibweb%2Faction%2Fsearch.do?vid=UWINDSOR%26mode=Advanced%26ct=AdvancedSearch%26dscnt=0%26dstmp=1574468024793%26vid=UWINDSOR" class="EXLLanguageOptionLANGpt_BR" title="change interface language to">Portuguese</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div id="flagForFindDbDeepLink" title="NotADeepLink"></div> 
+     <div id="savedSelectedMyAccountTab"></div> 
+     <div id="exlidLightbox"> 
+      <script type="text/javascript">
+var str = window.location.href;
+var n = str.match(/openFdb=true/g);
+if (n != null){
+boomCallToRum('FindDbStat',false);
+var openMyDatabases = str.match(/openMyDatabases=true/g);
+ if(openMyDatabases != null){
+   openPrimoLightBox('searchDB','loadSearchDbPage','searchDbXml','IamDeepLinkToMyDatabases'); 
+ }else{
+   openPrimoLightBox('searchDB','loadSearchDbPage','searchDbXml','IamDeepLink');
+ }
+}
+</script> 
+      <noscript>
+       This feature required javascript
+      </noscript> 
+     </div> 
+     <!-- end ../tiles/mainMenuTile.jsp --> 
+    </div> 
+    <!-- dynamic_recursion.jsp end --> 
+    <!-- dynamic_recursion.jsp begin --> 
+    <!-- taglibsIncludeAll.jspf begin --> 
+    <!-- taglibsIncludeAll.jspf end -->
+    <div id="exlidSearchTileWrapper" class="EXLCustomLayoutTile EXLSearchWrapper"> 
+     <!-- begin ../views/search/l_search_input.jsp --> 
+     <!-- l_search_input.jsp begin --> 
+     <!-- taglibsIncludeAll.jspf begin --> 
+     <!-- taglibsIncludeAll.jspf end -->
+     <!-- jsp_mapping_retriever.jsp begin --> 
+     <!-- jsp_mapping_retriever.jsp end --> 
+     <!-- resolved jsp page for search tile: ../../tiles/advancedSearchTile.jsp --> 
+     <!-- taglibsIncludeAll.jspf begin --> 
+     <!-- taglibsIncludeAll.jspf end -->
+     <script type="text/javascript"> // <![CDATA[
+
+function removeChildren(elm){
+	if ( elm.hasChildNodes() )
+	{
+    		while ( elm.childNodes.length >= 1 )
+    		{
+        			elm.removeChild( elm.firstChild );
+    		}
+	}
+}
+
+
+function loopSelected(selObj, newObj, selectedElm)
+{
+
+	for (i=0; i<selObj.options.length; i++) {
+		var op = document.createElement('option');
+		op.text = selObj.options[i].text;
+		op.value = selObj.options[i].value;
+		op.id = selObj.options[i].id;
+		if (selectedElm == selObj.options[i].value ){
+			op.selected = 'selected';
+		}
+		try {
+  			newObj.add(op, newObj.options[i]); // firefox
+		} catch (ex) {
+  			newObj.add(op, i); // ie
+		}
+	}
+}
+
+
+function showSelected(selectedOption, id  ) {
+
+		var selOperatorObj = document.getElementById('exlidInput_precisionOperator_' +id);
+		var selOperatorIndex = selOperatorObj.selectedIndex;
+		var titleObj=document.getElementById('exlidInput_scope_title' +id);
+
+		var allObj =document.getElementById('exlidInput_scope_all' +id);
+		var orgObj = document.getElementById('exlidInput_scope_' +id);
+		var selectedElm =orgObj.options[orgObj.selectedIndex];
+
+		if ( selOperatorObj.options[selOperatorIndex].value =='begins_with'){
+			if (titleObj == null || titleObj == undefined ){
+				selectedOption.options[0].selected = 'selected';
+				alert('Starts_with can only be selected for use with title');
+				return false;
+			}
+			removeChildren(orgObj);
+			loopSelected(titleObj, orgObj, selectedElm.value);
+			var searchForm = document.getElementsByName('searchForm')[0];
+			var hiddenSrt = document.getElementById("str");
+			hiddenSrt.value = 'title';
+		} else{
+			removeChildren(orgObj);
+			loopSelected(allObj, orgObj, selectedElm.value);
+			var searchForm = document.getElementsByName('searchForm')[0];
+			var hiddenSrt = document.getElementById("str");
+			hiddenSrt.value = 'rank';
+		}
+
+}
+
+function unselect(id  ) {
+
+	 	 if (document.getElementById('begins_with'+id)) {
+			var orgObj = document.getElementById('exlidInput_scope_' +id);
+			removeChildren(orgObj);
+			var op = document.createElement('option');
+			op.text = 'in the title';
+			op.value = 'title';
+			op.id = 'scope_titleOnly'+id;
+			op.selected = 'selected';
+			try {
+  				orgObj.add(op, orgObj.options[0]); // firefox
+			} catch (ex) {
+  				orgObj.add(op, 0); // ie
+			}
+			var searchForm = document.getElementsByName('searchForm')[0];
+			var hiddenSrt = document.getElementById("str");
+			hiddenSrt.value = 'title';
+		}
+}
+
+function unselectAdvanceTitle(id){
+
+	if (document.getElementById('title'+id)) {
+		var orgObj = document.getElementById('exlidInput_scope_' +id);
+		removeChildren(orgObj);
+		var op = document.createElement('option');
+		op.text = 'in the title';
+		op.value = 'title';
+		op.id = 'scope_titleOnly'+id;
+		op.selected = 'selected';
+		try {
+			orgObj.add(op, orgObj.options[0]); // firefox
+		} catch (ex) {
+			orgObj.add(op, 0); // ie
+		}
+		var searchForm = document.getElementsByName('searchForm')[0];
+		var hiddenSrt = document.getElementById("str");
+		hiddenSrt.value = 'title';
+	}
+}
+
+
+//]]>
+</script> 
+     <noscript>
+      This feature requires javascript
+     </noscript>
+     <form name="searchForm" method="get" action="/primo_library/libweb/action/search.do;jsessionid=98CA66AA3DEC9A8B5CCE802C0CD536AA?fn=search&amp;ct=search" class="EXLSearchForm" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="if(isRemoteSearch()){doPleaseWait();}if(window.manualFormSubmit){manualFormSubmit(this.id);return false;}" id="searchForm" target="_self">
+      <input id="fn" type="hidden" value="search" name="fn"> 
+      <input id="ct" type="hidden" value="search" name="ct"> 
+      <input id="initialSearch" type="hidden" value="true" name="initialSearch"> 
+      <input type="hidden" id="year_value" value="Year"> 
+      <div id="exlidAdvancedSearchTile" class="EXLAdvancedSearch"> 
+       <div id="exlidAdvancedSearchRibbon"> 
+        <!-- search_hidden.jspf begin --> 
+        <!-- taglibsIncludeAll.jspf begin --> 
+        <!-- taglibsIncludeAll.jspf end -->
+        <!--
+		institution = UWINDSOR - University of Windsor
+		institution code = UWINDSOR
+	 --> 
+        <input type="hidden" id="mode" name="mode" value="Advanced"> 
+        <input type="hidden" id="tab" name="tab" value="default_tab"> 
+        <input type="hidden" id="indx" name="indx" value="1"> 
+        <input type="hidden" id="dum" name="dum" value="true"> 
+        <input type="hidden" name="srt" value="rank" id="str"> 
+        <input type="hidden" id="vid" name="vid" value="UWINDSOR"> 
+        <input type="hidden" id="frbg" name="frbg" value=""> 
+        <!-- search_hidden.jspf end -->
+        <fieldset> 
+         <legend class="EXLHiddenCue">Primo Advanced Search</legend> 
+         <input type="hidden" name="tb" value="t" id="tb">
+         <div class="EXLSearchTabsContainer"> 
+          <ul id="exlidSearchTabs" class="EXLTabs"> 
+           <li id="exlidTab0" class="EXLSearchTab EXLSearchTabSelected"> <span id="defaultScopedefault_tab" style="display:none">Everything</span> <a href="search.do;jsessionid=98CA66AA3DEC9A8B5CCE802C0CD536AA?mode=Advanced&amp;vid=UWINDSOR&amp;tab=default_tab" class="EXLSearchTabTitle EXLSearchTabLABELOne Stop Search" onclick="getSearchField(this,'Advanced'); delay4Remote('local','true ','default_tab')" title="One Stop Search"> <span>One Stop Search</span> </a> </li> 
+           <li id="exlidTab1" class="EXLSearchTab "> <span id="defaultScopetab1" style="display:none">Library Catalog</span> <a href="search.do;jsessionid=98CA66AA3DEC9A8B5CCE802C0CD536AA?mode=Advanced&amp;vid=UWINDSOR&amp;tab=tab1" class="EXLSearchTabTitle EXLSearchTabLABELCatalogue" onclick="getSearchField(this,'Advanced'); delay4Remote('local','true ','tab1')" title="Catalogue"> <span>Catalogue</span> </a> </li> 
+          </ul> 
+         </div> 
+         <div class="EXLSearchFieldRibbon EXLSearchFieldRibbonPreFilters"> 
+          <div class="EXLSearchFieldRibbonFormFieldsGroup1"> 
+           <div class="EXLAdvancedSearchFormRow"> 
+            <!-- userText.tag begin --> 
+            <!-- userText.tag end -->
+           </div> 
+           <div class="EXLAdvancedSearchFormRow"> 
+            <fieldset id="exlidAdvancedSearchFieldset0"> 
+             <legend class="EXLHiddenCue">Primo Advanced Search Query Term</legend> 
+             <span class="EXLAdvancedSearchFormRowInlineInput "> <label class="EXLHide" for="exlidInput_scope_1"> Show Results with: </label> 
+              <!-- select.tag begin --> 
+              <!-- taglibsIncludeAll.jspf begin --> 
+              <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_scope_1">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_scope_1" name="vl(67192094UI0)"> <option value="any" id="scope_any1" selected class="EXLSelectedOption"> Any</option> <option value="title" id="scope_title1" class="EXLSelectOption"> in the title</option> <option value="creator" id="scope_creator1" class="EXLSelectOption"> as author/creator</option> <option value="sub" id="scope_sub1" class="EXLSelectOption"> in subject</option> </select> <label class="EXLHide" for="exlidInput_scope_title1">Show Results with:</label> <select class="EXLSelectTag fixed" id="exlidInput_scope_title1" name="vl(67192094UI0)" style="display:none"> <option value="title" id="scope_titleOnly1" selected class="EXLSelectOption"> in the title</option> </select> <label class="EXLHide" for="exlidInput_scope_all1">Show Results with:</label> <select class="EXLSelectTag fixed" id="exlidInput_scope_all1" name="vl(67192094UI0)" style="display:none"> <option style="display:block" value="any" id="scope_anyall1" selected class="EXLSelectedOption"> Any</option> <option style="display:block" value="title" id="scope_titleall1" class="EXLSelectOption"> in the title</option> <option style="display:block" value="creator" id="scope_creatorall1" class="EXLSelectOption"> as author/creator</option> <option style="display:block" value="sub" id="scope_suball1" class="EXLSelectOption"> in subject</option> </select> 
+              <!-- select.tag end --></span> 
+             <span class="EXLAdvancedSearchFormRowInlineInput "> <label class="EXLHide" for="exlidInput_precisionOperator_1"> Show Results with: </label> 
+              <!-- select.tag begin --> 
+              <!-- taglibsIncludeAll.jspf begin --> 
+              <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_precisionOperator_1">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_precisionOperator_1" onchange="showSelected(this, '1' ); return false;" name="vl(1UIStartWith0)"> <option value="contains" selected class="EXLSelectedOption"> contains</option> <option value="exact" class="EXLSelectOption"> is (exact)</option> <option value="begins_with" class="EXLSelectOption"> starts with</option> </select> 
+              <!-- select.tag end --></span> 
+             <span class="EXLAdvancedSearchFormRowInlineInput "> <label class="EXLHide" for="input_freeText0"> Input search text: </label> <input type="text" id="input_freeText0" name="vl(freeText0)" value=""> </span> 
+             <span class="EXLAdvancedSearchFormRowInlineInput EXLBooleanOperatorInput"> <label class="EXLHide" for="exlidInput_boolOperator_1"> Show Results with: </label> 
+              <!-- select.tag begin --> 
+              <!-- taglibsIncludeAll.jspf begin --> 
+              <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_boolOperator_1">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_boolOperator_1" name="vl(boolOperator0)"> <option style="display:block" value="AND" id="boolOperator_AND1" selected class="EXLSelectedOption"> AND</option> <option style="display:block" value="OR" id="boolOperator_OR1" class="EXLSelectOption"> OR</option> <option style="display:block" value="NOT" id="boolOperator_NOT1" class="EXLSelectOption"> NOT</option> </select> 
+              <!-- select.tag end --></span> 
+            </fieldset> 
+           </div> 
+           <div class="EXLAdvancedSearchFormRow"> 
+            <fieldset id="exlidAdvancedSearchFieldset1"> 
+             <legend class="EXLHiddenCue">Primo Advanced Search Query Term</legend> 
+             <span class="EXLAdvancedSearchFormRowInlineInput "> <label class="EXLHide" for="exlidInput_scope_2"> Show Results with: </label> 
+              <!-- select.tag begin --> 
+              <!-- taglibsIncludeAll.jspf begin --> 
+              <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_scope_2">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_scope_2" name="vl(67192095UI1)"> <option value="any" id="scope_any2" selected class="EXLSelectedOption"> Any</option> <option value="title" id="scope_title2" class="EXLSelectOption"> in the title</option> <option value="creator" id="scope_creator2" class="EXLSelectOption"> as author/creator</option> <option value="sub" id="scope_sub2" class="EXLSelectOption"> in subject</option> </select> <label class="EXLHide" for="exlidInput_scope_title2">Show Results with:</label> <select class="EXLSelectTag fixed" id="exlidInput_scope_title2" name="vl(67192095UI1)" style="display:none"> <option value="title" id="scope_titleOnly2" selected class="EXLSelectOption"> in the title</option> </select> <label class="EXLHide" for="exlidInput_scope_all2">Show Results with:</label> <select class="EXLSelectTag fixed" id="exlidInput_scope_all2" name="vl(67192095UI1)" style="display:none"> <option style="display:block" value="any" id="scope_anyall2" selected class="EXLSelectedOption"> Any</option> <option style="display:block" value="title" id="scope_titleall2" class="EXLSelectOption"> in the title</option> <option style="display:block" value="creator" id="scope_creatorall2" class="EXLSelectOption"> as author/creator</option> <option style="display:block" value="sub" id="scope_suball2" class="EXLSelectOption"> in subject</option> </select> 
+              <!-- select.tag end --></span> 
+             <span class="EXLAdvancedSearchFormRowInlineInput "> <label class="EXLHide" for="exlidInput_precisionOperator_2"> Show Results with: </label> 
+              <!-- select.tag begin --> 
+              <!-- taglibsIncludeAll.jspf begin --> 
+              <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_precisionOperator_2">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_precisionOperator_2" onchange="showSelected(this, '2' ); return false;" name="vl(1UIStartWith1)"> <option value="contains" selected class="EXLSelectedOption"> contains</option> <option value="exact" class="EXLSelectOption"> is (exact)</option> <option value="begins_with" class="EXLSelectOption"> starts with</option> </select> 
+              <!-- select.tag end --></span> 
+             <span class="EXLAdvancedSearchFormRowInlineInput "> <label class="EXLHide" for="input_freeText1"> Input search text: </label> <input type="text" id="input_freeText1" name="vl(freeText1)" value=""> </span> 
+             <span class="EXLAdvancedSearchFormRowInlineInput EXLBooleanOperatorInput"> <label class="EXLHide" for="exlidInput_boolOperator_2"> Show Results with: </label> 
+              <!-- select.tag begin --> 
+              <!-- taglibsIncludeAll.jspf begin --> 
+              <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_boolOperator_2">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_boolOperator_2" name="vl(boolOperator1)"> <option style="display:block" value="AND" id="boolOperator_AND2" selected class="EXLSelectedOption"> AND</option> <option style="display:block" value="OR" id="boolOperator_OR2" class="EXLSelectOption"> OR</option> <option style="display:block" value="NOT" id="boolOperator_NOT2" class="EXLSelectOption"> NOT</option> </select> 
+              <!-- select.tag end --></span> 
+            </fieldset> 
+           </div> 
+           <div class="EXLAdvancedSearchFormRow"> 
+            <fieldset id="exlidAdvancedSearchFieldset2"> 
+             <legend class="EXLHiddenCue">Primo Advanced Search Query Term</legend> 
+             <span class="EXLAdvancedSearchFormRowInlineInput "> <label class="EXLHide" for="exlidInput_scope_3"> Show Results with: </label> 
+              <!-- select.tag begin --> 
+              <!-- taglibsIncludeAll.jspf begin --> 
+              <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_scope_3">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_scope_3" name="vl(555182199UI2)"> <option value="any" id="scope_any3" selected class="EXLSelectedOption"> Any</option> <option value="title" id="scope_title3" class="EXLSelectOption"> in the title</option> <option value="creator" id="scope_creator3" class="EXLSelectOption"> as author/creator</option> <option value="sub" id="scope_sub3" class="EXLSelectOption"> in subject</option> </select> <label class="EXLHide" for="exlidInput_scope_title3">Show Results with:</label> <select class="EXLSelectTag fixed" id="exlidInput_scope_title3" name="vl(555182199UI2)" style="display:none"> <option value="title" id="scope_titleOnly3" selected class="EXLSelectOption"> in the title</option> </select> <label class="EXLHide" for="exlidInput_scope_all3">Show Results with:</label> <select class="EXLSelectTag fixed" id="exlidInput_scope_all3" name="vl(555182199UI2)" style="display:none"> <option style="display:block" value="any" id="scope_anyall3" selected class="EXLSelectedOption"> Any</option> <option style="display:block" value="title" id="scope_titleall3" class="EXLSelectOption"> in the title</option> <option style="display:block" value="creator" id="scope_creatorall3" class="EXLSelectOption"> as author/creator</option> <option style="display:block" value="sub" id="scope_suball3" class="EXLSelectOption"> in subject</option> </select> 
+              <!-- select.tag end --></span> 
+             <span class="EXLAdvancedSearchFormRowInlineInput "> <label class="EXLHide" for="exlidInput_precisionOperator_3"> Show Results with: </label> 
+              <!-- select.tag begin --> 
+              <!-- taglibsIncludeAll.jspf begin --> 
+              <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_precisionOperator_3">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_precisionOperator_3" onchange="showSelected(this, '3' ); return false;" name="vl(1UIStartWith2)"> <option value="contains" selected class="EXLSelectedOption"> contains</option> <option value="exact" class="EXLSelectOption"> is (exact)</option> <option value="begins_with" class="EXLSelectOption"> starts with</option> </select> 
+              <!-- select.tag end --></span> 
+             <span class="EXLAdvancedSearchFormRowInlineInput "> <label class="EXLHide" for="input_freeText2"> Input search text: </label> <input type="text" id="input_freeText2" name="vl(freeText2)" value=""> </span> 
+             <span class="EXLAdvancedSearchFormRowInlineInput EXLBooleanOperatorInput"> <label class="EXLHide" for="exlidInput_boolOperator_3"> Show Results with: </label> 
+              <!-- select.tag begin --> 
+              <!-- taglibsIncludeAll.jspf begin --> 
+              <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_boolOperator_3">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_boolOperator_3" name="vl(boolOperator2)"> <option style="display:block" value="AND" id="boolOperator_AND3" selected class="EXLSelectedOption"> AND</option> <option style="display:block" value="OR" id="boolOperator_OR3" class="EXLSelectOption"> OR</option> <option style="display:block" value="NOT" id="boolOperator_NOT3" class="EXLSelectOption"> NOT</option> </select> 
+              <!-- select.tag end --></span> 
+            </fieldset> 
+           </div> 
+           <div class="EXLAdvancedSearchFormRow"> 
+            <fieldset id="exlidAdvancedSearchFieldset3"> 
+             <legend class="EXLHiddenCue">Primo Advanced Search Query Term</legend> 
+             <span class="EXLAdvancedSearchFormRowInlineInput "> <label class="EXLHide" for="exlidInput_scope_4"> Show Results with: </label> 
+              <!-- select.tag begin --> 
+              <!-- taglibsIncludeAll.jspf begin --> 
+              <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_scope_4">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_scope_4" name="vl(555182312UI3)"> <option value="any" id="scope_any4" selected class="EXLSelectedOption"> Any</option> <option value="title" id="scope_title4" class="EXLSelectOption"> in the title</option> <option value="creator" id="scope_creator4" class="EXLSelectOption"> as author/creator</option> <option value="sub" id="scope_sub4" class="EXLSelectOption"> in subject</option> </select> <label class="EXLHide" for="exlidInput_scope_title4">Show Results with:</label> <select class="EXLSelectTag fixed" id="exlidInput_scope_title4" name="vl(555182312UI3)" style="display:none"> <option value="title" id="scope_titleOnly4" selected class="EXLSelectOption"> in the title</option> </select> <label class="EXLHide" for="exlidInput_scope_all4">Show Results with:</label> <select class="EXLSelectTag fixed" id="exlidInput_scope_all4" name="vl(555182312UI3)" style="display:none"> <option style="display:block" value="any" id="scope_anyall4" selected class="EXLSelectedOption"> Any</option> <option style="display:block" value="title" id="scope_titleall4" class="EXLSelectOption"> in the title</option> <option style="display:block" value="creator" id="scope_creatorall4" class="EXLSelectOption"> as author/creator</option> <option style="display:block" value="sub" id="scope_suball4" class="EXLSelectOption"> in subject</option> </select> 
+              <!-- select.tag end --></span> 
+             <span class="EXLAdvancedSearchFormRowInlineInput "> <label class="EXLHide" for="exlidInput_precisionOperator_4"> Show Results with: </label> 
+              <!-- select.tag begin --> 
+              <!-- taglibsIncludeAll.jspf begin --> 
+              <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_precisionOperator_4">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_precisionOperator_4" onchange="showSelected(this, '4' ); return false;" name="vl(1UIStartWith3)"> <option value="contains" selected class="EXLSelectedOption"> contains</option> <option value="exact" class="EXLSelectOption"> is (exact)</option> <option value="begins_with" class="EXLSelectOption"> starts with</option> </select> 
+              <!-- select.tag end --></span> 
+             <span class="EXLAdvancedSearchFormRowInlineInput "> <label class="EXLHide" for="input_freeText3"> Input search text: </label> <input type="text" id="input_freeText3" name="vl(freeText3)" value=""> </span> 
+             <span class="EXLAdvancedSearchFormRowInlineInput EXLBooleanOperatorInput EXLHidden"> <label class="EXLHide" for="exlidInput_boolOperator_4"> Show Results with: </label> 
+              <!-- select.tag begin --> 
+              <!-- taglibsIncludeAll.jspf begin --> 
+              <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_boolOperator_4">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_boolOperator_4" name="vl(boolOperator3)"> <option style="display:block" value="AND" id="boolOperator_AND4" selected class="EXLSelectedOption"> AND</option> <option style="display:block" value="OR" id="boolOperator_OR4" class="EXLSelectOption"> OR</option> <option style="display:block" value="NOT" id="boolOperator_NOT4" class="EXLSelectOption"> NOT</option> </select> 
+              <!-- select.tag end --></span> 
+            </fieldset> 
+           </div> 
+           <!--prefilters row--> 
+           <div class="EXLAdvancedSearchFormRow EXLAdvancedSearchFormRowPrefilters"> 
+            <fieldset id="exlidAdvancedSearchFieldsetPreFilters"> 
+             <legend class="EXLHiddenCue">Primo Advanced Search prefilters</legend> 
+             <span class="EXLAdvancedSearchFormRowInlineInput"> </span> 
+            </fieldset> 
+           </div> 
+          </div> 
+          <!-- start right column --> 
+          <div class="EXLSearchFieldRibbonFormFieldsGroup2"> 
+           <div class="EXLAdvancedSearchFormRow"> 
+            <span class="EXLAdvancedSearchFormRowInlineInput"> <label for="exlidInput_publicationDate_">Publication Date:</label> 
+             <!-- select.tag begin --> 
+             <!-- taglibsIncludeAll.jspf begin --> 
+             <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_publicationDate_">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_publicationDate_" name="vl(D64785727UI4)"> <option style="display:block" value="all_items" id="publicationDate_all_items" selected class="EXLSelectedOption"> Any year</option> <option style="display:block" value="1-YEAR" id="publicationDate_1-YEAR" class="EXLSelectOption"> Last year</option> <option style="display:block" value="2-YEAR" id="publicationDate_2-YEAR" class="EXLSelectOption"> Last 2 years</option> <option style="display:block" value="5-YEAR" id="publicationDate_5-YEAR" class="EXLSelectOption"> Last 5 years</option> <option style="display:block" value="10-YEAR" id="publicationDate_10-YEAR" class="EXLSelectOption"> Last 10 years</option> <option style="display:block" value="20-YEAR" id="publicationDate_20-YEAR" class="EXLSelectOption"> Last 20 years</option> </select> 
+             <!-- select.tag end --></span> 
+           </div> 
+           <div class="EXLAdvancedSearchFormRow"> 
+            <span class="EXLAdvancedSearchFormRowInlineInput"> <label for="exlidInput_mediaType_">Material Type:</label> 
+             <!-- select.tag begin --> 
+             <!-- taglibsIncludeAll.jspf begin --> 
+             <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_mediaType_">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_mediaType_" name="vl(527375623UI5)"> <option style="display:block" value="all_items" id="mediaType_all_items" selected class="EXLSelectedOption"> All items</option> <option style="display:block" value="books" id="mediaType_books" class="EXLSelectOption"> Books</option> <option style="display:block" value="articles" id="mediaType_articles" class="EXLSelectOption"> Articles</option> <option style="display:block" value="journals" id="mediaType_journals" class="EXLSelectOption"> Journals</option> <option style="display:block" value="audio_video" id="mediaType_audio_video" class="EXLSelectOption"> Audio Visual</option> <option style="display:block" value="images" id="mediaType_images" class="EXLSelectOption"> Images</option> <option style="display:block" value="websites" id="mediaType_websites" class="EXLSelectOption"> Web Sites</option> <option style="display:block" value="rare_books" id="mediaType_rare_books" class="EXLSelectOption"> Rare Books</option> <option style="display:block" value="government_documents" id="mediaType_government_documents" class="EXLSelectOption"> Government documents</option> <option style="display:block" value="newspaper_articles" id="mediaType_newspaper_articles" class="EXLSelectOption"> Newspaper Articles</option> <option style="display:block" value="reference_entrys" id="mediaType_reference_entrys" class="EXLSelectOption"> Reference entries</option> <option style="display:block" value="reviews" id="mediaType_reviews" class="EXLSelectOption"> Reviews</option> <option style="display:block" value="statistical_data_sets" id="mediaType_statistical_data_sets" class="EXLSelectOption"> Statistical Data Sets</option> <option style="display:block" value="scores" id="mediaType_scores" class="EXLSelectOption"> Scores</option> <option style="display:block" value="maps" id="mediaType_maps" class="EXLSelectOption"> Maps</option> <option style="display:block" value="legal_documents" id="mediaType_legal_documents" class="EXLSelectOption"> Legal documents</option> <option style="display:block" value="conference_proceedings" id="mediaType_conference_proceedings" class="EXLSelectOption"> Conference Proceedings</option> <option style="display:block" value="dissertations" id="mediaType_dissertations" class="EXLSelectOption"> Dissertations</option> <option style="display:block" value="databases" id="mediaType_databases" class="EXLSelectOption"> Databases</option> </select> 
+             <!-- select.tag end --></span> 
+           </div> 
+           <div class="EXLAdvancedSearchFormRow"> 
+            <span class="EXLAdvancedSearchFormRowInlineInput"> <label for="exlidInput_language_">Language:</label> 
+             <!-- select.tag begin --> 
+             <!-- taglibsIncludeAll.jspf begin --> 
+             <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_language_">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_language_" name="vl(556731757UI6)"> <option style="display:block" value="all_items" id="language_all_items" selected class="EXLSelectedOption"> Any language</option> <option style="display:block" value="eng" id="language_eng" class="EXLSelectOption"> English</option> <option style="display:block" value="fre" id="language_fre" class="EXLSelectOption"> French</option> <option style="display:block" value="ger" id="language_ger" class="EXLSelectOption"> German</option> <option style="display:block" value="spa" id="language_spa" class="EXLSelectOption"> Spanish</option> <option style="display:block" value="ita" id="language_ita" class="EXLSelectOption"> Italian</option> <option style="display:block" value="rus" id="language_rus" class="EXLSelectOption"> Russian</option> <option style="display:block" value="lat" id="language_lat" class="EXLSelectOption"> Latin</option> <option style="display:block" value="gre" id="language_gre" class="EXLSelectOption"> Greek</option> <option style="display:block" value="ara" id="language_ara" class="EXLSelectOption"> Arabic</option> <option style="display:block" value="hin" id="language_hin" class="EXLSelectOption"> Hindi</option> <option style="display:block" value="chi" id="language_chi" class="EXLSelectOption"> Chinese</option> <option style="display:block" value="pol" id="language_pol" class="EXLSelectOption"> Polish</option> <option style="display:block" value="jpn" id="language_jpn" class="EXLSelectOption"> Japanese</option> <option style="display:block" value="oji" id="language_oji" class="EXLSelectOption"> Ojibwa</option> </select> 
+             <!-- select.tag end --></span> 
+           </div> 
+           <div class="EXLAdvancedSearchFormRow"> 
+            <span class="EXLAdvancedSearchFormDateRangeRow"> <label for="exlidInput_DateRange_Start">Start Date:</label> 
+             <!-- select.tag begin --> 
+             <!-- taglibsIncludeAll.jspf begin --> 
+             <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_drStartDay_">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_drStartDay_" name="vl(64785728UI7)"> <option style="display:block" value="00" id="drStartDay_00" class="EXLSelectOption"> Day</option> <option style="display:block" value="01" id="drStartDay_01" class="EXLSelectOption"> 01</option> <option style="display:block" value="02" id="drStartDay_02" class="EXLSelectOption"> 02</option> <option style="display:block" value="03" id="drStartDay_03" class="EXLSelectOption"> 03</option> <option style="display:block" value="04" id="drStartDay_04" class="EXLSelectOption"> 04</option> <option style="display:block" value="05" id="drStartDay_05" class="EXLSelectOption"> 05</option> <option style="display:block" value="06" id="drStartDay_06" class="EXLSelectOption"> 06</option> <option style="display:block" value="07" id="drStartDay_07" class="EXLSelectOption"> 07</option> <option style="display:block" value="08" id="drStartDay_08" class="EXLSelectOption"> 08</option> <option style="display:block" value="09" id="drStartDay_09" class="EXLSelectOption"> 09</option> <option style="display:block" value="10" id="drStartDay_10" class="EXLSelectOption"> 10</option> <option style="display:block" value="11" id="drStartDay_11" class="EXLSelectOption"> 11</option> <option style="display:block" value="12" id="drStartDay_12" class="EXLSelectOption"> 12</option> <option style="display:block" value="13" id="drStartDay_13" class="EXLSelectOption"> 13</option> <option style="display:block" value="14" id="drStartDay_14" class="EXLSelectOption"> 14</option> <option style="display:block" value="15" id="drStartDay_15" class="EXLSelectOption"> 15</option> <option style="display:block" value="16" id="drStartDay_16" class="EXLSelectOption"> 16</option> <option style="display:block" value="17" id="drStartDay_17" class="EXLSelectOption"> 17</option> <option style="display:block" value="18" id="drStartDay_18" class="EXLSelectOption"> 18</option> <option style="display:block" value="19" id="drStartDay_19" class="EXLSelectOption"> 19</option> <option style="display:block" value="20" id="drStartDay_20" class="EXLSelectOption"> 20</option> <option style="display:block" value="21" id="drStartDay_21" class="EXLSelectOption"> 21</option> <option style="display:block" value="22" id="drStartDay_22" class="EXLSelectOption"> 22</option> <option style="display:block" value="23" id="drStartDay_23" class="EXLSelectOption"> 23</option> <option style="display:block" value="24" id="drStartDay_24" class="EXLSelectOption"> 24</option> <option style="display:block" value="25" id="drStartDay_25" class="EXLSelectOption"> 25</option> <option style="display:block" value="26" id="drStartDay_26" class="EXLSelectOption"> 26</option> <option style="display:block" value="27" id="drStartDay_27" class="EXLSelectOption"> 27</option> <option style="display:block" value="28" id="drStartDay_28" class="EXLSelectOption"> 28</option> <option style="display:block" value="29" id="drStartDay_29" class="EXLSelectOption"> 29</option> <option style="display:block" value="30" id="drStartDay_30" class="EXLSelectOption"> 30</option> <option style="display:block" value="31" id="drStartDay_31" class="EXLSelectOption"> 31</option> </select> 
+             <!-- select.tag end -->
+             <!-- select.tag begin --> 
+             <!-- taglibsIncludeAll.jspf begin --> 
+             <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_drStartMonth_">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_drStartMonth_" name="vl(64785729UI7)"> <option style="display:block" value="00" id="drStartMonth_00" class="EXLSelectOption"> Month</option> <option style="display:block" value="01" id="drStartMonth_01" class="EXLSelectOption"> 01</option> <option style="display:block" value="02" id="drStartMonth_02" class="EXLSelectOption"> 02</option> <option style="display:block" value="03" id="drStartMonth_03" class="EXLSelectOption"> 03</option> <option style="display:block" value="04" id="drStartMonth_04" class="EXLSelectOption"> 04</option> <option style="display:block" value="05" id="drStartMonth_05" class="EXLSelectOption"> 05</option> <option style="display:block" value="06" id="drStartMonth_06" class="EXLSelectOption"> 06</option> <option style="display:block" value="07" id="drStartMonth_07" class="EXLSelectOption"> 07</option> <option style="display:block" value="08" id="drStartMonth_08" class="EXLSelectOption"> 08</option> <option style="display:block" value="09" id="drStartMonth_09" class="EXLSelectOption"> 09</option> <option style="display:block" value="10" id="drStartMonth_10" class="EXLSelectOption"> 10</option> <option style="display:block" value="11" id="drStartMonth_11" class="EXLSelectOption"> 11</option> <option style="display:block" value="12" id="drStartMonth_12" class="EXLSelectOption"> 12</option> </select> 
+             <!-- select.tag end --><label class="EXLHide" for="input_drStartYear7">query input</label> <input type="text" placeholder="Year" id="input_drStartYear7" name="vl(drStartYear7)"> </span> 
+           </div> 
+           <div class="EXLAdvancedSearchFormRow"> 
+            <span class="EXLAdvancedSearchFormDateRangeRow"> <label for="exlidInput_DateRange_Start">End Date:</label> 
+             <!-- select.tag begin --> 
+             <!-- taglibsIncludeAll.jspf begin --> 
+             <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_drEndDay_">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_drEndDay_" name="vl(64785730UI7)"> <option style="display:block" value="00" id="drEndDay_00" class="EXLSelectOption"> Day</option> <option style="display:block" value="01" id="drEndDay_01" class="EXLSelectOption"> 01</option> <option style="display:block" value="02" id="drEndDay_02" class="EXLSelectOption"> 02</option> <option style="display:block" value="03" id="drEndDay_03" class="EXLSelectOption"> 03</option> <option style="display:block" value="04" id="drEndDay_04" class="EXLSelectOption"> 04</option> <option style="display:block" value="05" id="drEndDay_05" class="EXLSelectOption"> 05</option> <option style="display:block" value="06" id="drEndDay_06" class="EXLSelectOption"> 06</option> <option style="display:block" value="07" id="drEndDay_07" class="EXLSelectOption"> 07</option> <option style="display:block" value="08" id="drEndDay_08" class="EXLSelectOption"> 08</option> <option style="display:block" value="09" id="drEndDay_09" class="EXLSelectOption"> 09</option> <option style="display:block" value="10" id="drEndDay_10" class="EXLSelectOption"> 10</option> <option style="display:block" value="11" id="drEndDay_11" class="EXLSelectOption"> 11</option> <option style="display:block" value="12" id="drEndDay_12" class="EXLSelectOption"> 12</option> <option style="display:block" value="13" id="drEndDay_13" class="EXLSelectOption"> 13</option> <option style="display:block" value="14" id="drEndDay_14" class="EXLSelectOption"> 14</option> <option style="display:block" value="15" id="drEndDay_15" class="EXLSelectOption"> 15</option> <option style="display:block" value="16" id="drEndDay_16" class="EXLSelectOption"> 16</option> <option style="display:block" value="17" id="drEndDay_17" class="EXLSelectOption"> 17</option> <option style="display:block" value="18" id="drEndDay_18" class="EXLSelectOption"> 18</option> <option style="display:block" value="19" id="drEndDay_19" class="EXLSelectOption"> 19</option> <option style="display:block" value="20" id="drEndDay_20" class="EXLSelectOption"> 20</option> <option style="display:block" value="21" id="drEndDay_21" class="EXLSelectOption"> 21</option> <option style="display:block" value="22" id="drEndDay_22" class="EXLSelectOption"> 22</option> <option style="display:block" value="23" id="drEndDay_23" class="EXLSelectOption"> 23</option> <option style="display:block" value="24" id="drEndDay_24" class="EXLSelectOption"> 24</option> <option style="display:block" value="25" id="drEndDay_25" class="EXLSelectOption"> 25</option> <option style="display:block" value="26" id="drEndDay_26" class="EXLSelectOption"> 26</option> <option style="display:block" value="27" id="drEndDay_27" class="EXLSelectOption"> 27</option> <option style="display:block" value="28" id="drEndDay_28" class="EXLSelectOption"> 28</option> <option style="display:block" value="29" id="drEndDay_29" class="EXLSelectOption"> 29</option> <option style="display:block" value="30" id="drEndDay_30" class="EXLSelectOption"> 30</option> <option style="display:block" value="31" id="drEndDay_31" class="EXLSelectOption"> 31</option> </select> 
+             <!-- select.tag end -->
+             <!-- select.tag begin --> 
+             <!-- taglibsIncludeAll.jspf begin --> 
+             <!-- taglibsIncludeAll.jspf end --><label class="EXLHide" for="exlidInput_drEndMonth_">criteria input</label> <select class="EXLSelectTag fixed" id="exlidInput_drEndMonth_" name="vl(64785731UI7)"> <option style="display:block" value="00" id="drEndMonth_00" class="EXLSelectOption"> Month</option> <option style="display:block" value="01" id="drEndMonth_01" class="EXLSelectOption"> 01</option> <option style="display:block" value="02" id="drEndMonth_02" class="EXLSelectOption"> 02</option> <option style="display:block" value="03" id="drEndMonth_03" class="EXLSelectOption"> 03</option> <option style="display:block" value="04" id="drEndMonth_04" class="EXLSelectOption"> 04</option> <option style="display:block" value="05" id="drEndMonth_05" class="EXLSelectOption"> 05</option> <option style="display:block" value="06" id="drEndMonth_06" class="EXLSelectOption"> 06</option> <option style="display:block" value="07" id="drEndMonth_07" class="EXLSelectOption"> 07</option> <option style="display:block" value="08" id="drEndMonth_08" class="EXLSelectOption"> 08</option> <option style="display:block" value="09" id="drEndMonth_09" class="EXLSelectOption"> 09</option> <option style="display:block" value="10" id="drEndMonth_10" class="EXLSelectOption"> 10</option> <option style="display:block" value="11" id="drEndMonth_11" class="EXLSelectOption"> 11</option> <option style="display:block" value="12" id="drEndMonth_12" class="EXLSelectOption"> 12</option> </select> 
+             <!-- select.tag end --><label class="EXLHide" for="input_64785732UI7">query input</label> <input type="text" placeholder="Year" id="input_64785732UI7" name="vl(64785732UI7)"> </span> 
+           </div> 
+           <!-- static closing parts of right column --> 
+           <div id="scopesListAdvancedSearch"> 
+            <!-- taglibsIncludeAll.jspf begin --> 
+            <!-- taglibsIncludeAll.jspf end -->
+            <div id="scopesListAdvanced" class="EXLAdvancedSearchFormRow EXLAdvancedSearchFormRowHide"> 
+             <span class="EXLAdvancedSearchFormRowInlineInput"> <label for="exlidSearchIn"> </label> <select id="exlidSearchIn" class="EXLSearchInputScopesSelect" name="scp.scps" disabled> <option id="EVERYTHING" value="scope:(UWINDSOR_COURSE),scope:(&quot;UWINDSOR&quot;),scope:(UWINDSOR_DIGITALCOMMONS),primo_central_multiple_fe" class="EXLSelectedOption EXLSearchInputScopesOptionEVERYTHING" selected>Everything</option> </select> </span> 
+             <div class="EXLAdvancedSearchFormRow"> 
+              <!-- userText.tag begin --> 
+              <!-- userText.tag end -->
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div>
+         <!-- end right column --> 
+         <div class="EXLSearchFieldRibbonFormSubmitSearch"> 
+          <input id="goButton" name="Submit" type="submit" value="Search" class="submit"> 
+         </div> 
+         <div class="EXLSearchFieldRibbonFormSubmitSearch EXLSearchFieldRibbonFormClearSearch"> 
+          <input id="exlidClearSelectedFieldsAdvancedSearch" type="button" value="Clear" class="submit EXLAdvancedSearchClearSelection"> 
+         </div> 
+         <div class="EXLSearchFieldRibbonFormLinks"> 
+          <a href="search.do;jsessionid=98CA66AA3DEC9A8B5CCE802C0CD536AA?mode=Basic&amp;ct=BasicSearch&amp;vid=UWINDSOR&amp;ct=AdvancedSearch&amp;dscnt=0&amp;dstmp=1574468024807" title="Return to basic search options">Simple Search</a> 
+         </div> 
+        </fieldset> 
+       </div> 
+      </div> 
+     </form>
+     <!-- l_search_input.jsp end -->
+     <!-- end ../views/search/l_search_input.jsp --> 
+    </div> 
+    <!-- dynamic_recursion.jsp end --> 
+    <!-- dynamic_recursion.jsp begin --> 
+    <!-- taglibsIncludeAll.jspf begin --> 
+    <!-- taglibsIncludeAll.jspf end -->
+    <div id="exlidHeaderSystemFeedback" class="EXLCustomLayoutTile EXLSystemFeedback"> 
+     <!-- begin ../tiles/systemFeedbackTile.jsp --> 
+     <!-- systemFeedbackTile.jsp begin --> 
+     <!-- taglibsIncludeAll.jspf begin --> 
+     <!-- taglibsIncludeAll.jspf end -->
+     <!-- systemFeedbackTile.jsp end -->
+     <!-- end ../tiles/systemFeedbackTile.jsp --> 
+    </div> 
+    <!-- dynamic_recursion.jsp end --> 
+   </div> 
+   <!-- dynamic_recursion.jsp end --> 
+   <!-- dynamic_recursion.jsp begin --> 
+   <!-- taglibsIncludeAll.jspf begin --> 
+   <!-- taglibsIncludeAll.jspf end -->
+   <div id="exlidHomeContainer" class="EXLCustomLayoutContainer EXLHomeContainer"> 
+    <!-- dynamic_recursion.jsp begin --> 
+    <!-- taglibsIncludeAll.jspf begin --> 
+    <!-- taglibsIncludeAll.jspf end -->
+    <div class="EXLCustomLayoutContainer EXLHomeBlockContainer1"> 
+     <!-- dynamic_recursion.jsp begin --> 
+     <!-- taglibsIncludeAll.jspf begin --> 
+     <!-- taglibsIncludeAll.jspf end -->
+     <div class="EXLCustomLayoutTile EXLContentBlock1"> 
+      <!-- begin ../views/include/l_featured.jsp --> 
+      <!-- l_featured.jsp begin --> 
+      <!-- taglibsIncludeAll.jspf begin --> 
+      <!-- taglibsIncludeAll.jspf end -->
+      <!-- jsp_mapping_retriever.jsp begin --> 
+      <!-- jsp_mapping_retriever.jsp end --> 
+      <!-- featured.jsp begin --> 
+      <!-- taglibsIncludeAll.jspf begin --> 
+      <!-- taglibsIncludeAll.jspf end -->
+      <!-- includeStaticHTML.jspf begin (/static_htmls/blank.html) --> 
+      <!-- taglibsIncludeAll.jspf begin --> 
+      <!-- taglibsIncludeAll.jspf end -->
+      <!-- includeStaticHTML.jspf end (/static_htmls/blank.html) -->
+      <!-- featured.jsp end -->
+      <!-- l_featured.jsp end -->
+      <!-- end ../views/include/l_featured.jsp --> 
+     </div> 
+     <!-- dynamic_recursion.jsp end --> 
+     <!-- dynamic_recursion.jsp begin --> 
+     <!-- taglibsIncludeAll.jspf begin --> 
+     <!-- taglibsIncludeAll.jspf end -->
+     <div class="EXLCustomLayoutTile EXLContentBlock2"> 
+      <!-- begin ../views/include/l_news.jsp --> 
+      <!-- l_news.jsp begin --> 
+      <!-- taglibsIncludeAll.jspf begin --> 
+      <!-- taglibsIncludeAll.jspf end -->
+      <!-- jsp_mapping_retriever.jsp begin --> 
+      <!-- jsp_mapping_retriever.jsp end --> 
+      <!-- news.jsp begin --> 
+      <!-- taglibsIncludeAll.jspf begin --> 
+      <!-- taglibsIncludeAll.jspf end -->
+      <div> 
+       <!-- includeStaticHTML.jspf begin (/static_htmls/blank.html) --> 
+       <!-- taglibsIncludeAll.jspf begin --> 
+       <!-- taglibsIncludeAll.jspf end -->
+       <!-- includeStaticHTML.jspf end (/static_htmls/blank.html) -->
+      </div> 
+      <!-- news.jsp end -->
+      <!-- l_news.jsp end -->
+      <!-- end ../views/include/l_news.jsp --> 
+     </div> 
+     <!-- dynamic_recursion.jsp end --> 
+    </div> 
+    <!-- dynamic_recursion.jsp end --> 
+    <!-- dynamic_recursion.jsp begin --> 
+    <!-- taglibsIncludeAll.jspf begin --> 
+    <!-- taglibsIncludeAll.jspf end -->
+    <div class="EXLCustomLayoutTile EXLHomeBlockContainer2"> 
+     <!-- begin ../views/include/l_service.jsp --> 
+     <!-- l_service.jsp begin --> 
+     <!-- taglibsIncludeAll.jspf begin --> 
+     <!-- taglibsIncludeAll.jspf end -->
+     <!-- jsp_mapping_retriever.jsp begin --> 
+     <!-- jsp_mapping_retriever.jsp end --> 
+     <!-- service.jsp begin --> 
+     <!-- taglibsIncludeAll.jspf begin --> 
+     <!-- taglibsIncludeAll.jspf end -->
+     <div> 
+      <!-- includeStaticHTML.jspf begin (/static_htmls/blank.html) --> 
+      <!-- taglibsIncludeAll.jspf begin --> 
+      <!-- taglibsIncludeAll.jspf end -->
+      <!-- includeStaticHTML.jspf end (/static_htmls/blank.html) -->
+     </div> 
+     <!-- service.jsp end -->
+     <!-- l_service.jsp end -->
+     <!-- end ../views/include/l_service.jsp --> 
+    </div> 
+    <!-- dynamic_recursion.jsp end --> 
+   </div> 
+   <!-- dynamic_recursion.jsp end --> 
+   <!-- dynamic_recursion.jsp begin --> 
+   <!-- taglibsIncludeAll.jspf begin --> 
+   <!-- taglibsIncludeAll.jspf end -->
+   <div id="footerEXL" class="EXLCustomLayoutTile EXLFooter EXLClearBoth EXLFooterTile"> 
+    <!-- begin ../headings/footers/l_footer.jsp --> 
+    <!-- l_footer.jsp begin --> 
+    <!-- taglibsIncludeAll.jspf begin --> 
+    <!-- taglibsIncludeAll.jspf end -->
+    <!-- jsp_mapping_retriever.jsp begin --> 
+    <!-- jsp_mapping_retriever.jsp end --> 
+    <!-- footer.jsp begin --> 
+    <!-- taglibsIncludeAll.jspf begin --> 
+    <!-- taglibsIncludeAll.jspf end -->
+    <!-- includeStaticHTML.jspf begin (/uploaded_files/UWINDSOR/footer.html) --> 
+    <!-- taglibsIncludeAll.jspf begin --> 
+    <!-- taglibsIncludeAll.jspf end --> 
+    <!--begin footer--> 
+    <div class="EXLFooterLinksContainer"> 
+     <!--begin Search Tips--> 
+     <h3>General Search tips</h3> 
+     <ul> 
+      <li>Search terms are connected by AND unless OR or NOT are specified between the words and phrases.</li> 
+      <li>Phrase Search: Add quotation marks to ensure your words appear together in any items in your search results. E.g. "global warming"</li> 
+      <li>Wild Card: Enter a question mark to perform a single character wildcard search. For example, wom?n looks for women and woman</li> 
+      <li>Truncation: Enter an asterisk to perform a truncated search. For example, cultur* looks for culture, cultures, cultural, etc.</li> 
+     </ul> 
+     <!--end Search Tips--> 
+     <ul class="EXLFooterLinksList1"> 
+      <li><a href="http://leddy.uwindsor.ca">Library Home</a></li> 
+      <li><a href="http://www.uwindsor.ca/law/library/">Law Library</a></li> 
+      <li><a href="http://leddy.uwindsor.ca/hours">Library Hours</a></li> 
+      <li><a href="http://leddy.uwindsor.ca/placing-materials-in-course-reserves">Course Reserve Requests</a></li> 
+      <li class="footer-last"><a href="http://leddy.uwindsor.ca/contact-us">Contact Us</a></li> 
+     </ul> 
+     <ul class="EXLFooterLinksList2"> 
+      <li class="EXLFooterFirstLink">Powered by ExLibris Primo</li> 
+      <li class="footer-last">Copyright © 2014</li> 
+     </ul> 
+    </div> 
+    <!--end footer--> 
+    <!-- includeStaticHTML.jspf end (/uploaded_files/UWINDSOR/footer.html) -->
+    <!-- autoRefresh.jspf begin --> 
+    <!-- deferScript.tag begin --> 
+    <!-- deferScript.tag end -->
+    <div class="EXLFooterUpdateContainer"> 
+     <div class="EXLFooterAutoUpdate"> 
+      <form action="" method="post" name="update" id="update"> 
+       <input type="checkbox" id="allowRefresh_chkbx" checked onclick="updateAutoRefresh(this);"> 
+       <label for="allowRefresh_chkbx">Update my screen automatically
+        <!-- Update my screen automatically --></label> 
+       <input class="EXLHide" type="submit"> 
+      </form> 
+     </div> 
+    </div> 
+    <!-- autoRefresh.jspf end -->
+    <!-- footer.jsp end --> 
+    <!-- l_footer.jsp end --> 
+    <!-- end ../headings/footers/l_footer.jsp --> 
+   </div> 
+   <!-- dynamic_recursion.jsp end --> 
+  </div> 
+  <!-- dynamic_recursion.jsp end --> 
+  <!-- pleaseWait.jsp begin --> 
+  <!-- taglibsIncludeAll.jspf begin --> 
+  <!-- taglibsIncludeAll.jspf end -->
+  <div id="exlidPleaseWaitContainer"> 
+   <div id="exlidPleaseWaitTile" class="EXLPleaseWait"> 
+    <div class="EXLPleaseWaitHeader"> 
+     <h1>Searching Remote Databases, Please Wait</h1> 
+    </div> 
+    <!--end EXLPleaseWaitHeader--> 
+    <div class="EXLPleaseWaitList"> 
+     <ul> 
+      <li class="EXLPleaseWaitListFirstItem"><span>Searching for</span><strong id="exlidPleaseWaitSearchTerms"></strong></li> 
+      <li><span>in</span><strong id="exlidPleaseWaitSearchScope">scope:(UWINDSOR_COURSE),scope:("UWINDSOR"),scope:(UWINDSOR_DIGITALCOMMONS),primo_central_multiple_fe</strong></li> 
+      <li class="EXLPleaseWaitListLastItem"><span><a href="#" id="exlidPleaseWaitStopSearch" title="stop search and show me the result list">Show me what you have so far</a></span></li> 
+     </ul> 
+    </div> 
+    <!--end EXLPleaseWaitList--> 
+    <div class="EXLPleaseWaitProgressBar"> 
+     <div class="EXLPleaseWaitProgressBarContainer"> 
+      <div id="exlidProgressBar" class="EXLPleaseWaitProgressBarFiller"></div> 
+     </div> 
+    </div> 
+   </div> 
+   <!--end exlidPleaseWaitTile--> 
+  </div> 
+  <!-- pleaseWait.jsp end -->
+  <script type="text/javascript" src="../javascript/pleaseWait.js"></script> 
+  <noscript>
+   This feature requires javascript
+  </noscript> 
+  <!-- deferredScripts.tag begin --> 
+  <!-- deferred comment:  --> 
+  <script type="text/javascript">
+					
+//<![CDATA[
+function handleAutoRefreshResponse(){
+	if(checkReadyState(request)) //check to see if we have data.
+	{
+		//we don't really care about the response. it's fire and forget.
+	}else{
+	}
+}
+
+function updateAutoRefresh(checkbox){
+	var autoRefreshUrl = 'preferences.do?fn=allowRefresh&url=../static_htmls/blank.html&allowRefresh=';
+	if (checkbox.checked){
+		ajaxGet(autoRefreshUrl+'on',handleAutoRefreshResponse);
+	}else{
+		ajaxGet(autoRefreshUrl+'off',handleAutoRefreshResponse);
+	}
+}
+// ]]>
+</script>
+  <!-- deferredScripts.tag end --> 
+  <noscript>
+   This feature requires javascript
+  </noscript>   
+  <!-- dynamic_layout.jsp end -->
+ </body>
+</html>

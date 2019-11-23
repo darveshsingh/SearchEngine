@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product#">
+ <head> 
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"5c792f4a4e",applicationID:"56771658"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script> 
+  <link rel="shortcut icon" href="https://www.payments.ca/sites/all/themes/payments_canada/favicon.ico" type="image/vnd.microsoft.icon"> 
+  <meta name="generator" content="Drupal 7 (https://www.drupal.org)"> 
+  <link rel="canonical" href="https://www.payments.ca/resources/payment-guides/financial-institution-guides"> 
+  <link rel="shortlink" href="https://www.payments.ca/node/395"> 
+  <meta property="og:site_name" content="Payments Canada"> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:url" content="https://www.payments.ca/resources/payment-guides/financial-institution-guides"> 
+  <meta property="og:title" content="Financial Institution Guides"> 
+  <meta property="og:updated_time" content="2016-08-10T11:48:32-04:00"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:url" content="https://www.payments.ca/resources/payment-guides/financial-institution-guides"> 
+  <meta name="twitter:title" content="Financial Institution Guides"> 
+  <meta property="article:published_time" content="2016-08-10T11:48:32-04:00"> 
+  <meta property="article:modified_time" content="2016-08-10T11:48:32-04:00"> 
+  <title>Financial Institution Guides | Payments Canada</title> 
+  <meta name="MobileOptimized" content="width"> 
+  <meta name="HandheldFriendly" content="true"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> 
+  <!--[if IEMobile]><meta http-equiv="cleartype" content="on"><![endif]--> 
+  <link type="text/css" rel="stylesheet" href="https://www.payments.ca/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all"> 
+  <link type="text/css" rel="stylesheet" href="https://www.payments.ca/sites/default/files/css/css_EBJjvX69GPVDtSrXdHA5WPxecbcsIMqxwowf8tM1brc.css" media="all"> 
+  <link type="text/css" rel="stylesheet" href="https://www.payments.ca/sites/default/files/css/css_UkzWT9VhhxDV6dpoS7tNI0r2iP2ALrxxauvS_k6vD04.css" media="all"> 
+  <link type="text/css" rel="stylesheet" href="https://www.payments.ca/sites/default/files/css/css_CXx8FuJUb08AeVtHAdNoUwPSiRJS5s3JZ5inpigmdm0.css" media="all"> 
+  <script src="https://www.payments.ca/sites/default/files/js/js_Z9GZiyQg-lqCTrA5IBUiJDjh1Ngdmh2u597DRAA7B9s.js"></script> 
+  <script src="https://www.payments.ca/sites/default/files/js/js_EebRuRXFlkaf356V0T2K_8cnUVfCKesNTxdvvPSEhCM.js"></script> 
+  <script src="https://www.payments.ca/sites/default/files/js/js_H7q2xORKmR9AN8Qx5spKEIBp7R_wG2apAswJoCUZY7I.js"></script> 
+  <script src="https://www.payments.ca/sites/default/files/js/js_deAcwC0q6fmspjO3uuEhalZezAz2xANT04b2GzJKiLQ.js"></script> 
+  <script>var text_resize_scope = "main";
+					var text_resize_minimum = "14";
+					var text_resize_maximum = "28";
+					var text_resize_line_height_allow = 0;
+					var text_resize_line_height_min = "16";
+					var text_resize_line_height_max = "36";</script> 
+  <script src="https://www.payments.ca/sites/default/files/js/js_noT5B4VuxB5T1A6nAFwgFNPqyxpSUxwWrr3cOiB424c.js"></script> 
+  <script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-28811439-1", {"cookieDomain":"auto","allowLinker":true});ga("require", "linker");ga("linker:autoLink", ["payments.ca","paiements.ca"]);ga("set", "anonymizeIp", true);ga("send", "pageview");</script> 
+  <script src="https://www.payments.ca/sites/default/files/js/js_0nMVGcqbqpzLdx2IBMtaf9reyueLrej8n4mbBArGZkk.js"></script> 
+  <script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"payments_canada","theme_token":"gv-HjOv1XEc18hr7i-A5-H7uuwAjCsDXs1NiHN_7hYg","js":{"public:\/\/google_tag\/language\/google_tag.en.script.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/custom\/payments_canada_splash\/splash_redirect.js":1,"0":1,"sites\/all\/modules\/contrib\/text_resize\/text_resize.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"1":1,"sites\/all\/themes\/payments_canada\/js\/vendor\/jquery.fitvids.js":1,"sites\/all\/themes\/payments_canada\/js\/vendor\/jquery.responsiveTabs.min.js":1,"sites\/all\/themes\/payments_canada\/js\/accordion.js":1,"sites\/all\/themes\/payments_canada\/js\/events.js":1,"sites\/all\/themes\/payments_canada\/js\/main-menu.js":1,"sites\/all\/themes\/payments_canada\/js\/mobile-menu.js":1,"sites\/all\/themes\/payments_canada\/js\/sidebar-menu.js":1,"sites\/all\/themes\/payments_canada\/js\/slick-playpause.js":1,"sites\/all\/themes\/payments_canada\/js\/top-region.js":1,"sites\/all\/themes\/payments_canada\/js\/video-embeds.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"modules\/locale\/locale.css":1,"sites\/all\/libraries\/fontello\/css\/fontello.css":1,"sites\/all\/themes\/payments_canada\/system.menus.css":1,"sites\/all\/themes\/payments_canada\/system.messages.css":1,"sites\/all\/themes\/payments_canada\/system.theme.css":1,"sites\/all\/themes\/payments_canada\/css\/styles.css":1}},"better_exposed_filters":{"views":{"guides":{"displays":{"panel_pane_guides":{"filters":[]}}}}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":2,"trackCrossDomains":["payments.ca","paiements.ca"]},"currentPath":"node\/395","currentPathIsAdmin":false,"urlIsAjaxTrusted":{"\/search\/pages":true}});</script> 
+ </head> 
+ <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-395 node-type-guide-category i18n-en section-resources page-panels"> 
+  <div id="skip-link"> 
+   <a href="#page-title">Skip navigation</a> 
+  </div> 
+  <div class="region region-page-top"> 
+   <noscript aria-hidden="true">
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTQLC2F" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+   </noscript>
+   <div id="mobile-nav" class="menu-block-wrapper menu-block-5 menu-name-main-menu parent-mlid-0 menu-level-1"> 
+    <button aria-controls="mobile-nav" class="btn btn-mobile-nav-close" type="button"> <span aria-hidden="true" class="fa fa-close"></span><span aria-hidden="true">Close</span> <span class="element-invisible">Close menu</span> </button> 
+    <ul class="menu">
+     <li class="menu__item is-expanded first expanded menu-mlid-445"><span class="menu__link nolink" tabindex="0">Our Directories</span><button class="menu-expand"><span aria-hidden="true" class="arrow fa fa-chevron-right"></span><span class="element-invisible">Expand Our Directories items</span></button>
+      <ul class="menu">
+       <li class="menu__item is-leaf first leaf menu-mlid-1682"><a href="https://www.payments.ca/our-directories/member-financial-institutions" class="menu__link">Participant Financial Institutions</a></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1886"><a href="https://www.payments.ca/our-directories/financial-institutions-branch-directory" class="menu__link">Financial Institutions Branch Directory</a></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1874"><a href="https://www.payments.ca/our-directories/financial-institutions-file" class="menu__link">Financial Institutions File</a></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1876"><a href="https://www.payments.ca/our-directories/corporate-creditor-identification-number-database" class="menu__link">Corporate Creditor Identification Number Database</a></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1683"><a href="https://www.payments.ca/our-directories/self-accredited-cheque-printers" class="menu__link">Self-Accredited Cheque Printers</a></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1684"><a href="https://www.payments.ca/our-directories/retail-system-acss-direct-and-group-clearers" class="menu__link">Retail System (ACSS) Direct and Group Clearers</a></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1685"><a href="https://www.payments.ca/our-directories/high-value-system-lvts-participants" class="menu__link">High-Value System (LVTS) Participants</a></li> 
+       <li class="menu__item is-leaf last leaf menu-mlid-1686"><a href="https://www.payments.ca/our-directories/high-value-system-lvts-non-participant-partners" class="menu__link">High-Value System (LVTS) Non-Participant Partners</a></li> 
+      </ul></li> 
+     <li class="menu__item is-expanded expanded menu-mlid-446"><span class="menu__link nolink" tabindex="0">Industry Info</span><button class="menu-expand"><span aria-hidden="true" class="arrow fa fa-chevron-right"></span><span class="element-invisible">Expand Industry Info items</span></button>
+      <ul class="menu">
+       <li class="menu__item is-expanded first expanded menu-mlid-1657"><a href="https://www.payments.ca/industry-info/our-research" class="menu__link">Our Research</a><button class="menu-expand"><span aria-hidden="true" class="arrow fa fa-chevron-right"></span><span class="element-invisible">Expand Our Research items</span></button>
+        <ul class="menu">
+         <li class="menu__item is-leaf first leaf menu-mlid-7446"><a href="https://www.payments.ca/industry-info/our-research/canadian-payment-methods-trends" class="menu__link">Canadian Payment Methods &amp; Trends</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-7456"><a href="https://www.payments.ca/industry-info/our-research/discussion-papers" class="menu__link">Discussion Papers</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-7466"><a href="https://www.payments.ca/industry-info/our-research/market-research" class="menu__link">Market Research</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-7476"><a href="https://www.payments.ca/industry-info/our-research/case-studies" class="menu__link">Case Studies</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-7486"><a href="https://www.payments.ca/industry-info/our-research/project-jasper" class="menu__link">Project Jasper</a></li> 
+         <li class="menu__item is-leaf is-parent leaf has-children menu-mlid-7526"><a href="https://www.payments.ca/industry-info/our-research/payments-perspectives" class="menu__link">Payments Perspectives</a></li> 
+         <li class="menu__item is-leaf last leaf menu-mlid-7496"><a href="https://www.payments.ca/industry-info/our-research/other-research" class="menu__link">Other research</a></li> 
+        </ul></li> 
+       <li class="menu__item is-expanded expanded menu-mlid-1730"><a href="https://www.payments.ca/modernization" class="menu__link">Modernization</a><button class="menu-expand"><span aria-hidden="true" class="arrow fa fa-chevron-right"></span><span class="element-invisible">Expand Modernization items</span></button>
+        <ul class="menu">
+         <li class="menu__item is-leaf first leaf menu-mlid-2656"><a href="https://www.payments.ca/modernization/vision-canadian-payments-ecosystem" class="menu__link">A Vision for The Canadian Payments Ecosystem</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-2661"><a href="https://www.payments.ca/modernization/industry-roadmap-high-level-plan" class="menu__link">Industry Roadmap &amp; High-Level Plan</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-7376"><a href="https://www.payments.ca/industry-info/modernization/modernization-target-state" class="menu__link">Modernization Target State</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1733"><a href="https://www.payments.ca/industry-info/modernization/iso-20022" class="menu__link">ISO 20022</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-6786"><a href="https://www.payments.ca/industry-info/modernization/aft-enhancements" class="menu__link">AFT Enhancements</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1732"><a href="https://www.payments.ca/modernization/faqs" class="menu__link">FAQs</a></li> 
+         <li class="menu__item is-leaf last leaf menu-mlid-5811"><a href="https://www.payments.ca/industry-info/modernization/industry-views" title="Industry Views" class="menu__link">Industry Views</a></li> 
+        </ul></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1743"><a href="https://www.payments.ca/industry-info/industry-data" class="menu__link">Industry Data</a></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1676"><a href="https://www.payments.ca/industry-info/payment-profiles" class="menu__link">Payment Profiles</a></li> 
+       <li class="menu__item is-expanded last expanded menu-mlid-6906"><a href="https://www.payments.ca/industry-info/paytech-canada" class="menu__link">Paytech in Canada</a><button class="menu-expand"><span aria-hidden="true" class="arrow fa fa-chevron-right"></span><span class="element-invisible">Expand Paytech in Canada items</span></button>
+        <ul class="menu">
+         <li class="menu__item is-leaf first leaf menu-mlid-7441"><a href="https://www.payments.ca/node/7366" class="menu__link">Paytech Industry</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-6911"><a href="https://www.payments.ca/industry-info/paytech-canada/paytech-resources" class="menu__link">Paytech Resources</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-6916"><a href="https://www.payments.ca/industry-info/paytech-canada/paytech-timeline" class="menu__link">Paytech Timeline</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-6921"><a href="https://www.payments.ca/industry-info/paytech-canada/payments-ecosystem-experience-layer" class="menu__link">The Experience Layer</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-6926"><a href="https://www.payments.ca/industry-info/paytech-canada/payments-ecosystem-connection-layer" class="menu__link">The Connection Layer</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-6931"><a href="https://www.payments.ca/industry-info/paytech-canada/payments-ecosystem-ledger-layer" class="menu__link">The Ledger Layer</a></li> 
+         <li class="menu__item is-leaf last leaf menu-mlid-6936"><a href="https://www.payments.ca/industry-info/paytech-canada/payments-ecosystem-balance-layer" class="menu__link">The Balance Layer</a></li> 
+        </ul></li> 
+      </ul></li> 
+     <li class="menu__item is-expanded is-active-trail expanded active-trail menu-mlid-447"><span class="menu__link is-active-trail active-trail nolink" tabindex="0">Resources</span><button class="menu-expand"><span aria-hidden="true" class="arrow fa fa-chevron-right"></span><span class="element-invisible">Expand Resources items</span></button>
+      <ul class="menu">
+       <li class="menu__item is-expanded is-active-trail first expanded active-trail menu-mlid-1661"><a href="https://www.payments.ca/resources/payment-guides" class="menu__link is-active-trail active-trail">Payment Guides</a><button class="menu-expand"><span aria-hidden="true" class="arrow fa fa-chevron-right"></span><span class="element-invisible">Expand Payment Guides items</span></button>
+        <ul class="menu">
+         <li class="menu__item is-leaf is-parent first leaf has-children menu-mlid-1760"><a href="https://www.payments.ca/resources/payment-guides/consumer-guides" class="menu__link">Consumer Guides</a></li> 
+         <li class="menu__item is-leaf is-parent leaf has-children menu-mlid-1772"><a href="https://www.payments.ca/resources/payment-guides/business-guides" class="menu__link">Business Guides</a></li> 
+         <li class="menu__item is-leaf is-parent is-active-trail is-active leaf has-children active-trail active menu-mlid-1838"><a href="https://www.payments.ca/resources/payment-guides/financial-institution-guides" class="menu__link is-active-trail active-trail active">Financial Institution Guides</a></li> 
+         <li class="menu__item is-leaf is-parent last leaf has-children menu-mlid-1890"><a href="https://www.payments.ca/resources/payment-guides/cheque-printer-guide" class="menu__link">Cheque Printer Guide</a></li> 
+        </ul></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1663"><a href="https://www.payments.ca/resources/speakers-bureau" class="menu__link">Speakers Bureau</a></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1844"><a href="https://www.payments.ca/resources/payment-academy" class="menu__link">Payments Academy</a></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1878"><a href="https://www.payments.ca/resources/subscribe" class="menu__link">Subscribe</a></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1668"><a href="https://www.payments.ca/resources/payments-glossary" class="menu__link">Payments Glossary</a></li> 
+       <li class="menu__item is-expanded expanded menu-mlid-1870"><a href="https://www.payments.ca/resources/iso-20022-resource-centre" class="menu__link">ISO 20022 Resource Centre</a><button class="menu-expand"><span aria-hidden="true" class="arrow fa fa-chevron-right"></span><span class="element-invisible">Expand ISO 20022 Resource Centre items</span></button>
+        <ul class="menu">
+         <li class="menu__item is-leaf first leaf menu-mlid-7371"><a href="https://www.payments.ca/resources/iso-20022-resource-centre/onboarding" class="menu__link">Onboarding</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1871"><a href="https://www.payments.ca/resources/iso-20022-resource-centre/overview-message-portfolio" class="menu__link">Overview of Message Portfolio</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1872"><a href="https://www.payments.ca/resources/iso-20022-resource-centre/technical-documentation" class="menu__link">Technical Documentation</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-5071"><a href="https://www.payments.ca/resources/iso-20022-resource-centre/message-maintenance" class="menu__link">Message Maintenance</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-7366"><a href="https://www.payments.ca/resources/iso-20022-resource-centre/news-and-additional-resources" class="menu__link">News and Additional Resources</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1880"><a href="https://www.payments.ca/resources/iso-20022-resource-centre/endorsements" class="menu__link">Endorsements</a></li> 
+         <li class="menu__item is-leaf last leaf menu-mlid-1873"><a href="https://www.payments.ca/resources/iso-20022-resource-centre/faqs" class="menu__link">FAQs</a></li> 
+        </ul></li> 
+       <li class="menu__item is-leaf last leaf menu-mlid-2636"><a href="https://www.payments.ca/resources/our-conference" class="menu__link">Our Conference</a></li> 
+      </ul></li> 
+     <li class="menu__item is-expanded last expanded menu-mlid-448"><span class="menu__link nolink" tabindex="0">About Us</span><button class="menu-expand"><span aria-hidden="true" class="arrow fa fa-chevron-right"></span><span class="element-invisible">Expand About Us items</span></button>
+      <ul class="menu">
+       <li class="menu__item is-leaf first leaf menu-mlid-1654"><a href="https://www.payments.ca/about-us/what-we-do" class="menu__link">What We Do</a></li> 
+       <li class="menu__item is-expanded expanded menu-mlid-1656"><a href="https://www.payments.ca/about-us/who-we-work-with" class="menu__link">Who We Work With</a><button class="menu-expand"><span aria-hidden="true" class="arrow fa fa-chevron-right"></span><span class="element-invisible">Expand Who We Work With items</span></button>
+        <ul class="menu">
+         <li class="menu__item is-leaf first leaf menu-mlid-1746"><a href="https://www.payments.ca/about-us/who-we-work-with/participant-financial-institutions" class="menu__link">Participant Financial Institutions</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1748"><a href="https://www.payments.ca/about-us/who-we-work-with/stakeholder" class="menu__link">Stakeholder</a></li> 
+         <li class="menu__item is-leaf last leaf menu-mlid-1750"><a href="https://www.payments.ca/about-us/who-we-work-with/regulators" class="menu__link">Regulators</a></li> 
+        </ul></li> 
+       <li class="menu__item is-expanded expanded menu-mlid-1752"><a href="https://www.payments.ca/about-us/how-we-collaborate" class="menu__link">How We Collaborate</a><button class="menu-expand"><span aria-hidden="true" class="arrow fa fa-chevron-right"></span><span class="element-invisible">Expand How We Collaborate items</span></button>
+        <ul class="menu">
+         <li class="menu__item is-leaf first leaf menu-mlid-1754"><a href="https://www.payments.ca/about-us/how-we-collaborate/member-advisory-council" class="menu__link">Member Advisory Council</a></li> 
+         <li class="menu__item is-leaf last leaf menu-mlid-1756"><a href="https://www.payments.ca/about-us/how-we-collaborate/stakeholder-advisory-council" class="menu__link">Stakeholder Advisory Council</a></li> 
+        </ul></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1758"><a href="https://www.payments.ca/about-us/our-history" class="menu__link">Our History</a></li> 
+       <li class="menu__item is-expanded expanded menu-mlid-1670"><a href="https://www.payments.ca/about-us/our-systems-and-rules" class="menu__link">Our Systems and Rules</a><button class="menu-expand"><span aria-hidden="true" class="arrow fa fa-chevron-right"></span><span class="element-invisible">Expand Our Systems and Rules items</span></button>
+        <ul class="menu">
+         <li class="menu__item is-leaf is-parent first leaf has-children menu-mlid-1702"><a href="https://www.payments.ca/about-us/our-systems-and-rules/large-value-transfer-system" class="menu__link">Large Value Transfer System</a></li> 
+         <li class="menu__item is-leaf is-parent leaf has-children menu-mlid-1692"><a href="https://www.payments.ca/about-us/our-systems-and-rules/retail-system" class="menu__link">Retail System</a></li> 
+         <li class="menu__item is-leaf is-parent leaf has-children menu-mlid-1710"><a href="https://www.payments.ca/about-us/our-systems-and-rules/us-dollar-bulk-exchange" class="menu__link">US Dollar Bulk Exchange</a></li> 
+         <li class="menu__item is-leaf is-parent last leaf has-children menu-mlid-1716"><a href="https://www.payments.ca/about-us/our-systems-and-rules/systems-closure-schedule" class="menu__link">Updates</a></li> 
+        </ul></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1672"><a href="https://www.payments.ca/about-us/leadership-team" class="menu__link">Leadership Team</a></li> 
+       <li class="menu__item is-expanded expanded menu-mlid-1718"><a href="https://www.payments.ca/about-us/governance-risk" class="menu__link">Governance &amp; Risk</a><button class="menu-expand"><span aria-hidden="true" class="arrow fa fa-chevron-right"></span><span class="element-invisible">Expand Governance &amp; Risk items</span></button>
+        <ul class="menu">
+         <li class="menu__item is-leaf first leaf menu-mlid-1720"><a href="https://www.payments.ca/about-us/governance-risk/board-directors" class="menu__link">Board of Directors</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1721"><a href="https://www.payments.ca/about-us/governance-risk/enabling-legislation" class="menu__link">Enabling Legislation</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1723"><a href="https://www.payments.ca/about-us/governance-risk/board-directors/bylaws" class="menu__link">Bylaws</a></li> 
+         <li class="menu__item is-leaf last leaf menu-mlid-1725"><a href="https://www.payments.ca/about-us/governance-risk/regulatory-environment-risk-management" class="menu__link">Regulatory Environment &amp; Risk Management</a></li> 
+        </ul></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1728"><a href="https://www.payments.ca/about-us/annual-reports" class="menu__link">Annual Reports</a></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1736"><a href="https://www.payments.ca/about-us/corporate-plan" class="menu__link">Corporate Plan</a></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1674"><a href="https://www.payments.ca/about-us/careers" class="menu__link">Careers</a></li> 
+       <li class="menu__item is-expanded expanded menu-mlid-1678"><a href="https://www.payments.ca/about-us/news" class="menu__link">News</a><button class="menu-expand"><span aria-hidden="true" class="arrow fa fa-chevron-right"></span><span class="element-invisible">Expand News items</span></button>
+        <ul class="menu">
+         <li class="menu__item is-leaf is-parent first last leaf has-children menu-mlid-7391"><a href="https://www.payments.ca/about-us/news/multimedia" class="menu__link">Multimedia</a></li> 
+        </ul></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1679"><a href="https://www.payments.ca/about-us/event-calendar" class="menu__link">Event Calendar</a></li> 
+       <li class="menu__item is-leaf leaf menu-mlid-1738"><a href="https://www.payments.ca/about-us/media-centre" class="menu__link">Media Centre</a></li> 
+       <li class="menu__item is-leaf last leaf menu-mlid-1740"><a href="https://www.payments.ca/about-us/contact" class="menu__link">Contact</a></li> 
+      </ul></li> 
+    </ul>
+   </div> 
+  </div> 
+  <div id="page"> 
+   <div class="region region-top"> 
+    <div class="container"> 
+     <div class="region-content"> 
+      <div id="block-menu-block-1" class="block block-menu-block block-top-menu first odd" role="navigation"> 
+       <div class="menu-block-wrapper menu-block-1 menu-name-menu-top parent-mlid-0 menu-level-1"> 
+        <ul class="menu">
+         <li class="menu__item is-leaf first leaf menu-mlid-420"><a href="https://www.payments.ca/" title="" class="menu__link">Home</a></li> 
+         <li class="menu__item is-leaf last leaf menu-mlid-2241"><a href="https://members.payments.ca/" class="menu__link">Member Login</a></li> 
+        </ul>
+       </div> 
+      </div> 
+      <div id="block-text-resize-0" class="block block-text-resize even"> 
+       <h2 class="block__title block-title">Text Resize</h2> 
+       <a href="javascript:;" class="changer" id="text_resize_decrease"><span class="element-invisible">Decrease text size</span><span aria-hidden="true">A</span></a>
+       <a href="javascript:;" class="changer" id="text_resize_reset"><span class="element-invisible">Reset text size</span><span aria-hidden="true">A</span></a>
+       <a href="javascript:;" class="changer" id="text_resize_increase"><span class="element-invisible">Increase text size</span><span aria-hidden="true">A</span></a>
+       <div id="text_resize_clear"></div> 
+      </div> 
+      <div id="block-search-api-page-page-search" class="block block-search-api-page block-search odd"> 
+       <form action="/search/pages" method="post" id="search-api-page-search-form-page-search" accept-charset="UTF-8">
+        <div>
+         <div class="form-item form-type-textfield form-item-keys-6"> 
+          <label class="element-invisible" for="edit-keys-6">Enter your keywords </label> 
+          <input placeholder="Search" type="text" id="edit-keys-6" name="keys_6" value="" size="15" maxlength="128" class="form-text"> 
+         </div> 
+         <input type="hidden" name="id" value="6"> 
+         <button type="submit" name="op" class="form-submit" id="search-submit-button"><span class="fa fa-search" aria-hidden="true"></span><span class="element-invisible">Search submit</span><input style="display: none;" type="submit" id="edit-submit-6" name="op" value="" class="form-submit"></button>
+         <input type="hidden" name="form_build_id" value="form-hNK0ZRxmJDKO3vbF4C61XUkvqRI0R_Cw6iE1_vr1_Jg"> 
+         <input type="hidden" name="form_id" value="search_api_page_search_form_page_search"> 
+        </div>
+       </form> 
+      </div> 
+      <div id="block-locale-language" class="block block-locale last even" role="complementary"> 
+       <h2 class="block__title block-title">Languages</h2> 
+       <ul class="language-switcher-locale-url">
+        <li class="en first active"><a href="https://www.payments.ca/resources/payment-guides/financial-institution-guides" class="language-link active" xml:lang="en" title="Financial Institution Guides">en</a></li> 
+        <li class="fr last"><a href="https://www.paiements.ca/ressources/guides-de-paiement/institutions-financieres" class="language-link" xml:lang="fr" title="Institutions financières">fr</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <header class="header" id="header" role="banner"> 
+    <div class="container"> 
+     <div class="region region-title"> 
+      <button aria-controls="mobile-nav" class="btn btn-mobile-nav" type="button"> <span aria-hidden="true" class="fa fa-reorder"></span><span class="element-invisible">Menu</span> </button> 
+      <h1 class="site-title" id="site-name"> <a href="https://www.payments.ca/" title="Home" rel="home"><span>Payments Canada</span></a> </h1> 
+     </div> 
+     <div class="region region-logo"> 
+      <a href="https://www.payments.ca/" title="Home - Payments Canada." rel="home" class="logo" id="logo"><img src="https://www.payments.ca/sites/all/themes/payments_canada/logo.png" alt="Home - Payments Canada."></a> 
+     </div> 
+     <div class="header__region region region-header"> 
+      <div id="block-tb-megamenu-main-menu" class="block block-tb-megamenu block-main-menu first last odd"> 
+       <div class="tb-megamenu tb-megamenu-main-menu"> 
+        <div class="nav-collapse" id="main-nav"> 
+         <ul class="tb-megamenu-nav nav level-0 items-4"> 
+          <li data-id="445" data-level="1" data-type="menu_item" data-class="our-directories" data-xicon="" data-caption="" data-alignsub="justify" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega our-directories mega-align-justify dropdown"> <a href="javascript:void(0);" class="dropdown-toggle">Our Directories</a> 
+           <div data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child"> 
+            <div class="mega-dropdown-inner"> 
+             <div class="tb-megamenu-row row-fluid"> 
+              <div data-class="" data-width="6" data-hidewcol="0" id="tb-megamenu-column-1" class="tb-megamenu-column span6  mega-col-nav"> 
+               <div class="tb-megamenu-column-inner mega-inner clearfix"> 
+                <ul class="tb-megamenu-subnav mega-nav level-1 items-4"> 
+                 <li data-id="1682" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/our-directories/member-financial-institutions">Participant Financial Institutions</a> </li> 
+                 <li data-id="1886" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/our-directories/financial-institutions-branch-directory">Financial Institutions Branch Directory</a> </li> 
+                 <li data-id="1874" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/our-directories/financial-institutions-file">Financial Institutions File</a> </li> 
+                 <li data-id="1876" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/our-directories/corporate-creditor-identification-number-database">Corporate Creditor Identification Number Database</a> </li> 
+                </ul> 
+               </div> 
+              </div> 
+              <div data-class="" data-width="6" data-hidewcol="" id="tb-megamenu-column-2" class="tb-megamenu-column span6  mega-col-nav"> 
+               <div class="tb-megamenu-column-inner mega-inner clearfix"> 
+                <ul class="tb-megamenu-subnav mega-nav level-1 items-4"> 
+                 <li data-id="1683" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/our-directories/self-accredited-cheque-printers">Self-Accredited Cheque Printers</a> </li> 
+                 <li data-id="1684" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/our-directories/retail-system-acss-direct-and-group-clearers">Retail System (ACSS) Direct and Group Clearers</a> </li> 
+                 <li data-id="1685" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/our-directories/high-value-system-lvts-participants">High-Value System (LVTS) Participants</a> </li> 
+                 <li data-id="1686" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/our-directories/high-value-system-lvts-non-participant-partners">High-Value System (LVTS) Non-Participant Partners</a> </li> 
+                </ul> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> </li> 
+          <li data-id="446" data-level="1" data-type="menu_item" data-class="industry-info" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega industry-info dropdown"> <a href="javascript:void(0);" class="dropdown-toggle">Industry Info</a> 
+           <div data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child"> 
+            <div class="mega-dropdown-inner"> 
+             <div class="tb-megamenu-row row-fluid"> 
+              <div data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-4" class="tb-megamenu-column span12  mega-col-nav"> 
+               <div class="tb-megamenu-column-inner mega-inner clearfix"> 
+                <ul class="tb-megamenu-subnav mega-nav level-1 items-5"> 
+                 <li data-id="1657" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/industry-info/our-research">Our Research</a> </li> 
+                 <li data-id="1730" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/modernization">Modernization</a> </li> 
+                 <li data-id="1743" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/industry-info/industry-data">Industry Data</a> </li> 
+                 <li data-id="1676" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/industry-info/payment-profiles">Payment Profiles</a> </li> 
+                 <li data-id="6906" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega dropdown-submenu"> <a href="https://www.payments.ca/industry-info/paytech-canada" class="dropdown-toggle">Paytech in Canada</a> 
+                  <div data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child"> 
+                   <div class="mega-dropdown-inner"> 
+                    <div class="tb-megamenu-row row-fluid"> 
+                     <div data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-3" class="tb-megamenu-column span12  mega-col-nav"> 
+                      <div class="tb-megamenu-column-inner mega-inner clearfix"> 
+                       <ul class="tb-megamenu-subnav mega-nav level-2 items-7"> 
+                        <li data-id="7441" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega"> <a href="https://www.payments.ca/node/7366">Paytech Industry</a> </li> 
+                        <li data-id="6911" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega"> <a href="https://www.payments.ca/industry-info/paytech-canada/paytech-resources">Paytech Resources</a> </li> 
+                        <li data-id="6916" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega"> <a href="https://www.payments.ca/industry-info/paytech-canada/paytech-timeline">Paytech Timeline</a> </li> 
+                        <li data-id="6921" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega"> <a href="https://www.payments.ca/industry-info/paytech-canada/payments-ecosystem-experience-layer">The Experience Layer</a> </li> 
+                        <li data-id="6926" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega"> <a href="https://www.payments.ca/industry-info/paytech-canada/payments-ecosystem-connection-layer">The Connection Layer</a> </li> 
+                        <li data-id="6931" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega"> <a href="https://www.payments.ca/industry-info/paytech-canada/payments-ecosystem-ledger-layer">The Ledger Layer</a> </li> 
+                        <li data-id="6936" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega"> <a href="https://www.payments.ca/industry-info/paytech-canada/payments-ecosystem-balance-layer">The Balance Layer</a> </li> 
+                       </ul> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> </li> 
+                </ul> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> </li> 
+          <li data-id="447" data-level="1" data-type="menu_item" data-class="resources" data-xicon="" data-caption="" data-alignsub="justify" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega resources mega-align-justify dropdown active active-trail"> <a href="javascript:void(0);" class="dropdown-toggle">Resources</a> 
+           <div data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child"> 
+            <div class="mega-dropdown-inner"> 
+             <div class="tb-megamenu-row row-fluid"> 
+              <div data-class="" data-width="6" data-hidewcol="0" id="tb-megamenu-column-6" class="tb-megamenu-column span6  mega-col-nav"> 
+               <div class="tb-megamenu-column-inner mega-inner clearfix"> 
+                <ul class="tb-megamenu-subnav mega-nav level-1 items-1"> 
+                 <li data-id="1661" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="1" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega mega-group active active-trail"> <a href="https://www.payments.ca/resources/payment-guides" class="mega-group-title">Payment Guides</a> 
+                  <div data-class="" data-width="" class="tb-megamenu-submenu mega-group-ct nav-child"> 
+                   <div class="mega-dropdown-inner"> 
+                    <div class="tb-megamenu-row row-fluid"> 
+                     <div data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-5" class="tb-megamenu-column span12  mega-col-nav"> 
+                      <div class="tb-megamenu-column-inner mega-inner clearfix"> 
+                       <ul class="tb-megamenu-subnav mega-nav level-2 items-4"> 
+                        <li data-id="1760" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" class="tb-megamenu-item level-3 mega"> <a href="https://www.payments.ca/resources/payment-guides/consumer-guides">Consumer Guides</a> </li> 
+                        <li data-id="1772" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" class="tb-megamenu-item level-3 mega"> <a href="https://www.payments.ca/resources/payment-guides/business-guides">Business Guides</a> </li> 
+                        <li data-id="1838" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" class="tb-megamenu-item level-3 mega active active-trail"> <a href="https://www.payments.ca/resources/payment-guides/financial-institution-guides">Financial Institution Guides</a> </li> 
+                        <li data-id="1890" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" class="tb-megamenu-item level-3 mega"> <a href="https://www.payments.ca/resources/payment-guides/cheque-printer-guide">Cheque Printer Guide</a> </li> 
+                       </ul> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> </li> 
+                </ul> 
+               </div> 
+              </div> 
+              <div data-class="" data-width="6" data-hidewcol="" id="tb-megamenu-column-7" class="tb-megamenu-column span6  mega-col-nav"> 
+               <div class="tb-megamenu-column-inner mega-inner clearfix"> 
+                <ul class="tb-megamenu-subnav mega-nav level-1 items-6"> 
+                 <li data-id="1663" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/resources/speakers-bureau">Speakers Bureau</a> </li> 
+                 <li data-id="1844" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/resources/payment-academy">Payments Academy</a> </li> 
+                 <li data-id="1878" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/resources/subscribe">Subscribe</a> </li> 
+                 <li data-id="1668" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/resources/payments-glossary">Payments Glossary</a> </li> 
+                 <li data-id="1870" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/resources/iso-20022-resource-centre">ISO 20022 Resource Centre</a> </li> 
+                 <li data-id="2636" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/resources/our-conference">Our Conference</a> </li> 
+                </ul> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> </li> 
+          <li data-id="448" data-level="1" data-type="menu_item" data-class="about-us" data-xicon="" data-caption="" data-alignsub="justify" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega about-us mega-align-justify dropdown"> <a href="javascript:void(0);" class="dropdown-toggle">About Us</a> 
+           <div data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child"> 
+            <div class="mega-dropdown-inner"> 
+             <div class="tb-megamenu-row row-fluid"> 
+              <div data-class="" data-width="4" data-hidewcol="0" id="tb-megamenu-column-8" class="tb-megamenu-column span4  mega-col-nav"> 
+               <div class="tb-megamenu-column-inner mega-inner clearfix"> 
+                <ul class="tb-megamenu-subnav mega-nav level-1 items-5"> 
+                 <li data-id="1654" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/about-us/what-we-do">What We Do</a> </li> 
+                 <li data-id="1656" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/about-us/who-we-work-with">Who We Work With</a> </li> 
+                 <li data-id="1752" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/about-us/how-we-collaborate">How We Collaborate</a> </li> 
+                 <li data-id="1758" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/about-us/our-history">Our History</a> </li> 
+                 <li data-id="1670" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/about-us/our-systems-and-rules">Our Systems and Rules</a> </li> 
+                </ul> 
+               </div> 
+              </div> 
+              <div data-class="" data-width="4" data-hidewcol="" id="tb-megamenu-column-9" class="tb-megamenu-column span4  mega-col-nav"> 
+               <div class="tb-megamenu-column-inner mega-inner clearfix"> 
+                <ul class="tb-megamenu-subnav mega-nav level-1 items-4"> 
+                 <li data-id="1672" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/about-us/leadership-team">Leadership Team</a> </li> 
+                 <li data-id="1718" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="1" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/about-us/governance-risk">Governance &amp; Risk</a> </li> 
+                 <li data-id="1728" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/about-us/annual-reports">Annual Reports</a> </li> 
+                 <li data-id="1736" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/about-us/corporate-plan">Corporate Plan</a> </li> 
+                </ul> 
+               </div> 
+              </div> 
+              <div data-class="" data-width="4" data-hidewcol="" id="tb-megamenu-column-12" class="tb-megamenu-column span4  mega-col-nav"> 
+               <div class="tb-megamenu-column-inner mega-inner clearfix"> 
+                <ul class="tb-megamenu-subnav mega-nav level-1 items-5"> 
+                 <li data-id="1674" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/about-us/careers">Careers</a> </li> 
+                 <li data-id="1678" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega dropdown-submenu"> <a href="https://www.payments.ca/about-us/news" class="dropdown-toggle">News</a> 
+                  <div data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child"> 
+                   <div class="mega-dropdown-inner"> 
+                    <div class="tb-megamenu-row row-fluid"> 
+                     <div data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-11" class="tb-megamenu-column span12  mega-col-nav"> 
+                      <div class="tb-megamenu-column-inner mega-inner clearfix"> 
+                       <ul class="tb-megamenu-subnav mega-nav level-2 items-1"> 
+                        <li data-id="7391" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega dropdown-submenu"> <a href="https://www.payments.ca/about-us/news/multimedia" class="dropdown-toggle">Multimedia</a> 
+                         <div data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child"> 
+                          <div class="mega-dropdown-inner"> 
+                           <div class="tb-megamenu-row row-fluid"> 
+                            <div data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-10" class="tb-megamenu-column span12  mega-col-nav"> 
+                             <div class="tb-megamenu-column-inner mega-inner clearfix"> 
+                              <ul class="tb-megamenu-subnav mega-nav level-3 items-4"> 
+                               <li data-id="7411" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-4 mega"> <a href="https://www.payments.ca/about-us/news/multimedia/paypod-podcast">The PayPod Podcast</a> </li> 
+                               <li data-id="7416" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-4 mega"> <a href="https://www.payments.ca/about-us/news/multimedia/infographic">Infographics</a> </li> 
+                               <li data-id="7421" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-4 mega"> <a href="https://www.payments.ca/about-us/news/multimedia/market-research">Market Research</a> </li> 
+                               <li data-id="9271" data-level="4" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-4 mega"> <a href="https://www.payments.ca/about-us/news/multimedia/videos">Videos</a> </li> 
+                              </ul> 
+                             </div> 
+                            </div> 
+                           </div> 
+                          </div> 
+                         </div> </li> 
+                       </ul> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div> </li> 
+                 <li data-id="1679" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/about-us/event-calendar">Event Calendar</a> </li> 
+                 <li data-id="1738" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/about-us/media-centre">Media Centre</a> </li> 
+                 <li data-id="1740" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega"> <a href="https://www.payments.ca/about-us/contact">Contact</a> </li> 
+                </ul> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> </li> 
+         </ul> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </header> 
+   <div id="main"> 
+    <div class="region region-breadcrumb" style="background-image: url(https://www.payments.ca/sites/default/files/menu-items/header_3.jpg);"> 
+     <nav class="breadcrumb" role="navigation">
+      <h2 class="element-invisible">You are here</h2>
+      <ol>
+       <li><a href="https://www.payments.ca/" class="home">Home</a> &gt; </li>
+       <li><span class="nolink" tabindex="0">Resources</span> &gt; </li>
+       <li><a href="https://www.payments.ca/resources/payment-guides">Payment Guides</a> &gt; </li>
+       <li><span class="current">Financial Institution Guides</span></li>
+      </ol>
+     </nav> 
+    </div> 
+    <div id="content" class="column" role="main"> 
+     <div class="container"> 
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-581cd56265cc1878"></script> 
+      <div style="text-align: right;" class="addthis_inline_share_toolbox"></div> 
+     </div> 
+     <div class="panel-display panel-twocol-stacked"> 
+      <div class="container top"> 
+       <div class="panel-panel panel-col sidebar"> 
+        <div class="inside"> 
+         <div class="panel-pane pane-block pane-menu-block-4 pane-menu-block block-sidebar-menu"> 
+          <button aria-controls="sidebar-nav" class="btn btn-sidebarnav" type="button"> <span aria-hidden="true" class="fa fa-ellipsis-v"></span> <span class="element-invisible">Section Menu</span> </button> 
+          <div class="nav-collapse" id="sidebar-nav"> 
+           <button aria-controls="sidebar-nav" class="btn btn-sidebarnav-close" type="button"> <span aria-hidden="true" class="fa fa-close"></span><span aria-hidden="true">Close</span> <span class="element-invisible">Close menu</span> </button> 
+           <h2 class="pane-title"> <a href="https://www.payments.ca/resources/payment-guides" class="active-trail">Payment Guides</a> </h2> 
+           <div class="pane-content"> 
+            <div class="menu-block-wrapper menu-block-4 menu-name-main-menu parent-mlid-0 menu-level-2"> 
+             <ul class="menu">
+              <li class="menu__item is-collapsed first collapsed menu-mlid-1760"><a href="https://www.payments.ca/resources/payment-guides/consumer-guides" class="menu__link">Consumer Guides</a></li> 
+              <li class="menu__item is-collapsed collapsed menu-mlid-1772"><a href="https://www.payments.ca/resources/payment-guides/business-guides" class="menu__link">Business Guides</a></li> 
+              <li class="menu__item is-expanded is-active-trail is-active expanded active-trail active menu-mlid-1838"><a href="https://www.payments.ca/resources/payment-guides/financial-institution-guides" class="menu__link is-active-trail active-trail active">Financial Institution Guides</a>
+               <ul class="menu">
+                <li class="menu__item is-leaf first last leaf menu-mlid-1840"><a href="https://www.payments.ca/resources/payment-guides/financial-institution-guides/pre-authorized-debits" class="menu__link">Pre-Authorized Debits</a></li> 
+               </ul></li> 
+              <li class="menu__item is-collapsed last collapsed menu-mlid-1890"><a href="https://www.payments.ca/resources/payment-guides/cheque-printer-guide" class="menu__link">Cheque Printer Guide</a></li> 
+             </ul>
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="panel-panel panel-col main"> 
+        <div class="inside"> 
+         <div class="panel-pane pane-entity-view pane-node"> 
+          <article class="node-395 node node-guide-category view-mode-full clearfix"> 
+           <header> 
+            <h1 class="title" id="page-title" tabindex="-1">Financial Institution Guides</h1> 
+           </header> 
+          </article> 
+         </div> 
+         <div class="panel-pane pane-views-panes pane-guides-panel-pane-guides"> 
+          <div class="view view-guides view-id-guides view-display-id-panel_pane_guides view-dom-id-34dd78b91d12c7832c121b0191253e9f"> 
+           <div class="view-content"> 
+            <div class="views-row views-row-1 views-row-odd views-row-first views-row-last listing"> 
+             <div class="views-field views-field-title">
+              <h2 class="field-content highlight"><a href="https://www.payments.ca/resources/payment-guides/financial-institution-guides/pre-authorized-debits">Pre-Authorized Debits</a></h2>
+             </div>
+             <div class="listing-image"> 
+              <div class="views-field views-field-field-image">
+               <div class="field-content">
+                <img src="https://www.payments.ca/sites/default/files/styles/listing/public/guide/different_cheque_photo.jpg?itok=P5r01oq3" width="250" height="250">
+               </div>
+              </div>
+             </div> 
+             <div class="listing-summary"> 
+              <div class="views-field views-field-body"> 
+               <div class="field-content">
+                Pre-authorized debits (PADs) are a convenient way to pay bills and make payments automatically.
+               </div> 
+              </div> 
+              <div class="listing-link"> 
+               <a href="https://www.payments.ca/resources/payment-guides/financial-institution-guides/pre-authorized-debits" class="btn">View the <span class="element-invisible">Pre-Authorized Debits</span> Guide</a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <footer id="footer" class="region region-footer"> 
+    <div id="block-block-31" class="block block-block block-mailchimp-signup first odd"> 
+     <h2 class="block__title block-title">STAY CONNECTED</h2> 
+     <div class="small-container medium-container large-container"> 
+      <div class="small-8 medium-8 large-8"> 
+       <p>Payments Canada provides timely, in-depth news and information on the payments ecosystem, payments Modernization, and exclusive updates about The SUMMIT -- Canada’s largest payments conference. Subscribe today and stay connected. Sign up for your payments experience today.</p> 
+      </div> 
+      <div class="small-4 medium-4 large-4">
+       <a class="btn" href="/resources/subscribe">Subscribe</a>
+      </div> 
+     </div> 
+    </div> 
+    <div id="block-menu-block-3" class="block block-menu-block block-sitemap last even" role="navigation"> 
+     <div class="menu-block-wrapper menu-block-3 menu-name-main-menu parent-mlid-0 menu-level-1"> 
+      <ul class="menu">
+       <li class="menu__item is-expanded first expanded menu-mlid-445"><span class="menu__link nolink" tabindex="0">Our Directories</span>
+        <ul class="menu">
+         <li class="menu__item is-leaf first leaf menu-mlid-1682"><a href="https://www.payments.ca/our-directories/member-financial-institutions" class="menu__link">Participant Financial Institutions</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1886"><a href="https://www.payments.ca/our-directories/financial-institutions-branch-directory" class="menu__link">Financial Institutions Branch Directory</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1874"><a href="https://www.payments.ca/our-directories/financial-institutions-file" class="menu__link">Financial Institutions File</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1876"><a href="https://www.payments.ca/our-directories/corporate-creditor-identification-number-database" class="menu__link">Corporate Creditor Identification Number Database</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1683"><a href="https://www.payments.ca/our-directories/self-accredited-cheque-printers" class="menu__link">Self-Accredited Cheque Printers</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1684"><a href="https://www.payments.ca/our-directories/retail-system-acss-direct-and-group-clearers" class="menu__link">Retail System (ACSS) Direct and Group Clearers</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1685"><a href="https://www.payments.ca/our-directories/high-value-system-lvts-participants" class="menu__link">High-Value System (LVTS) Participants</a></li> 
+         <li class="menu__item is-leaf last leaf menu-mlid-1686"><a href="https://www.payments.ca/our-directories/high-value-system-lvts-non-participant-partners" class="menu__link">High-Value System (LVTS) Non-Participant Partners</a></li> 
+        </ul></li> 
+       <li class="menu__item is-expanded expanded menu-mlid-446"><span class="menu__link nolink" tabindex="0">Industry Info</span>
+        <ul class="menu">
+         <li class="menu__item is-leaf is-parent first leaf has-children menu-mlid-1657"><a href="https://www.payments.ca/industry-info/our-research" class="menu__link">Our Research</a></li> 
+         <li class="menu__item is-leaf is-parent leaf has-children menu-mlid-1730"><a href="https://www.payments.ca/modernization" class="menu__link">Modernization</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1743"><a href="https://www.payments.ca/industry-info/industry-data" class="menu__link">Industry Data</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1676"><a href="https://www.payments.ca/industry-info/payment-profiles" class="menu__link">Payment Profiles</a></li> 
+         <li class="menu__item is-leaf is-parent last leaf has-children menu-mlid-6906"><a href="https://www.payments.ca/industry-info/paytech-canada" class="menu__link">Paytech in Canada</a></li> 
+        </ul></li> 
+       <li class="menu__item is-expanded is-active-trail expanded active-trail menu-mlid-447"><span class="menu__link is-active-trail active-trail nolink" tabindex="0">Resources</span>
+        <ul class="menu">
+         <li class="menu__item is-leaf is-parent is-active-trail first leaf has-children active-trail menu-mlid-1661"><a href="https://www.payments.ca/resources/payment-guides" class="menu__link is-active-trail active-trail">Payment Guides</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1663"><a href="https://www.payments.ca/resources/speakers-bureau" class="menu__link">Speakers Bureau</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1844"><a href="https://www.payments.ca/resources/payment-academy" class="menu__link">Payments Academy</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1878"><a href="https://www.payments.ca/resources/subscribe" class="menu__link">Subscribe</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1668"><a href="https://www.payments.ca/resources/payments-glossary" class="menu__link">Payments Glossary</a></li> 
+         <li class="menu__item is-leaf is-parent leaf has-children menu-mlid-1870"><a href="https://www.payments.ca/resources/iso-20022-resource-centre" class="menu__link">ISO 20022 Resource Centre</a></li> 
+         <li class="menu__item is-leaf last leaf menu-mlid-2636"><a href="https://www.payments.ca/resources/our-conference" class="menu__link">Our Conference</a></li> 
+        </ul></li> 
+       <li class="menu__item is-expanded last expanded menu-mlid-448"><span class="menu__link nolink" tabindex="0">About Us</span>
+        <ul class="menu">
+         <li class="menu__item is-leaf first leaf menu-mlid-1654"><a href="https://www.payments.ca/about-us/what-we-do" class="menu__link">What We Do</a></li> 
+         <li class="menu__item is-leaf is-parent leaf has-children menu-mlid-1656"><a href="https://www.payments.ca/about-us/who-we-work-with" class="menu__link">Who We Work With</a></li> 
+         <li class="menu__item is-leaf is-parent leaf has-children menu-mlid-1752"><a href="https://www.payments.ca/about-us/how-we-collaborate" class="menu__link">How We Collaborate</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1758"><a href="https://www.payments.ca/about-us/our-history" class="menu__link">Our History</a></li> 
+         <li class="menu__item is-leaf is-parent leaf has-children menu-mlid-1670"><a href="https://www.payments.ca/about-us/our-systems-and-rules" class="menu__link">Our Systems and Rules</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1672"><a href="https://www.payments.ca/about-us/leadership-team" class="menu__link">Leadership Team</a></li> 
+         <li class="menu__item is-leaf is-parent leaf has-children menu-mlid-1718"><a href="https://www.payments.ca/about-us/governance-risk" class="menu__link">Governance &amp; Risk</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1728"><a href="https://www.payments.ca/about-us/annual-reports" class="menu__link">Annual Reports</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1736"><a href="https://www.payments.ca/about-us/corporate-plan" class="menu__link">Corporate Plan</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1674"><a href="https://www.payments.ca/about-us/careers" class="menu__link">Careers</a></li> 
+         <li class="menu__item is-leaf is-parent leaf has-children menu-mlid-1678"><a href="https://www.payments.ca/about-us/news" class="menu__link">News</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1679"><a href="https://www.payments.ca/about-us/event-calendar" class="menu__link">Event Calendar</a></li> 
+         <li class="menu__item is-leaf leaf menu-mlid-1738"><a href="https://www.payments.ca/about-us/media-centre" class="menu__link">Media Centre</a></li> 
+         <li class="menu__item is-leaf last leaf menu-mlid-1740"><a href="https://www.payments.ca/about-us/contact" class="menu__link">Contact</a></li> 
+        </ul></li> 
+      </ul>
+     </div> 
+    </div> 
+   </footer> 
+   <div class="region region-bottom"> 
+    <div class="container"> 
+     <div id="block-block-1" class="block block-block block-disclaimer first odd"> 
+      <ul class="horizontal"> 
+       <li><a href="/legal-notices">Legal</a></li> 
+       <li><a href="/sitemap">Sitemap</a></li> 
+      </ul> 
+      <p>© 2017 PAYMENTS CANADA. All Rights Reserved.</p> 
+     </div> 
+     <div id="block-menu-block-2" class="block block-menu-block block-social last even" role="navigation"> 
+      <div class="menu-block-wrapper menu-block-2 menu-name-menu-social parent-mlid-0 menu-level-1"> 
+       <ul class="menu">
+        <li class="menu__item is-leaf first leaf menu-mlid-486"><a href="https://www.facebook.com/paymentscanada/" class="menu__link facebook">Facebook</a></li> 
+        <li class="menu__item is-leaf leaf menu-mlid-487"><a href="https://twitter.com/paymentscanada" class="menu__link twitter">Twitter</a></li> 
+        <li class="menu__item is-leaf last leaf menu-mlid-488"><a href="https://www.linkedin.com/company/payments-canada" class="menu__link linkedin">Linkedin</a></li> 
+       </ul>
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="menu-overlay"></div> 
+  </div> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5c792f4a4e","applicationID":"56771658","transactionName":"ZldVN0QCVxBWVhUIVl8ddgBCClYNGEUABlxuX1YNVwRcEWhbDgVcbkReBkE8SQJQUA==","queueTime":0,"applicationTime":226,"atts":"ShBWQQwYRB4=","errorBeacon":"bam.nr-data.net","agent":""}</script>  
+ </body>
+</html>
