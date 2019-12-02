@@ -14,8 +14,8 @@
 
 		<!--  Rolling File Appender -->
 		<RollingFile name="FileAppender"
-			fileName="logs/log4j2.log"
-			filePattern="logs/log4j2-%d{yyyy-MM-dd}-%i.log">
+			fileName="logs/logger.log"
+			filePattern="logs/logger-%d{yyyy-MM-dd}-%i.log">
 			<PatternLayout>
 				<Pattern>${LOG_PATTERN}</Pattern>
 			</PatternLayout>
@@ -26,7 +26,7 @@
 		</RollingFile>
 	</Appenders>
 	<Loggers>
-		<Logger name="com.uwindsor.acc.searchengine" level="debug"
+		<Logger name="websearchengine" level="debug"
 			additivity="false">
 			<AppenderRef ref="ConsoleAppender" />
 			<AppenderRef ref="FileAppender" />

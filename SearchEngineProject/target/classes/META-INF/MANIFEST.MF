@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
-Implementation-Title: SearchEngine
+Implementation-Title: SearchEngineApp
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Prince
-Implementation-Vendor-Id: com.uwindsor.acc.searchengine.project
-Build-Jdk: 1.8.0_221
+Built-By: Rajwinder
+Implementation-Vendor-Id: websearchengine
+Build-Jdk: 1.8.0_231
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/SearchEngine
 Created-By: Maven Integration for Eclipse
