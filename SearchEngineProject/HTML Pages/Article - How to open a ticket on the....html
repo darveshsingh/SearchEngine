@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/TDPortal/Content/Scripts/jquery/1.11.2/jquery.min.js?v=20191115204103"></script>
+  <script src="/TDPortal/Content/Scripts/jquery-migrate/1.2.1/jquery-migrate.min.js?v=20191115204103"></script>
+  <script src="/TDPortal/Content/Scripts/jquery-ui/1.11.4/jquery-ui-1.11.4.custom.timepicker.min.js?v=20191115204101"></script>
+  <link href="/TDPortal/Content/Styles/jquery-ui/1.11.4/jquery-ui.compiled.min.css?v=20191115204033" rel="stylesheet" type="text/css">
+  <link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20191115204033" rel="stylesheet" type="text/css" id="lnkBootstrapCSS">
+  <script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20191115204034"></script>
+  <link href="/TDPortal/Content/Styles/font-awesome.min.css?v=20191115204033" rel="stylesheet" type="text/css" id="lnkFontAwesome">
+  <script src="/TDClient/Scripts/json2.min.js?v=20191115204010"></script> 
+  <script src="/TDClient/Scripts/underscore-min.js?v=20191115204010"></script> 
+  <script src="/TDClient/Scripts/TDJSFramework.compiled.min.js?v=20191115204008"></script> 
+  <script src="/TDClient/Scripts/clientOS.min.js?v=20191115204009"></script> 
+  <script src="/TDClient/Scripts/collapseMe.min.js?v=20191115204009"></script> 
+  <script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20191115204009"></script> 
+  <script src="/TDClient/Scripts/SiteSearch.min.js?v=20191115204009"></script> 
+  <link href="/TDClient/Styles/bootstrap_custom.min.css?v=20191115204006" rel="stylesheet" type="text/css">
+  <link href="/TDClient/Styles/TDStyles.min.css?v=20191115204006" rel="stylesheet" type="text/css">
+  <link href="https://uwindsor.teamdynamix.com/TDPortal/BE/Style/93/TDClient/1975?v=20171025204019" rel="stylesheet" type="text/css">
+  <link id="ctl00_ctl00_lnkFavicon" rel="shortcut icon" href="https://uwindsor.teamdynamix.com/TDPortal/BE/Icon/93/1975?v=20150226204704"> 
+  <script async src="//www.googletagmanager.com/gtag/js?id=UA-67479808-1"></script> 
+  <script>
+
+      $(function () {
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        // Be sure to set the proper cookie domain to the customer's full subdomain when sending the pageview hit.
+        gtag('config', 'UA-67479808-1', { 'cookie_domain': 'uwindsor.teamdynamix.com' });
+
+        });
+
+    </script> 
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+        baseUrl: '/TDClient/',
+        isTdGoogleAnalyticsEnabled: true,
+        isAuthenticated: false
+        });
+
+      $('#collapseMe').collapseMe({
+        toggleVisibilitySelector: '.navbar-toggle'
+      });
+
+    });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script> 
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20191115204104"></script>
+  <link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20191115204104" rel="stylesheet" type="text/css" id="lnkSelect2"> 
+  <style type="text/css">
+    .honey-pot-div {
+      display: none;
+    }
+  </style> 
+  <script>
+
+    
+
+    function checkRecipients() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#divShareModal').modal('toggle')
+      }
+    }
+
+    function toggleFeedback(isHelpful) {
+      $('#divHelpfulComments').show();
+      $('#divHelpfulYesNo').hide();
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsHelpful').val(isHelpful);
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').focus();
+    }
+
+    function toggleFeedbackResult() {
+      $('#divWasHelpful, #divFeedbackRecorded, #divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    // The following two functions were added as a result of ticket ID: 1392522. We are generating these buttons dynamically to 
+    // prevent bots from clicking them and posting feedback on an article. Additionally, we have an input that is hidden from
+    // the user. If a bot enters text in that input, which it likely will (bots love filling out forms), then we don't accept the
+    // form submission
+    function generateFeedbackButtons() {
+      var $btnHelpfulYes = $('<button id="btnHelpfulYes" type="button" class="btn btn-primary gutter-left" onclick="toggleFeedback(1);">Yes</button>');
+      var $btnHelpfulNo = $('<button id="btnHelpfulNo" type="button" class="btn btn-primary gutter-left-sm" onclick="toggleFeedback(0);">No</button>');
+
+      $('#divWasHelpful').append($btnHelpfulYes);
+      $('#divWasHelpful').append($btnHelpfulNo);
+    }
+    function attemptAddFeedback(e) {
+      if ($('#honeyPot').val() !== '') {
+        e.preventDefault();
+        window.location.reload();
+      }
+    }
+
+    $(function () {
+      
+
+      generateFeedbackButtons();
+      $('[data-toggle="popover"]').popover();
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divBody table:not(.SkipTableFixup)').each(function () {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function () { $(this).css('padding', padding + 'px') });
+      });
+
+      
+    });
+
+    
+  </script> 
+  <link rel="stylesheet" type="text/css" href="/TDClient/WebResource.axd?d=W635ydP1zPpneCzu2xYPRxBVzOuwjMhqDC05HApv5S9qGe3BFof4lBm7tnXyPzx6kUYjdwGmfJDlVNT-ifGW-enOMVCxRbKkEjXWMC3x3O9JzaYhjq3Qo4rwL6df2H9pMXb0dQ2&amp;t=637094295786185142">
+  <meta property="og:title" content="How to open a ticket on the self-service Client Portal?"> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:url" content="https://uwindsor.teamdynamix.com/TDClient/1975/Portal/KB/ArticleDet?ID=11372"> 
+  <meta property="og:image" content="https://uwindsor.teamdynamix.com/TDPortal/BE/Logo/93/1975"> 
+  <meta property="og:description" content="Learn how to submit service requests and report issues by opening tickets on the self-service Client Portal, and then track progress on your request, and submit feedback to staff working on your request."> 
+  <meta property="og:site_name" content="University of Windsor - Knowledge Base"> 
+  <meta property="article:published_time" content="2016-02-25T19:21Z"> 
+  <meta property="article:modified_time" content="2019-02-23T19:06Z"> 
+  <meta property="article:tag" content="ticket">
+  <title>
+	Article - How to open a ticket on the...
+</title>
+ </head> 
+ <body> 
+  <form method="post" action="/TDClient/1975/Portal/KB/ArticleDet?ID=11372" id="aspnetForm"> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""> 
+    <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""> 
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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"> 
+   </div> 
+   <script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script> 
+   <script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=636939809766230707" type="text/javascript"></script> 
+   <script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=ffffffffa580202a" type="text/javascript"></script> 
+   <script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=ffffffffa580202a" type="text/javascript"></script> 
+   <script src="/TDClient/WebResource.axd?d=5nB8CG0WfggiiLl9i90T5jyLUi_adV-Nbz5BHUxfJ92OiPi7r5J8ONuFFbHA6jjqZX0cT8H_DbC2qBUBD7R1mGqZ0sFXVczfloHVQP0R9esYoFIgFglQpTHFmNhE1DfB6TYnA9eJHHskINa4m56Z3I8PaTM1&amp;t=637094295786185142" type="text/javascript"></script> 
+   <script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=637094295786185142" type="text/javascript"></script> 
+   <script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=637094295786185142" type="text/javascript"></script> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="784CA02E"> 
+   </div> 
+   <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel1','','tctl00$ctl00$cpContent$cpContent$upFeedbackGrid','','tctl00$ctl00$cpContent$cpContent$upFeed','','tctl00$ctl00$cpContent$cpContent$UpdatePanel2','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnSubmitComments','','ctl00$ctl00$cpContent$cpContent$btnToggleFavorite',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script> 
+   <div id="ctl00_ctl00_upMain" style="display:none;"> 
+    <div id="ctl00_ctl00_pbMain" style="position: fixed; top: 50%; left: 0px; width: 100%; height: 1px; overflow: visible; z-index: 2000; display: block;">
+     <div style="margin-left: -125px; position: fixed; top: 50%; left: 50%; width: 250px; height: 90px;">
+      <div class="well shadow">
+       <h2 class="h4 gutter-top-none">Updating...</h2>
+       <div class="progress" style="margin-bottom: 0;">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+       </div>
+      </div>
+     </div>
+    </div> 
+   </div> 
+   <header role="banner"> 
+    <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;"> 
+     <div class="logo-header-full hidden-xs"> 
+      <div class="pull-left"> 
+       <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a> 
+      </div> 
+      <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;"> 
+       <div id="divLogo" class="pull-left logo-container"> 
+        <a href="http://www.uwindsor.ca" target="_blank"> <img src="/TDPortal/BE/Logo/93/1975" alt="University of Windsor Logo" class="js-logo img-responsive"> </a> 
+       </div> 
+       <div class="master-header-right pull-right padding-top padding-bottom"> 
+        <div class="pull-left topLevelSearch input-group"> 
+         <div id="SiteSearch-85fe438779de47829c5efb08505e3646" class="gutter-bottom input-group site-search" style="max-width: 400px;"> 
+          <div id="SiteSearch-dropdown-85fe438779de47829c5efb08505e3646" class="input-group-btn"> 
+           <button type="button" id="SiteSearch-filter-85fe438779de47829c5efb08505e3646" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Filter your search by categories" data-component="all"> <span class="fa fa-globe"></span><span class="fa fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span> <span class="sr-only">Filter your search by categories</span> </button> 
+           <ul class="dropdown-menu"> 
+            <li> <a href="javascript:void(0);" data-component="all" data-component-icon="fa-globe" title="Search all areas"> <span class="fa fa-fw fa-nopad fa-globe" aria-hidden="true"></span> All </a> </li> 
+            <li role="separator" class="divider"></li> 
+            <li> <a href="javascript:void(0);" data-component="kb" data-component-icon="fa-lightbulb-o" title="Search Knowledge Base"> <span class="fa fa-fw fa-nopad fa-lightbulb-o" aria-hidden="true"></span> Knowledge Base </a> </li> 
+            <li> <a href="javascript:void(0);" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog"> <span class="fa fa-fw fa-nopad fa-compass" aria-hidden="true"></span> Service Catalog </a> </li> 
+            <li> <a href="javascript:void(0);" data-component="q" data-component-icon="fa-comments" title="Search Questions"> <span class="fa fa-fw fa-nopad fa-comments" aria-hidden="true"></span> Questions </a> </li> 
+           </ul> 
+          </div> 
+          <input id="SiteSearch-text-85fe438779de47829c5efb08505e3646" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" aria-label="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag."> 
+          <span class="input-group-btn"> <button id="SiteSearch-button-85fe438779de47829c5efb08505e3646" class="btn btn-default" type="button" title="Search"> <span class="fa fa-fw fa-nopad fa-search blue" aria-hidden="true"></span> <span class="sr-only">Search</span> </button> </span> 
+         </div> 
+         <script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/1975/Portal/Shared/Search",
+      tagLookupServiceUrl: "/TDClient/1975/Portal/WebServices/JSON/TagLookupService.asmx/GetItems",
+      searchTextBoxSelector: '#SiteSearch-text-85fe438779de47829c5efb08505e3646',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-85fe438779de47829c5efb08505e3646',
+      searchButtonSelector: '#SiteSearch-button-85fe438779de47829c5efb08505e3646',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-85fe438779de47829c5efb08505e3646',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: true,
+      autoFocusSearch: false
+    });
+  });
+</script> 
+        </div> 
+        <div title="Sign In" class="pull-right gutter-top-sm"> 
+         <a href="/TDClient/1975/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1975%2fPortal%2fKB%2fArticleDet%3fID%3d11372">Sign In </a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary"> 
+      <div id="navContainer" class="container"> 
+       <div class="navbar-header"> 
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse"> <span class="tdbar-button-anchored icon-bar"></span> <span class="tdbar-button-anchored icon-bar"></span> <span class="tdbar-button-anchored icon-bar"></span> <span class="sr-only">Show Applications Menu</span> </button> 
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#"> Client Portal </a> 
+       </div> 
+       <div id="td-navbar-collapse" class="collapse navbar-collapse"> 
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe"> 
+         <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg"> <a href="/TDClient/1975/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1975%2fPortal%2fKB%2fArticleDet%3fID%3d11372">Sign In</a> </li> 
+         <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg"> <a href="/TDClient/1975/Portal/Shared/Search" title="search">Search</a> </li> 
+         <li id="divDesktopc6761c8c-7ac3-49af-a678-485e8a47f4fe" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/">Home</a> </li> 
+         <li id="divDesktop6752d70c-2547-4111-b28d-55e8a0f26f3d" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=6752d70c-2547-4111-b28d-55e8a0f26f3d">|</a> </li> 
+         <li id="divDesktopec55dfbf-78f6-48cf-86ae-b4b4cf201a44" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=ec55dfbf-78f6-48cf-86ae-b4b4cf201a44">Help</a> </li> 
+         <li id="divDesktop37b7390b-cc5d-4a6a-aa5c-49b8924066de" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=37b7390b-cc5d-4a6a-aa5c-49b8924066de">|</a> </li> 
+         <li id="divDesktopc5b8214f-8f71-4492-bb14-64e2db562678" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=c5b8214f-8f71-4492-bb14-64e2db562678">Notifications</a> </li> 
+         <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable"> <a href="/TDClient/1975/Portal/Requests/ServiceCatalog">Services</a> </li> 
+         <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable"> <a href="/TDClient/1975/Portal/KB/">Knowledge Base</a> </li> 
+         <li id="divTDQuestions" class="themed tdbar-button-anchored sr-focusable"> <a href="/TDClient/1975/Portal/Forums/Questions/?Filter=all">Questions</a> </li> 
+         <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu"> <a class="dropdown-toggle" data-toggle="dropdown" title="More Applications" href="#"> <span class="sr-only">More Applications</span> <span class="fa fa-ellipsis-h" aria-hidden="true"></span> </a> 
+          <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul> </li> 
+        </ul> 
+       </div> 
+      </div> 
+     </nav> 
+    </div> 
+   </header> 
+   <div id="navShim" class="hidden-xs hidden-sm"></div> 
+   <main role="main"> 
+    <div id="content" tabindex="-1"> 
+     <nav id="divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base"> 
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a> 
+      <div class="container clearfix"> 
+       <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;"> 
+        <li> <a href="/TDClient/1975/Portal/KB/Search">Search <span class="sr-only">Articles</span></a> </li> 
+       </ul> 
+      </div> 
+     </nav> 
+     <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;"> 
+      <span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red"></span></span> 
+      <div class="clearfix"> 
+       <ol class="breadcrumb pull-left"> 
+        <li><a href="/TDClient/1975/Portal/KB/">Knowledge Base</a></li>
+        <li class="active">How to open a ticket on the self-service Client Portal?</li> 
+       </ol> 
+       <span class="js-open-monitor" style="display: none;"></span> 
+      </div> 
+      <div class="row gutter-top"> 
+       <div id="divMainContent" class="col-md-8"> 
+        <h1 class="gutter-top" style="-ms-word-wrap: break-word; word-wrap: break-word;"> How to open a ticket on the self-service Client Portal? </h1> 
+        <div id="ctl00_ctl00_cpContent_cpContent_divTags"> 
+         <span class="sr-only">Tags</span> 
+         <span class="fa fa-tags gray gutter-right-sm" aria-hidden="true" title="Tags"></span> 
+         <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23ticket" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl00_TagControl1_lnkDisplay" title="ticket">ticket</a> 
+        </div> 
+        <div id="ctl00_ctl00_cpContent_cpContent_divBody" class="gutter-top break-word ckeShim clearfix">
+         <p>A new on-line system for submitting and tracking service requests was <a href="http://www.uwindsor.ca/dailynews/2015-10-29/new-issue-tracking-system-empower-it-services-clients" target="_blank">implemented in the Fall of 2015</a>; at the same time the ability to send inquiries to helpdesk@uwindsor.ca was phased out.&nbsp;The self-service Client Portal provides faculty, staff and students with the ability to electronically submit their requests by opening tickets for each of the services listed in our <a href="https://uwindsor.teamdynamix.com/TDClient/Requests/ServiceCatalog" target="_blank">Service Catalogue</a>. Users can then track progress made on their tickets and provide feedback directly to staff assigned to work on their requests.</p> 
+         <p>Please note&nbsp;that if you just have a general "How do I...?" question, you do not have to open a ticket. Instead, you can&nbsp;<a href="https://uwindsor.teamdynamix.com/TDClient/Forums/Questions/New?">Ask a&nbsp;Question</a>&nbsp;for each of the services listed in our <a href="http://uwindsor.teamdynamix.com/TDClient/Requests/ServiceCatalog">Service Catalogue</a> that will be posted on our <a href="https://uwindsor.teamdynamix.com/TDClient/Forums/Questions/?Filter=all">Questions</a> forum. Our staff will post an answer to your question within one business day, or open a ticket on your behalf to follow-up if required. Please note that all questions and answers posted on this forum are visible to all authenticated users so please be sure not to include any sensitive information, and only use it for generic questions (for example: "How do I enable Out of Office in Outlook?")</p> 
+         <h2>Opening a Ticket</h2> 
+         <p>To open a new ticket, you must first navigate to a&nbsp;<a href="https://uwindsor.teamdynamix.com/TDClient/Requests/ServiceCatalog" target="_blank">Service Catalogue</a> page for the service&nbsp;that you want to open a ticket for.</p> 
+         <p>Navigation to a service page can be done in two different ways:</p> 
+         <ol> 
+          <li>Searching</li> 
+          <li>Browsing</li> 
+         </ol> 
+         <h3>&nbsp;</h3> 
+         <h3><span style="font-size: 16px">Searching Method</span></h3> 
+         <ul> 
+          <li>Enter a&nbsp;keyword or phrase, for example: "shared mailbox",&nbsp;into the search bar located in the top right corner of the screen.</li> 
+          <li>Click on the globe icon&nbsp;and select <strong>Service Catalogue</strong></li> 
+          <li>Press <strong>Enter</strong> or click on the magnifying glass icon</li> 
+         </ul> 
+         <p><br> <img style="width: 418px; height: 206px;" alt src="https://uwindsor.teamdynamix.com/TDPortal/Images/Viewer?fileName=db547875-f43f-4e25-bac0-e9d5b49cde82.PNG"></p> 
+         <ul> 
+          <li>On the results screen, click on the desired service document to open it.</li> 
+          <li>On the service document, click on the <strong>Open Ticket</strong> button to access the on-line ticket form for that service</li> 
+         </ul> 
+         <p><img style="width: 369px; height: 76px;" alt src="https://uwindsor.teamdynamix.com/TDPortal/Images/Viewer?fileName=4c65ffc4-4bcf-4528-a9e4-1c8da7838dd4.PNG"></p> 
+         <ul> 
+          <li>Fill-out the form and click on the <strong>Request</strong> button on the bottom of the form to submit your ticket.</li> 
+         </ul> 
+         <p><img style="width: 113px; height: 58px;" alt src="https://uwindsor.teamdynamix.com/TDPortal/Images/Viewer?fileName=892a3563-82e7-4a80-9a19-f1963b4401c0.PNG"></p> 
+         <h3>&nbsp;</h3> 
+         <h3><span style="font-size: 16px">Browsing Method</span></h3> 
+         <p>Click on <strong>Services&nbsp;</strong>on the menu ribbon to access our Service Catalogue. Open a category that corresponds with the area that you are seeking support for. Some categories include sub-categories. If you prefer to see an alphabetic list of all services, click on <strong>Services A-Z</strong> on the menu ribbon.</p> 
+         <p>Locate and open the desired service page, then click the green button on the right labeled <b>Open Ticket</b>. This will launch&nbsp;an on-line form that is specific to the service that you requesting support for. Once you complete and submit that form, a ticket for your request will be created, and a confirmation e-mail with the ticket reference number will be e-mailed back to you.</p> 
+         <p>&nbsp;</p>
+        </div> 
+        <div id="divFeedback2" class="well gutter-top-lg"> 
+         <div class="row" id="divHelpfulYesNo"> 
+          <div class="col-sm-7"> 
+           <div> 
+            <a href="/TDClient/1975/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1975%2fPortal%2fKB%2fArticleDet%3fID%3d11372">Sign in to leave feedback</a> 
+           </div> 
+          </div> 
+          <div class="col-sm-5 text-right"> 
+           <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel1" aria-live="polite" aria-atomic="true">
+             77% helpful - 13 reviews 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="tab-content gutter-top gutter-bottom"> 
+         <div id="ctl00_ctl00_cpContent_cpContent_upFeedbackGrid"> 
+         </div> 
+         <div id="ctl00_ctl00_cpContent_cpContent_upFeed"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-md-4"> 
+        <a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:__doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','')"></a> 
+        <div id="divDetails" class="panel panel-default"> 
+         <div class="panel-heading"> 
+          <h3 class="panel-title">Details</h3> 
+         </div> 
+         <div class="panel-body"> 
+          <div id="ArticleID"> 
+           <span class="control-label gutter-bottom-xs">Article ID: </span> 11372 
+          </div> 
+          <div id="divAuthor" class="disp-group"> 
+           <span class="control-label gutter-bottom-xs"> Created </span> 
+           <div> 
+            <span id="ctl00_ctl00_cpContent_cpContent_udtCreatedDate">Thu 2/25/16 2:21 PM</span>
+            <span id="ctl00_ctl00_cpContent_cpContent_lblCreatedBy"></span> 
+           </div> 
+          </div> 
+          <div id="ctl00_ctl00_cpContent_cpContent_divModified" class="disp-group"> 
+           <span class="control-label gutter-bottom-xs"> Modified </span> 
+           <div> 
+            <span id="ctl00_ctl00_cpContent_cpContent_udtModifiedDate">Sat 2/23/19 2:06 PM</span>
+            <span id="ctl00_ctl00_cpContent_cpContent_lblModifiedBy"></span> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div id="ctl00_ctl00_cpContent_cpContent_divKB" class="panel panel-default"> 
+         <div class="panel-heading"> 
+          <h3 class="panel-title">Related Articles (1)</h3> 
+         </div> 
+         <div class="panel-body"> 
+          <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg"> 
+           <div class="clearfix"> 
+            <div class="pull-left font-md"> 
+             <a target="_blank" href="https://uwindsor.teamdynamix.com/TDClient/1975/Portal/KB/ArticleDet?ID=11375">How to access and update my tickets on Client Portal?</a> 
+            </div> 
+            <div class="pull-right"> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="ctl00_ctl00_cpContent_cpContent_divProgress" style="display: none; z-index: 60;"> 
+       <div id="ctl00_ctl00_cpContent_cpContent_pbMain" style="position: fixed; top: 50%; left: 0px; width: 100%; height: 1px; overflow: visible; z-index: 2000; display: block;">
+        <div style="margin-left: -125px; position: fixed; top: 50%; left: 50%; width: 250px; height: 90px;">
+         <div class="well shadow">
+          <h2 class="h4 gutter-top-none">Deleting...</h2>
+          <div class="progress" style="margin-bottom: 0;">
+           <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+          </div>
+         </div>
+        </div>
+       </div> 
+      </div> 
+      <div class="modal fade" id="divShareModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> 
+       <div class="modal-dialog"> 
+        <div class="modal-content"> 
+         <div class="modal-header"> 
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> 
+          <h4 class="modal-title" id="myModalLabel"> <span class="fa fa-share-alt fa-fw" aria-hidden="true"></span>Share </h4> 
+         </div> 
+         <div class="modal-body"> 
+          <div class="form-group"> 
+           <label class="control-label" for="ctl00_ctl00_cpContent_cpContent_shareRecipients">Recipient(s) <small>- separate email addresses with a comma</small></label> 
+           <input name="ctl00$ctl00$cpContent$cpContent$shareRecipients" type="text" id="ctl00_ctl00_cpContent_cpContent_shareRecipients" class="form-control"> 
+          </div> 
+          <div class="form-group"> 
+           <label for="ctl00_ctl00_cpContent_cpContent_shareBody" class="control-label">Message</label> 
+           <textarea name="ctl00$ctl00$cpContent$cpContent$shareBody" id="ctl00_ctl00_cpContent_cpContent_shareBody" class="form-control" style="height: 175px;">Check out this knowledge base article I found in the University of Windsor knowledge base.
+
+https://uwindsor.teamdynamix.com/TDClient/1975/Portal/KB/ArticleDet?ID=11372
+
+How to open a ticket on the self-service Client Portal?
+
+Learn how to submit service requests and report issues by opening tickets on the self-service Client Portal, and then track progress on your request, and submit feedback to staff working on your request.</textarea> 
+          </div> 
+         </div> 
+         <div class="modal-footer text-left"> 
+          <button onclick="checkRecipients(); __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare','')" id="ctl00_ctl00_cpContent_cpContent_btnSendShare" type="button" class="btn btn-primary"> <span class="fa fa-paper-plane-o" aria-hidden="true"></span> Send </button> 
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </main> 
+   <script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script> 
+  </form> 
+  <footer role="contentinfo"> 
+  </footer> 
+  <script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        })
+          .blur(function () {
+            $beLogo.removeClass('accessibility-focus-on-logo');
+          })
+      })(jQuery);
+
+  </script>   
+ </body>
+</html>

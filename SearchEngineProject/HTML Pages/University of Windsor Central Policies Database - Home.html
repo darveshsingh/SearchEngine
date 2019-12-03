@@ -1,0 +1,442 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <!-- Copyright(C) 2005-2018 by Inmagic Canada Software, a division of SydneyPLUS International Library Systems, Inc., Richmond BC Canada. All rights reserved. This code is proprietary to Inmagic Canada Software. --> 
+  <link rel="SHORTCUT ICON" href="/Presto/images/icons/links/favicon.png"> 
+  <title>
+    University of Windsor Central Policies Database
+    -
+    Home
+</title> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="keywords" content="LucideaKMPresto"> 
+  <link id="inmPrestoTheme" rel="stylesheet" href="/Presto/styles/scss/themes/UWindsor_Law_Library/theme_05022019_024830.css" type="text/css"> 
+  <link type="text/css" href="/Presto/styles/css/presto.min.css?v=5.1.0.221" rel="stylesheet"> 
+  <script type="text/javascript" src="/Presto/jscript/presto.min.js?v=5.1.0.221"></script> 
+  <script type="text/javascript" src="/Presto/jscript/CustomCommonScripts.js?v=5.1.0.221"></script> 
+  <script language="javascript" src="/Presto/help/RoboHelp_CSH.js?v=5.1.0.221" type="text/javascript"></script> 
+  <title>
+
+</title>
+ </head> 
+ <body id="ctl00_ctl00_PageBody" style="width:100%;height:100%;margin:0px; padding:0px;" class="inmg-body home-home"> 
+  <div class="banner-nav-container container-fluid"> 
+   <nav id="inmTopBar" class="navbar navbar-expand-sm navbar-expand-md navbar-dark fixed-top"> 
+    <div id="inm-top-bar-container" class="full-width"> 
+     <div id="inm-banner-bar" class="row"> 
+      <div class="col-6 col-md-8" style="padding-right: 0px; padding-left: 0px;"> 
+       <ul id="inm-banner-bar-left-area" class="navbar-nav"> 
+        <a id="hlLogoBrandLink" class="navbar-brand brand-image" aria-label="Home Page" href="http://www.uwindsor.ca"><img id="inmBrandLogo" title="Brand Logo" class="img-fluid" src="/Presto/styles/scss/themes/UWindsor_Law_Library/images/uwindsor_logo%20(1).png" alt="University of Windsor Logo" style="border-width:0px;"></a> 
+        <li class="banner-bar-content nav-item"></li> 
+       </ul> 
+      </div> 
+      <div class="col-6 col-md-4" style="padding-right: 0px; padding-left: 0px;"> 
+       <ul id="inmFullRightMenu" class="navbar-nav float-right"> 
+        <li id="inm-quick-search-input-container" class="nav-item searchbox-container">
+         <div class="inm-quicksearch-box">
+          <input id="inmQuickSearchInput" value="" class="form-control-test expanded" placeholder="Quick Search..." type="text" aria-label="Quick Search">
+          <input id="inm-quick-search-button" style="display: none;" value="" type="button" aria-label="Perform Quick Search">
+         </div></li>
+        <li id="inm-quick-search-show-button-container" class="nav-item"><a id="inmQuickSearchShowButton" href="javascript:void(0);" title="Search" class="inm-tooltip nav-link banner-icon-btn" aria-label="Quick Search"><i class="fa search-icon searchbox-icon" aria-hidden="true"></i></a></li>
+        <li id="mi-MyAccount" class="dropdown nav-item"><a href="#" class="dropdown-toggle nav-link banner-icon-btn inm-menu-list-item" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label=" Menu"><i class="fa no-profile-img-icon" aria-hidden="true"></i></a>
+         <div class="dropdown-menu dropdown-menu-right inm-menu-items">
+          <a href="javascript:OnAboutClick();" class="dropdown-item " target="_self">About</a>
+          <a href="/Presto/LogoutHttpHandler.axd?reloginMsgKey=TG9nZ2VkT3V0&amp;bmdc=MQ==" class="dropdown-item " target="_self">Log In</a>
+         </div></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div id="inm-menu-bar-container" class="row"> 
+      <div id="divSecondaryMenuBar" class="full-width collapse inm-hover-menu show" style="padding-right: 0px; padding-left: 0px;" data-delay="500"> 
+       <ul id="inm-menu-bar" class="navbar-nav"> 
+        <li id="rootItem-67" class="nav-item inm-menu "><a href="http://lawlibrary.uwindsor.ca/Presto/home/home.aspx?ssid=Home" class="inm-custom-child-item-en-us nav-link">Home</a></li> 
+        <li id="rootItem-Search" class="nav-item dropdown inm-menu"><a href="#" class="inmg-mi-search-en-us nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search</a> 
+         <div id="inm-menu-search-items" class="dropdown-menu inm-menu-items">
+          <a href="/Presto/content/AdvancedSearch.aspx?ctID=OTdhY2QzODgtNjhlYi00ZWY0LTg2OTUtNmU5NjEzY2JkMWYx" id="menu-item-Search-56" title="Policies" target="_self" class="dropdown-item">Policies</a>
+         </div></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </nav> 
+  </div> 
+  <div id="SessionExpiredPopup" class="modal fade" role="dialog" aria-labelledby="SessionExpiredPopup-modal-label"> 
+   <div id="SessionExpiredPopup-modal-dialog" class="modal-dialog" role="document">
+    <div id="SessionExpiredPopup-modal-content" class="modal-content inm-panel-container">
+     <div id="SessionExpiredPopup-modal-header" class="modal-header inm-panel-header">
+      <h4 class="modal-title" id="SessionExpiredPopup-modal-label"></h4>
+     </div>
+     <div id="SessionExpiredPopup-modal-body" class="inm-panel-body">
+      <div id="SessionExpiredPopup-intro" class="modal-intro"></div>
+      <div id="SessionExpiredPopup-validation-container" class="modal-validation">
+       <ul id="SessionExpiredPopup-error-list"></ul>
+      </div>
+      <div id="SessionExpiredPopup-input-container" class="modal-body modal-input-container full-width"> 
+       <div></div> 
+      </div>
+      <div class="modal-processing">
+       <div style="padding-top: 5px;" id="SessionExpiredPopup-processing">
+        <i class="fa fa-spinner fa-pulse fa-fw"></i>
+        <span class="sr-only">&nbsp;<span style="vertical-align: middle;">Processing...</span></span>&nbsp;
+        <span style="vertical-align: middle;">Processing...</span>
+       </div>
+      </div>
+     </div>
+     <div id="SessionExpiredPopup-modal-footer" class="modal-footer inm-panel-footer"></div>
+    </div>
+   </div> 
+  </div> 
+  <script type="text/javascript">
+
+    var expiredURL = '';
+    var sessionTimeOutURL = '';
+    var session = (function() {
+        var cs = new Inmagicinc.WebControls.CommonScripts();
+        var timeout = 30;
+        var isIPAuthentication = 0;
+        var countdown = 30;
+        var endpointURL = "/" + window.location.pathname.split('/')[1] + "/configure/users/ConfigureUserIPAuthentication.aspx";
+
+        var countDownTimer;
+        var alertTimer;
+        var expireTimer;
+
+        //private
+        var setCloseBrowserEvent = function() {
+            $(window).click(function(){
+                $(window).off('beforeunload');
+            });
+            $(window).mousedown(function(){
+                $(window).off('beforeunload');
+            });
+            $(window).keypress(function(){
+                $(window).off('beforeunload');
+            });
+            $(window).keydown(function(e){ 
+                if (e.which == 116){ // key code of the F5 button, cancel 'beforeunload' event
+                    $(window).off('beforeunload');
+                } 
+            }); 
+            $(window).on('beforeunload', function(){
+                expire(0);
+            });
+        };
+
+        var clearTimer = function() {
+            //reset timer
+            clearInterval(countDownTimer);
+            clearTimeout(alertTimer);
+            clearTimeout(expireTimer);
+        };
+        
+        var handleWebserviceError = function(xhr, status, error) {
+            //error-handling
+            console.log(xhr.responseText);
+        };
+
+        var callWebService = function(uri, data, fail) {
+            $.ajax({
+                type: 'post',
+                url: endpointURL + '/' + uri,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: data,
+                async: false
+            })
+            .fail(handleWebserviceError);
+        };
+
+        //public
+        var setTimer = function() {
+            if (window.name !== '')
+                return;
+
+            setCloseBrowserEvent();
+
+            if (timeout === 0)
+                return;
+
+            var seconds = timeout / 1000;
+
+            countDownTimer = setInterval(function() {
+                seconds--;
+                
+                //ie issue
+                cs.ReenableButtons('SessionExpiredPopup');
+                $('#seconds').html(seconds);
+
+            }, 1000);
+
+            alertTimer = setTimeout(function() {
+                $('#SessionExpiredPopup').inmModalDialog('open');
+
+            }, timeout - countdown * 1000);
+
+            expireTimer = setTimeout(function() {
+                expire(2);
+                redirect(sessionTimeOutURL);
+
+            }, timeout);
+        };
+
+        var resetTimer = function() {
+            $('#SessionExpiredPopup').inmModalDialog('close');
+            var jsonData = '{"isIPAuthentication":' + isIPAuthentication + '}';
+            callWebService('ResetUserSession', jsonData);
+            clearTimer();
+            setTimer();
+        };
+
+        var expire = function(logout) {
+            //logout: 0 - browser on before unload, such as user close browser, refresh
+            //logout: 1 - user click "NO" to end session, when session alert popup
+            //logout: 2 - session timeout occurs
+            var jsonData = '{"logout":' + logout + ',"isIPAuthentication":' + isIPAuthentication + '}';
+            callWebService('ExpireUserSession', jsonData);
+        };
+
+        var redirect = function(url) {
+            //need to turn off beforeunload event listener
+            $(window).off('beforeunload');
+
+            //close alert popup
+            $('#SessionExpiredPopup').inmModalDialog('close');
+
+            //clear timers
+            clearTimer();
+
+            //redirect to logout page
+            window.location = url;
+        };
+
+        return {
+            setTimer: setTimer,
+            resetTimer: resetTimer,
+            expire: expire,
+            redirect: redirect
+
+        };
+
+    })();
+
+    function OnSessionExpireAlert() {
+        session.setTimer();
+    };
+
+    function OnResetSession() {
+        session.resetTimer();
+    }
+
+    function OnExpireSession() {
+        session.expire(1);
+        session.redirect(expiredURL);
+    }
+
+</script> 
+  <div id="inmAboutModal" class="modal fade" role="dialog" aria-labelledby="inmAboutModal-modal-label"> 
+   <div id="inmAboutModal-modal-dialog" class="modal-dialog" role="document">
+    <div id="inmAboutModal-modal-content" class="modal-content inm-panel-container">
+     <div id="inmAboutModal-modal-header" class="modal-header inm-panel-header">
+      <h4 class="modal-title" id="inmAboutModal-modal-label"></h4>
+     </div>
+     <div id="inmAboutModal-modal-body" class="inm-panel-body">
+      <div id="inmAboutModal-intro" class="modal-intro"></div>
+      <div id="inmAboutModal-validation-container" class="modal-validation">
+       <ul id="inmAboutModal-error-list"></ul>
+      </div>
+      <div id="inmAboutModal-input-container" class="modal-body modal-input-container full-width"> 
+       <div class="full-width smallprint"> 
+        <div id="about-logo-container" class="navbar-brand brand-image">
+         <img id="inmBrandLogo" class="img-fluid" title="Brand Logo" src="/Presto/images/branding/lucidea-logo.png" alt="Brand Logo" style="border-width:0px;">
+        </div> 
+        <hr> 
+        <div id="lblVersion" style="font-size: larger;font-weight: bold; padding-bottom:15px;">
+         <strong>Inmagic<sup>®</sup> Presto</strong> Version 5.1 Build 221
+        </div> 
+        <div id="div_tooltip_template" class="tooltip_templates" style="padding-bottom:10px;display:none"></div> 
+        <hr> 
+        <strong>Inmagic<sup>®</sup> Presto</strong>
+        <br>
+        <br>Copyright © 2005-2018 by Inmagic Canada Software, a division of SydneyPLUS International Library Systems, Inc., a Lucidea Company, Richmond BC Canada. All rights reserved.
+        <br> Inmagic® and the Inmagic logo are registered trademarks of SydneyPLUS International.
+        <br>Unauthorized duplication or distribution is prohibited.
+        <br> 
+        <br> Other brand and product names are trademarks or registered trademarks of their respective holders. Use of any other product name does not imply endorsement of that product by Inmagic.&nbsp;
+        <br>
+        <br>
+        <a href="../help/ThirdPartyLicenses.htm" target="_blank">Third-party Licenses</a> 
+       </div> 
+      </div>
+      <div class="modal-processing">
+       <div style="padding-top: 5px;" id="inmAboutModal-processing">
+        <i class="fa fa-spinner fa-pulse fa-fw"></i>
+        <span class="sr-only">&nbsp;<span style="vertical-align: middle;">Processing...</span></span>&nbsp;
+        <span style="vertical-align: middle;">Processing...</span>
+       </div>
+      </div>
+     </div>
+     <div id="inmAboutModal-modal-footer" class="modal-footer inm-panel-footer"></div>
+    </div>
+   </div> 
+  </div> 
+  <script type="text/javascript">
+        $(document).ready(function () {
+            $('.inm-about-tooltip').tooltipster({
+                theme: ['tooltipster-light']
+            });
+        });
+
+    </script> 
+  <div id="inmContentContainer" class="container-fluid fixed-menu-padding"> 
+   <form name="aspnetForm" method="post" action="./home.aspx" id="aspnetForm"> 
+    <div> 
+     <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""> 
+     <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""> 
+     <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTg4MzUyOTExNQ9kFgJmD2QWAmYPZBYEAgEPZBYCZg9kFgpmDxYCHgRUZXh0BdcBPCEtLSBDb3B5cmlnaHQoQykgMjAwNS0yMDE4IGJ5IElubWFnaWMgQ2FuYWRhIFNvZnR3YXJlLCBhIGRpdmlzaW9uIG9mIFN5ZG5leVBMVVMgSW50ZXJuYXRpb25hbCBMaWJyYXJ5IFN5c3RlbXMsIEluYy4sIFJpY2htb25kIEJDIENhbmFkYS4gQWxsIHJpZ2h0cyByZXNlcnZlZC4gVGhpcyBjb2RlIGlzIHByb3ByaWV0YXJ5IHRvIElubWFnaWMgQ2FuYWRhIFNvZnR3YXJlLiAtLT5kAgEPFgIfAAVPPGxpbmsgcmVsPSJTSE9SVENVVCBJQ09OIiBocmVmPSIvUHJlc3RvL2ltYWdlcy9pY29ucy9saW5rcy9mYXZpY29uLnBuZyI+PC9saW5rPmQCAg8WAh8ABS9Vbml2ZXJzaXR5IG9mIFdpbmRzb3IgQ2VudHJhbCBQb2xpY2llcyBEYXRhYmFzZWQCAw8WAh8ABQRIb21lZAIEDxYCHwAFMDxtZXRhIG5hbWU9ImtleXdvcmRzIiBjb250ZW50PSJMdWNpZGVhS01QcmVzdG8iPmQCAw8WAh4FY2xhc3MFE2lubWctYm9keSBob21lLWhvbWUWCAIDDxYCHwEFPm5hdmJhciBuYXZiYXItZXhwYW5kLXNtIG5hdmJhci1leHBhbmQtbWQgbmF2YmFyLWRhcmsgZml4ZWQtdG9wFgYCAw8PFgIeC05hdmlnYXRlVXJsBRZodHRwOi8vd3d3LnV3aW5kc29yLmNhFgIeCmFyaWEtbGFiZWwFCUhvbWUgUGFnZRYCZg8PFgYeCEltYWdlVXJsBUwvUHJlc3RvL3N0eWxlcy9zY3NzL3RoZW1lcy9VV2luZHNvcl9MYXdfTGlicmFyeS9pbWFnZXMvdXdpbmRzb3JfbG9nbyAoMSkucG5nHg1BbHRlcm5hdGVUZXh0BRpVbml2ZXJzaXR5IG9mIFdpbmRzb3IgTG9nbx4HVG9vbFRpcAUaVW5pdmVyc2l0eSBvZiBXaW5kc29yIExvZ29kZAIHD2QWBGYPZBYCAgEPFgIfAAXaCTxsaSBpZD0iaW5tLXF1aWNrLXNlYXJjaC1pbnB1dC1jb250YWluZXIiIGNsYXNzPSJuYXYtaXRlbSBzZWFyY2hib3gtY29udGFpbmVyIj48ZGl2IGNsYXNzPSJpbm0tcXVpY2tzZWFyY2gtYm94Ij48aW5wdXQgaWQ9ImlubVF1aWNrU2VhcmNoSW5wdXQiIHZhbHVlPSIiIGNsYXNzPSJmb3JtLWNvbnRyb2wtdGVzdCBleHBhbmRlZCIgcGxhY2Vob2xkZXI9IlF1aWNrIFNlYXJjaC4uLiIgdHlwZT0idGV4dCIgIGFyaWEtbGFiZWw9IlF1aWNrIFNlYXJjaCIgLz48aW5wdXQgaWQ9ImlubS1xdWljay1zZWFyY2gtYnV0dG9uIiBzdHlsZT0iZGlzcGxheTogbm9uZTsiIHZhbHVlPSIiIHR5cGU9ImJ1dHRvbiIgYXJpYS1sYWJlbD0iUGVyZm9ybSBRdWljayBTZWFyY2giLz48L2Rpdj48L2xpPjxsaSBpZD0iaW5tLXF1aWNrLXNlYXJjaC1zaG93LWJ1dHRvbi1jb250YWluZXIiIGNsYXNzPSJuYXYtaXRlbSI+PGEgaWQ9ImlubVF1aWNrU2VhcmNoU2hvd0J1dHRvbiIgaHJlZj0iamF2YXNjcmlwdDp2b2lkKDApOyIgdGl0bGU9IlNlYXJjaCIgY2xhc3M9ImlubS10b29sdGlwIG5hdi1saW5rIGJhbm5lci1pY29uLWJ0biIgYXJpYS1sYWJlbD0iUXVpY2sgU2VhcmNoIj48aSBjbGFzcz0iZmEgc2VhcmNoLWljb24gc2VhcmNoYm94LWljb24iIGFyaWEtaGlkZGVuPSJ0cnVlIj48L2k+PC9hPjwvbGk+PGxpIGlkPSJtaS1NeUFjY291bnQiIGNsYXNzPSJkcm9wZG93biBuYXYtaXRlbSI+PGEgaHJlZj0iIyIgY2xhc3M9ImRyb3Bkb3duLXRvZ2dsZSBuYXYtbGluayBiYW5uZXItaWNvbi1idG4gaW5tLW1lbnUtbGlzdC1pdGVtIiAgZGF0YS10b2dnbGU9ImRyb3Bkb3duIiByb2xlPSJidXR0b24iIGFyaWEtaGFzcG9wdXA9InRydWUiIGFyaWEtZXhwYW5kZWQ9ImZhbHNlIiBhcmlhLWxhYmVsPSIgTWVudSI+PGkgY2xhc3M9ImZhIG5vLXByb2ZpbGUtaW1nLWljb24iIGFyaWEtaGlkZGVuPSJ0cnVlIj48L2k+PC9hPjxkaXYgY2xhc3M9ImRyb3Bkb3duLW1lbnUgZHJvcGRvd24tbWVudS1yaWdodCBpbm0tbWVudS1pdGVtcyI+PGEgaHJlZj0iamF2YXNjcmlwdDpPbkFib3V0Q2xpY2soKTsiIGNsYXNzPSJkcm9wZG93bi1pdGVtICIgdGFyZ2V0PSJfc2VsZiI+QWJvdXQ8L2E+PGEgaHJlZj0iL1ByZXN0by9Mb2dvdXRIdHRwSGFuZGxlci5heGQ/cmVsb2dpbk1zZ0tleT1URzluWjJWa1QzVjAmYm1kYz1NUT09IiBjbGFzcz0iZHJvcGRvd24taXRlbSAiIHRhcmdldD0iX3NlbGYiPkxvZyBJbjwvYT48L2Rpdj48L2xpPmQCAg8WAh4HVmlzaWJsZWhkAgkPFgQfAQUnZnVsbC13aWR0aCBjb2xsYXBzZSBpbm0taG92ZXItbWVudSBzaG93HgpkYXRhLWRlbGF5BQM1MDAWAgIBDxYCHwAFmwU8bGkgaWQ9InJvb3RJdGVtLTY3IiBjbGFzcz0ibmF2LWl0ZW0gaW5tLW1lbnUgIj48YSBocmVmPSJodHRwOi8vbGF3bGlicmFyeS51d2luZHNvci5jYS9QcmVzdG8vaG9tZS9ob21lLmFzcHg/c3NpZD1Ib21lIiBjbGFzcz0iaW5tLWN1c3RvbS1jaGlsZC1pdGVtLWVuLXVzIG5hdi1saW5rIj5Ib21lPC9hPjwvbGk+CjxsaSBpZD0icm9vdEl0ZW0tU2VhcmNoIiBjbGFzcz0ibmF2LWl0ZW0gZHJvcGRvd24gaW5tLW1lbnUiPjxhIGhyZWY9IiMiIGNsYXNzPSJpbm1nLW1pLXNlYXJjaC1lbi11cyBuYXYtbGluayBkcm9wZG93bi10b2dnbGUiIGRhdGEtdG9nZ2xlPSJkcm9wZG93biIgcm9sZT0iYnV0dG9uIiBhcmlhLWhhc3BvcHVwPSJ0cnVlIiBhcmlhLWV4cGFuZGVkPSJmYWxzZSI+U2VhcmNoPC9hPgo8ZGl2IGlkPSJpbm0tbWVudS1zZWFyY2gtaXRlbXMiIGNsYXNzPSJkcm9wZG93bi1tZW51IGlubS1tZW51LWl0ZW1zIj48YSBocmVmPSIvUHJlc3RvL2NvbnRlbnQvQWR2YW5jZWRTZWFyY2guYXNweD9jdElEPU9UZGhZMlF6T0RndE5qaGxZaTAwWldZMExUZzJPVFV0Tm1VNU5qRXpZMkprTVdZeCIgaWQ9Im1lbnUtaXRlbS1TZWFyY2gtNTYiIHRpdGxlPSJQb2xpY2llcyIgdGFyZ2V0PSJfc2VsZiIgY2xhc3M9ImRyb3Bkb3duLWl0ZW0iPlBvbGljaWVzPC9hPjwvZGl2PjwvbGk+ZAIFD2QWAmYPD2QWAh4PYXJpYS1sYWJlbGxlZGJ5BR9TZXNzaW9uRXhwaXJlZFBvcHVwLW1vZGFsLWxhYmVsZAIHD2QWAmYPD2QWAh8JBRlpbm1BYm91dE1vZGFsLW1vZGFsLWxhYmVsFgJmD2QWAmYPZBYCAgEPZBYCAgIPZBYCZg9kFgQCAQ8PFgIfBAUoL1ByZXN0by9pbWFnZXMvYnJhbmRpbmcvbHVjaWRlYS1sb2dvLnBuZ2RkAgsPFgIfAAWnBTxzdHJvbmc+SW5tYWdpYzxzdXA+JnJlZzs8L3N1cD4gUHJlc3RvPC9zdHJvbmc+PGJyPjxicj5Db3B5cmlnaHQgJmNvcHk7IDIwMDUtMjAxOCBieSBJbm1hZ2ljIENhbmFkYSBTb2Z0d2FyZSwgYSBkaXZpc2lvbiBvZiBTeWRuZXlQTFVTIEludGVybmF0aW9uYWwgTGlicmFyeSBTeXN0ZW1zLCBJbmMuLCBhIEx1Y2lkZWEgQ29tcGFueSwgUmljaG1vbmQgQkMgQ2FuYWRhLiBBbGwgcmlnaHRzIHJlc2VydmVkLjxicj4gSW5tYWdpYyYjMDE3NDsgYW5kIHRoZSBJbm1hZ2ljIGxvZ28gYXJlIHJlZ2lzdGVyZWQgdHJhZGVtYXJrcyBvZiBTeWRuZXlQTFVTIEludGVybmF0aW9uYWwuPGJyPlVuYXV0aG9yaXplZCBkdXBsaWNhdGlvbiBvciBkaXN0cmlidXRpb24gaXMgcHJvaGliaXRlZC48YnIgLz4JPGJyPiBPdGhlciBicmFuZCBhbmQgcHJvZHVjdCBuYW1lcyBhcmUgdHJhZGVtYXJrcyBvciByZWdpc3RlcmVkIHRyYWRlbWFya3Mgb2YgdGhlaXIgcmVzcGVjdGl2ZSBob2xkZXJzLiBVc2Ugb2YgYW55IG90aGVyIHByb2R1Y3QgbmFtZSBkb2VzIG5vdCBpbXBseSBlbmRvcnNlbWVudCBvZiB0aGF0IHByb2R1Y3QgYnkgSW5tYWdpYy4mbmJzcDs8YnIgLz48YnIgLz48YSBocmVmPSIuLi9oZWxwL1RoaXJkUGFydHlMaWNlbnNlcy5odG0iIHRhcmdldD0iX2JsYW5rIj5UaGlyZC1wYXJ0eSBMaWNlbnNlczwvYT5kAgkPFgIfAQUiY29udGFpbmVyLWZsdWlkIGZpeGVkLW1lbnUtcGFkZGluZxYCAgEPZBYCAgEPZBYCAgcPFgIeCWlubmVyaHRtbAV0WW91IGRvIG5vdCBoYXZlIHBlcm1pc3Npb24gdG8gdmlldyBhbnkgc2NyZWVucyBvZiB0aGlzIHR5cGUuIENvbnRhY3QgeW91ciBzeXN0ZW0gYWRtaW5pc3RyYXRvciBmb3IgbW9yZSBpbmZvcm1hdGlvbi5kZKUcXkNnRdEuquCqyMZzLkEG7XbEtiKhLMtbsMA5Nepo"> 
+    </div> 
+    <script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script> 
+    <script src="/Presto/WebResource.axd?d=9yKwbLsWHI3Uap-IWGSg3cLxwUBEYu9mU5ES7Y7MmA-d0RgqEsIMgqlQLgJjsXZDUYov2AnsDKUMX0uzQ9WvXhV2K5v1vTJ4hqdREhS4pio1&amp;t=636686510738678653" type="text/javascript"></script> 
+    <script src="/Presto/ScriptResource.axd?d=XDFnL-aYFKgSU-C6OLtkFmYtsWFhKzleAoO-mbJ7GXbY4byfqd4jE2TnKArWrR8WfFdLsujVivqg_F1uy0jeEwmOpHEtL3Wql4RpPvyhkBdDyZ8LQ6TBWvjMgLkXes2TC5c82rzwdYhHnNdwLBlZYBSMmnuDphSm5OWukHORC-U1&amp;t=545ba255" type="text/javascript"></script> 
+    <script src="/Presto/ScriptResource.axd?d=KwupztVnifZZUroV-iaocPCIO3f5NfVoz8HB0gPt-4a4_QQ-mc8492K1051idheQGhnfL24EqQvcYDITwJjiPhgblPBX9T_tykRWJilpKxUE0i07DpjehYQEPjBIg5nOkx3CasG5dL_Ad2L1fBsTd8ecCaASyuW5M6GUr6tEMJ76qG-exh4N7EC5B70IeuHJ0&amp;t=545ba255" type="text/javascript"></script> 
+    <div> 
+     <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4496F044"> 
+    </div> 
+    <div id="inm-content-inner-container" class="row"> 
+     <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$mpcSingleContent$_smAjaxScripts', 'aspnetForm', [], [], [], 90, 'ctl00$ctl00');
+//]]>
+</script> 
+     <a name="skipnav"></a> 
+     <div id="divContent" class="full-width"> 
+      <input type="hidden" name="ctl00$ctl00$mpcSingleContent$hfScreenId" id="hfScreenId"> 
+      <div class="page-main-container row"> 
+      </div> 
+     </div> 
+    </div> 
+    <script type="text/javascript">
+//<![CDATA[
+$(document).ready(function() {inmAdvScreenCtrl.RenderScreen('.page-main-container', 'MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDAwMDAwMDAwLjA=', 'en-US', 'screenID_10063', false, function(result){inmAdvScreenCtrl.InitConfigOptionMenu();});setAccordionTabIcon();});$(document).ready(function(){
+$('#SessionExpiredPopup').inmModalDialog({
+title: "No Dialog Title Entered",
+draggable: true,
+show: false,
+construct: false,
+width: "600px",
+buttons: [{
+id: "SessionExpiredPopup_Save",
+text:  "Save",
+action: "save",
+buttonColorClass: "btn-success",
+click: function(ui){
+$('#SessionExpiredPopup-validation-container').hide();
+$('#SessionExpiredPopup .modal-processing').show();
+$('#SessionExpiredPopup .modal-footer').find('#SessionExpiredPopup_Save').addClass('disabled');
+if (document.getElementById("frameInline")) {
+$("#frameInline").css("visibility","visible");
+}
+$('#SessionExpiredPopup .modal-footer').find('#SessionExpiredPopup_Save').removeClass('disabled');
+}
+},{
+id: "SessionExpiredPopup_Cancel",
+text:  "Cancel",
+action: "cancel",
+buttonColorClass: "btn-danger",click: function(ui){
+if (document.getElementById("frameInline")) {
+$("#frameInline").css("visibility","visible");
+}
+$(ui.data.el).inmModalDialog('close');
+}}],
+onOpen: function() {
+if (document.getElementById("frameInline")) {
+var s = $("#frameInline").attr("src");
+if (s.indexOf("GetDoc") > -1 || s.indexOf("_swf") > -1) {
+$("#frameInline").css("visibility","hidden");
+}
+}$('#SessionExpiredPopup-validation-container').hide();
+$('#SessionExpiredPopup .modal-footer').find('#SessionExpiredPopup_Save').removeClass('disabled');},
+onClose: function(ui) {
+if (document.getElementById("frameInline")) {
+$("#frameInline").css("visibility","visible");
+}
+$('#SessionExpiredPopup .modal-processing').hide();
+}});
+});
+$(document).ready(function(){
+$('#inmAboutModal').inmModalDialog({
+title: "About Inmagic<sup>®</sup> Presto",
+draggable: true,
+show: false,
+construct: false,
+width: "700px",
+bodyHeight: "500px",
+buttons: [{
+id: "inmAboutModal_Cancel",
+text:  "Close",
+action: "cancel",
+buttonColorClass: "btn-danger",click: function(ui){
+if (document.getElementById("frameInline")) {
+$("#frameInline").css("visibility","visible");
+}
+$(ui.data.el).inmModalDialog('close');
+}}],
+onOpen: function() {
+if (document.getElementById("frameInline")) {
+var s = $("#frameInline").attr("src");
+if (s.indexOf("GetDoc") > -1 || s.indexOf("_swf") > -1) {
+$("#frameInline").css("visibility","hidden");
+}
+}$('#inmAboutModal-validation-container').hide();
+$('#inmAboutModal .modal-footer').find('#inmAboutModal_Save').removeClass('disabled');},
+onClose: function(ui) {
+if (document.getElementById("frameInline")) {
+$("#frameInline").css("visibility","visible");
+}
+$('#inmAboutModal .modal-processing').hide();
+}});
+});
+//]]>
+</script> 
+   </form> 
+  </div> 
+  <div id="divFooterBarContentContainer"></div> 
+  <script type="text/javascript">
+        $(document).on('focusin', function (e) {
+            if ($(e.target).closest(".mce-window, .moxman-window").length) {
+                e.stopImmediatePropagation();
+            }
+        });
+
+        var footerBar = $.trim($("#divFooterBarContentContainer").html());
+        if (footerBar.length > 0) {
+            if (window.addEventListener)
+                window.addEventListener("load", function () { resetFooter(3); }, false);
+
+            else
+                if (window.attachEvent)
+                    window.attachEvent("onload", function () { resetFooter(3); });
+
+                else
+                    if (window.onLoad)
+                        window.onload = resetFooter(3);
+
+        }
+
+    </script>   
+ </body>
+</html>
