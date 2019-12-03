@@ -19,7 +19,7 @@ import websearchengine.controller.SearchController;
 import websearchengine.models.SearchResults;
 import websearchengine.models.SortNode;
 import websearchengine.models.TSTNode;
-import websearchengine.searchservices.websearchservicesimpl.TSTStringTokenizerImpl;
+import websearchengine.searchservices.websearchservicesimpl.TSTStringTokenizerCreationImpl;
 import websearchengine.websearchservice.WebSearchService;
 import websearchengine.websortservice.websortserviceimpl.QuickSortImpl;
 import websearchengine.webutils.SearchEngineConstants;
@@ -31,7 +31,7 @@ public class WebSearchServiceImpl implements WebSearchService {
 	private static File file;
 	public IndexTable idxTable = new IndexTable();
 	public TST<TSTNode> tst = new TST<TSTNode>(idxTable);
-	public TSTStringTokenizerImpl token;
+	public TSTStringTokenizerCreationImpl token;
 
 	private static final Logger log = LogManager.getLogger(SearchController.class);
 
@@ -82,9 +82,9 @@ public class WebSearchServiceImpl implements WebSearchService {
 		if (log.isDebugEnabled())
 			log.debug("Searching Keyword : " + keyword);
 		// Read text files and put words to TST
-		webS.token = new TSTStringTokenizerImpl(webS.tst);
+		webS.token = new TSTStringTokenizerCreationImpl(webS.tst);
 		webS.token.readFile();
-
+		
 		int wordIdx = webS.tst.get(keyword);
 		if (wordIdx != -1) {
 			cntArray = webS.idxTable.getCntArray(wordIdx);
@@ -92,8 +92,7 @@ public class WebSearchServiceImpl implements WebSearchService {
 		}
 
 		if (cntArray != null) {
-			// The sort of cnt is increasing order. We want to display it in decreasing
-			// order.
+			// Display the Search Results in the decreasing order
 			for (int i = cntArray.length - 1; i >= 0; i--) {
 				if (cntArray[i].cnt == 0)
 					break;

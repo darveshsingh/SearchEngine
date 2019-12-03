@@ -18,54 +18,53 @@ import websearchengine.searchservices.TSTStringCreation;
 import websearchengine.webutils.SearchEngineConstants;
 import websearchengine.webutils.TST;
 
-public class TSTStringTokenizerImpl implements TSTStringCreation {
+public class TSTStringTokenizerCreationImpl implements TSTStringCreation {
 
 	String[] fileName;
 	private static File file;
 	private TST<TSTNode> tst;
 
-	private static final Logger log = LogManager.getLogger(TSTStringTokenizerImpl.class);
+	private static final Logger log = LogManager.getLogger(TSTStringTokenizerCreationImpl.class);
 
-	public TSTStringTokenizerImpl(TST<TSTNode> tst) {
+	public TSTStringTokenizerCreationImpl(TST<TSTNode> tst) {
 		this.tst = tst;
 	}
 
-	public String getFileName(int fileIdx) {
-		return fileName[fileIdx];
+	public String getFileName(int fileId) {
+		return fileName[fileId];
 	}
 
-	public static String PrefixString(String stringline) {
-		if (SearchEngineConstants.IDENTIFIER_REGEX.indexOf(stringline.charAt(0)) == -1) {
-			return stringline;
-		} else if (stringline.length() == 1) {
+	public static String PrefixString(String line) {
+		if (SearchEngineConstants.IDENTIFIER_REGEX.indexOf(line.charAt(0)) == -1) {
+			return line;
+		} else if (line.length() == 1) {
 			return null;
 		} else {
-			return PrefixString(stringline.substring(1));
+			return PrefixString(line.substring(1));
 		}
 	}
 
-	public static String SuffixString(String stringline) {
-		if (SearchEngineConstants.IDENTIFIER_REGEX.indexOf(stringline.charAt(stringline.length() - 1)) == -1) {
-			return stringline;
+	public static String SuffixString(String line) {
+		if (SearchEngineConstants.IDENTIFIER_REGEX.indexOf(line.charAt(line.length() - 1)) == -1) {
+			return line;
 		}
-		return SuffixString(stringline.substring(0, stringline.length() - 1));
+		return SuffixString(line.substring(0, line.length() - 1));
 	}
 
 	public void readFile() {
 		String[] filelist;
-		ArrayList<ArrayList<String>> store_all = new ArrayList<ArrayList<String>>();
+		ArrayList<ArrayList<String>> allFileList = new ArrayList<ArrayList<String>>();
 		file = new File(SearchEngineConstants.HTML_TO_TXT_DIRECTORY);
 		filelist = file.list();
 		fileName = new String[filelist.length];
-
 		for (int i = 0; i < filelist.length; i++) {
 			fileName[i] = filelist[i].substring(0, filelist[i].length() - 4);
 		}
 
 		try {
 			for (int i = 0; i < filelist.length; i++) {
-				ArrayList<String> store = new ArrayList<String>();
-				// If the file isn't .txt file, skip it
+				ArrayList<String> fileList = new ArrayList<String>();
+				// Check whether the file is .txt
 				if (!filelist[i].substring(filelist[i].length() - 4).equals(".txt"))
 					continue;
 
@@ -73,42 +72,42 @@ public class TSTStringTokenizerImpl implements TSTStringCreation {
 				InputStream input = new FileInputStream(file);
 				BufferedReader read = new BufferedReader(new InputStreamReader(input));
 
-				store.add(filelist[i]);
-				String stringline = read.readLine();
-				int row_number = 1;
+				fileList.add(filelist[i]);
+				String line = read.readLine();
+				int rowNumber = 1;
 
-				while (stringline != null) {
-					StringTokenizer st = new StringTokenizer(stringline);
-					String row_number_string = "row: " + row_number;
-					store.add(row_number_string);
+				while (line != null) {
+					StringTokenizer st = new StringTokenizer(line);
+					String rowNumberString = "row: " + rowNumber;
+					fileList.add(rowNumberString);
 					while (st.hasMoreElements()) {
 						String temp = st.nextToken();
 
 						if (temp.length() == 1) {
 							if ((temp.charAt(0) >= 'a' && temp.charAt(0) <= 'z')
 									|| (temp.charAt(0) >= 'A' && temp.charAt(0) <= 'Z')) {
-								store.add(temp);
+								fileList.add(temp);
 								// Add the word to TST
-								TSTNode tstNode = new TSTNode(i, row_number);
+								TSTNode tstNode = new TSTNode(i, rowNumber);
 								tst.put(temp, tstNode);
 							}
 						} else {
-							String Prefix_fixed = PrefixString(temp);
-							if (Prefix_fixed != null) {
-								String final_string = SuffixString(Prefix_fixed);
-								if (final_string != null) {
-									store.add(final_string);
-									// Add the word to TST
-									TSTNode tstNode = new TSTNode(i, row_number);
+							String prefixString = PrefixString(temp);
+							if (prefixString != null) {
+								String finalKey = SuffixString(prefixString);
+								if (finalKey != null) {
+									fileList.add(finalKey);
+									// Adding the word to TST
+									TSTNode tstNode = new TSTNode(i, rowNumber);
 									tst.put(temp, tstNode);
 								}
 							}
 						}
 					}
-					stringline = read.readLine();
-					row_number++;
+					line = read.readLine();
+					rowNumber++;
 				}
-				store_all.add(store);
+				allFileList.add(fileList);
 				read.close();
 				input.close();
 			}
