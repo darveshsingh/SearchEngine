@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/TDPortal/Content/Scripts/jquery/1.11.2/jquery.min.js?v=20191115204103"></script>
+  <script src="/TDPortal/Content/Scripts/jquery-migrate/1.2.1/jquery-migrate.min.js?v=20191115204103"></script>
+  <script src="/TDPortal/Content/Scripts/jquery-ui/1.11.4/jquery-ui-1.11.4.custom.timepicker.min.js?v=20191115204101"></script>
+  <link href="/TDPortal/Content/Styles/jquery-ui/1.11.4/jquery-ui.compiled.min.css?v=20191115204033" rel="stylesheet" type="text/css">
+  <link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20191115204033" rel="stylesheet" type="text/css" id="lnkBootstrapCSS">
+  <script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20191115204034"></script>
+  <link href="/TDPortal/Content/Styles/font-awesome.min.css?v=20191115204033" rel="stylesheet" type="text/css" id="lnkFontAwesome">
+  <script src="/TDClient/Scripts/json2.min.js?v=20191115204010"></script> 
+  <script src="/TDClient/Scripts/underscore-min.js?v=20191115204010"></script> 
+  <script src="/TDClient/Scripts/TDJSFramework.compiled.min.js?v=20191115204008"></script> 
+  <script src="/TDClient/Scripts/clientOS.min.js?v=20191115204009"></script> 
+  <script src="/TDClient/Scripts/collapseMe.min.js?v=20191115204009"></script> 
+  <script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20191115204009"></script> 
+  <script src="/TDClient/Scripts/SiteSearch.min.js?v=20191115204009"></script> 
+  <link href="/TDClient/Styles/bootstrap_custom.min.css?v=20191115204006" rel="stylesheet" type="text/css">
+  <link href="/TDClient/Styles/TDStyles.min.css?v=20191115204006" rel="stylesheet" type="text/css">
+  <link href="https://uwindsor.teamdynamix.com/TDPortal/BE/Style/93/TDClient/1975?v=20171025204019" rel="stylesheet" type="text/css">
+  <link id="ctl00_ctl00_lnkFavicon" rel="shortcut icon" href="https://uwindsor.teamdynamix.com/TDPortal/BE/Icon/93/1975?v=20150226204704"> 
+  <script async src="//www.googletagmanager.com/gtag/js?id=UA-67479808-1"></script> 
+  <script>
+
+      $(function () {
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        // Be sure to set the proper cookie domain to the customer's full subdomain when sending the pageview hit.
+        gtag('config', 'UA-67479808-1', { 'cookie_domain': 'uwindsor.teamdynamix.com' });
+
+        });
+
+    </script> 
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+        baseUrl: '/TDClient/',
+        isTdGoogleAnalyticsEnabled: true,
+        isAuthenticated: false
+        });
+
+      $('#collapseMe').collapseMe({
+        toggleVisibilitySelector: '.navbar-toggle'
+      });
+
+    });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script> 
+  <script>
+
+    function ReloadList() {
+      window.location.href = window.location.href;
+    }
+
+    // Adds ellipsis for long descriptions with long titles
+    $(function() {
+      $('.category-box').tdEllipsis();
+
+      var kbEllipsis = document.querySelectorAll('.kb-ellipse');
+      Array.prototype.forEach.call(kbEllipsis, function (kb) {
+        var smallTag = kb.querySelector('small');
+        var kbHeight = kb.clientHeight;
+        while(smallTag.offsetHeight > kbHeight) {
+          smallTag.textContent = smallTag.textContent.replace(/\W*\s(\S)*$/, '...');
+        }
+      });
+    });
+  </script> 
+  <meta property="og:title" content="Faculty &amp; Staff E-mail (Office 365/Outlook/OWA)"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:url" content="https://uwindsor.teamdynamix.com/TDClient/1975/Portal/KB/?CategoryID=2188"> 
+  <meta property="og:image" content="https://uwindsor.teamdynamix.com/TDPortal/BE/Logo/93/1975"> 
+  <meta property="og:description" content="Office 365/Outlook/OWA related questions and answers."> 
+  <meta property="og:site_name" content="University of Windsor - Knowledge Base">
+  <title>
+	Knowledge Base - Faculty &amp; Staff E-mail (Office 365/Outlook/OWA)
+</title>
+ </head> 
+ <body> 
+  <form method="post" action="/TDClient/1975/Portal/KB/?CategoryID=2188" id="aspnetForm"> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""> 
+    <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""> 
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="vcpaxZie/XDEJRJ147448ug5qwknX9Rr9vxzLozTftqut42a2thvVOhEQdRJnnZwGg+WAfnh9NWkM7P+nxbjbNQ+xj47404n4pOlffNeXeb+yFcthclCV4PDThZ2Kkbj5WTT7gh7laJWLnjwWgpWINgIK1aNUTd7ZciVW2OlbVjnswT31PcvazeDZt+fQSPIvlF58foBXuIowSYLITHF/DfBhFpvQE4YsMjvVm66wf21Lih730LZti/MIBU+jE8ha0+5QSUDQR1LMIvCCVtqG+OxO0MiLx8K7iW2vMTiBGFW3S3JlFXh0+3FSKEEs/KDoy3QpqNJscYA6QshVcMX3MnBNm1nzpSMTXQZqiKrq9WV5el9yuNfBUDuouRd5/++mLbRyOqPlms4Ha50t9hLcm8uN9XVXyBj0JKBYbSHM93kfUzSJzg6J/azUz/5/IexzFC1GsAbjT865Fm/Rj5sDk1Tf6KDzsLkR+YOKqzB5qURUVyvYvDsZrgz3S4JpZ2TYOCSTF7mqVJf4gRfMVlNciMuCo1kNdowPTf7ozQbpx1SHbwf"> 
+   </div> 
+   <script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script> 
+   <script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=636939809766230707" type="text/javascript"></script> 
+   <script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=ffffffffa580202a" type="text/javascript"></script> 
+   <script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=ffffffffa580202a" type="text/javascript"></script> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EA19DDCE"> 
+   </div> 
+   <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], [], [], 90, 'ctl00$ctl00');
+//]]>
+</script> 
+   <div id="ctl00_ctl00_upMain" style="display:none;"> 
+    <div id="ctl00_ctl00_pbMain" style="position: fixed; top: 50%; left: 0px; width: 100%; height: 1px; overflow: visible; z-index: 2000; display: block;">
+     <div style="margin-left: -125px; position: fixed; top: 50%; left: 50%; width: 250px; height: 90px;">
+      <div class="well shadow">
+       <h2 class="h4 gutter-top-none">Updating...</h2>
+       <div class="progress" style="margin-bottom: 0;">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+       </div>
+      </div>
+     </div>
+    </div> 
+   </div> 
+   <header role="banner"> 
+    <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;"> 
+     <div class="logo-header-full hidden-xs"> 
+      <div class="pull-left"> 
+       <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a> 
+      </div> 
+      <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;"> 
+       <div id="divLogo" class="pull-left logo-container"> 
+        <a href="http://www.uwindsor.ca" target="_blank"> <img src="/TDPortal/BE/Logo/93/1975" alt="University of Windsor Logo" class="js-logo img-responsive"> </a> 
+       </div> 
+       <div class="master-header-right pull-right padding-top padding-bottom"> 
+        <div class="pull-left topLevelSearch input-group"> 
+         <div id="SiteSearch-569cb83409884fd59354a2c43b5e0f28" class="gutter-bottom input-group site-search" style="max-width: 400px;"> 
+          <div id="SiteSearch-dropdown-569cb83409884fd59354a2c43b5e0f28" class="input-group-btn"> 
+           <button type="button" id="SiteSearch-filter-569cb83409884fd59354a2c43b5e0f28" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Filter your search by categories" data-component="all"> <span class="fa fa-globe"></span><span class="fa fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span> <span class="sr-only">Filter your search by categories</span> </button> 
+           <ul class="dropdown-menu"> 
+            <li> <a href="javascript:void(0);" data-component="all" data-component-icon="fa-globe" title="Search all areas"> <span class="fa fa-fw fa-nopad fa-globe" aria-hidden="true"></span> All </a> </li> 
+            <li role="separator" class="divider"></li> 
+            <li> <a href="javascript:void(0);" data-component="kb" data-component-icon="fa-lightbulb-o" title="Search Knowledge Base"> <span class="fa fa-fw fa-nopad fa-lightbulb-o" aria-hidden="true"></span> Knowledge Base </a> </li> 
+            <li> <a href="javascript:void(0);" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog"> <span class="fa fa-fw fa-nopad fa-compass" aria-hidden="true"></span> Service Catalog </a> </li> 
+            <li> <a href="javascript:void(0);" data-component="q" data-component-icon="fa-comments" title="Search Questions"> <span class="fa fa-fw fa-nopad fa-comments" aria-hidden="true"></span> Questions </a> </li> 
+           </ul> 
+          </div> 
+          <input id="SiteSearch-text-569cb83409884fd59354a2c43b5e0f28" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" aria-label="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag."> 
+          <span class="input-group-btn"> <button id="SiteSearch-button-569cb83409884fd59354a2c43b5e0f28" class="btn btn-default" type="button" title="Search"> <span class="fa fa-fw fa-nopad fa-search blue" aria-hidden="true"></span> <span class="sr-only">Search</span> </button> </span> 
+         </div> 
+         <script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/1975/Portal/Shared/Search",
+      tagLookupServiceUrl: "/TDClient/1975/Portal/WebServices/JSON/TagLookupService.asmx/GetItems",
+      searchTextBoxSelector: '#SiteSearch-text-569cb83409884fd59354a2c43b5e0f28',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-569cb83409884fd59354a2c43b5e0f28',
+      searchButtonSelector: '#SiteSearch-button-569cb83409884fd59354a2c43b5e0f28',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-569cb83409884fd59354a2c43b5e0f28',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: true,
+      autoFocusSearch: false
+    });
+  });
+</script> 
+        </div> 
+        <div title="Sign In" class="pull-right gutter-top-sm"> 
+         <a href="/TDClient/1975/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1975%2fPortal%2fKB%2f%3fCategoryID%3d2188">Sign In </a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary"> 
+      <div id="navContainer" class="container"> 
+       <div class="navbar-header"> 
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse"> <span class="tdbar-button-anchored icon-bar"></span> <span class="tdbar-button-anchored icon-bar"></span> <span class="tdbar-button-anchored icon-bar"></span> <span class="sr-only">Show Applications Menu</span> </button> 
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#"> Client Portal </a> 
+       </div> 
+       <div id="td-navbar-collapse" class="collapse navbar-collapse"> 
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe"> 
+         <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg"> <a href="/TDClient/1975/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1975%2fPortal%2fKB%2f%3fCategoryID%3d2188">Sign In</a> </li> 
+         <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg"> <a href="/TDClient/1975/Portal/Shared/Search" title="search">Search</a> </li> 
+         <li id="divDesktopc6761c8c-7ac3-49af-a678-485e8a47f4fe" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/">Home</a> </li> 
+         <li id="divDesktop6752d70c-2547-4111-b28d-55e8a0f26f3d" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=6752d70c-2547-4111-b28d-55e8a0f26f3d">|</a> </li> 
+         <li id="divDesktopec55dfbf-78f6-48cf-86ae-b4b4cf201a44" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=ec55dfbf-78f6-48cf-86ae-b4b4cf201a44">Help</a> </li> 
+         <li id="divDesktop37b7390b-cc5d-4a6a-aa5c-49b8924066de" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=37b7390b-cc5d-4a6a-aa5c-49b8924066de">|</a> </li> 
+         <li id="divDesktopc5b8214f-8f71-4492-bb14-64e2db562678" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=c5b8214f-8f71-4492-bb14-64e2db562678">Notifications</a> </li> 
+         <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable"> <a href="/TDClient/1975/Portal/Requests/ServiceCatalog">Services</a> </li> 
+         <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable"> <a href="/TDClient/1975/Portal/KB/">Knowledge Base</a> </li> 
+         <li id="divTDQuestions" class="themed tdbar-button-anchored sr-focusable"> <a href="/TDClient/1975/Portal/Forums/Questions/?Filter=all">Questions</a> </li> 
+         <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu"> <a class="dropdown-toggle" data-toggle="dropdown" title="More Applications" href="#"> <span class="sr-only">More Applications</span> <span class="fa fa-ellipsis-h" aria-hidden="true"></span> </a> 
+          <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul> </li> 
+        </ul> 
+       </div> 
+      </div> 
+     </nav> 
+    </div> 
+   </header> 
+   <div id="navShim" class="hidden-xs hidden-sm"></div> 
+   <main role="main"> 
+    <div id="content" tabindex="-1"> 
+     <nav id="divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base"> 
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a> 
+      <div class="container clearfix"> 
+       <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;"> 
+        <li> <a href="/TDClient/1975/Portal/KB/Search">Search <span class="sr-only">Articles</span></a> </li> 
+       </ul> 
+      </div> 
+     </nav> 
+     <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;"> 
+      <span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red"></span></span> 
+      <div class="gutter-bottom"> 
+       <ol class="breadcrumb"> 
+        <li><a href="/TDClient/1975/Portal/KB/">Knowledge Base</a></li>
+        <li><a href="/TDClient/1975/Portal/KB/?CategoryID=2307">Messaging &amp; Collaboration</a></li>
+        <li class="active"><a href="/TDClient/1975/Portal/KB/?CategoryID=2188">Faculty &amp; Staff E-mail (Office 365/Outlook/OWA)</a></li> 
+       </ol> 
+       <h1> <span id="ctl00_ctl00_cpContent_cpContent_spnIcon" class="fa"> ?</span> <span id="ctl00_ctl00_cpContent_cpContent_lblCategoryName">Faculty &amp; Staff E-mail (Office 365/Outlook/OWA)</span> </h1> 
+      </div> 
+      <div class="row"> 
+       <div id="divCats" class="col-md-8"> 
+        <div id="ctl00_ctl00_cpContent_cpContent_divCategoryDescription" class="well">
+         Office 365/Outlook/OWA related questions and answers.
+        </div> 
+        <h2>Articles (68)</h2> 
+        <div class="gutter-bottom"> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <span class="fa fa-thumb-tack" aria-hidden="true" title="Pinned Article"></span> <span class="sr-only">Pinned Article</span> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=14632"> What is Auto-Complete List in Outlook and how can I edit it? </a> </h3> 
+          <div class="gray">
+            The Auto-Complete List in Outlook is a feature that displays suggestions ad possible matches for names and e-mail addresses as you start to type them in the To, Cc, and Bcc boxes. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=12755"> Can Outlook load images automatically for selected senders? </a> </h3> 
+          <div class="gray">
+            Outlook has a security feature which by default is configured not to load any embedded images in HTML e-mail messages received from outside of Office 365 domain. This article discusses common issues associated with this feature. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=39283"> Cannot send or reply to messages on my Apple device running iOS 11 </a> </h3> 
+          <div class="gray">
+            Cannot send or reply to messages on my Apple device running iOS 11 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=17886"> Error message when attaching files in Outlook on the Web: "Something went wrong while connecting to OneDrive for Business" </a> </h3> 
+          <div class="gray">
+            Microsoft is reporting an issue with Outlook on the Web that appears to be affecting our Office 365 users. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9438"> How can I access my UWin Office 365 account on my mobile device? </a> </h3> 
+          <div class="gray">
+            Links to other Knowledge base articles providing specific instructions for various platforms and operating systems. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9437"> How can I access my UWin Office 365 e-mail account? </a> </h3> 
+          <div class="gray">
+            Links to other Knowledge base articles providing specific instructions for various platforms and operating systems. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=10743"> How can I tell which distribution lists and groups a person belongs to in Office 365? </a> </h3> 
+          <div class="gray">
+            By looking at the Membership section of the person's Contact Card in Outlook, you will be able to see all of the distribution lists and groups that the person belongs to. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9452"> How do I "Send and File" messages in Outlook? </a> </h3> 
+          <div class="gray">
+            How to duplicate Lotus Notes feature called "Send &amp; File" that allowed the sender to save a copy of the sent message in a folder other than the default "Sent Items" folder. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=10398"> How do I access a shared mailbox in Outlook Web App (OWA)? </a> </h3> 
+          <div class="gray">
+            It is possible to access a shared mailbox without having to install Outlook client. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9440"> How do I add a shared mailbox to Outlook 2013? </a> </h3> 
+          <div class="gray">
+            Instructions on adding a shared mailbox to Outlook 2013 for Windows 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=66233"> How do I add a shared mailbox to Outlook 365/2016 for Windows? </a> </h3> 
+          <div class="gray">
+            Instructions on adding a shared mailbox to Outlook 365/2016 for Windows 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9441"> How do I add a shared mailbox to Outlook for Mac? </a> </h3> 
+          <div class="gray">
+            Instructions on adding shared mailboxes to Outlook for Mac. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9449"> How do I add a shared mailbox to Outlook Online on portal.office.com? </a> </h3> 
+          <div class="gray">
+            Instructions on adding a shared mailbox to Outlook Web App (OWA), which is a web browser version of Outlook. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=11519"> How do I add a UWin Office 365 account as a new additional account to Outlook for Mac? </a> </h3> 
+          <div class="gray">
+            Instructions to add an additional or shared mailbox to Outlook for Mac 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=15889"> How do I add the University academic dates and holidays to my calendar using Outlook Web Access (OWA)? </a> </h3> 
+          <div class="gray">
+            Adding University academic dates and holidays to my calendar 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=10611"> How do I add the University academic dates and holidays to my Outlook 2013 calendar? </a> </h3> 
+          <div class="gray">
+            Instructions to add the University academic dates and statutory holidays calendar to Outlook 2013. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9442"> How do I address an e-mail message in Outlook 2013 using the UWindsor Directory? </a> </h3> 
+          <div class="gray">
+            If you want to search by last name only, enter the last name in the To:. CC: or BCC: field, and hit Control+K or click the "Check names button. This will display a dialog with all of the people with that last name. You can then select the correct person based on their first name, title, e-mail address, office address, phone number, etc. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9443"> How do I allow someone else to manage my mail and calendar in Outlook? </a> </h3> 
+          <div class="gray">
+            Delegate Access goes beyond just sharing access to your folders or calendar. Delegates are granted additional permissions, such as creating email messages or responding to meeting requests on your behalf. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9313"> How do I configure Outlook to send an automatic reply for each message received? </a> </h3> 
+          <div class="gray">
+            Setup automatic reply for every message received overwriting default functionality of only one automatic reply per e-mail address. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9929"> How do I create an "All Documents" view in Outlook for Windows? </a> </h3> 
+          <div class="gray">
+            Instructions for duplicating Lotus Notes' "All documents" view in Outlook for Windows 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9445"> How do I edit an e-mail distribution list in Outlook 2013 </a> </h3> 
+          <div class="gray">
+            If you are listed as the owner of the distribution list, you can make changes to the members of the list by following the instructions outlined in this article. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9446"> How do I edit an e-mail distribution list in Outlook Web App (OWA)? </a> </h3> 
+          <div class="gray">
+            If you are listed as the owner of the distribution list, you can make changes to the members of the list by following the instructions outlined in this article. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9311"> How do I get Outlook 2013 to recognize commas in a list of e-mail addresses? </a> </h3> 
+          <div class="gray">
+            By default, Outlook 2013 for Windows uses semi-colons to separate a list of e-mail addresses. There is an option to allow for commas as e-mail address separators as well. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9448"> How do I grant someone access to my calendar in Outlook 2013 </a> </h3> 
+          <div class="gray">
+            There are two different ways to grant someone access to your calendar in Outlook 2013. The first method allows you to grant one of the three predefined levels of access and send e-mail notification to this person at the same time. Method number two, provides you with greater control and granularity over the access level for each person. We recommend that you use method number one to grant access initially, then method number two to further refine access level and other related settings. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=10736"> How do I remove a shared mailbox from Outlook 2013? </a> </h3> 
+          <div class="gray">
+            If you no longer need access to a shared maibox, you need to notify IT Service Desk and follow these instructions to remove an account in your Outlook 2013. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9451"> How do I reply to a message with an attachment and include the attachment in my reply in Outlook 2013 </a> </h3> 
+          <div class="gray">
+            A workaround for Outlook 2013 limitation that does not include the attachment in the reply when replying to a message with an attachment. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9450"> How do I reset MS Outlook on my Windows 7 PC? </a> </h3> 
+          <div class="gray">
+            This article explains how to reset Outlook profile which stores your e-mail account data. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9454"> How do I set Microsoft Outlook to be the default mail client on my Mac? </a> </h3> 
+          <div class="gray">
+            If you have Lotus Notes and Outlook installed on your Windows 7 workstation, you may have to manually update your settings to switch your default e-mail program form Lotus Notes to Outlook. This ensures that Outlook will be used in place of Lotus Notes whenever you click on any so called "mail to" links, such as when you release blocked messages from quarantine by clicking the message ID link in your spam digest message 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9455"> How do I setup Outlook 2013 for Windows to access my UWin Office 365 account? </a> </h3> 
+          <div class="gray">
+            Steps for post-installation configuration of MS Outlook 2013 for Windows. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=10662"> How do I setup Outlook for Mac to access my UWin Office 365 account? </a> </h3> 
+          <div class="gray">
+            Steps for post-installation configuration of MS Outlook for Mac. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9435"> How do I turn off the 365 junk mail filter in Outlook Web App (OWA) in Office 365? </a> </h3> 
+          <div class="gray">
+            By default, the Office 365 junk mail filter is enabled, and offers additional spam protection along with the University Pure Message filter. If you wish, you can turn off Office 365 junk mail filter following instructions provided in this article. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=15636"> How many e-mail addresses can I put in Outlook's and OWA's To, CC &amp; BCC fields? </a> </h3> 
+          <div class="gray">
+            To combat spam and mass-mailing worms or viruses, Microsoft imposes the following limits in Office 365 to messages, senders, or recipients. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9456"> How to access and view a room schedule and bookings in Outlook 2013? </a> </h3> 
+          <div class="gray">
+            In Office 365, each room and resource has its own separate calendar/mailbox associated with it. If you want to access and/or manage the schedule for a particular room, you can add the respective room's calendar to Outlook's Calendar section. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9457"> How to access my Office 365 e-mail account with Outlook Online app? </a> </h3> 
+          <div class="gray">
+            Web version of Outlook called Outlook Web App or OWA, allows you to access your UWin Office 365 account in a browser on any computer or mobile devices that is connected to the Internet without the need to install or configure anything. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9463"> How to access your migrated Lotus Notes mail archive in Outlook? </a> </h3> 
+          <div class="gray">
+            If you had mail archive in Lotus Notes, it was migrated to Office 365 and you will be able to access it in both Outlook and Outlook Web App (OWA). 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9458"> How to add my University Office 365 account to my Android device? </a> </h3> 
+          <div class="gray">
+            There are two ways to access your University Office 365 account on your Android device - either with the native built in Mail, Contacts and Calendars app, or with Microsoft's Outlook Preview app, available from the Google Play Store (the app requires Android 4 or greater.) 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9377"> How to add my University Office 365 account to my BlackBerry 10? </a> </h3> 
+          <div class="gray">
+            Steps for adding UWin Office 365 account to BlackBerry device that is running BlackBerry OS 10. Not applicable to BlackBerry devices with older OS versions. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9459"> How to add my University Office 365 account to my iPhone or iPad? </a> </h3> 
+          <div class="gray">
+            There are two ways to access your University Office 365 account on your iOS device - either with the native built in Mail, Contacts and Calendars app, or with Microsoft's Outlook app, available from the Apple App Store. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9460"> How to add my UWin Office 365 account as new additional account to Outlook? </a> </h3> 
+          <div class="gray">
+            Instructions for adding your UWin Office 365 account as a "new account" to your Outlook without having to reinstall Outlook or having to remove your existing account data. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=67560"> How to back up Outlook's signatures? </a> </h3> 
+          <div class="gray">
+            Microsoft Outlook does not roam user's signature. It needs to be backed up manually before the user is switched to a new computer of a new Windows profile. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9461"> How to create and add an e-mail signature in Outlook and OWA? </a> </h3> 
+          <div class="gray">
+            Instructions for creating e-mail signature in Outlook 2013 for Windows, Outlook for Mac, and Outlook Web App (OWA) 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=13181"> How to enable archiving of e-mails in Outlook? </a> </h3> 
+          <div class="gray">
+            In Outlook 2013, user can enable archiving on individual folders or on on the entire mailbox. Archiving is disabled by default. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=11178"> How to enable Automated Replies (Out of Office) feature for a shared mailbox? </a> </h3> 
+          <div class="gray">
+            Follow these steps to enable automatic replies (a.k.a. Out-of-Office feature) inside a shared mailbox using Outlook Web App (OWA). 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=10643"> How to import religious and/or state holidays into Outlook? </a> </h3> 
+          <div class="gray">
+            Instructions for importing various holidays, such as Canadian, U.S. state holidays, or Jewish, Islamic, etc. religious holidays. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=10639"> How to manage a room schedule and bookings in Outlook 2013? </a> </h3> 
+          <div class="gray">
+            In order for you to see all details of the room bookings, you must have full admin access to that room. Only local room administrators are permitted to have full access to a particular room calendar. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9464"> How to reserve a meeting room in Outlook? </a> </h3> 
+          <div class="gray">
+            Instructions for creating a room reservation in Outlook. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=14392"> How to restrict who can book a particular room or resource in Office 365? </a> </h3> 
+          <div class="gray">
+            By default, anyone can book a room or resource in Office 365. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=62871"> How to specify Reply-To address in Outlook </a> </h3> 
+          <div class="gray">
+            To have the replies of an email be delivered by default to someone else's mailbox instead of your own is possible when using the Outlook client. However you must have access to the designated recipient's mailbox. This is particularly useful when you want any replies that may come from an email being sent out to be delivered to a group mailbox. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=10746"> Is it possible to recall a message using Outlook or Office 365? </a> </h3> 
+          <div class="gray">
+            How to recall a message using Outlook 2013, and message recall limitations to be aware of. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9466"> Is there a limit to the number of accounts in Outlook? </a> </h3> 
+          <div class="gray">
+            This article provides a workaround to the limit of accounts that can be added to Outlook. By default, Outlook 2010 and Outlook 2013 allow up to 10 Exchange accounts to be configured in a single mail profile. If you for some reason need to add more than 10 Exchange accounts to your mail profile, you can extend this limit to via a Windows Registry tweak. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=51720"> Moving a received e-mail message to an Office 365 Group </a> </h3> 
+          <div class="gray">
+            If you are a member of an Office 365 Group, and you have received an e-mail message which was not sent to the Group’s e-mail address, but you wish to save it into the Group as an e-mail communication you need to follow the steps outlined in this article. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9469"> What browsers are supported for Microsoft Office 365? </a> </h3> 
+          <div class="gray">
+            Which browsers should be used for the optimal experience with Office 365 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=10610"> What is a shared mailbox in Office 365 and how to access it? </a> </h3> 
+          <div class="gray">
+            There are several different ways that users can access an Office 365 shared mailbox. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=10742"> What is Microsoft FindTime? </a> </h3> 
+          <div class="gray">
+            FindTime is an Office 365 add-in from Microsoft that allows you to take the work out of trying to schedule meetings with a number of people, either inside or outside of the University. Learn how to install Microsoft FindTime for Outlook/Office 365. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=12005"> What is the difference between a group and distribution list in Office 365? </a> </h3> 
+          <div class="gray">
+            An outline of differences between these two different types of groups. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9471"> What is the difference between sharing folders, such as Calendar, in Outlook and delegating access? </a> </h3> 
+          <div class="gray">
+            There are two ways to work with another person's Outlook folders, such as Calendar, — folder sharing and Delegate Access. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=65083"> What message protection options are available for Office 365? </a> </h3> 
+          <div class="gray">
+            Office 365 message encryption and protection 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=11478"> Which file attachment types are being blocked by the PureMessage for security reasons? </a> </h3> 
+          <div class="gray">
+            To secure the campus from worms and viruses that can spread through e-mail, a number of different types of file attachments are not allowed to enter our system. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9473"> Why am I able to open and read e-mail messages in my Outlook mailbox without entering the password? </a> </h3> 
+          <div class="gray">
+            Explains why you are not being prompted to enter your password every time you start Outlook, which is what you had to do each time you started Lotus Notes. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9474"> Why are my folders not displaying in alphabetical order in Outlook? </a> </h3> 
+          <div class="gray">
+            Outlook 2013 allows you to have folders in any order you choose - you can re-arrange them however you see fit. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9418"> Why are some messages missing from my folders in Outlook after my mailbox was migrated from Lotus Notes? </a> </h3> 
+          <div class="gray">
+            In Outlook, it is not possible to have an e-mail message appear in more than one folder. Therefore, all copies of sent messages would only appear in "Sent Items" folder after the migration, even if they were filed in other folders in Lotus Notes while being sent out. Also, messages stored in Inbox folder would no longer appear in any other folder that they may have been added to in Lotus Notes. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9475"> Why do I receive the error "Message could not be saved" when sending a message with an attachment in Outlook for Mac? </a> </h3> 
+          <div class="gray">
+            You must run Repair Disk Permissions utility that may take a few minutes depending on the amount of files you have on your Mac. Once the repair is complete, launch Outlook and you should be able to send attachments. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=13661"> Why entries that I add to my calendar on iPhone/iPad do not synchronise to my Outlook/OWA? </a> </h3> 
+          <div class="gray">
+            Most likely you have multiple accounts set up on your device, and another account's calendar is configured as your default calendar. Follow the steps included to fix this. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9467"> Why I am not seeing meeting invitation response from someone who accepted my invitation in Outlook? </a> </h3> 
+          <div class="gray">
+            People can accept meeting invitations in Outlook 2013 without sending a response to the meeting chair. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=73758"> Why is Outlook on the web only giving me the option to send an attachment as a link, instead of as an attachment? </a> </h3> 
+          <div class="gray">
+            Outlook on the web does not give the option to send as attachment 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=10814"> Why is the calendar permissions button greyed out in Outlook 2016 for Mac? </a> </h3> 
+          <div class="gray">
+            Instructions to make the calendar permissions button in Outlook for Mac 2016 visible 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=23900"> How can I see who is in a group or mailing list before I send an e-mail message in Outlook? </a> </h3> 
+          <div class="gray">
+            There are two different ways to display the names of members of a group or mailing list in Outlook before sending an e-mail message addressed to that group or mailing list. 
+          </div> 
+         </div> 
+         <div class="gutter-bottom-lg"> 
+          <h3 class="gutter-bottom-xs"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=23975"> How to create your own e-mail distribution list in Outlook? </a> </h3> 
+          <div class="gray">
+            Users of Outlook can create their own e-mail distribution lists in Outlook that are known as Contact Lists. 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="divCatsSidebar" class="col-md-4"> 
+        <h2 class="sr-only">Additional Resources</h2> 
+        <div id="ctl00_ctl00_cpContent_cpContent_divPopular" class="panel panel-default"> 
+         <div class="panel-heading"> 
+          <h3 class="panel-title" title="Most popular articles based upon total views">Popular Articles</h3> 
+         </div> 
+         <div class="panel-body"> 
+          <ul class="panel-list"> 
+           <li class="gutter-bottom"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=10461">Login pages for University systems and apps.</a> </li> 
+           <li class="gutter-bottom"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=10394">What to do if I forgot my UWin Account password?</a> </li> 
+           <li class="gutter-bottom"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=12005">What is the difference between a group and distribution list in Office 365?</a> </li> 
+           <li class="gutter-bottom"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=10814">Why is the calendar permissions button greyed out in Outlook 2016 for Mac?</a> </li> 
+           <li class="gutter-bottom"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=9474">Why are my folders not displaying in alphabetical order in Outlook?</a> </li> 
+          </ul> 
+         </div> 
+         <div class="panel-footer clearfix"> 
+          <a class="pull-right" href="/TDClient/1975/Portal/KB/PopularArticles">View All Popular Articles <span class="fa fa-chevron-right"></span> </a> 
+         </div> 
+        </div> 
+        <div id="ctl00_ctl00_cpContent_cpContent_divRecent" class="panel panel-default"> 
+         <div class="panel-heading"> 
+          <h3 class="panel-title" title="Most recently modified articles">Recent Articles</h3> 
+         </div> 
+         <div class="panel-body"> 
+          <ul class="panel-list"> 
+           <li class="gutter-bottom"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=62368">How to add another user as local administrator on the machine that is joined to Azure AD?</a> </li> 
+           <li class="gutter-bottom"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=62148">How to enable BitLocker drive encryption on your Windows 10 computer?</a> </li> 
+           <li class="gutter-bottom"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=91448">University of Windsor Software Entitlements and Distribution</a> </li> 
+           <li class="gutter-bottom"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=82694">What is Windows Hello?</a> </li> 
+           <li class="gutter-bottom"> <a href="/TDClient/1975/Portal/KB/ArticleDet?ID=48942">Printing to GoPrint with your own MacOS computer</a> </li> 
+          </ul> 
+         </div> 
+         <div class="panel-footer clearfix"> 
+          <a class="pull-right" href="/TDClient/1975/Portal/KB/RecentArticles">View All Recent Articles <span class="fa fa-chevron-right"></span> </a> 
+         </div> 
+        </div> 
+        <div class="panel panel-default tag-list"> 
+         <div class="panel-heading"> 
+          <h3 class="panel-title">Popular Tags<span class="fa fa-tags" aria-hidden="true"></span></h3> 
+         </div> 
+         <div class="panel-body"> 
+          <ul id="ctl00_ctl00_cpContent_cpContent_tags_ulTags" class="panel-list"> 
+           <li class="gutter-bottom-sm"> <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23blackboard" rel="nofollow">blackboard</a> (54) </li> 
+           <li class="gutter-bottom-sm"> <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23outlook" rel="nofollow">outlook</a> (39) </li> 
+           <li class="gutter-bottom-sm"> <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23ms-office-365" rel="nofollow">ms-office-365</a> (31) </li> 
+           <li class="gutter-bottom-sm"> <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23lotus-notes" rel="nofollow">lotus-notes</a> (24) </li> 
+           <li class="gutter-bottom-sm"> <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23OneDrive" rel="nofollow">OneDrive</a> (22) </li> 
+           <li class="gutter-bottom-sm"> <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23teamroom" rel="nofollow">teamroom</a> (15) </li> 
+           <li class="gutter-bottom-sm"> <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23y2k20" rel="nofollow">y2k20</a> (15) </li> 
+           <li class="gutter-bottom-sm"> <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23e-mail" rel="nofollow">e-mail</a> (14) </li> 
+           <li class="gutter-bottom-sm"> <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23ms-office-365-groups" rel="nofollow">ms-office-365-groups</a> (14) </li> 
+           <li class="gutter-bottom-sm"> <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23network-wireless-wifi" rel="nofollow">network-wireless-wifi</a> (14) </li> 
+          </ul> 
+         </div> 
+         <div class="panel-footer clearfix"> 
+          <div class="pull-right"> 
+           <a href="/TDClient/1975/Portal/Shared/BrowseTags?ItemID=0&amp;ComponentID=26">View All Tags <span class="fa fa-chevron-right" aria-hidden="true"></span> </a> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="clearfix"></div> 
+       </div> 
+      </div> 
+      <div class="clearfix"></div> 
+     </div> 
+    </div> 
+   </main> 
+   <script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script> 
+  </form> 
+  <footer role="contentinfo"> 
+  </footer> 
+  <script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        })
+          .blur(function () {
+            $beLogo.removeClass('accessibility-focus-on-logo');
+          })
+      })(jQuery);
+
+  </script>   
+ </body>
+</html>

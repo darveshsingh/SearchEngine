@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+ <head> 
+  <!-- Google Tag Manager --> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5G8Z8WS');</script> 
+  <!-- End Google Tag Manager --> 
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"fb66a3283b",applicationID:"70695766"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script> 
+  <script>window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = '4KT8J';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m && m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'); return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(c,d,i){if(!c || document.cookie.match('fs_uid=[`;`]*`[`;`]*`[`;`]*`')){
+    d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
+    ';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
+})(window,document,window['_fs_namespace'],'script','user');</script> 
+  <meta itemprop="acquia_lift:content_title" content="Grades"> 
+  <meta itemprop="acquia_lift:content_type" content="content_page"> 
+  <meta itemprop="acquia_lift:page_type" content="node page"> 
+  <meta itemprop="acquia_lift:context_language" content="en"> 
+  <meta itemprop="acquia_lift:content_section" content="Learn"> 
+  <meta itemprop="acquia_lift:content_keywords" content=""> 
+  <meta itemprop="acquia_lift:post_id" content="13959"> 
+  <meta itemprop="acquia_lift:content_uuid" content="9464e2ce-70e7-47ae-8b37-cfbd99d1af32"> 
+  <meta itemprop="acquia_lift:published_date" content="1461363857"> 
+  <meta itemprop="acquia_lift:persona" content="Student"> 
+  <meta itemprop="acquia_lift:engagement_score" content="1"> 
+  <meta itemprop="acquia_lift:account_id" content="BLACKBOARD"> 
+  <meta itemprop="acquia_lift:site_id" content="blackboardprod"> 
+  <meta itemprop="acquia_lift:contentOrigin" content="8480a1a7-d4ab-4a9f-7700-d38f23a3ba6a"> 
+  <meta itemprop="acquia_lift:liftAssetsURL" content="https://lift3assets.lift.acquia.com/stable"> 
+  <meta itemprop="acquia_lift:bootstrapMode" content="auto"> 
+  <meta itemprop="acquia_lift:contentReplacementMode" content="trusted"> 
+  <script src="https://lift3assets.lift.acquia.com/stable/lift.js" async></script> 
+  <script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","/sites/default/files/google_analytics/analytics.js?q0pw5k","ga");ga("create", "UA-1394520-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script> 
+  <meta name="title" content="Grades | Blackboard Help"> 
+  <meta name="Generator" content="Drupal 8 (https://www.drupal.org)"> 
+  <meta name="MobileOptimized" content="width"> 
+  <meta name="HandheldFriendly" content="true"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta> 
+  <link rel="shortcut icon" href="/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon"> 
+  <link rel="alternate" hreflang="en" href="https://help.blackboard.com/Learn/Student/Grades"> 
+  <link rel="alternate" hreflang="ar" href="https://help.blackboard.com/ar-sa/Learn/Student/Grades"> 
+  <link rel="alternate" hreflang="cy" href="https://help.blackboard.com/cy-gb/Learn/Student/Grades"> 
+  <link rel="alternate" hreflang="de" href="https://help.blackboard.com/de-de/Learn/Student/Grades"> 
+  <link rel="alternate" hreflang="es" href="https://help.blackboard.com/es-es/Learn/Student/Grades"> 
+  <link rel="alternate" hreflang="fr" href="https://help.blackboard.com/fr-fr/Learn/Student/Grades"> 
+  <link rel="alternate" hreflang="ja" href="https://help.blackboard.com/ja-jp/Learn/Student/Grades"> 
+  <link rel="alternate" hreflang="ko" href="https://help.blackboard.com/ko-kr/Learn/Student/Grades"> 
+  <link rel="alternate" hreflang="nl" href="https://help.blackboard.com/nl-nl/Learn/Student/Grades"> 
+  <link rel="alternate" hreflang="nb" href="https://help.blackboard.com/nb-no/Learn/Student/Grades"> 
+  <link rel="alternate" hreflang="pt-br" href="https://help.blackboard.com/pt-br/Learn/Student/Grades"> 
+  <link rel="alternate" hreflang="ru" href="https://help.blackboard.com/ru-ru/Learn/Student/Grades"> 
+  <link rel="alternate" hreflang="sv" href="https://help.blackboard.com/sv-se/Learn/Student/Grades"> 
+  <link rel="alternate" hreflang="tr" href="https://help.blackboard.com/tr-tr/Learn/Student/Grades"> 
+  <link rel="alternate" hreflang="zh-hans" href="https://help.blackboard.com/zh-hans/Learn/Student/Grades"> 
+  <link rel="canonical" href="https://help.blackboard.com/Learn/Student/Grades"> 
+  <link rel="shortlink" href="https://help.blackboard.com/node/13959"> 
+  <link rel="revision" href="https://help.blackboard.com/Learn/Student/Grades"> 
+  <title>Grades | Blackboard Help</title> 
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_Lc4eMIlEWhSCPcH_nC2kLpuIVwnPSkD1DvVEIWrX5DY.css?q0pw5k"> 
+  <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic&amp;subset=latin,cyrillic,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext"> 
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_pwMl3ukEBmQzKHa_P-R3NMTsibG2Ka6ggG88TdmsMKs.css?q0pw5k"> 
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/13959","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","bb_algolia_search_ui_block":{"algolia":{"clientId":"","apiKey":""},"searchButton":"Search","searchInputPlaceholder":null,"debug":0,"ga_id":"UA-1394520-1"},"bb_school_help_desk_block":{"placeholder_text":"Type institution name to get support","button_text":"Go","search_hint_text":"Press enter to search","debug":null,"ga_id":"UA-1394520-1"},"bb_user_feedback_block":{"firebase":{"apiKey":"AIzaSyAwRR0lNtqG8BYSYvhTP80Ai1By8XLpjbM","authDomain":"help-user-feedback.firebaseapp.com","databaseURL":"https:\/\/help-user-feedback.firebaseio.com","projectId":"help-user-feedback","storageBucket":"","messagingSenderId":"","appId":"1:567988132324:web:774f65db53e24c06"},"helpfulToolTipText":"Helpful?","unhelpfulToolTipText":"Not Helpful?","unhelpfulModalHeading":"Not helpful?","unhelpfulModalBody":"Sorry this wasn\u0027t helpful. Let us know how to improve this section.","unhelpfulPlaceholderText":"What\u0027s missing or not helpful?","submitButtonText":"Send","cancelButtonText":"No, Thanks","showCancelButton":1,"debug":0,"ga_id":"UA-1394520-1"},"cookieconsent":{"message":"This website uses cookies to ensure you get the best experience. Click \u201cAccept\u201d to agree to our cookie policy. You can manage and opt out of cookies using your browser or device settings.","dismiss":"Accept","learnMore":"Learn more","link":"\/1004en_US","path":"","expiry":365,"target":"_blank","domain":".help.blackboard.com","markup":"\u003Cdiv class=\u0022cc_banner cc_container cc_container--open\u0022\u003E\n    \u003Ca href=\u0022#null\u0022 data-cc-event=\u0022click:dismiss\u0022 target=\u0022_blank\u0022 class=\u0022cc_btn cc_btn_accept_all\u0022\u003EAccept\u003C\/a\u003E\n    \u003Cp class=\u0022cc_message\u0022\u003EThis website uses cookies to ensure you get the best experience. Click \u201cAccept\u201d to agree to our cookie policy. You can manage and opt out of cookies using your browser or device settings. \u003Ca data-cc-if=\u0022options.link\u0022 target=\u0022_blank\u0022 class=\u0022cc_more_info\u0022 href=\u0022\/1004en_US\u0022\u003ELearn more\u003C\/a\u003E\u003C\/p\u003E\n    \u003Ca class=\u0022cc_logo\u0022 target=\u0022_blank\u0022 href=\u0022http:\/\/silktide.com\/cookieconsent\u0022\u003ECookie Consent plugin for the EU cookie law\u003C\/a\u003E\n\u003C\/div\u003E\n","container":".page-header","theme":"\/themes\/blackboard\/css\/cookieconsent.css"},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"thematic_release_notes_filter":{"message":"This product doesn\u0027t have any recently released features that match the selected filter."},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":null,"extNofollow":null,"extFollowNoOverride":null,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":".block--block-blackboard-content","extAlert":false,"extAlertText":"","mailtoClass":"0","mailtoLabel":"(link sends email)"}},"ctx_product":"66","ctx_product_name":"Learn","ctx_role":"151","ctx_role_name":"Student","langPrefixes":{"en":"","ar":"ar-sa","ca":"ca-es","de":"de-de","es":"es-es","fi":"fi-fi","fr":"fr-fr","ja":"ja-jp","ko":"ko-kr","nl":"nl-nl","nb":"nb-no","pt-br":"pt-br","ru":"ru-ru","sv":"sv-se","tr":"tr-tr","zh-hans":"zh-hans","nn":"nn-no","cy":"cy-gb"},"langMapping":{"jp":"ja-jp","zh":"zh-hans"},"domainExceptions":{"bbcollab.com":{"ca":"en-us"}},"ajax":[],"user":{"uid":0,"permissionsHash":"d0487089e11c14032c2364e00e59b4a41f3c228bf4d43b2147b9c4581a71d156"}}</script> 
+  <!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]--> 
+  <script src="/sites/default/files/js/js_pn3aoKzHAtG5jrUppZewBdFDGcnQjVyjz1oGxWoi1ds.js"></script> 
+  <script src="//use.typekit.net/bnp0oul.js"></script> 
+  <script>try{Typekit.load({ async: true });}catch(e){}</script> 
+ </head> 
+ <body class="role-anonymous path-node page-node-type-content-page"> 
+  <!-- Google Tag Manager (noscript) --> 
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5G8Z8WS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <!-- End Google Tag Manager (noscript) --> 
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas> 
+   <div class="layout-container"> 
+    <a href="#main-content" class="visually-hidden focusable"> Skip to main content </a> 
+    <a id="top"></a> 
+    <header class="page-header" role="banner"> 
+     <div class="page-header__content"> 
+      <div class="page-header__first"> 
+       <div class="region region-header-first"> 
+        <div class="block block--block-blackboardnavtoggle-2 " id="block-blackboardnavtoggle-2" data-block-plugin-id="block_content:b7d0db1b-b49c-4f8b-879f-9e74d8b06381"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <a class="nav-toggle"></a>
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-blackboardbranding " id="block-blackboard-blackboardbranding" data-block-plugin-id="block_content:2c8604e2-130e-4604-9dd5-dd92f52aaba3"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <span class="branding branding--medium"><a href="/"><strong>Blackboard</strong> Help</a></span> 
+          <span class="branding branding--small"><a href="/"><strong>Bb</strong> Help</a></span>
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-languageswitcher language-switcher-language-url" id="block-blackboard-languageswitcher" role="navigation" data-block-plugin-id="language_block:language_interface"> 
+         <h2>Language</h2> 
+         <ul class="links">
+          <li hreflang="en" data-drupal-link-system-path="node/13959" class="is-active"><a href="/Learn/Student/Grades" class="language-link is-active" hreflang="en" data-drupal-link-system-path="node/13959">English</a></li>
+          <li hreflang="ar" data-drupal-link-system-path="node/13959"><a href="/ar-sa/Learn/Student/Grades" class="language-link" hreflang="ar" data-drupal-link-system-path="node/13959">?????</a></li>
+          <li hreflang="ca" data-drupal-link-system-path="node/13959"><a href="/ca-es/Learn/Student/Grades" class="language-link" hreflang="ca" data-drupal-link-system-path="node/13959">Català</a></li>
+          <li hreflang="cy" data-drupal-link-system-path="node/13959"><a href="/cy-gb/Learn/Student/Grades" class="language-link" hreflang="cy" data-drupal-link-system-path="node/13959">Cymraeg</a></li>
+          <li hreflang="de" data-drupal-link-system-path="node/13959"><a href="/de-de/Learn/Student/Grades" class="language-link" hreflang="de" data-drupal-link-system-path="node/13959">Deutsch</a></li>
+          <li hreflang="es" data-drupal-link-system-path="node/13959"><a href="/es-es/Learn/Student/Grades" class="language-link" hreflang="es" data-drupal-link-system-path="node/13959">Español</a></li>
+          <li hreflang="fi" data-drupal-link-system-path="node/13959"><a href="/fi-fi/Learn/Student/Grades" class="language-link" hreflang="fi" data-drupal-link-system-path="node/13959">suomi</a></li>
+          <li hreflang="fr" data-drupal-link-system-path="node/13959"><a href="/fr-fr/Learn/Student/Grades" class="language-link" hreflang="fr" data-drupal-link-system-path="node/13959">Français</a></li>
+          <li hreflang="ja" data-drupal-link-system-path="node/13959"><a href="/ja-jp/Learn/Student/Grades" class="language-link" hreflang="ja" data-drupal-link-system-path="node/13959">???</a></li>
+          <li hreflang="ko" data-drupal-link-system-path="node/13959"><a href="/ko-kr/Learn/Student/Grades" class="language-link" hreflang="ko" data-drupal-link-system-path="node/13959">???</a></li>
+          <li hreflang="nl" data-drupal-link-system-path="node/13959"><a href="/nl-nl/Learn/Student/Grades" class="language-link" hreflang="nl" data-drupal-link-system-path="node/13959">Nederlands</a></li>
+          <li hreflang="nb" data-drupal-link-system-path="node/13959"><a href="/nb-no/Learn/Student/Grades" class="language-link" hreflang="nb" data-drupal-link-system-path="node/13959">Norsk (Bokmål)</a></li>
+          <li hreflang="pt-br" data-drupal-link-system-path="node/13959"><a href="/pt-br/Learn/Student/Grades" class="language-link" hreflang="pt-br" data-drupal-link-system-path="node/13959">Português, Brasil</a></li>
+          <li hreflang="ru" data-drupal-link-system-path="node/13959"><a href="/ru-ru/Learn/Student/Grades" class="language-link" hreflang="ru" data-drupal-link-system-path="node/13959">???????</a></li>
+          <li hreflang="sv" data-drupal-link-system-path="node/13959"><a href="/sv-se/Learn/Student/Grades" class="language-link" hreflang="sv" data-drupal-link-system-path="node/13959">Svenska</a></li>
+          <li hreflang="tr" data-drupal-link-system-path="node/13959"><a href="/tr-tr/Learn/Student/Grades" class="language-link" hreflang="tr" data-drupal-link-system-path="node/13959">Türkçe</a></li>
+          <li hreflang="zh-hans" data-drupal-link-system-path="node/13959"><a href="/zh-hans/Learn/Student/Grades" class="language-link" hreflang="zh-hans" data-drupal-link-system-path="node/13959"> ????</a></li>
+         </ul> 
+        </div> 
+        <div class="block block--block-bbalgoliasearchui " id="block-bbalgoliasearchui" data-block-plugin-id="bb_algolia_search_ui_block"> 
+         <div id="algolia-search-ui" data-description="Provides ReactJS Script as BB Algolia Search UI Block"></div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="breadcrumb-container"> 
+       <div class="region region-breadcrumb"> 
+        <div class="block block--block-blackboardnavtoggle " id="block-blackboardnavtoggle" data-block-plugin-id="block_content:b7d0db1b-b49c-4f8b-879f-9e74d8b06381"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <a class="nav-toggle"></a>
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-breadcrumbs " id="block-blackboard-breadcrumbs" data-block-plugin-id="system_breadcrumb_block"> 
+         <nav role="navigation" aria-labelledby="system-breadcrumb"> 
+          <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2> 
+          <ol> 
+           <li> <a href="/">Home</a> </li> 
+           <li> <a href="/Learn">Learn</a> </li> 
+           <li> <a href="/Learn/Student">Student</a> </li> 
+          </ol> 
+         </nav> 
+        </div> 
+        <div class="block block--block-booknavigationsorted " id="block-booknavigationsorted" data-block-plugin-id="full_book_navigation"> 
+         <div class="blackboard_books-navigation" data-page-type="product-page"> 
+          <nav id="book-block-menu-25571" class="book-block-menu" role="navigation" data-product="Ally" aria-label="Book outline for Blackboard Ally Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-25571" class="menu-item menu-item--expanded"> <a href="/Ally" hreflang="en">Ally</a> 
+             <ul class="menu"> 
+              <li id="nid-20901" class="menu-item menu-item--collapsed lazy folder"> <a href="/Ally/Ally_for_LMS" hreflang="en">Ally for LMS</a> </li> 
+              <li id="nid-25506" class="menu-item menu-item--collapsed lazy folder"> <a href="/Ally/Ally_for_Websites" hreflang="en">Ally for Websites</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-469" class="book-block-menu" role="navigation" data-product="Blackboard App" aria-label="Book outline for Blackboard App Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-469" class="menu-item menu-item--expanded"> <a href="/Blackboard_App" hreflang="en">Blackboard App</a> 
+             <ul class="menu"> 
+              <li id="nid-470" class="menu-item"> <a href="/Blackboard_App/Quick_Start" hreflang="en">Quick Start</a> </li> 
+              <li id="nid-471" class="menu-item"> <a href="/Blackboard_App/Feature_Guide" hreflang="en">Feature Guide</a> </li> 
+              <li id="nid-21041" class="menu-item"> <a href="/Blackboard_App/Activity_Stream" hreflang="en">Activity Stream</a> </li> 
+              <li id="nid-13051" class="menu-item"> <a href="/Blackboard_App/Course_List" hreflang="en">Courses and Organizations</a> </li> 
+              <li id="nid-21026" class="menu-item"> <a href="/Blackboard_App/Course_Content" hreflang="en">Course Content</a> </li> 
+              <li id="nid-23321" class="menu-item"> <a href="/Blackboard_App/Offline_Content" hreflang="en">Offline Content</a> </li> 
+              <li id="nid-21886" class="menu-item"> <a href="/Blackboard_App/Announcements" hreflang="en">Announcements</a> </li> 
+              <li id="nid-12438" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Collaborate" hreflang="en">Collaborate</a> </li> 
+              <li id="nid-15644" class="menu-item"> <a href="/Blackboard_App/Discussions" hreflang="en">Discussions</a> </li> 
+              <li id="nid-21896" class="menu-item"> <a href="/Blackboard_App/Due_Dates" hreflang="en">Due Dates</a> </li> 
+              <li id="nid-21891" class="menu-item"> <a href="/Blackboard_App/Grades" hreflang="en">Grades</a> </li> 
+              <li id="nid-12544" class="menu-item"> <a href="/Blackboard_App/Link_to_Cloud_Storage" hreflang="en">Link to Cloud Storage</a> </li> 
+              <li id="nid-21031" class="menu-item"> <a href="/Blackboard_App/Profile" hreflang="en">Profile</a> </li> 
+              <li id="nid-21036" class="menu-item"> <a href="/Blackboard_App/Push_Notifications" hreflang="en">Push Notifications</a> </li> 
+              <li id="nid-21021" class="menu-item"> <a href="/Blackboard_App/Tests_and_Assignments" hreflang="en">Tests and Assignments</a> </li> 
+              <li id="nid-26381" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Whats_New" hreflang="en">What's New</a> </li> 
+              <li id="nid-15931" class="menu-item"> <a href="/Blackboard_App/FAQs" hreflang="en">Common Questions</a> </li> 
+              <li id="nid-20461" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Accessibility" hreflang="en">Accessibility</a> </li> 
+              <li id="nid-21726" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Windows" hreflang="en">Windows Devices</a> </li> 
+              <li id="nid-20731" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Transition_to_New_Apps" hreflang="en">Transition to New Blackboard Apps</a> </li> 
+              <li id="nid-15603" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Administrator_Info" hreflang="en">Administrator Info</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-30671" class="book-block-menu" role="navigation" data-product="Blackboard Data" aria-label="Book outline for Blackboard Data"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-30671" class="menu-item menu-item--expanded"> <a href="/Blackboard_Data" hreflang="en">Blackboard Data</a> 
+             <ul class="menu"> 
+              <li id="nid-30491" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Data/Administrator" hreflang="en">Blackboard Data for Developers</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-13118" class="book-block-menu" role="navigation" data-product="Blackboard Instructor" aria-label="Book outline for Blackboard Instructor Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-13118" class="menu-item menu-item--expanded"> <a href="/Blackboard_Instructor" hreflang="en">Blackboard Instructor</a> 
+             <ul class="menu"> 
+              <li id="nid-20696" class="menu-item"> <a href="/Blackboard_Instructor/Quick_Start" hreflang="en">Quick Start</a> </li> 
+              <li id="nid-20701" class="menu-item"> <a href="/Blackboard_Instructor/Feature_Guide" hreflang="en">Feature Guide</a> </li> 
+              <li id="nid-20966" class="menu-item"> <a href="/Blackboard_Instructor/Course_List" hreflang="en">Courses and Organizations</a> </li> 
+              <li id="nid-20951" class="menu-item"> <a href="/Blackboard_Instructor/Course_Content" hreflang="en">Course Content</a> </li> 
+              <li id="nid-24111" class="menu-item"> <a href="/Blackboard_Instructor/Offline_Content" hreflang="en">Offline Content</a> </li> 
+              <li id="nid-20946" class="menu-item"> <a href="/Blackboard_Instructor/Announcements" hreflang="en">Announcements</a> </li> 
+              <li id="nid-13127" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Collaborate" hreflang="en">Collaborate</a> </li> 
+              <li id="nid-20956" class="menu-item"> <a href="/Blackboard_Instructor/Discussions" hreflang="en">Discussions</a> </li> 
+              <li id="nid-25806" class="menu-item"> <a href="/Blackboard_Instructor/Grading" hreflang="en">Grading</a> </li> 
+              <li id="nid-25781" class="menu-item"> <a href="/Blackboard_Instructor/Link_to_Cloud_Storage" hreflang="en">Link to Cloud Storage</a> </li> 
+              <li id="nid-28906" class="menu-item"> <a href="/Blackboard_Instructor/Push_Notifications" hreflang="en">Push Notifications</a> </li> 
+              <li id="nid-20961" class="menu-item"> <a href="/Blackboard_Instructor/Tests_and_Assignments" hreflang="en">Tests and Assignments</a> </li> 
+              <li id="nid-26761" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Whats_New" hreflang="en">What's New</a> </li> 
+              <li id="nid-21006" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Accessibility" hreflang="en">Accessibility</a> </li> 
+              <li id="nid-23806" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Administrator_Info" hreflang="en">Administrator Info</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-477" class="book-block-menu" role="navigation" data-product="Collaborate" aria-label="Book outline for Blackboard Collaborate Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-477" class="menu-item menu-item--expanded"> <a href="/Collaborate" hreflang="en">Collaborate</a> 
+             <ul class="menu"> 
+              <li id="nid-478" class="menu-item menu-item--collapsed lazy folder"> <a href="/Collaborate/Ultra" hreflang="en">Ultra Experience</a> </li> 
+              <li id="nid-528" class="menu-item menu-item--collapsed lazy folder"> <a href="/Collaborate/v12" hreflang="en">Original Experience</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10745" class="book-block-menu" role="navigation" data-product="Community Engagement" aria-label="Book outline for Blackboard Community Engagement"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10745" class="menu-item menu-item--expanded"> <a href="/Community_Engagement" hreflang="en">Community Engagement</a> 
+             <ul class="menu"> 
+              <li id="nid-10891" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Parent_Community_Member" hreflang="en">Parent/Community Member</a> </li> 
+              <li id="nid-10892" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-10890" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Teacher" hreflang="en">Teacher</a> </li> 
+              <li id="nid-10889" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-2253" class="book-block-menu" role="navigation" data-product="Connect" aria-label="Book outline for Blackboard Connect"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-2253" class="menu-item menu-item--expanded"> <a href="/Connect" hreflang="en">Connect</a> 
+             <ul class="menu"> 
+              <li id="nid-2254" class="menu-item menu-item--collapsed lazy folder"> <a href="/Connect/Connect_5" hreflang="en">Connect 5</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-28221" class="book-block-menu" role="navigation" data-product="CourseSites" aria-label="Book outline for Blackboard CourseSites"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-28221" class="menu-item menu-item--expanded"> <a href="/CourseSites" hreflang="en">CourseSites</a> 
+             <ul class="menu"> 
+              <li id="nid-28216" class="menu-item menu-item--collapsed lazy folder"> <a href="/CourseSites/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-28226" class="menu-item menu-item--collapsed lazy folder"> <a href="/CourseSites/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-28231" class="menu-item"> <a href="/CourseSites/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-2514" class="book-block-menu" role="navigation" data-product="Drive" aria-label="Book outline for Blackboard Drive"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-2514" class="menu-item menu-item--expanded"> <a href="/Drive" hreflang="en">Drive</a> 
+             <ul class="menu"> 
+              <li id="nid-2549" class="menu-item"> <a href="/Drive/Bb_Drive_Product_Update" hreflang="en">Product Updates</a> </li> 
+              <li id="nid-21566" class="menu-item menu-item--collapsed lazy folder"> <a href="/Drive/Drive_1.7" hreflang="en">Release 1.7</a> </li> 
+              <li id="nid-2528" class="menu-item menu-item--collapsed lazy folder"> <a href="/Drive/1.6" hreflang="en">Release 1.6</a> </li> 
+              <li id="nid-2515" class="menu-item menu-item--collapsed lazy folder"> <a href="/Drive/1.5" hreflang="en">Release 1.5</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-3271" class="book-block-menu" role="navigation" data-product="Learn" aria-label="Book outline for Blackboard Learn Help"> 
+           <ul class="menu my-book-menu active-book"> 
+            <li id="nid-3271" class="menu-item menu-item--expanded menu-item--active-trail expanded"> <a href="/Learn" hreflang="en">Learn</a> 
+             <ul class="menu"> 
+              <li id="nid-13376" class="menu-item menu-item--expanded menu-item--active-trail expanded"> <a href="/Learn/Student" hreflang="en">Student</a> 
+               <ul class="menu"> 
+                <li id="nid-13377" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Student/FAQ" hreflang="en">Common Questions</a> </li> 
+                <li id="nid-13385" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Student/Getting_Started" hreflang="en">Getting Started</a> </li> 
+                <li id="nid-13401" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Student/About_You" hreflang="en">About You</a> </li> 
+                <li id="nid-13433" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Student/Stay_in_the_Loop" hreflang="en">Stay in the Loop</a> </li> 
+                <li id="nid-13460" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Student/Interact" hreflang="en">Interact with Others</a> </li> 
+                <li id="nid-13567" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Student/Content" hreflang="en">Content in Your Courses</a> </li> 
+                <li id="nid-13691" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Student/Add_and_Format_Content" hreflang="en">Add and Format Content</a> </li> 
+                <li id="nid-13896" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Student/Assignments" hreflang="en">Assignments</a> </li> 
+                <li id="nid-13957" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Student/Tests_and_Surveys" hreflang="en">Tests and Surveys</a> </li> 
+                <li id="nid-13959" class="active menu-item menu-item--expanded menu-item--active-trail expanded"> <a href="/Learn/Student/Grades" hreflang="en">Grades</a> 
+                 <ul class="menu"> 
+                  <li id="nid-22996" class="menu-item"> <a href="/Learn/Student/Grades/Attendance" hreflang="en">Attendance Grades</a> </li> 
+                  <li id="nid-15690" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Student/Grades/How_Am_I_Doing" hreflang="en">How Am I Doing?</a> </li> 
+                 </ul> </li> 
+                <li id="nid-13394" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Student/Accessibility" hreflang="en">Accessibility</a> </li> 
+                <li id="nid-13399" class="menu-item"> <a href="/Learn/Student/Watch_Videos" hreflang="en">Watch Videos</a> </li> 
+               </ul> </li> 
+              <li id="nid-14045" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-13425" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10671" class="book-block-menu" role="navigation" data-product="Open Content" aria-label="Book outline for Blackboard Open Content"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10671" class="menu-item menu-item--expanded"> <a href="/Blackboard_Open_Content" hreflang="en">Open Content</a> 
+             <ul class="menu"> 
+              <li id="nid-10703" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_Content/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-10672" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_Content/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10564" class="book-block-menu" role="navigation" data-product="Open Education" aria-label="Book outline for Blackboard Open Education"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10564" class="menu-item menu-item--expanded"> <a href="/Open_Education" hreflang="en">Open Education</a> 
+             <ul class="menu"> 
+              <li id="nid-10572" class="menu-item menu-item--collapsed lazy folder"> <a href="/Open_Education/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-10565" class="menu-item menu-item--collapsed lazy folder"> <a href="/Open_Education/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10375" class="book-block-menu" role="navigation" data-product="Open LMS" aria-label="Book outline for Blackboard Open LMS "> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10375" class="menu-item menu-item--expanded"> <a href="/Blackboard_Open_LMS" hreflang="en">Open LMS </a> 
+             <ul class="menu"> 
+              <li id="nid-10451" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_LMS/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-10478" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_LMS/Teacher" hreflang="en">Teacher</a> </li> 
+              <li id="nid-10376" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_LMS/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-19816" class="book-block-menu" role="navigation" data-product="Predict" aria-label="Book outline for Blackboard Predict"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-19816" class="menu-item menu-item--expanded"> <a href="/Predict" hreflang="en">Predict</a> 
+             <ul class="menu"> 
+              <li id="nid-19091" class="menu-item menu-item--collapsed lazy folder"> <a href="/Predict/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-19090" class="menu-item menu-item--collapsed lazy folder"> <a href="/Predict/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-19096" class="menu-item menu-item--collapsed lazy folder"> <a href="/Predict/Advisor" hreflang="en">Advisor</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-26316" class="book-block-menu" role="navigation" data-product="SafeAssign" aria-label="Book outline for Blackboard SafeAssign"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-26316" class="menu-item menu-item--expanded"> <a href="/SafeAssign" hreflang="en">SafeAssign</a> 
+             <ul class="menu"> 
+              <li id="nid-26116" class="menu-item menu-item--collapsed lazy folder"> <a href="/SafeAssign/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-26111" class="menu-item menu-item--collapsed lazy folder"> <a href="/SafeAssign/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-26056" class="menu-item menu-item--collapsed lazy folder"> <a href="/SafeAssign/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10576" class="book-block-menu" role="navigation" data-product="SIS Central" aria-label="Book outline for Blackboard SIS Central for Connect"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10576" class="menu-item menu-item--expanded"> <a href="/SIS_Central/Connect" hreflang="en">SIS Central for Connect</a> 
+             <ul class="menu"> 
+              <li id="nid-10577" class="menu-item menu-item--collapsed lazy folder"> <a href="/SIS_Central/Connect/PowerSchool_Integration" hreflang="en">PowerSchool Integration</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-11788" class="book-block-menu" role="navigation" data-product="SmartView" aria-label="Book outline for Blackboard SmartView"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-11788" class="menu-item menu-item--expanded"> <a href="/SmartView" hreflang="en">SmartView</a> 
+             <ul class="menu"> 
+              <li id="nid-11790" class="menu-item"> <a href="/SmartView/Authentication_Logging_In" hreflang="en">Logging In</a> </li> 
+              <li id="nid-11791" class="menu-item menu-item--collapsed lazy folder"> <a href="/SmartView/Advisor_Desktop_Interface" hreflang="en">Advisor Desktop</a> </li> 
+              <li id="nid-11797" class="menu-item menu-item--collapsed lazy folder"> <a href="/SmartView/Service_Desk_Interface" hreflang="en">Service Desk</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-21691" class="book-block-menu" role="navigation" data-product="Web Community Manager" aria-label="Book outline for Blackboard Web Community Manager"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-21691" class="menu-item menu-item--expanded"> <a href="/Web_Community_Manager" hreflang="en">Web Community Manager</a> 
+             <ul class="menu"> 
+              <li id="nid-21696" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Parent_Community_Member" hreflang="en">Parent/Community Member</a> </li> 
+              <li id="nid-21701" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-22326" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Teacher_Editor" hreflang="en">Teacher/Editor</a> </li> 
+              <li id="nid-21711" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Administrator" hreflang="en">Administrator</a> </li> 
+              <li id="nid-31421" class="menu-item"> <a href="/Web_Community_Manager/Teacher_Editor/Section_Workspace" hreflang="en">Section Workspace</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="page-header__second"> 
+       <div class="region region-header-second"> 
+        <div class="block block--block-blackboardtools " id="block-blackboardtools" data-block-plugin-id="block_content:4089d30d-1c4e-4ceb-bf0e-4199adc0a900"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div class="page-header__tools">
+           <a class="page-header__home" href="/" title="Home"><span class="icon-home" aria-hidden="true"></span>Home</a> 
+           <a class="page-header__print" title="Print"><span class="icon-printer" aria-hidden="true"></span>Print</a>
+          </div>
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-page-title " id="block-blackboard-page-title" data-block-plugin-id="page_title_block"> 
+         <h1><span>Grades</span> </h1> 
+        </div> 
+        <div class="block block--block-liftslot-fullspanbanner " id="block-liftslot-fullspanbanner" data-block-plugin-id="block_content:582f9bde-be9a-4fe6-b87f-1314126a7021"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div data-lift-slot="fb2baad0-4af7-11e7-b2aa-9d057867a0b0"></div>
+         </div> 
+        </div> 
+        <div class="block block--block-liftslot-studentlandingbanner " id="block-liftslot-studentlandingbanner" data-block-plugin-id="block_content:36968852-eb69-4598-8fc0-afc21978c52f"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div data-lift-slot="077642d0-89bb-11e7-8902-7de7c872c496"></div>
+         </div> 
+        </div> 
+        <div class="block block--block-liftslot-instructorlandingbanner " id="block-liftslot-instructorlandingbanner" data-block-plugin-id="block_content:896a174e-6094-4226-8825-122d884ecc5f"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div data-lift-slot="535c7f70-89bb-11e7-9aa3-ef6c45e0fd72"></div>
+         </div> 
+        </div> 
+        <div class="block block--block-lift-sidebarblock " id="block-lift-sidebarblock" data-block-plugin-id="block_content:945908c1-ca42-40f6-900f-cfe5a40ecd0e"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div data-lift-slot="f1168e80-154a-11e7-bb29-3961d4ea1e6e"></div>
+         </div> 
+        </div> 
+        <div class="block block--block-liftslot-sidebarblock2 " id="block-liftslot-sidebarblock2" data-block-plugin-id="block_content:4a3e2310-bee3-4a7d-bb63-8543c0365657"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div class="block--block-lift-sidebarblock"> 
+           <div data-lift-slot="c6a9fca0-fa31-11e7-9ba6-db640d383e63"></div> 
+          </div>
+         </div> 
+        </div> 
+        <div class="block block--block-liftslot-sidebarblock3 " id="block-liftslot-sidebarblock3" data-block-plugin-id="block_content:78e9893a-652c-4f9f-9ea2-39d6ae91d839"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div class="block--block-lift-sidebarblock"> 
+           <div data-lift-slot="112e5f50-fa32-11e7-9ba6-db640d383e63"></div> 
+          </div>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <main role="main"> 
+     <a id="main-content" tabindex="-1"></a> 
+     <div class="page-content"> 
+      <ul class="visually-hidden accessible-navigation__content"> 
+      </ul> 
+      <div class="region region-content"> 
+       <div data-drupal-messages-fallback class="hidden"></div> 
+       <div class="block block--block-views-block-view-applies-to-original-course-view-admin-block-1 views-element-container" id="block-views-block-view-applies-to-original-course-view-admin-block-1" data-block-plugin-id="views_block:view_applies_to_original_course_view_admin-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-original-course-view-admin view-id-view_applies_to_original_course_view_admin view-display-id-block_1 js-view-dom-id-bf26f44d5bed9c255e7660a6a75c25a7fec82f6dc4fec41a0d457ac7d6aef8ed"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-orig-course-inst-block-1 views-element-container" id="block-views-block-view-applies-orig-course-inst-block-1" data-block-plugin-id="views_block:view_applies_orig_course_inst-block_1"> 
+        <div>
+         <div class="view view-view-applies-orig-course-inst view-id-view_applies_orig_course_inst view-display-id-block_1 js-view-dom-id-f38cff4c89eb79912c4f81e02b4f3b1561d4e0c02d92fe361dd949b7b5d1c80c"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-orig-course-stud-block-1 views-element-container" id="block-views-block-view-applies-orig-course-stud-block-1" data-block-plugin-id="views_block:view_applies_orig_course_stud-block_1"> 
+        <div>
+         <div class="view view-view-applies-orig-course-stud view-id-view_applies_orig_course_stud view-display-id-block_1 js-view-dom-id-fd9d303989a861099848046161900ad8ff998e49358319915ddc0c63f77614eb"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-orig-exp-inst-block-1 views-element-container" id="block-views-block-view-applies-orig-exp-inst-block-1" data-block-plugin-id="views_block:view_applies_orig_exp_inst-block_1"> 
+        <div>
+         <div class="view view-view-applies-orig-exp-inst view-id-view_applies_orig_exp_inst view-display-id-block_1 js-view-dom-id-578bee78e1ee0eef76cbf63f71fadb811624e3363a98b98068a4a5a8da369af0"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-orig-exp-stud-block-1 views-element-container" id="block-views-block-view-applies-orig-exp-stud-block-1" data-block-plugin-id="views_block:view_applies_orig_exp_stud-block_1"> 
+        <div>
+         <div class="view view-view-applies-orig-exp-stud view-id-view_applies_orig_exp_stud view-display-id-block_1 js-view-dom-id-ce796d5ca2f8c6e6d6b13fe923c1f144fc78319133762bc80b253232f6650070"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-original-experience-admin-block-1 views-element-container" id="block-views-block-view-applies-to-original-experience-admin-block-1" data-block-plugin-id="views_block:view_applies_to_original_experience_admin-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-original-experience-admin view-id-view_applies_to_original_experience_admin view-display-id-block_1 js-view-dom-id-904445b54515119b05557f5aa0d608df0906b17b6c58493e4a693ad3940000a1"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-ultra-course-inst-block-1 views-element-container" id="block-views-block-view-applies-ultra-course-inst-block-1" data-block-plugin-id="views_block:view_applies_ultra_course_inst-block_1"> 
+        <div>
+         <div class="view view-view-applies-ultra-course-inst view-id-view_applies_ultra_course_inst view-display-id-block_1 js-view-dom-id-50d4627a8bf890cde488269c3cc5facf5d3c3a1920600bd24491b7ef0d50d26d"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-ultra-course-stud-block-1 views-element-container" id="block-views-block-view-applies-ultra-course-stud-block-1" data-block-plugin-id="views_block:view_applies_ultra_course_stud-block_1"> 
+        <div>
+         <div class="view view-view-applies-ultra-course-stud view-id-view_applies_ultra_course_stud view-display-id-block_1 js-view-dom-id-0937eff037d2416a65abd613f86ecee06ab0cc4ab9295b7aa8d47e9961dad50c"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-ultra-exp-admin-block-1 views-element-container" id="block-views-block-view-applies-ultra-exp-admin-block-1" data-block-plugin-id="views_block:view_applies_ultra_exp_admin-block_1"> 
+        <div>
+         <div class="view view-view-applies-ultra-exp-admin view-id-view_applies_ultra_exp_admin view-display-id-block_1 js-view-dom-id-f2d66437ca18a9e9b0a02225b450899918033c36c74db44372500406d51d68a9"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-ultra-exp-inst-block-1 views-element-container" id="block-views-block-view-applies-ultra-exp-inst-block-1" data-block-plugin-id="views_block:view_applies_ultra_exp_inst-block_1"> 
+        <div>
+         <div class="view view-view-applies-ultra-exp-inst view-id-view_applies_ultra_exp_inst view-display-id-block_1 js-view-dom-id-09f3d29140b04eafda79c5dcc18f8a1655457816cf22eabfe71e41b08e219e1d"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-ultra-exp-stud-block-1 views-element-container" id="block-views-block-view-applies-ultra-exp-stud-block-1" data-block-plugin-id="views_block:view_applies_ultra_exp_stud-block_1"> 
+        <div>
+         <div class="view view-view-applies-ultra-exp-stud view-id-view_applies_ultra_exp_stud view-display-id-block_1 js-view-dom-id-fa7ee2cb7d33836e0b3a7f0286be8230ff42c505676428c30136f279a52ae5c1"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-institution-controls-assignments-1 views-element-container" id="block-views-block-view-applies-to-institution-controls-assignments-1" data-block-plugin-id="views_block:view_applies_to_institution_controls_assignments-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-institution-controls-assignments view-id-view_applies_to_institution_controls_assignments view-display-id-block_1 js-view-dom-id-e0c7a6a675f37d5edf458c3e5fcce79603d205126ef91de866d9ec46f019529e"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-institution-controls-gradebook-1 views-element-container" id="block-views-block-view-applies-to-institution-controls-gradebook-1" data-block-plugin-id="views_block:view_applies_to_institution_controls_gradebook-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-institution-controls-gradebook view-id-view_applies_to_institution_controls_gradebook view-display-id-block_1 js-view-dom-id-4815c95bcb115d976896256bdce4758560f615362fa8378ccab8af683a3b16af"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-institution-controls-rubrics-1 views-element-container" id="block-views-block-view-applies-to-institution-controls-rubrics-1" data-block-plugin-id="views_block:view_applies_to_institution_controls_gradebook_and_rubrics-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-institution-controls-gradebook-and-rubrics view-id-view_applies_to_institution_controls_gradebook_and_rubrics view-display-id-block_1 js-view-dom-id-5c1dec569163f3cb6ac87b3496fce3e370f63d74b41ca4b59d6879aa6430e8ab"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-institution-controls-rubrics-2 views-element-container" id="block-views-block-view-applies-to-institution-controls-rubrics-2" data-block-plugin-id="views_block:view_applies_to_institution_controls_rubrics-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-institution-controls-rubrics view-id-view_applies_to_institution_controls_rubrics view-display-id-block_1 js-view-dom-id-5f894ce7e3fb93b220cda641164a1f374c89762401cfbf48626eed89b2b70c8a"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-institution-controls-tests-block-1 views-element-container" id="block-views-block-view-applies-to-institution-controls-tests-block-1" data-block-plugin-id="views_block:view_applies_to_institution_controls_tests-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-institution-controls-tests view-id-view_applies_to_institution_controls_tests view-display-id-block_1 js-view-dom-id-a594a2f5df824e55e243de5509d39fe559e06a13d76277c0613b517cc52b54e4"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-self-hosting-block-1 views-element-container" id="block-views-block-view-applies-to-self-hosting-block-1" data-block-plugin-id="views_block:view_applies_to_self_hosting-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-self-hosting view-id-view_applies_to_self_hosting view-display-id-block_1 js-view-dom-id-de15a1c1c086c3633545a559b8141acb2abada51a46e334e23e4ca0a8c919c1e"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-blackboard-content " id="block-blackboard-content" data-block-plugin-id="system_main_block"> 
+        <article role="article" about="/Learn/Student/Grades"> 
+         <div> 
+          <div class="field field--name-field-content-page-paragraphs field--type-entity-reference-revisions field--label-hidden field__items"> 
+           <div class="paragraph paragraph--type--duplicate-page-content paragraph--view-mode--default"> 
+            <div class="field field--name-field-page-name field--type-entity-reference field--label-hidden field__item">
+             <article role="article" about="/node/30251"> 
+              <h2> <a href="/node/30251" rel="bookmark"><span>Video: Check Your Grades</span> </a> </h2> 
+              <div> 
+               <div class="field field--name-field-content-page-paragraphs field--type-entity-reference-revisions field--label-hidden field__items"> 
+                <div class="paragraph paragraph--type--basic-content-paragraph paragraph--view-mode--default"> 
+                 <div class="field field--name-field-content field--type-text-long field--label-hidden field__item">
+                  <hr lang="en-us" xml:lang="en-us">
+                  <h2 lang="en-us" xml:lang="en-us"><a id="video"></a>Watch a video about checking grades</h2> 
+                  <p class="screen-reader" lang="en-us" xml:lang="en-us">The following narrated video provides a visual and auditory representation of some of the information included on this page. For a detailed description of what is portrayed in the video, <a href="https://youtu.be/im1j8wGNoBg">open the video on YouTube</a>, navigate to <span class="interface">More actions</span>, and select <span class="interface">Open transcript</span>.?</p> 
+                  <p lang="en-us" xml:lang="en-us"><a class="link-https" href="https://youtu.be/im1j8wGNoBg">Video: Check your grades</a> explains how to check your grades in the Original experience.</p> 
+                  <div class="video-size-container" lang="en-us" xml:lang="en-us">
+                   ? 
+                   <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="1d94832b-9d65-43e6-a176-91541dbff363" data-langcode="en" class="embedded-entity">
+                    <div> 
+                     <div class="field field--name-field-media-video-embed-field field--type-video-embed-field field--label-hidden field__item">
+                      <div class="video-embed-field-provider-youtube video-embed-field-responsive-video">
+                       <iframe width="854" height="480" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/im1j8wGNoBg?autoplay=0&amp;start=0&amp;rel=0"></iframe> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                  </div>
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </article> 
+            </div> 
+           </div> 
+           <div class="paragraph paragraph--type--basic-content-paragraph paragraph--view-mode--default"> 
+            <div class="field field--name-field-content field--type-text-long field--label-hidden field__item">
+             <div> 
+              <h2><a id="where"></a>Where are my grades?</h2> 
+              <p class="LearnMore" lang="ultra" xml:lang="ultra">Doesn't seem familiar? <a href="#ultra_all_grades">Jump to the "Ultra" help about accessing grades</a>.</p> 
+              <p>You can see grades for all of your courses or one course at a time.</p> 
+              <p>To view grades for all of your courses, select the arrow next to your name in the upper-right corner. In the menu, select <span class="interface">My Grades</span>. You can sort your grades by <span class="interface">All Courses</span> or <span class="interface">Last Graded</span>. If your work hasn't been graded, grade status icons appear. Select a graded item's title to review your submission. For tests, after you select the title, the <span class="interface">View Attempts</span> page opens. Select the grade to review your submission.</p> 
+              <p class="LearnMore"><a href="/Learn/Student/Tests_and_Surveys#feedback">More on viewing your test grades</a></p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="bc08b24e-c860-4be1-bca7-e5c475667f66" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="required" style="max-width: 100%; width: 600px;" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang="required"> 
+                 <img src="/sites/default/files/bb_assets_embed/14000/original_global_nav.png" width="1571" height="1106" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <p>To view the grades for the course you're in, select the <span class="interface">My Grades</span> link on the course menu or on the <span class="interface">Tools</span> page.</p> 
+              <p>Your instructor controls which links appear on the course menu.</p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="36ea755b-777f-4f07-a3db-580d7f97c5bc" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="required" style="max-width: 100%; width: 430px" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang="required"> 
+                 <img src="/sites/default/files/bb_assets_embed/14000/my_grades_original_access.png" width="550" height="422" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <p class="LearnMore" lang="required" xml:lang="required"><a href="/Learn/Student/Accessibility/View_Your_Grades_With_JAWS" title="View Your Grades With JAWS">More on viewing your grades with JAWS<sup>®</sup></a></p> 
+              <hr>
+              <h2><a id="my_grades"></a>My Grades page</h2> 
+              <p class="LearnMore" lang="ultra" xml:lang="ultra">Doesn't seem familiar? <a href="#ultra_all_grades">Jump to the "Ultra" help about viewing grades</a>.</p> 
+              <p>On the <span class="interface">My Grades</span> page, you can view all the coursework and grades for the course you're in. If your work hasn't been graded, <a href="#item_status">grade status icons</a> appear.</p> 
+              <p>You can filter and order your view.</p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="89a0e9e5-59e7-43ba-bace-c55db2fc0111" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="required" style="max-width: 100%; width: 600px;" class="internal left field field--name-image field--type-image field--label-hidden field__item" xml:lang="required"> 
+                 <img src="/sites/default/files/images/2018-01/my_grades_page_original.png" width="1315" height="1158" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <p>Select an item's title to review your submission. For example, your instructor can type comments and highlight text in your document. Select an assignment's title to access the assignment's <span class="interface">Review Submission History</span> page and review the grade, annotations, and feedback in context. If your file doesn't open automatically in the browser, your institution hasn't turned on inline viewing.</p> 
+              <p class="LearnMore"><a href="/Learn/Student/Assignments/Assignment_Grades#history" title="Learn/Student/Assignments/Assignment_Grades#history">More on inline viewing</a></p> 
+              <p><span class="emphasize">Reminder</span>: For tests, after you select the title, the <span class="interface">View Attempts</span> page opens. Select the grade to review your submission.</p> 
+              <p>If your instructor used a rubric to grade your work, select the <span class="interface">View Rubric</span> link to view details.</p> 
+              <p>Select the <span class="interface">View Feedback</span> icon to view instructor feedback in a pop-up box.</p> 
+              <p>If your instructor uses the attendance grading feature, you'll see an attendance grade.</p> 
+              <p class="LearnMore"><a href="/Learn/Student/Grades/Attendance#check">More on your attendance grade</a></p> 
+              <hr>
+              <h2><a id="item_status"></a>What do the icons mean?</h2> 
+              <p>If your instructor hasn't graded your work yet, grade status icons appear.</p> 
+              <table>
+               <caption>
+                My Grades icons
+               </caption> 
+               <thead>
+                <tr>
+                 <th>Icon</th> 
+                 <th>Description</th> 
+                </tr>
+               </thead>
+               <tbody>
+                <tr>
+                 <td>-</td> 
+                 <td>No information is available.</td> 
+                </tr>
+                <tr>
+                 <td> 
+                  <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="09649a36-0b92-4d84-bedf-1f04a6807dd5" data-langcode="en" class="embedded-entity">
+                   <div> 
+                    <div lang="" style="width: 16px; height: 16px;" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang=""> 
+                     <img src="/sites/default/files/bb_assets_embed/14000/icon_grade_completed.png" width="16" height="16" alt="" typeof="foaf:Image">
+                    </div> 
+                   </div> 
+                  </div> </td> 
+                 <td>You completed the work, but no grade is assigned for items such as surveys.</td> 
+                </tr>
+                <tr>
+                 <td> 
+                  <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="8a2026a7-9498-4c97-aafc-317637ff74fb" data-langcode="en" class="embedded-entity">
+                   <div> 
+                    <div lang="" style="width: 18px; height: 18px;" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang=""> 
+                     <img src="/sites/default/files/bb_assets_embed/14000/icon_needs_grading.png" width="18" height="18" alt="" typeof="foaf:Image">
+                    </div> 
+                   </div> 
+                  </div> </td> 
+                 <td>You submitted your work. This item is ready for grading.</td> 
+                </tr>
+                <tr>
+                 <td><span class="interface">Grade</span></td> 
+                 <td>After an item has been graded, select the title to review your submission. For tests, after you select the title, the <span class="interface">View Attempts</span> page opens. Select the grade to review your submission.</td> 
+                </tr>
+                <tr>
+                 <td> 
+                  <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="fc40ffb9-1538-4fcf-baca-1831dcd304b9" data-langcode="en" class="embedded-entity">
+                   <div> 
+                    <div lang="" style="width: 18px; height: 18px;" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang=""> 
+                     <img src="/sites/default/files/bb_assets_embed/14000/icon_grading_in_progress.png" width="18" height="18" alt="" typeof="foaf:Image">
+                    </div> 
+                   </div> 
+                  </div> </td> 
+                 <td>Your work is in progress, but you haven't submitted it yet.</td> 
+                </tr>
+                <tr>
+                 <td> 
+                  <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="590fb177-d95d-48a0-be41-ad64bf1311b6" data-langcode="en" class="embedded-entity">
+                   <div> 
+                    <div lang="" style="width: 18px; height: 18px;" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang=""> 
+                     <img src="/sites/default/files/bb_assets_embed/14000/icon_exempt.png" width="18" height="18" alt="" typeof="foaf:Image">
+                    </div> 
+                   </div> 
+                  </div> </td> 
+                 <td>Your grade for this item is exempted. You don't have to submit work.</td> 
+                </tr>
+                <tr>
+                 <td> 
+                  <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="83ce4045-222b-494c-bbe7-1b1b3e4890e9" data-langcode="en" class="embedded-entity">
+                   <div> 
+                    <div lang="" style="width: 18px; height: 18px;" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang=""> 
+                     <img src="/sites/default/files/bb_assets_embed/14000/icon_error.png" width="36" height="36" alt="" typeof="foaf:Image">
+                    </div> 
+                   </div> 
+                  </div> </td> 
+                 <td>An error has occurred. Contact your instructor.</td> 
+                </tr>
+                <tr>
+                 <td> 
+                  <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="7c8d823f-7354-42cc-8346-dd321c198dff" data-langcode="en" class="embedded-entity">
+                   <div> 
+                    <div lang="" style="width: 17px; height: 18px;" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang=""> 
+                     <img src="/sites/default/files/bb_assets_embed/14000/icon_anonymous.png" width="17" height="18" alt="" typeof="foaf:Image">
+                    </div> 
+                   </div> 
+                  </div> </td> 
+                 <td>Your work was graded anonymously. Appears with submissions where your instructor assigned grades with student names hidden during the grading process.</td> 
+                </tr>
+                <tr>
+                 <td> 
+                  <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="92aca850-6c28-4eda-8f9b-00ce91a47c6d" data-langcode="en" class="embedded-entity">
+                   <div> 
+                    <div lang="" style="width: 19px; height: 16px;" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang=""> 
+                     <img src="/sites/default/files/bb_assets_embed/14000/icon_feedback.png" width="19" height="16" alt="" typeof="foaf:Image">
+                    </div> 
+                   </div> 
+                  </div> </td> 
+                 <td>Select to view feedback from your instructor.</td> 
+                </tr>
+               </tbody>
+              </table>
+              <h2><a id="alerts"></a>New grade alerts</h2> 
+              <p class="LearnMore" lang="ultra" xml:lang="ultra">Doesn't seem familiar? <a href="#ultra_alerts">Jump to the "Ultra" help about grade alerts</a>.</p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="83aa38f9-f5d9-46b2-8463-200f07757f01" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="required" style="max-width: 100%; float: left; width: 300px;" class="internal left field field--name-image field--type-image field--label-hidden field__item" xml:lang="required"> 
+                 <img src="/sites/default/files/bb_assets_embed/14000/my_blackboard_notification.png" width="525" height="424" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <p>Return to the menu next to your name to view new grading activity.</p> 
+              <p>If a number appears on the <span class="interface">My Grades</span> icon, you have new grades, items due, or new items with due dates. You can also choose to receive grade alerts through email and text messages if your institution allows.</p> 
+              <p class="LearnMore"><a href="/Learn/Student/Stay_in_the_Loop/Notifications" title="Notifications">More on setting up alerts</a></p> 
+              <hr>
+              <h2><a id="receipts"></a>Submission receipts</h2> 
+              <p>If your institution allows, you will receive a notification email for each assignment or test submission that includes information such as attached filenames and sizes. For group assignments, all the members in your group will receive the receipt when one member submits for the group.</p> 
+              <p>Even when the email notifications are turned off, you can also access receipts any time on the <span class="interface">My Grades</span> page in the submissions area.</p> 
+              <p class="LearnMore"><a href="/Learn/Student/Assignments/Submit_Assignments" title="Submit Assignments">More on submitting assignments</a></p> 
+              <hr>
+              <h2><a id="view_recording"></a>View a feedback recording</h2> 
+              <p class="LearnMore" lang="ultra" xml:lang="ultra">Doesn't seem familiar? <a href="#ultra_view_recording">Jump to the "Ultra" help about viewing feedback recordings inside a course</a>.</p> 
+              <p>Your instructor might leave a video or audio recording for additional feedback to your grade. If there is a feedback recording, you'll see an icon in your feedback area of <span class="interface">My Grades</span>. Select the icon to stream the video to your computer or device. You can use standard playback controls such as pause or sliding the player bar. Playing a recording is supported in modern browsers without the need for a browser plug-in. You can't export or download the feedback recording at this time.</p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="fe975ada-506a-42c1-a2ce-04f9d31baf08" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="en-us" style="max-width: 100%; width: 480px;" class="field field--name-image field--type-image field--label-hidden field__item" xml:lang="en-us"> 
+                 <img src="/sites/default/files/images/2018-05/original_student_view_feedback.png" width="379" height="476" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+             </div>
+            </div> 
+           </div> 
+           <div class="paragraph paragraph--type--basic-content-paragraph paragraph--view-mode--default"> 
+            <div class="field field--name-field-content field--type-text-long field--label-hidden field__item">
+             <div lang="ultra" xml:lang="ultra"> 
+              <hr>
+              <h2><a id="ultra_all_grades"></a>ULTRA: Grades for all courses</h2> 
+              <p class="LearnMore">Doesn't seem familiar? <a href="#where">Jump to the "Original" help about viewing grades for all courses</a>.</p> 
+              <p>In the list where your name appears, select <span class="interface">Grades</span>.</p> 
+              <p class="note">This information also applies to organizations.</p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="2b342944-5ee3-49f2-b3bc-66e088f9b076" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="en-us" style="max-width: 100%; width: 620px" class="field field--name-image field--type-image field--label-hidden field__item" xml:lang="en-us"> 
+                 <img src="/sites/default/files/images/2019-08/ultra_stud_base_grades.png" width="1897" height="1315" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <p>Your grades are organized by course name and term in alphabetical order. Select any item in any course to view details.</p> 
+              <p><span class="emphasize">Want to dive in and focus on one course?</span> Select a course name to go to that course's grades page. You may have two types of courses.</p> 
+              <p>Next to the name of your course, you'll find your overall grade. If your instructor has set up the overall grade, select the grade pill to see how it's calculated.</p> 
+              <p class="LearnMore"><a href="#ultra_overall">More on your overall grade</a></p> 
+             </div>
+            </div> 
+           </div> 
+           <div class="paragraph paragraph--type--basic-content-paragraph paragraph--view-mode--default"> 
+            <div class="field field--name-field-content field--type-text-long field--label-hidden field__item">
+             <div lang="ultra" xml:lang="ultra"> 
+              <hr>
+              <h2><a id="ultra_inside"></a>ULTRA: Grades inside a course</h2> 
+              <p class="LearnMore">Doesn't seem familiar? <a href="#where">Jump to the "Original" help about viewing grades inside a course</a>.</p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="7c5d2699-0192-46cf-aae8-e332d1c9254a" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="en-us" style="max-width: 100%; width: 980px" class="internal left field field--name-image field--type-image field--label-hidden field__item" xml:lang="en-us"> 
+                 <img src="/sites/default/files/images/2018-05/ultra_student_grades_in_course.png" width="1378" height="710" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <ol class="UpperAlpha">
+               <li>In a course, you can access your <span class="interface">Course Grades</span> page on the navigation bar. Select the <span class="interface">Gradebook</span> icon to view the grades that your instructor posted.</li> 
+               <li>Your <span class="interface">Overall Grade</span> calculates your performance to date. Select the grade pill to learn more about <a href="#ultra_overall">how your overall grade is calculated</a>. Your instructor may choose not to add an overall grade.</li> 
+               <li>For each item, you can view the status and how many attempts you have. View which attempts you've started, submitted before the due date, and if any submissions are or will be late. Submission info appears in red after the due date passes. <p class="note">If you’re allowed only one attempt and submit before the due date, you won’t see the second line of text for the item.</p> </li> 
+               <li>Select an item to open the <span class="interface">Details &amp; Information</span> panel and view your current grade and how it was calculated. You can also view how many attempts you have and if any submissions are or will be late.</li> 
+               <li>If the due date has passed, you’re informed the next attempt will be marked late.</li> 
+               <li>Select the grade pill to access your submission. If you made multiple submissions, the <span class="interface">Submission</span> panel opens. If your instructor annotated a file you uploaded as your submission, you can view the annotations inline. Visit the assignment grades topic to<a href="/Learn/Student/Assignments/Assignment_Grades#comment"> see&nbsp;how multiple comments appear in your annotated PDF</a>.</li> 
+              </ol>
+              <p>You may see zeros for work you haven't submitted after the due date passes. You can still submit attempts to update your grade. Your instructor determines grade penalties for late work.</p> 
+              <p class="LearnMore"><a href="#ultra_zeros">More on zeros assigned to past due work</a></p> 
+              <p>If your instructor uses the attendance grading feature, you'll see an attendance grade.</p> 
+              <p class="LearnMore"><a href="/Learn/Student/Grades/Attendance#ultra_check">More on your attendance grade</a></p> 
+              <h3><a id="view"></a>View attempts and feedback</h3> 
+              <p>In the <span class="interface">Submission</span> panel, you can see which attempts have grades and feedback. Select the attempt you want to view. Your submission opens, and you can view your grade and how it was calculated. You can review your work and expand the <span class="interface">Feedback</span> panel if your instructor left comments. A message appears if your instructor has overridden the item's final grade.</p> 
+              <p class="LearnMore"><a href="/Learn/Student/Assignments/Submit_Assignments#ultra_late">More on how late work appears</a></p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="009d6a5a-4712-4892-a805-df8a9fcae382" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="en-us" style="max-width: 100%; width: 900px" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang="en-us"> 
+                 <img src="/sites/default/files/images/2019-04/ultra_student_grades_in_course_2.png" width="1357" height="399" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <p>You can also see how many attempts you have on the <span class="interface">Course Grades</span> page. You can see which attempts you submitted before the due date and if any submissions are or will be late.</p> 
+              <p class="LearnMore"><a href="/Learn/Student/Grades#ultra-grades-inside-a-course">More on the <span class="interface">Course Grades page</span></a></p> 
+              <h4><a id="documents"></a></h4> 
+             </div>
+            </div> 
+           </div> 
+           <div class="paragraph paragraph--type--basic-content-paragraph paragraph--view-mode--default"> 
+            <div class="field field--name-field-content field--type-text-long field--label-hidden field__item">
+             <div lang="ultra" xml:lang="ultra"> 
+              <hr>
+              <h2><a id="ultra_alerts"></a>ULTRA: New grade alerts</h2> 
+              <p class="LearnMore">Doesn't seem familiar? <a href="#alerts">Jump to the "Original" help about grade alerts</a>.</p> 
+              <p>When grades are posted, you'll find them in your activity stream. Select <span class="interface">View your grade</span> to display your grade. If your instructor added feedback, you'll see it after the item's title.</p> 
+              <p class="LearnMore"><a href="/Learn/Student/Stay_in_the_Loop/Activity_Stream" title="Activity Stream">More on the activity stream</a></p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="0949c6ec-ba56-4ffd-93e3-d16d58202af8" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="en-us" style="max-width: 500px" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang="en-us"> 
+                 <img src="/sites/default/files/images/2019-06/ultra_student_grade_in_stream.png" width="1060" height="386" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <p>You can also access the item in your course to review your grade and feedback in context.</p> 
+             </div>
+            </div> 
+           </div> 
+           <div class="paragraph paragraph--type--basic-content-paragraph paragraph--view-mode--default"> 
+            <div class="field field--name-field-content field--type-text-long field--label-hidden field__item">
+             <div lang="ultra" xml:lang="ultra"> 
+              <hr>
+              <h2><a id="ultra_feedback"></a>ULTRA: Grades and feedback</h2> 
+              <p>If your instructor needs to grade questions in your assessment, <span class="interface">Pending</span> appears in the <span class="interface">Grading</span> section.</p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="b3456998-b19f-41a4-aeb2-d27cebd48095" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="en-us" style="max-width: 100%; width: 350px;" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang="en-us"> 
+                 <img src="/sites/default/files/bb_assets_embed/20000/ultra_tests_student_grade_pending.png" width="550" height="437" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <p>Your instructor may choose not to reveal the correct answers to automatically scored questions until all students have submitted. A banner appears at the top of the assessment with this information. Check back later to see if answers have been revealed.</p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="871c2a02-a0d7-4c51-9376-c9aa6a7892aa" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="en-us" style="max-width: 100%; width: 500px" class="field field--name-image field--type-image field--label-hidden field__item" xml:lang="en-us"> 
+                 <img src="/sites/default/files/images/2019-07/ultra_stud_assessments_reveal_answers.png" width="1186" height="788" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <p>Your instructor must manually grade some question types such as Essays, and then post the assessment grade and feedback. Your grades also appear on the global and course grades pages.</p> 
+              <p class="LearnMore"><a href="/Learn/Student/Grades#ultra_all_grades" title="Grades">More on accessing grades</a></p> 
+              <p class="LearnMore"><a href="/Learn/Student/Tests_and_Surveys/Grades#ultra_scoring">More on the scoring options for questions</a></p> 
+              <p class="LearnMore"><a href="/Learn/Student/Tests_and_Surveys#ultra_change">More on score changes to questions</a></p> 
+              <p>You can also access the assessment in your course to review your grade and feedback in context. Select the test or assignment title on the <span class="interface">Course Content</span> page and the <span class="interface">Details &amp; Information</span> panel opens. Select anywhere in the <span class="interface">Grading</span> section to review what you submitted, available correct answers, and your grade and feedback. If your instructor left feedback, select the speech bubble icon to view it.</p> 
+              <p>For questions where you chose from more than answer, you can select <span class="interface">Show other options</span> to review the answer choices.</p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="8dfe62b2-a4bc-465e-b3e6-d448649db874" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="en-us" style="max-width: 800px;" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang="en-us"> 
+                 <img src="/sites/default/files/bb_assets_embed/19000/ultra_tests_student_view_graded_MC.png" width="2226" height="1458" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <h3><a id="ultra_zeros"></a>Zeros assigned to past due work</h3> 
+              <p>If set up by your instructor, you may see zeros for work you haven't submitted after the due date passes. You can still submit attempts to update your grade. Your instructor determines grade penalties for late work.</p> 
+              <p>You'll see your zero grade on your <span class="interface">Grades</span> pages and in the <span class="interface">Details &amp; Information</span> panel for the item.</p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="8bb43609-abcb-4ffe-ae80-da155e857e26" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="en-us" style="max-width: 100%; width: 650px" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang="en-us"> 
+                 <img src="/sites/default/files/images/2018-09/ultra_student_unsubmitted_zero.png" width="1516" height="1398" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <p>You're notified about the zero grade in your stream.</p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="09286973-fdfd-4cfb-b53e-c46aa1e9a814" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="en-us" style="max-width: 100%; width: 400px" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang="en-us"> 
+                 <img src="/sites/default/files/images/2018-09/ultra_student_stream_zero.png" width="832" height="220" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+             </div>
+            </div> 
+           </div> 
+           <div class="paragraph paragraph--type--basic-content-paragraph paragraph--view-mode--default"> 
+            <div class="field field--name-field-content field--type-text-long field--label-hidden field__item">
+             <div lang="ultra" xml:lang="ultra"> 
+              <hr>
+              <h2><a id="ultra_pills"></a>ULTRA: Grade pills</h2> 
+              <p>Your instructor determines how to display your grade for each graded item:</p> 
+              <ul>
+               <li>Letter grade</li> 
+               <li>Points</li> 
+               <li>Percentage</li> 
+              </ul>
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="d2aaf553-042e-4470-b2b0-c33be7feda40" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="en-us" style="max-width: 100%; width: 500px" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang="en-us"> 
+                 <img src="/sites/default/files/images/2018-07/ultra_student_grade_pill_colors.png" width="1055" height="332" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <p>The grade pill for each assessment question and graded item appears in five colors. The highest score range is green and the lowest is red. At this time, your instructors can't change the colors or the percentages. The colors map to these percentages:</p> 
+              <ul>
+               <li>&gt; 90% = green</li> 
+               <li>89–80% = yellow/green</li> 
+               <li>79–70% = yellow</li> 
+               <li>69–60% = orange</li> 
+               <li>59–50% = red</li> 
+              </ul>
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="3f450f00-17c3-441a-af91-c99c56236196" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="en-us" style="max-width: 100%; width: 620px" class="field field--name-image field--type-image field--label-hidden field__item" xml:lang="en-us"> 
+                 <img src="/sites/default/files/images/2019-11/ultra_student_grade_pills_grades_page.png" width="1381" height="1365" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <hr>
+              <h2><a id="ultra_view_recording"></a>ULTRA: View a feedback recording</h2> 
+              <p class="LearnMore">Doesn't seem familiar? <a href="#view_recording">Jump to the "Original" help about viewing feedback recordings inside a course</a>.</p> 
+              <p>Your instructor can leave a video or audio recording for additional feedback on your assessment grade. Recordings appear in the <span class="interface">Feedback</span> panel when your instructor assigns a grade for each submission.</p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="514f2f55-6c94-4dec-b307-35357393411d" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="en-us" style="max-width: 100%; width: 320px;" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang="en-us"> 
+                 <img src="/sites/default/files/images/2019-04/ultra_student_view_feedback_recording.png" width="391" height="322" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <p>Select the film icon to stream the video to your computer or device. You can use standard playback controls such as pause or sliding the player bar. Playback is supported in modern browsers without the need for a browser plug-in. You can't export or download the feedback recording at this time.</p> 
+             </div>
+            </div> 
+           </div> 
+           <div class="paragraph paragraph--type--basic-content-paragraph paragraph--view-mode--default"> 
+            <div class="field field--name-field-content field--type-text-long field--label-hidden field__item">
+             <div lang="ultra" xml:lang="ultra"> 
+              <hr>
+              <h2><a id="ultra_overall"></a>ULTRA: Overall grade</h2> 
+              <p>The overall grade helps you keep track of how you're doing in each of your courses. You can see if you're on track for the grade you want or if you need to improve.</p> 
+              <p>If your instructor has set up the overall grade, it appears on your global <span class="interface">Grades</span> page and inside your course on your <span class="interface">Course Grades</span> page. Select the grade pill to learn more about how it's calculated.</p> 
+              <p>The <span class="interface">Overall Grade</span> panel shows you how items and categories are weighted. For example, based on your instructors' preferences, tests may count for more than homework or quizzes. The percentage listed with each entry shows how much it contributes to your overall grade calculation.</p> 
+              <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="881bc21e-3541-4c76-9430-e6f32e740eb0" data-langcode="en" class="embedded-entity">
+               <div> 
+                <div lang="en-us" style="max-width: 100%; width: 740px" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang="en-us"> 
+                 <img src="/sites/default/files/images/2018-05/learn_ultra_student_attendance_overall_grade_panel.png" width="2178" height="1474" alt="" typeof="foaf:Image">
+                </div> 
+               </div> 
+              </div> 
+              <p>If your instructor decides to override your overall grade, a message appears at the top of this panel. You may still see a grade here&nbsp;or a grade notation to indicate that your participation in the course is unique. Example grade notations include <span class="interface">Exempt</span>, <span class="interface">Withdrawal</span>, and <span class="interface">Incomplete</span>, but your instructor may decide to create custom ones.</p> 
+             </div>
+            </div> 
+           </div> 
+           <div class="paragraph paragraph--type--basic-content-paragraph paragraph--view-mode--default"> 
+           </div> 
+          </div> 
+         </div> 
+        </article> 
+       </div> 
+      </div> 
+      <div class="sidebar-content"> 
+       <aside class="layout-sidebar-first" role="complementary"> 
+        <div class="region region-sidebar-first"> 
+         <div class="block block--block-blackboardtoc " id="block-blackboardtoc" data-block-plugin-id="block_content:4f34edb4-a6a1-4e3f-8c03-8d5a8128855b"> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <div class="table-of-contents" id="table-of-contents"> 
+            <h3 class="table-of-contents__title">On this page</h3> 
+            <ul class="table-of-contents__list"></ul>
+           </div>
+          </div> 
+         </div> 
+        </div> 
+       </aside> 
+      </div> 
+     </div> 
+    </main> 
+    <div class="pre-footer"> 
+     <div class="pre-footer__second"> 
+      <div class="region region-prefooter-second"> 
+       <div class="block block--block-floatingbuttons " id="block-floatingbuttons" data-block-plugin-id="block_content:de7e5770-c178-4c6a-9ae2-9342ebdc76c1"> 
+        <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+         <div id="floating-buttons" class="fb-buttons"> 
+          <div class="fb-container"> 
+           <span class="fb-button"> <a class="fb-button-link page-header__print" aria-label="Print this page"> <img class="fb-button-icon" src="/themes/blackboard/img/icon-print.svg"> </a> </span> 
+          </div> 
+          <div class="fb-container"> 
+           <span id="fbb-help" class="fb-button"> <a class="fb-button-link" href="#block-prefootercontentblock" aria-label="Need more help?"> <img class="fb-button-icon" src="/themes/blackboard/img/icon-help_hc_dark.svg"> </a> </span> 
+          </div> 
+          <div class="fb-container"> 
+           <span id="fbb-follow" class="fb-button"> <a class="fb-button-link" href="#node-subscribe-form" aria-label="Follow this page"> <img class="fb-button-icon" src="/themes/blackboard/img/icon-notification_hc_dark.svg"> </a> </span> 
+          </div> 
+         </div>
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="pre-footer__third"> 
+      <div class="region region-prefooter-third"> 
+       <div class="block block--block-prefootercontentblock " id="block-prefootercontentblock" data-block-plugin-id="bb_widgets_pre_footer_content_block"> 
+        <article role="article" about="/node/23941"> 
+         <h2> <a href="/node/23941" rel="bookmark"><span>Learn - student</span> </a> </h2> 
+         <div> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <div class="more-help"> 
+            <div class="more-help__container"> 
+             <h2>Need more help with <span data-localize="locked">Learn</span>?</h2> 
+             <ul class="has-blackboard-school-help-desk-search-block"> 
+              <li id="Blackboard-School-HelpDesk-Search-Container"> <a href="https://blackboard.secure.force.com/btbb_unauth" target="_blank" rel="noopener noreferrer"> 
+                <div class="more-help__icon"> 
+                 <i class="icon-alert-chat"></i> 
+                </div> <span>Contact your institution's support desk</span> </a> 
+               <div class="Blackboard-School-HelpDesk-Search"></div> </li> 
+              <li> <a href="https://www.youtube.com/playlist?list=PLontYaReEU1seUE3ACG3sEc3zR7Br7URU" target="_blank" rel="noopener noreferrer"> 
+                <div class="more-help__icon"> 
+                 <i class="icon-video2"></i> 
+                </div> <span>Watch videos for students</span> </a> </li> 
+              <li> <a href="https://twitter.com/blackboardhelp" target="_blank" rel="noopener noreferrer"> 
+                <div class="more-help__image"> 
+                 <img alt="Twitter logo" src="/themes/blackboard/img/icon-social-media-twitter-blue-66x56.png"> 
+                </div> <span>Tweet Support @BlackboardHelp</span> </a> </li> 
+              <li> <a href="https://blackboard.secure.force.com/btbb_publichome?dfprod=Learn" target="_blank" rel="noopener noreferrer"> 
+                <div class="more-help__icon"> 
+                 <i class="icon-discussions"></i> 
+                </div> <span>Find more help</span> </a> </li> 
+             </ul> 
+            </div> 
+           </div>
+          </div> 
+         </div> 
+        </article> 
+       </div> 
+       <div class="block block--block-nodesubscribeblock " id="block-nodesubscribeblock" data-block-plugin-id="node_subscribe"> 
+        <div id="node-subscribe-form"></div> 
+       </div> 
+       <div class="block block--block-bbschoolhelpdeskblock " id="block-bbschoolhelpdeskblock" data-block-plugin-id="bb_school_help_desk_block"> 
+        <div aria-hidden="true" data-description="Provides ReactJS Script as BB School Help Desk Block" class="hidden"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <footer class="page-footer" role="contentinfo"> 
+     <div class="page-footer__content"> 
+      <div class="page-footer__first"> 
+       <div class="region region-footer-first"> 
+        <div class="block block--block-blackboard-visitblackboardcomlink " id="block-blackboard-visitblackboardcomlink" data-block-plugin-id="block_content:db947466-941f-49b3-9bef-7afbe943663a"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <h3><a href="http://www.blackboard.com/" target="_blank">Visit Blackboard.com</a></h3> 
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-blackboardcopyright " id="block-blackboard-blackboardcopyright" data-block-plugin-id="block_content:1ac0d952-50f6-484c-bff0-961ee5b22d49"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <p>Copyright©2018. Blackboard&nbsp;Inc.<br> <a href="/Copyright_Notice">Legal Disclaimers</a><br> <a href="/1000en_US">Privacy Statement</a></p>
+         </div> 
+        </div> 
+        <div class="block block--block-views-block-footer-menu-view-footer-block views-element-container" id="block-views-block-footer-menu-view-footer-block" data-block-plugin-id="views_block:footer_menu_view-footer_block"> 
+         <div>
+          <div class="footer-block view view-footer-menu-view view-id-footer_menu_view view-display-id-footer_block js-view-dom-id-17db47c974243e6ebbbee069c2f640314b4b36ef9be0992a0cb433855179d611"> 
+           <div class="view-content"> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/About_Help" hreflang="en">About Help</a>
+              </div>
+             </div> 
+            </div> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/Accessibility" hreflang="en">Accessibility</a>
+              </div>
+             </div> 
+            </div> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/Client_Resources" hreflang="en">Client Resources</a>
+              </div>
+             </div> 
+            </div> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/Product_Security" hreflang="en">Product Security</a>
+              </div>
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <nav role="navigation" aria-labelledby="block-blackboard-account-menu-menu" id="block-blackboard-account-menu" data-block-plugin-id="system_menu_block:account"> 
+         <h2 class="visually-hidden" id="block-blackboard-account-menu-menu">User account menu</h2> 
+         <ul class="menu"> 
+          <li class="menu-item"> <a href="/user/login" data-drupal-link-system-path="user/login">Log in</a> </li> 
+         </ul> 
+        </nav> 
+       </div> 
+      </div> 
+      <div class="page-footer__second-third-container"> 
+       <div class="page-footer__second"> 
+        <div class="region region-footer-second"> 
+         <nav role="navigation" aria-labelledby="block-blackboard-helpforblackboardproducts-menu" id="block-blackboard-helpforblackboardproducts" data-block-plugin-id="system_menu_block:help-for-blackboard-product"> 
+          <h2 id="block-blackboard-helpforblackboardproducts-menu">Help for Blackboard Products</h2> 
+          <ul class="menu"> 
+           <li class="menu-item"> <a href="/Ally" data-drupal-link-system-path="node/25571">Ally</a> </li> 
+           <li class="menu-item"> <a href="http://www.blackboard.com/education-analytics/index.aspx">Analytics</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_App" data-drupal-link-system-path="node/469">Blackboard App</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_Instructor" data-drupal-link-system-path="node/13118">Blackboard Instructor</a> </li> 
+           <li class="menu-item"> <a href="/Collaborate" data-drupal-link-system-path="node/477">Collaborate</a> </li> 
+           <li class="menu-item"> <a href="/Community_Engagement" data-drupal-link-system-path="node/10745">Community Engagement</a> </li> 
+           <li class="menu-item"> <a href="/Connect" data-drupal-link-system-path="node/2253">Connect</a> </li> 
+           <li class="menu-item"> <a href="/Learn" data-drupal-link-system-path="node/3271">CourseSites</a> </li> 
+           <li class="menu-item"> <a href="/Drive" data-drupal-link-system-path="node/2514">Drive</a> </li> 
+           <li class="menu-item"> <a href="/Learn" data-drupal-link-system-path="node/3271">Learn</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_Open_Content" data-drupal-link-system-path="node/10671">Open Content</a> </li> 
+           <li class="menu-item"> <a href="/Open_Education" data-drupal-link-system-path="node/10564">Open Education</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_Open_LMS" data-drupal-link-system-path="node/10375">Open LMS</a> </li> 
+           <li class="menu-item"> <a href="/Predict" data-drupal-link-system-path="node/19816">Predict</a> </li> 
+           <li class="menu-item"> <a href="/SafeAssign" data-drupal-link-system-path="node/26316">SafeAssign</a> </li> 
+           <li class="menu-item"> <a href="/SIS_Central/Connect" data-drupal-link-system-path="node/10576">SIS Central - Connect</a> </li> 
+           <li class="menu-item"> <a href="/SmartView" data-drupal-link-system-path="node/11788">SmartView</a> </li> 
+           <li class="menu-item"> <a href="/Web_Community_Manager" data-drupal-link-system-path="node/21691">Web Community Manager</a> </li> 
+          </ul> 
+         </nav> 
+         <div class="block block--block-backtotop " id="block-backtotop" data-block-plugin-id="block_content:61c42d5b-62bf-4b74-8152-b080e41a3292"> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <a class="back-to-top" href="#top"><span class="icon-chevron-up"></span> Back to top</a>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="page-footer__third"> 
+        <div class="region region-footer-third"> 
+         <div class="block block--block-blackboardfindproduct " id="block-blackboardfindproduct" data-block-plugin-id="block_content:2177ea62-5c1e-49df-91f2-e00f28235364"> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <div class="find-product"> 
+            <h2>Not sure which product?</h2> 
+            <p>Blackboard has many products. Let&nbsp;us help you find what you need.</p> 
+            <a class="button" href="/" title="Find My Product">Find My Product</a>
+           </div>
+          </div> 
+         </div> 
+         <div class="block block--block-allyjs " id="block-allyjs" data-block-plugin-id="block_content:a43b54be-3874-4322-b717-e5e187d70041"> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <script data-ally-loader data-ally-platform-name="web" data-ally-client-id="4826" data-ally-af-style="flag_small" src="https://prod.ally.ac/integration/api/ally.ui.js">
+</script>
+          </div> 
+         </div> 
+         <div class="block block--block-bbuserfeedbackblock " id="block-bbuserfeedbackblock" data-block-plugin-id="bb_user_feedback_block"> 
+          <div aria-hidden="true" data-description="Provides ReactJS Script as BB User Feedbacks Block" class="hidden"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+  </div> 
+  <script src="/sites/default/files/js/js_Akazc-aZWDLBMdo4wALDLhuyTBX-5p3NP55qPOxsWxE.js"></script> 
+  <script src="/modules/custom/bb_widgets/bb_user_feedback_block/js/user-feedback.bundle.js?v=1.x"></script> 
+  <script src="/modules/custom/bb_widgets/bb_school_help_desk_block/js/school-help-desk-search.bundle.js?v=1.x"></script> 
+  <script src="/sites/default/files/js/js_UFFnI5kYZO66EsJr619F2naa1hyo-rMVPm0Jr9KUyOs.js"></script> 
+  <script src="/modules/custom/bb_widgets/bb_algolia_search_ui/js/app.bundle.js?v=1.x"></script> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fb66a3283b","applicationID":"70695766","transactionName":"YQcBNxcEV0RYVhdeXFhNIgARDFZZFlERQkNXDjwTFwBmRVxbB1JBaQ4KDQ4W","queueTime":0,"applicationTime":908,"atts":"TUACQV8eREo=","errorBeacon":"bam.nr-data.net","agent":""}</script>  
+ </body>
+</html>

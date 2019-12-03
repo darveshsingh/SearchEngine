@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/TDPortal/Content/Scripts/jquery/1.11.2/jquery.min.js?v=20191115204103"></script>
+  <script src="/TDPortal/Content/Scripts/jquery-migrate/1.2.1/jquery-migrate.min.js?v=20191115204103"></script>
+  <script src="/TDPortal/Content/Scripts/jquery-ui/1.11.4/jquery-ui-1.11.4.custom.timepicker.min.js?v=20191115204101"></script>
+  <link href="/TDPortal/Content/Styles/jquery-ui/1.11.4/jquery-ui.compiled.min.css?v=20191115204033" rel="stylesheet" type="text/css">
+  <link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20191115204033" rel="stylesheet" type="text/css" id="lnkBootstrapCSS">
+  <script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20191115204034"></script>
+  <link href="/TDPortal/Content/Styles/font-awesome.min.css?v=20191115204033" rel="stylesheet" type="text/css" id="lnkFontAwesome">
+  <script src="/TDClient/Scripts/json2.min.js?v=20191115204010"></script> 
+  <script src="/TDClient/Scripts/underscore-min.js?v=20191115204010"></script> 
+  <script src="/TDClient/Scripts/TDJSFramework.compiled.min.js?v=20191115204008"></script> 
+  <script src="/TDClient/Scripts/clientOS.min.js?v=20191115204009"></script> 
+  <script src="/TDClient/Scripts/collapseMe.min.js?v=20191115204009"></script> 
+  <script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20191115204009"></script> 
+  <script src="/TDClient/Scripts/SiteSearch.min.js?v=20191115204009"></script> 
+  <link href="/TDClient/Styles/bootstrap_custom.min.css?v=20191115204006" rel="stylesheet" type="text/css">
+  <link href="/TDClient/Styles/TDStyles.min.css?v=20191115204006" rel="stylesheet" type="text/css">
+  <link href="https://uwindsor.teamdynamix.com/TDPortal/BE/Style/93/TDClient/1975?v=20171025204019" rel="stylesheet" type="text/css">
+  <link id="ctl00_ctl00_lnkFavicon" rel="shortcut icon" href="https://uwindsor.teamdynamix.com/TDPortal/BE/Icon/93/1975?v=20150226204704"> 
+  <script async src="//www.googletagmanager.com/gtag/js?id=UA-67479808-1"></script> 
+  <script>
+
+      $(function () {
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        // Be sure to set the proper cookie domain to the customer's full subdomain when sending the pageview hit.
+        gtag('config', 'UA-67479808-1', { 'cookie_domain': 'uwindsor.teamdynamix.com' });
+
+        });
+
+    </script> 
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+        baseUrl: '/TDClient/',
+        isTdGoogleAnalyticsEnabled: true,
+        isAuthenticated: false
+        });
+
+      $('#collapseMe').collapseMe({
+        toggleVisibilitySelector: '.navbar-toggle'
+      });
+
+    });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script> 
+  <script src="/TDClient/Scripts/Share.min.js?v=20191115204010"></script> 
+  <script>
+
+    function ToggleFavorite() {    
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleFavorite', '');
+    }
+
+    function checkRecipients() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#myModal').modal('toggle')
+      }
+    }
+    $(function () {
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divDescription table:not(.SkipTableFixup)').each(function (table) {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function (cell) { $(this).css('padding', padding + 'px') });
+      });
+
+    });
+  </script> 
+  <meta property="og:title" content="VIP (Human Resources Information System)"> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:url" content="https://uwindsor.teamdynamix.com/TDClient/1975/Portal/Requests/ServiceDet?ID=14323"> 
+  <meta property="og:image" content="https://uwindsor.teamdynamix.com/TDPortal/BE/Logo/93/1975"> 
+  <meta property="og:description" content="Human Resources Information System (HRIS) is a collection of related systems: VIP, Pension, Equity, Position Control, Overtime call-in, Casual Time Entry"> 
+  <meta property="og:site_name" content="University of Windsor - Services"> 
+  <meta property="article:section" content="Administrative Systems"> 
+  <meta property="article:tag" content="equity"> 
+  <meta property="article:tag" content="hris"> 
+  <meta property="article:tag" content="overtime-callin"> 
+  <meta property="article:tag" content="payroll"> 
+  <meta property="article:tag" content="pension"> 
+  <meta property="article:tag" content="position-control"> 
+  <meta property="article:tag" content="VIP"> 
+  <meta property="article:tag" content="casual-time-entry">
+  <title>
+	Service - VIP (Human Resources Inform...
+</title>
+ </head> 
+ <body> 
+  <form method="post" action="/TDClient/1975/Portal/Requests/ServiceDet?ID=14323" id="aspnetForm"> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""> 
+    <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""> 
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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"> 
+   </div> 
+   <script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script> 
+   <script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=636939809766230707" type="text/javascript"></script> 
+   <script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=ffffffffa580202a" type="text/javascript"></script> 
+   <script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=ffffffffa580202a" type="text/javascript"></script> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E24F3D79"> 
+    <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="P9huHkC7v99BkExAiSHA2ao9ulKXv/g/YA8RuupfxX6mwm4wRHKcJzQ1vTkIm88X8jKNcJ2IASZqOjqh4GKWqvDzPfexDird+jz8OPvwS3ygfo4Uoa5jRj8hujWBeP9e/eyiZk0n4U9Q13jjbNTqYMgFFwiKrhwiRMBAwJmR4+DtDYwaCQwQWTUbbYCXwl9UfOIr2QFXRL+wt7ED2/jm0wBb2pU="> 
+   </div> 
+   <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel2','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnToggleFavorite',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script> 
+   <div id="ctl00_ctl00_upMain" style="display:none;"> 
+    <div id="ctl00_ctl00_pbMain" style="position: fixed; top: 50%; left: 0px; width: 100%; height: 1px; overflow: visible; z-index: 2000; display: block;">
+     <div style="margin-left: -125px; position: fixed; top: 50%; left: 50%; width: 250px; height: 90px;">
+      <div class="well shadow">
+       <h2 class="h4 gutter-top-none">Updating...</h2>
+       <div class="progress" style="margin-bottom: 0;">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+       </div>
+      </div>
+     </div>
+    </div> 
+   </div> 
+   <header role="banner"> 
+    <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;"> 
+     <div class="logo-header-full hidden-xs"> 
+      <div class="pull-left"> 
+       <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a> 
+      </div> 
+      <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;"> 
+       <div id="divLogo" class="pull-left logo-container"> 
+        <a href="http://www.uwindsor.ca" target="_blank"> <img src="/TDPortal/BE/Logo/93/1975" alt="University of Windsor Logo" class="js-logo img-responsive"> </a> 
+       </div> 
+       <div class="master-header-right pull-right padding-top padding-bottom"> 
+        <div class="pull-left topLevelSearch input-group"> 
+         <div id="SiteSearch-d61e799d79594b7d9ac68feb5a2399bc" class="gutter-bottom input-group site-search" style="max-width: 400px;"> 
+          <div id="SiteSearch-dropdown-d61e799d79594b7d9ac68feb5a2399bc" class="input-group-btn"> 
+           <button type="button" id="SiteSearch-filter-d61e799d79594b7d9ac68feb5a2399bc" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Filter your search by categories" data-component="all"> <span class="fa fa-globe"></span><span class="fa fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span> <span class="sr-only">Filter your search by categories</span> </button> 
+           <ul class="dropdown-menu"> 
+            <li> <a href="javascript:void(0);" data-component="all" data-component-icon="fa-globe" title="Search all areas"> <span class="fa fa-fw fa-nopad fa-globe" aria-hidden="true"></span> All </a> </li> 
+            <li role="separator" class="divider"></li> 
+            <li> <a href="javascript:void(0);" data-component="kb" data-component-icon="fa-lightbulb-o" title="Search Knowledge Base"> <span class="fa fa-fw fa-nopad fa-lightbulb-o" aria-hidden="true"></span> Knowledge Base </a> </li> 
+            <li> <a href="javascript:void(0);" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog"> <span class="fa fa-fw fa-nopad fa-compass" aria-hidden="true"></span> Service Catalog </a> </li> 
+            <li> <a href="javascript:void(0);" data-component="q" data-component-icon="fa-comments" title="Search Questions"> <span class="fa fa-fw fa-nopad fa-comments" aria-hidden="true"></span> Questions </a> </li> 
+           </ul> 
+          </div> 
+          <input id="SiteSearch-text-d61e799d79594b7d9ac68feb5a2399bc" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" aria-label="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag."> 
+          <span class="input-group-btn"> <button id="SiteSearch-button-d61e799d79594b7d9ac68feb5a2399bc" class="btn btn-default" type="button" title="Search"> <span class="fa fa-fw fa-nopad fa-search blue" aria-hidden="true"></span> <span class="sr-only">Search</span> </button> </span> 
+         </div> 
+         <script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/1975/Portal/Shared/Search",
+      tagLookupServiceUrl: "/TDClient/1975/Portal/WebServices/JSON/TagLookupService.asmx/GetItems",
+      searchTextBoxSelector: '#SiteSearch-text-d61e799d79594b7d9ac68feb5a2399bc',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-d61e799d79594b7d9ac68feb5a2399bc',
+      searchButtonSelector: '#SiteSearch-button-d61e799d79594b7d9ac68feb5a2399bc',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-d61e799d79594b7d9ac68feb5a2399bc',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: true,
+      autoFocusSearch: false
+    });
+  });
+</script> 
+        </div> 
+        <div title="Sign In" class="pull-right gutter-top-sm"> 
+         <a href="/TDClient/1975/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1975%2fPortal%2fRequests%2fServiceDet%3fID%3d14323">Sign In </a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary"> 
+      <div id="navContainer" class="container"> 
+       <div class="navbar-header"> 
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse"> <span class="tdbar-button-anchored icon-bar"></span> <span class="tdbar-button-anchored icon-bar"></span> <span class="tdbar-button-anchored icon-bar"></span> <span class="sr-only">Show Applications Menu</span> </button> 
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#"> Client Portal </a> 
+       </div> 
+       <div id="td-navbar-collapse" class="collapse navbar-collapse"> 
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe"> 
+         <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg"> <a href="/TDClient/1975/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1975%2fPortal%2fRequests%2fServiceDet%3fID%3d14323">Sign In</a> </li> 
+         <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg"> <a href="/TDClient/1975/Portal/Shared/Search" title="search">Search</a> </li> 
+         <li id="divDesktopc6761c8c-7ac3-49af-a678-485e8a47f4fe" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/">Home</a> </li> 
+         <li id="divDesktop6752d70c-2547-4111-b28d-55e8a0f26f3d" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=6752d70c-2547-4111-b28d-55e8a0f26f3d">|</a> </li> 
+         <li id="divDesktopec55dfbf-78f6-48cf-86ae-b4b4cf201a44" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=ec55dfbf-78f6-48cf-86ae-b4b4cf201a44">Help</a> </li> 
+         <li id="divDesktop37b7390b-cc5d-4a6a-aa5c-49b8924066de" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=37b7390b-cc5d-4a6a-aa5c-49b8924066de">|</a> </li> 
+         <li id="divDesktopc5b8214f-8f71-4492-bb14-64e2db562678" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=c5b8214f-8f71-4492-bb14-64e2db562678">Notifications</a> </li> 
+         <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable"> <a href="/TDClient/1975/Portal/Requests/ServiceCatalog">Services</a> </li> 
+         <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable"> <a href="/TDClient/1975/Portal/KB/">Knowledge Base</a> </li> 
+         <li id="divTDQuestions" class="themed tdbar-button-anchored sr-focusable"> <a href="/TDClient/1975/Portal/Forums/Questions/?Filter=all">Questions</a> </li> 
+         <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu"> <a class="dropdown-toggle" data-toggle="dropdown" title="More Applications" href="#"> <span class="sr-only">More Applications</span> <span class="fa fa-ellipsis-h" aria-hidden="true"></span> </a> 
+          <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul> </li> 
+        </ul> 
+       </div> 
+      </div> 
+     </nav> 
+    </div> 
+   </header> 
+   <div id="navShim" class="hidden-xs hidden-sm"></div> 
+   <main role="main"> 
+    <div id="content" tabindex="-1"> 
+     <nav id="divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Services"> 
+      <a href="#servicesContent" class="sr-only sr-only-focusable">Skip to Services content</a> 
+      <div class="container clearfix"> 
+       <ul class="nav navbar-nav js-submenu" id="servicesSubMenu" style="margin-left: -15px;"> 
+        <li> <a href="/TDClient/1975/Portal/Requests/ServicesAtoZ">Services A-Z</a> </li> 
+        <li> <a href="/TDClient/1975/Portal/Requests/ServiceCatalogSearch">Search <span class="sr-only">Services</span></a> </li> 
+       </ul> 
+      </div> 
+     </nav> 
+     <div class="container gutter-top"> 
+      <div id="servicesContent" tabindex="-1" style="outline:none;"> 
+       <span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red"></span></span> 
+       <ol class="breadcrumb"> 
+        <li><a href="ServiceCatalog">Service Catalog</a></li>
+        <li class="active"><a href="ServiceCatalog?CategoryID=4213">Administrative Systems</a></li>
+        <li class="active">VIP (Human Resources Information System)</li> 
+       </ol> 
+       <div class="row gutter-top"> 
+        <div id="divMainContent" class="col-md-8"> 
+         <h1 class="wrap-text"> VIP (Human Resources Information System) </h1> 
+         <div id="ctl00_ctl00_cpContent_cpContent_divTags"> 
+          <span class="sr-only">Tags</span> 
+          <span class="fa fa-tags gray gutter-right-sm" aria-hidden="true" title="Tags"></span> 
+          <a href="/TDClient/1975/Portal/Requests/ServiceCatalogSearch?SearchText=%23equity" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl00_ctl00_lnkDisplay" title="equity">equity</a> 
+          <span class="fa fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span> 
+          <a href="/TDClient/1975/Portal/Requests/ServiceCatalogSearch?SearchText=%23hris" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl02_ctl00_lnkDisplay" title="hris">hris</a> 
+          <span class="fa fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span> 
+          <a href="/TDClient/1975/Portal/Requests/ServiceCatalogSearch?SearchText=%23overtime-callin" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl04_ctl00_lnkDisplay" title="overtime-callin">overtime-callin</a> 
+          <span class="fa fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span> 
+          <a href="/TDClient/1975/Portal/Requests/ServiceCatalogSearch?SearchText=%23payroll" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl06_ctl00_lnkDisplay" title="payroll">payroll</a> 
+          <span class="fa fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span> 
+          <a href="/TDClient/1975/Portal/Requests/ServiceCatalogSearch?SearchText=%23pension" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl08_ctl00_lnkDisplay" title="pension">pension</a> 
+          <span class="fa fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span> 
+          <a href="/TDClient/1975/Portal/Requests/ServiceCatalogSearch?SearchText=%23position-control" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl10_ctl00_lnkDisplay" title="position-control">position-control</a> 
+          <span class="fa fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span> 
+          <a href="/TDClient/1975/Portal/Requests/ServiceCatalogSearch?SearchText=%23VIP" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl12_ctl00_lnkDisplay" title="VIP">VIP</a> 
+          <span class="fa fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span> 
+          <a href="/TDClient/1975/Portal/Requests/ServiceCatalogSearch?SearchText=%23casual-time-entry" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl14_ctl00_lnkDisplay" title="casual-time-entry">casual-time-entry</a> 
+         </div> 
+         <div id="ctl00_ctl00_cpContent_cpContent_divDescription" class="gutter-top ckeShim">
+          <p>Human Resources Information System (HRIS) is a collection of related systems:</p> 
+          <h3>VIP</h3> 
+          <p style="margin-left: 40px">Our campus Human Resource / Payroll information system.&nbsp;</p> 
+          <h3>Equity (EQUITY)</h3> 
+          <p style="margin-left: 40px">A variety of applications &nbsp;for&nbsp; Office of Human Right and Accessibility.&nbsp; These include the Equity Census,&nbsp; WEIMS,&nbsp; and &nbsp;DEAP.</p> 
+          <h3>Position Control System (PCS)</h3> 
+          <p style="margin-left: 40px">An application used by Finance, Budgets and Planning for position budget control</p> 
+          <h3>UOW Overtime</h3> 
+          <p style="margin-left: 40px">UOW Overtime call-in is the electronic over-time call-in tracking application designed to provide a common resource for over-time call-in tracking.</p> 
+          <h3>Casual Time Entry</h3> 
+          <p style="margin-left: 40px">An &nbsp;application &nbsp;developed for time entry and approval for student employees in Athletics</p> 
+          <h2>Requesting Assistance</h2> 
+          <p>Have a question about this service. <a href="https://uwindsor.teamdynamix.com/TDClient/Forums/Questions/?CategoryID=200672&amp;Filter=all">Ask it here</a>.</p> 
+          <p>To request assistance with any issues related to systems listed above, please click <strong>Open Ticket</strong> button on the right. This will bring up a form that you will need to fill-out and submit to open a support ticket with the I.T. Service Desk. You will receive a confirmation e-mail with the ticket reference number and additional instructions.</p>
+         </div> &nbsp; 
+        </div> 
+        <div id="divSidebar" class="col-md-4"> 
+         <span id="ctl00_ctl00_cpContent_cpContent_lnkRequest"> <a href="TicketRequests/NewForm?ID=I2SEE2YbE34_" class="DetailAction"> <span class="fa fa-arrow-circle-o-right fa-fw"></span> Open Ticket </a> </span> 
+         <a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:__doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','')"></a> 
+         <div id="ctl00_ctl00_cpContent_cpContent_divKB" class="panel panel-default gutter-top"> 
+          <div class="panel-heading"> 
+           <h3 class="panel-title">Related Articles (1)</h3> 
+          </div> 
+          <div class="panel-body"> 
+           <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg"> 
+            <div class="clearfix"> 
+             <div class="pull-left font-md"> 
+              <a target="_blank" href="https://uwindsor.teamdynamix.com/TDClient/1975/Portal/KB/ArticleDet?ID=10461">Login pages for University systems and apps.</a> 
+             </div> 
+             <div class="pull-right"> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> 
+        <div class="modal-dialog"> 
+         <div class="modal-content"> 
+          <div class="modal-header"> 
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> 
+           <h4 class="modal-title" id="myModalLabel"> <span class="fa fa-share-alt fa-fw" aria-hidden="true"></span>Share </h4> 
+          </div> 
+          <div class="modal-body"> 
+           <div class="form-group"> 
+            <label class="control-label" for="ctl00_ctl00_cpContent_cpContent_shareRecipients">Recipient(s) <small>- separate email addresses with a comma</small></label> 
+            <input name="ctl00$ctl00$cpContent$cpContent$shareRecipients" type="text" id="ctl00_ctl00_cpContent_cpContent_shareRecipients" class="form-control"> 
+           </div> 
+           <div class="form-group"> 
+            <label class="control-label" for="ctl00_ctl00_cpContent_cpContent_shareBody">Message</label> 
+            <textarea name="ctl00$ctl00$cpContent$cpContent$shareBody" id="ctl00_ctl00_cpContent_cpContent_shareBody" class="form-control" style="height: 175px;">Check out this service request I found in the University of Windsor service catalog.
+
+https://uwindsor.teamdynamix.com/TDClient/1975/Portal/Requests/ServiceDet?ID=14323
+
+VIP (Human Resources Information System)
+
+Human Resources Information System (HRIS) is a collection of related systems: VIP, Pension, Equity, Position Control, Overtime call-in, Casual Time Entry</textarea> 
+           </div> 
+          </div> 
+          <div class="modal-footer text-left"> 
+           <a onclick="checkRecipients();" id="ctl00_ctl00_cpContent_cpContent_btnSendShare" type="button" class="btn btn-primary" href="javascript:__doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare','')"><span class="fa fa-paper-plane-o"></span> Send</a> 
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </main> 
+   <script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDRequests');Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script> 
+  </form> 
+  <footer role="contentinfo"> 
+  </footer> 
+  <script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        })
+          .blur(function () {
+            $beLogo.removeClass('accessibility-focus-on-logo');
+          })
+      })(jQuery);
+
+  </script>   
+ </body>
+</html>

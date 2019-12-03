@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+ <head> 
+  <!-- Google Tag Manager --> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5G8Z8WS');</script> 
+  <!-- End Google Tag Manager --> 
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"fb66a3283b",applicationID:"70695766"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script> 
+  <script>window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = '4KT8J';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m && m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'); return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(c,d,i){if(!c || document.cookie.match('fs_uid=[`;`]*`[`;`]*`[`;`]*`')){
+    d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
+    ';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
+})(window,document,window['_fs_namespace'],'script','user');</script> 
+  <meta itemprop="acquia_lift:content_title" content="Accessibility in Blackboard Learn"> 
+  <meta itemprop="acquia_lift:content_type" content="content_page"> 
+  <meta itemprop="acquia_lift:page_type" content="node page"> 
+  <meta itemprop="acquia_lift:context_language" content="en"> 
+  <meta itemprop="acquia_lift:content_section" content="Learn"> 
+  <meta itemprop="acquia_lift:content_keywords" content=""> 
+  <meta itemprop="acquia_lift:post_id" content="14002"> 
+  <meta itemprop="acquia_lift:content_uuid" content="356bdf16-e3de-4804-a26e-28be5003112b"> 
+  <meta itemprop="acquia_lift:published_date" content="1461363948"> 
+  <meta itemprop="acquia_lift:persona" content="Administrator"> 
+  <meta itemprop="acquia_lift:engagement_score" content="1"> 
+  <meta itemprop="acquia_lift:account_id" content="BLACKBOARD"> 
+  <meta itemprop="acquia_lift:site_id" content="blackboardprod"> 
+  <meta itemprop="acquia_lift:contentOrigin" content="8480a1a7-d4ab-4a9f-7700-d38f23a3ba6a"> 
+  <meta itemprop="acquia_lift:liftAssetsURL" content="https://lift3assets.lift.acquia.com/stable"> 
+  <meta itemprop="acquia_lift:bootstrapMode" content="auto"> 
+  <meta itemprop="acquia_lift:contentReplacementMode" content="trusted"> 
+  <script src="https://lift3assets.lift.acquia.com/stable/lift.js" async></script> 
+  <script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","/sites/default/files/google_analytics/analytics.js?q0pw5k","ga");ga("create", "UA-1394520-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script> 
+  <meta name="title" content="Accessibility in Blackboard Learn | Blackboard Help"> 
+  <meta name="Generator" content="Drupal 8 (https://www.drupal.org)"> 
+  <meta name="MobileOptimized" content="width"> 
+  <meta name="HandheldFriendly" content="true"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta> 
+  <link rel="shortcut icon" href="/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon"> 
+  <link rel="alternate" hreflang="en" href="https://help.blackboard.com/Learn/Administrator/Hosting/Accessibility"> 
+  <link rel="alternate" hreflang="ar" href="https://help.blackboard.com/ar-sa/Learn/Administrator/Hosting/Accessibility"> 
+  <link rel="alternate" hreflang="es" href="https://help.blackboard.com/es-es/Learn/Administrator/Hosting/Accessibility"> 
+  <link rel="alternate" hreflang="fr" href="https://help.blackboard.com/fr-fr/Learn/Administrator/Hosting/Accessibility"> 
+  <link rel="alternate" hreflang="ja" href="https://help.blackboard.com/ja-jp/Learn/Administrator/Hosting/Accessibility"> 
+  <link rel="alternate" hreflang="ko" href="https://help.blackboard.com/ko-kr/Learn/Administrator/Hosting/Accessibility"> 
+  <link rel="alternate" hreflang="nl" href="https://help.blackboard.com/nl-nl/Learn/Administrator/Hosting/Accessibility"> 
+  <link rel="alternate" hreflang="pt-br" href="https://help.blackboard.com/pt-br/Learn/Administrator/Hosting/Accessibility"> 
+  <link rel="alternate" hreflang="ru" href="https://help.blackboard.com/ru-ru/Learn/Administrator/Hosting/Accessibility"> 
+  <link rel="alternate" hreflang="zh-hans" href="https://help.blackboard.com/zh-hans/Learn/Administrator/Hosting/Accessibility"> 
+  <link rel="canonical" href="https://help.blackboard.com/Learn/Administrator/Hosting/Accessibility"> 
+  <link rel="shortlink" href="https://help.blackboard.com/node/14002"> 
+  <link rel="revision" href="https://help.blackboard.com/Learn/Administrator/Hosting/Accessibility"> 
+  <title>Accessibility in Blackboard Learn | Blackboard Help</title> 
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_n4izhdXLUnnW8xsPTx-Ur2mTUKsmRfBbD8V3MN5qfuI.css?q0pw5k"> 
+  <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic&amp;subset=latin,cyrillic,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext"> 
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_pwMl3ukEBmQzKHa_P-R3NMTsibG2Ka6ggG88TdmsMKs.css?q0pw5k"> 
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/14002","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","bb_algolia_search_ui_block":{"algolia":{"clientId":"","apiKey":""},"searchButton":"Search","searchInputPlaceholder":null,"debug":0,"ga_id":"UA-1394520-1"},"bb_school_help_desk_block":{"placeholder_text":"Type institution name to get support","button_text":"Go","search_hint_text":"Press enter to search","debug":null,"ga_id":"UA-1394520-1"},"bb_user_feedback_block":{"firebase":{"apiKey":"AIzaSyAwRR0lNtqG8BYSYvhTP80Ai1By8XLpjbM","authDomain":"help-user-feedback.firebaseapp.com","databaseURL":"https:\/\/help-user-feedback.firebaseio.com","projectId":"help-user-feedback","storageBucket":"","messagingSenderId":"","appId":"1:567988132324:web:774f65db53e24c06"},"helpfulToolTipText":"Helpful?","unhelpfulToolTipText":"Not Helpful?","unhelpfulModalHeading":"Not helpful?","unhelpfulModalBody":"Sorry this wasn\u0027t helpful. Let us know how to improve this section.","unhelpfulPlaceholderText":"What\u0027s missing or not helpful?","submitButtonText":"Send","cancelButtonText":"No, Thanks","showCancelButton":1,"debug":0,"ga_id":"UA-1394520-1"},"cookieconsent":{"message":"This website uses cookies to ensure you get the best experience. Click \u201cAccept\u201d to agree to our cookie policy. You can manage and opt out of cookies using your browser or device settings.","dismiss":"Accept","learnMore":"Learn more","link":"\/1004en_US","path":"","expiry":365,"target":"_blank","domain":".help.blackboard.com","markup":"\u003Cdiv class=\u0022cc_banner cc_container cc_container--open\u0022\u003E\n    \u003Ca href=\u0022#null\u0022 data-cc-event=\u0022click:dismiss\u0022 target=\u0022_blank\u0022 class=\u0022cc_btn cc_btn_accept_all\u0022\u003EAccept\u003C\/a\u003E\n    \u003Cp class=\u0022cc_message\u0022\u003EThis website uses cookies to ensure you get the best experience. Click \u201cAccept\u201d to agree to our cookie policy. You can manage and opt out of cookies using your browser or device settings. \u003Ca data-cc-if=\u0022options.link\u0022 target=\u0022_blank\u0022 class=\u0022cc_more_info\u0022 href=\u0022\/1004en_US\u0022\u003ELearn more\u003C\/a\u003E\u003C\/p\u003E\n    \u003Ca class=\u0022cc_logo\u0022 target=\u0022_blank\u0022 href=\u0022http:\/\/silktide.com\/cookieconsent\u0022\u003ECookie Consent plugin for the EU cookie law\u003C\/a\u003E\n\u003C\/div\u003E\n","container":".page-header","theme":"\/themes\/blackboard\/css\/cookieconsent.css"},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"thematic_release_notes_filter":{"message":"This product doesn\u0027t have any recently released features that match the selected filter."},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":null,"extNofollow":null,"extFollowNoOverride":null,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":".block--block-blackboard-content","extAlert":false,"extAlertText":"","mailtoClass":"0","mailtoLabel":"(link sends email)"}},"ctx_product":"66","ctx_product_name":"Learn","ctx_role":"106","ctx_role_name":"Administrator","langPrefixes":{"en":"","ar":"ar-sa","ca":"ca-es","de":"de-de","es":"es-es","fi":"fi-fi","fr":"fr-fr","ja":"ja-jp","ko":"ko-kr","nl":"nl-nl","nb":"nb-no","pt-br":"pt-br","ru":"ru-ru","sv":"sv-se","tr":"tr-tr","zh-hans":"zh-hans","nn":"nn-no","cy":"cy-gb"},"langMapping":{"jp":"ja-jp","zh":"zh-hans"},"domainExceptions":{"bbcollab.com":{"ca":"en-us"}},"ajax":[],"user":{"uid":0,"permissionsHash":"d0487089e11c14032c2364e00e59b4a41f3c228bf4d43b2147b9c4581a71d156"}}</script> 
+  <!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]--> 
+  <script src="/sites/default/files/js/js_pn3aoKzHAtG5jrUppZewBdFDGcnQjVyjz1oGxWoi1ds.js"></script> 
+  <script src="//use.typekit.net/bnp0oul.js"></script> 
+  <script>try{Typekit.load({ async: true });}catch(e){}</script> 
+ </head> 
+ <body class="role-anonymous path-node page-node-type-content-page"> 
+  <!-- Google Tag Manager (noscript) --> 
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5G8Z8WS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <!-- End Google Tag Manager (noscript) --> 
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas> 
+   <div class="layout-container"> 
+    <a href="#main-content" class="visually-hidden focusable"> Skip to main content </a> 
+    <a id="top"></a> 
+    <header class="page-header" role="banner"> 
+     <div class="page-header__content"> 
+      <div class="page-header__first"> 
+       <div class="region region-header-first"> 
+        <div class="block block--block-blackboardnavtoggle-2 " id="block-blackboardnavtoggle-2" data-block-plugin-id="block_content:b7d0db1b-b49c-4f8b-879f-9e74d8b06381"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <a class="nav-toggle"></a>
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-blackboardbranding " id="block-blackboard-blackboardbranding" data-block-plugin-id="block_content:2c8604e2-130e-4604-9dd5-dd92f52aaba3"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <span class="branding branding--medium"><a href="/"><strong>Blackboard</strong> Help</a></span> 
+          <span class="branding branding--small"><a href="/"><strong>Bb</strong> Help</a></span>
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-languageswitcher language-switcher-language-url" id="block-blackboard-languageswitcher" role="navigation" data-block-plugin-id="language_block:language_interface"> 
+         <h2>Language</h2> 
+         <ul class="links">
+          <li hreflang="en" data-drupal-link-system-path="node/14002" class="is-active"><a href="/Learn/Administrator/Hosting/Accessibility" class="language-link is-active" hreflang="en" data-drupal-link-system-path="node/14002">English</a></li>
+          <li hreflang="ar" data-drupal-link-system-path="node/14002"><a href="/ar-sa/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="ar" data-drupal-link-system-path="node/14002">?????</a></li>
+          <li hreflang="ca" data-drupal-link-system-path="node/14002"><a href="/ca-es/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="ca" data-drupal-link-system-path="node/14002">Català</a></li>
+          <li hreflang="cy" data-drupal-link-system-path="node/14002"><a href="/cy-gb/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="cy" data-drupal-link-system-path="node/14002">Cymraeg</a></li>
+          <li hreflang="de" data-drupal-link-system-path="node/14002"><a href="/de-de/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="de" data-drupal-link-system-path="node/14002">Deutsch</a></li>
+          <li hreflang="es" data-drupal-link-system-path="node/14002"><a href="/es-es/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="es" data-drupal-link-system-path="node/14002">Español</a></li>
+          <li hreflang="fi" data-drupal-link-system-path="node/14002"><a href="/fi-fi/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="fi" data-drupal-link-system-path="node/14002">suomi</a></li>
+          <li hreflang="fr" data-drupal-link-system-path="node/14002"><a href="/fr-fr/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="fr" data-drupal-link-system-path="node/14002">Français</a></li>
+          <li hreflang="ja" data-drupal-link-system-path="node/14002"><a href="/ja-jp/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="ja" data-drupal-link-system-path="node/14002">???</a></li>
+          <li hreflang="ko" data-drupal-link-system-path="node/14002"><a href="/ko-kr/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="ko" data-drupal-link-system-path="node/14002">???</a></li>
+          <li hreflang="nl" data-drupal-link-system-path="node/14002"><a href="/nl-nl/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="nl" data-drupal-link-system-path="node/14002">Nederlands</a></li>
+          <li hreflang="nb" data-drupal-link-system-path="node/14002"><a href="/nb-no/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="nb" data-drupal-link-system-path="node/14002">Norsk (Bokmål)</a></li>
+          <li hreflang="pt-br" data-drupal-link-system-path="node/14002"><a href="/pt-br/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="pt-br" data-drupal-link-system-path="node/14002">Português, Brasil</a></li>
+          <li hreflang="ru" data-drupal-link-system-path="node/14002"><a href="/ru-ru/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="ru" data-drupal-link-system-path="node/14002">???????</a></li>
+          <li hreflang="sv" data-drupal-link-system-path="node/14002"><a href="/sv-se/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="sv" data-drupal-link-system-path="node/14002">Svenska</a></li>
+          <li hreflang="tr" data-drupal-link-system-path="node/14002"><a href="/tr-tr/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="tr" data-drupal-link-system-path="node/14002">Türkçe</a></li>
+          <li hreflang="zh-hans" data-drupal-link-system-path="node/14002"><a href="/zh-hans/Learn/Administrator/Hosting/Accessibility" class="language-link" hreflang="zh-hans" data-drupal-link-system-path="node/14002"> ????</a></li>
+         </ul> 
+        </div> 
+        <div class="block block--block-bbalgoliasearchui " id="block-bbalgoliasearchui" data-block-plugin-id="bb_algolia_search_ui_block"> 
+         <div id="algolia-search-ui" data-description="Provides ReactJS Script as BB Algolia Search UI Block"></div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="breadcrumb-container"> 
+       <div class="region region-breadcrumb"> 
+        <div class="block block--block-blackboardnavtoggle " id="block-blackboardnavtoggle" data-block-plugin-id="block_content:b7d0db1b-b49c-4f8b-879f-9e74d8b06381"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <a class="nav-toggle"></a>
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-breadcrumbs " id="block-blackboard-breadcrumbs" data-block-plugin-id="system_breadcrumb_block"> 
+         <nav role="navigation" aria-labelledby="system-breadcrumb"> 
+          <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2> 
+          <ol> 
+           <li> <a href="/">Home</a> </li> 
+           <li> <a href="/Learn">Learn</a> </li> 
+           <li> <a href="/Learn/Administrator">Administrator</a> </li> 
+           <li> <a href="/Learn/Administrator/Hosting">Self- and Managed-Hosting</a> </li> 
+          </ol> 
+         </nav> 
+        </div> 
+        <div class="block block--block-booknavigationsorted " id="block-booknavigationsorted" data-block-plugin-id="full_book_navigation"> 
+         <div class="blackboard_books-navigation" data-page-type="product-page"> 
+          <nav id="book-block-menu-25571" class="book-block-menu" role="navigation" data-product="Ally" aria-label="Book outline for Blackboard Ally Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-25571" class="menu-item menu-item--expanded"> <a href="/Ally" hreflang="en">Ally</a> 
+             <ul class="menu"> 
+              <li id="nid-20901" class="menu-item menu-item--collapsed lazy folder"> <a href="/Ally/Ally_for_LMS" hreflang="en">Ally for LMS</a> </li> 
+              <li id="nid-25506" class="menu-item menu-item--collapsed lazy folder"> <a href="/Ally/Ally_for_Websites" hreflang="en">Ally for Websites</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-469" class="book-block-menu" role="navigation" data-product="Blackboard App" aria-label="Book outline for Blackboard App Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-469" class="menu-item menu-item--expanded"> <a href="/Blackboard_App" hreflang="en">Blackboard App</a> 
+             <ul class="menu"> 
+              <li id="nid-470" class="menu-item"> <a href="/Blackboard_App/Quick_Start" hreflang="en">Quick Start</a> </li> 
+              <li id="nid-471" class="menu-item"> <a href="/Blackboard_App/Feature_Guide" hreflang="en">Feature Guide</a> </li> 
+              <li id="nid-21041" class="menu-item"> <a href="/Blackboard_App/Activity_Stream" hreflang="en">Activity Stream</a> </li> 
+              <li id="nid-13051" class="menu-item"> <a href="/Blackboard_App/Course_List" hreflang="en">Courses and Organizations</a> </li> 
+              <li id="nid-21026" class="menu-item"> <a href="/Blackboard_App/Course_Content" hreflang="en">Course Content</a> </li> 
+              <li id="nid-23321" class="menu-item"> <a href="/Blackboard_App/Offline_Content" hreflang="en">Offline Content</a> </li> 
+              <li id="nid-21886" class="menu-item"> <a href="/Blackboard_App/Announcements" hreflang="en">Announcements</a> </li> 
+              <li id="nid-12438" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Collaborate" hreflang="en">Collaborate</a> </li> 
+              <li id="nid-15644" class="menu-item"> <a href="/Blackboard_App/Discussions" hreflang="en">Discussions</a> </li> 
+              <li id="nid-21896" class="menu-item"> <a href="/Blackboard_App/Due_Dates" hreflang="en">Due Dates</a> </li> 
+              <li id="nid-21891" class="menu-item"> <a href="/Blackboard_App/Grades" hreflang="en">Grades</a> </li> 
+              <li id="nid-12544" class="menu-item"> <a href="/Blackboard_App/Link_to_Cloud_Storage" hreflang="en">Link to Cloud Storage</a> </li> 
+              <li id="nid-21031" class="menu-item"> <a href="/Blackboard_App/Profile" hreflang="en">Profile</a> </li> 
+              <li id="nid-21036" class="menu-item"> <a href="/Blackboard_App/Push_Notifications" hreflang="en">Push Notifications</a> </li> 
+              <li id="nid-21021" class="menu-item"> <a href="/Blackboard_App/Tests_and_Assignments" hreflang="en">Tests and Assignments</a> </li> 
+              <li id="nid-26381" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Whats_New" hreflang="en">What's New</a> </li> 
+              <li id="nid-15931" class="menu-item"> <a href="/Blackboard_App/FAQs" hreflang="en">Common Questions</a> </li> 
+              <li id="nid-20461" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Accessibility" hreflang="en">Accessibility</a> </li> 
+              <li id="nid-21726" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Windows" hreflang="en">Windows Devices</a> </li> 
+              <li id="nid-20731" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Transition_to_New_Apps" hreflang="en">Transition to New Blackboard Apps</a> </li> 
+              <li id="nid-15603" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Administrator_Info" hreflang="en">Administrator Info</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-30671" class="book-block-menu" role="navigation" data-product="Blackboard Data" aria-label="Book outline for Blackboard Data"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-30671" class="menu-item menu-item--expanded"> <a href="/Blackboard_Data" hreflang="en">Blackboard Data</a> 
+             <ul class="menu"> 
+              <li id="nid-30491" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Data/Administrator" hreflang="en">Blackboard Data for Developers</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-13118" class="book-block-menu" role="navigation" data-product="Blackboard Instructor" aria-label="Book outline for Blackboard Instructor Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-13118" class="menu-item menu-item--expanded"> <a href="/Blackboard_Instructor" hreflang="en">Blackboard Instructor</a> 
+             <ul class="menu"> 
+              <li id="nid-20696" class="menu-item"> <a href="/Blackboard_Instructor/Quick_Start" hreflang="en">Quick Start</a> </li> 
+              <li id="nid-20701" class="menu-item"> <a href="/Blackboard_Instructor/Feature_Guide" hreflang="en">Feature Guide</a> </li> 
+              <li id="nid-20966" class="menu-item"> <a href="/Blackboard_Instructor/Course_List" hreflang="en">Courses and Organizations</a> </li> 
+              <li id="nid-20951" class="menu-item"> <a href="/Blackboard_Instructor/Course_Content" hreflang="en">Course Content</a> </li> 
+              <li id="nid-24111" class="menu-item"> <a href="/Blackboard_Instructor/Offline_Content" hreflang="en">Offline Content</a> </li> 
+              <li id="nid-20946" class="menu-item"> <a href="/Blackboard_Instructor/Announcements" hreflang="en">Announcements</a> </li> 
+              <li id="nid-13127" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Collaborate" hreflang="en">Collaborate</a> </li> 
+              <li id="nid-20956" class="menu-item"> <a href="/Blackboard_Instructor/Discussions" hreflang="en">Discussions</a> </li> 
+              <li id="nid-25806" class="menu-item"> <a href="/Blackboard_Instructor/Grading" hreflang="en">Grading</a> </li> 
+              <li id="nid-25781" class="menu-item"> <a href="/Blackboard_Instructor/Link_to_Cloud_Storage" hreflang="en">Link to Cloud Storage</a> </li> 
+              <li id="nid-28906" class="menu-item"> <a href="/Blackboard_Instructor/Push_Notifications" hreflang="en">Push Notifications</a> </li> 
+              <li id="nid-20961" class="menu-item"> <a href="/Blackboard_Instructor/Tests_and_Assignments" hreflang="en">Tests and Assignments</a> </li> 
+              <li id="nid-26761" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Whats_New" hreflang="en">What's New</a> </li> 
+              <li id="nid-21006" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Accessibility" hreflang="en">Accessibility</a> </li> 
+              <li id="nid-23806" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Administrator_Info" hreflang="en">Administrator Info</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-477" class="book-block-menu" role="navigation" data-product="Collaborate" aria-label="Book outline for Blackboard Collaborate Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-477" class="menu-item menu-item--expanded"> <a href="/Collaborate" hreflang="en">Collaborate</a> 
+             <ul class="menu"> 
+              <li id="nid-478" class="menu-item menu-item--collapsed lazy folder"> <a href="/Collaborate/Ultra" hreflang="en">Ultra Experience</a> </li> 
+              <li id="nid-528" class="menu-item menu-item--collapsed lazy folder"> <a href="/Collaborate/v12" hreflang="en">Original Experience</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10745" class="book-block-menu" role="navigation" data-product="Community Engagement" aria-label="Book outline for Blackboard Community Engagement"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10745" class="menu-item menu-item--expanded"> <a href="/Community_Engagement" hreflang="en">Community Engagement</a> 
+             <ul class="menu"> 
+              <li id="nid-10891" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Parent_Community_Member" hreflang="en">Parent/Community Member</a> </li> 
+              <li id="nid-10892" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-10890" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Teacher" hreflang="en">Teacher</a> </li> 
+              <li id="nid-10889" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-2253" class="book-block-menu" role="navigation" data-product="Connect" aria-label="Book outline for Blackboard Connect"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-2253" class="menu-item menu-item--expanded"> <a href="/Connect" hreflang="en">Connect</a> 
+             <ul class="menu"> 
+              <li id="nid-2254" class="menu-item menu-item--collapsed lazy folder"> <a href="/Connect/Connect_5" hreflang="en">Connect 5</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-28221" class="book-block-menu" role="navigation" data-product="CourseSites" aria-label="Book outline for Blackboard CourseSites"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-28221" class="menu-item menu-item--expanded"> <a href="/CourseSites" hreflang="en">CourseSites</a> 
+             <ul class="menu"> 
+              <li id="nid-28216" class="menu-item menu-item--collapsed lazy folder"> <a href="/CourseSites/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-28226" class="menu-item menu-item--collapsed lazy folder"> <a href="/CourseSites/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-28231" class="menu-item"> <a href="/CourseSites/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-2514" class="book-block-menu" role="navigation" data-product="Drive" aria-label="Book outline for Blackboard Drive"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-2514" class="menu-item menu-item--expanded"> <a href="/Drive" hreflang="en">Drive</a> 
+             <ul class="menu"> 
+              <li id="nid-2549" class="menu-item"> <a href="/Drive/Bb_Drive_Product_Update" hreflang="en">Product Updates</a> </li> 
+              <li id="nid-21566" class="menu-item menu-item--collapsed lazy folder"> <a href="/Drive/Drive_1.7" hreflang="en">Release 1.7</a> </li> 
+              <li id="nid-2528" class="menu-item menu-item--collapsed lazy folder"> <a href="/Drive/1.6" hreflang="en">Release 1.6</a> </li> 
+              <li id="nid-2515" class="menu-item menu-item--collapsed lazy folder"> <a href="/Drive/1.5" hreflang="en">Release 1.5</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-3271" class="book-block-menu" role="navigation" data-product="Learn" aria-label="Book outline for Blackboard Learn Help"> 
+           <ul class="menu my-book-menu active-book"> 
+            <li id="nid-3271" class="menu-item menu-item--expanded menu-item--active-trail expanded"> <a href="/Learn" hreflang="en">Learn</a> 
+             <ul class="menu"> 
+              <li id="nid-13376" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-14045" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-13425" class="menu-item menu-item--expanded menu-item--active-trail expanded"> <a href="/Learn/Administrator" hreflang="en">Administrator</a> 
+               <ul class="menu"> 
+                <li id="nid-13968" class="menu-item menu-item--expanded menu-item--active-trail expanded"> <a href="/Learn/Administrator/Hosting" hreflang="en">Self- and Managed-Hosting</a> 
+                 <ul class="menu"> 
+                  <li id="nid-15533" class="menu-item"> <a href="/Learn/Administrator/Hosting/FAQs" hreflang="en">Common Questions</a> </li> 
+                  <li id="nid-19696" class="menu-item"> <a href="/Learn/Administrator/Hosting/Get_to_Know_Blackboard_Learn" hreflang="en">Get to Know Blackboard Learn</a> </li> 
+                  <li id="nid-13428" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/Release_Notes" hreflang="en">Release Notes</a> </li> 
+                  <li id="nid-19056" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/Migration_Planning" hreflang="en">Migration Planning</a> </li> 
+                  <li id="nid-14002" class="active menu-item menu-item--expanded menu-item--active-trail expanded"> <a href="/Learn/Administrator/Hosting/Accessibility" hreflang="en">Accessibility</a> 
+                   <ul class="menu"> 
+                    <li id="nid-30441" class="menu-item"> <a href="/Learn/Administrator/Hosting/Accessibility/Functional_Testing" hreflang="en">Functional Tests</a> </li> 
+                    <li id="nid-14003" class="menu-item"> <a href="/Learn/Administrator/Hosting/Accessibility/Accessibility_Features" hreflang="en">Features</a> </li> 
+                    <li id="nid-14004" class="menu-item"> <a href="/Learn/Administrator/Hosting/Accessibility/Learn_Accessibility_Conformance_Statement" hreflang="en">Conformance Statement</a> </li> 
+                   </ul> </li> 
+                  <li id="nid-14005" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/Architecture" hreflang="en">Architecture</a> </li> 
+                  <li id="nid-14008" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/Authentication" hreflang="en">Authentication</a> </li> 
+                  <li id="nid-14026" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/Backup_and_Recovery" hreflang="en">Backup and Recovery</a> </li> 
+                  <li id="nid-14068" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/Course_Management" hreflang="en">Course Management</a> </li> 
+                  <li id="nid-14124" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/Databases" hreflang="en">Databases</a> </li> 
+                  <li id="nid-15537" class="menu-item"> <a href="/Learn/Administrator/Hosting/Feedback_and_Support" hreflang="en">Feedback and Support</a> </li> 
+                  <li id="nid-13999" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/Get_Started" hreflang="en">Server Administration</a> </li> 
+                  <li id="nid-13969" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/Install_or_Upgrade_Learn" hreflang="en">Install or Upgrade</a> </li> 
+                  <li id="nid-14133" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/Performance_Optimization" hreflang="en">Performance Optimization</a> </li> 
+                  <li id="nid-14187" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/Security" hreflang="en">Security</a> </li> 
+                  <li id="nid-14235" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/System_Integration" hreflang="en">System Integration</a> </li> 
+                  <li id="nid-14373" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/System_Management" hreflang="en">System Management</a> </li> 
+                  <li id="nid-14420" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/Tools_Management" hreflang="en">Tools Management</a> </li> 
+                  <li id="nid-14852" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/User_Interface_Management" hreflang="en">User Interface Management</a> </li> 
+                  <li id="nid-14918" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/User_Management" hreflang="en">User Management</a> </li> 
+                  <li id="nid-14933" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/Hosting/Watch_Videos" hreflang="en">Videos</a> </li> 
+                 </ul> </li> 
+                <li id="nid-14937" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator/SaaS" hreflang="en">SaaS Deployments</a> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10671" class="book-block-menu" role="navigation" data-product="Open Content" aria-label="Book outline for Blackboard Open Content"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10671" class="menu-item menu-item--expanded"> <a href="/Blackboard_Open_Content" hreflang="en">Open Content</a> 
+             <ul class="menu"> 
+              <li id="nid-10703" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_Content/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-10672" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_Content/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10564" class="book-block-menu" role="navigation" data-product="Open Education" aria-label="Book outline for Blackboard Open Education"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10564" class="menu-item menu-item--expanded"> <a href="/Open_Education" hreflang="en">Open Education</a> 
+             <ul class="menu"> 
+              <li id="nid-10572" class="menu-item menu-item--collapsed lazy folder"> <a href="/Open_Education/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-10565" class="menu-item menu-item--collapsed lazy folder"> <a href="/Open_Education/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10375" class="book-block-menu" role="navigation" data-product="Open LMS" aria-label="Book outline for Blackboard Open LMS "> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10375" class="menu-item menu-item--expanded"> <a href="/Blackboard_Open_LMS" hreflang="en">Open LMS </a> 
+             <ul class="menu"> 
+              <li id="nid-10451" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_LMS/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-10478" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_LMS/Teacher" hreflang="en">Teacher</a> </li> 
+              <li id="nid-10376" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_LMS/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-19816" class="book-block-menu" role="navigation" data-product="Predict" aria-label="Book outline for Blackboard Predict"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-19816" class="menu-item menu-item--expanded"> <a href="/Predict" hreflang="en">Predict</a> 
+             <ul class="menu"> 
+              <li id="nid-19091" class="menu-item menu-item--collapsed lazy folder"> <a href="/Predict/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-19090" class="menu-item menu-item--collapsed lazy folder"> <a href="/Predict/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-19096" class="menu-item menu-item--collapsed lazy folder"> <a href="/Predict/Advisor" hreflang="en">Advisor</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-26316" class="book-block-menu" role="navigation" data-product="SafeAssign" aria-label="Book outline for Blackboard SafeAssign"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-26316" class="menu-item menu-item--expanded"> <a href="/SafeAssign" hreflang="en">SafeAssign</a> 
+             <ul class="menu"> 
+              <li id="nid-26116" class="menu-item menu-item--collapsed lazy folder"> <a href="/SafeAssign/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-26111" class="menu-item menu-item--collapsed lazy folder"> <a href="/SafeAssign/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-26056" class="menu-item menu-item--collapsed lazy folder"> <a href="/SafeAssign/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10576" class="book-block-menu" role="navigation" data-product="SIS Central" aria-label="Book outline for Blackboard SIS Central for Connect"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10576" class="menu-item menu-item--expanded"> <a href="/SIS_Central/Connect" hreflang="en">SIS Central for Connect</a> 
+             <ul class="menu"> 
+              <li id="nid-10577" class="menu-item menu-item--collapsed lazy folder"> <a href="/SIS_Central/Connect/PowerSchool_Integration" hreflang="en">PowerSchool Integration</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-11788" class="book-block-menu" role="navigation" data-product="SmartView" aria-label="Book outline for Blackboard SmartView"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-11788" class="menu-item menu-item--expanded"> <a href="/SmartView" hreflang="en">SmartView</a> 
+             <ul class="menu"> 
+              <li id="nid-11790" class="menu-item"> <a href="/SmartView/Authentication_Logging_In" hreflang="en">Logging In</a> </li> 
+              <li id="nid-11791" class="menu-item menu-item--collapsed lazy folder"> <a href="/SmartView/Advisor_Desktop_Interface" hreflang="en">Advisor Desktop</a> </li> 
+              <li id="nid-11797" class="menu-item menu-item--collapsed lazy folder"> <a href="/SmartView/Service_Desk_Interface" hreflang="en">Service Desk</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-21691" class="book-block-menu" role="navigation" data-product="Web Community Manager" aria-label="Book outline for Blackboard Web Community Manager"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-21691" class="menu-item menu-item--expanded"> <a href="/Web_Community_Manager" hreflang="en">Web Community Manager</a> 
+             <ul class="menu"> 
+              <li id="nid-21696" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Parent_Community_Member" hreflang="en">Parent/Community Member</a> </li> 
+              <li id="nid-21701" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-22326" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Teacher_Editor" hreflang="en">Teacher/Editor</a> </li> 
+              <li id="nid-21711" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Administrator" hreflang="en">Administrator</a> </li> 
+              <li id="nid-31421" class="menu-item"> <a href="/Web_Community_Manager/Teacher_Editor/Section_Workspace" hreflang="en">Section Workspace</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="page-header__second"> 
+       <div class="region region-header-second"> 
+        <div class="block block--block-blackboardtools " id="block-blackboardtools" data-block-plugin-id="block_content:4089d30d-1c4e-4ceb-bf0e-4199adc0a900"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div class="page-header__tools">
+           <a class="page-header__home" href="/" title="Home"><span class="icon-home" aria-hidden="true"></span>Home</a> 
+           <a class="page-header__print" title="Print"><span class="icon-printer" aria-hidden="true"></span>Print</a>
+          </div>
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-page-title " id="block-blackboard-page-title" data-block-plugin-id="page_title_block"> 
+         <h1><span>Accessibility in Blackboard Learn</span> </h1> 
+        </div> 
+        <div class="block block--block-liftslot-fullspanbanner " id="block-liftslot-fullspanbanner" data-block-plugin-id="block_content:582f9bde-be9a-4fe6-b87f-1314126a7021"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div data-lift-slot="fb2baad0-4af7-11e7-b2aa-9d057867a0b0"></div>
+         </div> 
+        </div> 
+        <div class="block block--block-liftslot-studentlandingbanner " id="block-liftslot-studentlandingbanner" data-block-plugin-id="block_content:36968852-eb69-4598-8fc0-afc21978c52f"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div data-lift-slot="077642d0-89bb-11e7-8902-7de7c872c496"></div>
+         </div> 
+        </div> 
+        <div class="block block--block-liftslot-instructorlandingbanner " id="block-liftslot-instructorlandingbanner" data-block-plugin-id="block_content:896a174e-6094-4226-8825-122d884ecc5f"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div data-lift-slot="535c7f70-89bb-11e7-9aa3-ef6c45e0fd72"></div>
+         </div> 
+        </div> 
+        <div class="block block--block-lift-sidebarblock " id="block-lift-sidebarblock" data-block-plugin-id="block_content:945908c1-ca42-40f6-900f-cfe5a40ecd0e"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div data-lift-slot="f1168e80-154a-11e7-bb29-3961d4ea1e6e"></div>
+         </div> 
+        </div> 
+        <div class="block block--block-liftslot-sidebarblock2 " id="block-liftslot-sidebarblock2" data-block-plugin-id="block_content:4a3e2310-bee3-4a7d-bb63-8543c0365657"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div class="block--block-lift-sidebarblock"> 
+           <div data-lift-slot="c6a9fca0-fa31-11e7-9ba6-db640d383e63"></div> 
+          </div>
+         </div> 
+        </div> 
+        <div class="block block--block-liftslot-sidebarblock3 " id="block-liftslot-sidebarblock3" data-block-plugin-id="block_content:78e9893a-652c-4f9f-9ea2-39d6ae91d839"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div class="block--block-lift-sidebarblock"> 
+           <div data-lift-slot="112e5f50-fa32-11e7-9ba6-db640d383e63"></div> 
+          </div>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <main role="main"> 
+     <a id="main-content" tabindex="-1"></a> 
+     <div class="page-content"> 
+      <ul class="visually-hidden accessible-navigation__content"> 
+      </ul> 
+      <div class="region region-content"> 
+       <div data-drupal-messages-fallback class="hidden"></div> 
+       <div class="block block--block-views-block-view-applies-to-original-course-view-admin-block-1 views-element-container" id="block-views-block-view-applies-to-original-course-view-admin-block-1" data-block-plugin-id="views_block:view_applies_to_original_course_view_admin-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-original-course-view-admin view-id-view_applies_to_original_course_view_admin view-display-id-block_1 js-view-dom-id-f6301ab1563397288e17f515ec7174b83bf5467e60bada1db681b11d97147f82"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-orig-course-inst-block-1 views-element-container" id="block-views-block-view-applies-orig-course-inst-block-1" data-block-plugin-id="views_block:view_applies_orig_course_inst-block_1"> 
+        <div>
+         <div class="view view-view-applies-orig-course-inst view-id-view_applies_orig_course_inst view-display-id-block_1 js-view-dom-id-e324ef3ecf7e0b83592dffbc4d84217daff73ce16311fe20703393407c377900"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-orig-course-stud-block-1 views-element-container" id="block-views-block-view-applies-orig-course-stud-block-1" data-block-plugin-id="views_block:view_applies_orig_course_stud-block_1"> 
+        <div>
+         <div class="view view-view-applies-orig-course-stud view-id-view_applies_orig_course_stud view-display-id-block_1 js-view-dom-id-b6d7461c259147f065d534bd6f3231f4b3c57a942c8aee8b900c9e7e1e9496bf"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-orig-exp-inst-block-1 views-element-container" id="block-views-block-view-applies-orig-exp-inst-block-1" data-block-plugin-id="views_block:view_applies_orig_exp_inst-block_1"> 
+        <div>
+         <div class="view view-view-applies-orig-exp-inst view-id-view_applies_orig_exp_inst view-display-id-block_1 js-view-dom-id-b4e9ac30e9d79bbd92d00f0ff5cd80128dab383b2b08cea7f27466434d25dab2"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-orig-exp-stud-block-1 views-element-container" id="block-views-block-view-applies-orig-exp-stud-block-1" data-block-plugin-id="views_block:view_applies_orig_exp_stud-block_1"> 
+        <div>
+         <div class="view view-view-applies-orig-exp-stud view-id-view_applies_orig_exp_stud view-display-id-block_1 js-view-dom-id-ffd6b0501d1d046939daf838513c7ce099a89b7132ade0980cf3a4916931b9c6"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-original-experience-admin-block-1 views-element-container" id="block-views-block-view-applies-to-original-experience-admin-block-1" data-block-plugin-id="views_block:view_applies_to_original_experience_admin-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-original-experience-admin view-id-view_applies_to_original_experience_admin view-display-id-block_1 js-view-dom-id-02a3782d0aa2226301c60f1964b6d3a4327c9bd38e23387fe03943bc4c94ab95"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-ultra-course-inst-block-1 views-element-container" id="block-views-block-view-applies-ultra-course-inst-block-1" data-block-plugin-id="views_block:view_applies_ultra_course_inst-block_1"> 
+        <div>
+         <div class="view view-view-applies-ultra-course-inst view-id-view_applies_ultra_course_inst view-display-id-block_1 js-view-dom-id-13af33c2f77075e148e9174df01a5d07907df572a5b5a36ee5de987855c458b4"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-ultra-course-stud-block-1 views-element-container" id="block-views-block-view-applies-ultra-course-stud-block-1" data-block-plugin-id="views_block:view_applies_ultra_course_stud-block_1"> 
+        <div>
+         <div class="view view-view-applies-ultra-course-stud view-id-view_applies_ultra_course_stud view-display-id-block_1 js-view-dom-id-26a5a6bc427756c13f5c6de212939fb29f618e054237b9569ec08213a9457f22"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-ultra-exp-admin-block-1 views-element-container" id="block-views-block-view-applies-ultra-exp-admin-block-1" data-block-plugin-id="views_block:view_applies_ultra_exp_admin-block_1"> 
+        <div>
+         <div class="view view-view-applies-ultra-exp-admin view-id-view_applies_ultra_exp_admin view-display-id-block_1 js-view-dom-id-0fd192bd520d44d304a9cc7f79667ad0fc05fd7c761e0a04e4f20d9599e73d3d"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-ultra-exp-inst-block-1 views-element-container" id="block-views-block-view-applies-ultra-exp-inst-block-1" data-block-plugin-id="views_block:view_applies_ultra_exp_inst-block_1"> 
+        <div>
+         <div class="view view-view-applies-ultra-exp-inst view-id-view_applies_ultra_exp_inst view-display-id-block_1 js-view-dom-id-fd5a8c85b89100b7ae9029c56ca794b51cd2385d083487ac20382363ebd7e310"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-ultra-exp-stud-block-1 views-element-container" id="block-views-block-view-applies-ultra-exp-stud-block-1" data-block-plugin-id="views_block:view_applies_ultra_exp_stud-block_1"> 
+        <div>
+         <div class="view view-view-applies-ultra-exp-stud view-id-view_applies_ultra_exp_stud view-display-id-block_1 js-view-dom-id-3c4c57339fcb48869efcd259af0a837b015495c7b2e985b0337553465001b552"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-institution-controls-assignments-1 views-element-container" id="block-views-block-view-applies-to-institution-controls-assignments-1" data-block-plugin-id="views_block:view_applies_to_institution_controls_assignments-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-institution-controls-assignments view-id-view_applies_to_institution_controls_assignments view-display-id-block_1 js-view-dom-id-ba2903f295feb508cc571f4a7a5498c3ad4416b2f41f0998b4c6eaf0932749ca"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-institution-controls-gradebook-1 views-element-container" id="block-views-block-view-applies-to-institution-controls-gradebook-1" data-block-plugin-id="views_block:view_applies_to_institution_controls_gradebook-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-institution-controls-gradebook view-id-view_applies_to_institution_controls_gradebook view-display-id-block_1 js-view-dom-id-0c21b5950a4d1762c4458e115382959aa1d0f4ad1e60f3fb5614f7b7f2ee7f9e"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-institution-controls-rubrics-1 views-element-container" id="block-views-block-view-applies-to-institution-controls-rubrics-1" data-block-plugin-id="views_block:view_applies_to_institution_controls_gradebook_and_rubrics-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-institution-controls-gradebook-and-rubrics view-id-view_applies_to_institution_controls_gradebook_and_rubrics view-display-id-block_1 js-view-dom-id-8d78c2c8b89cbe80eb2345287251f563766fbce04feecba8b4799190a357825f"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-institution-controls-rubrics-2 views-element-container" id="block-views-block-view-applies-to-institution-controls-rubrics-2" data-block-plugin-id="views_block:view_applies_to_institution_controls_rubrics-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-institution-controls-rubrics view-id-view_applies_to_institution_controls_rubrics view-display-id-block_1 js-view-dom-id-706eeeeaf3e4fe01cea3a4ea9ced6c4933e742736fdb9aef0743e6ca3359b65f"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-institution-controls-tests-block-1 views-element-container" id="block-views-block-view-applies-to-institution-controls-tests-block-1" data-block-plugin-id="views_block:view_applies_to_institution_controls_tests-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-institution-controls-tests view-id-view_applies_to_institution_controls_tests view-display-id-block_1 js-view-dom-id-003edbda93e6e4f51df6d616d5509e98e03634a37dab7a4b5c961fabde9a986f"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-self-hosting-block-1 views-element-container" id="block-views-block-view-applies-to-self-hosting-block-1" data-block-plugin-id="views_block:view_applies_to_self_hosting-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-self-hosting view-id-view_applies_to_self_hosting view-display-id-block_1 js-view-dom-id-f7c2a31db7cfb27167804b34c59c712495ec23463e54f295a2d328890ea63253"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-blackboard-content " id="block-blackboard-content" data-block-plugin-id="system_main_block"> 
+        <article role="article" about="/Learn/Administrator/Hosting/Accessibility"> 
+         <div> 
+          <div class="field field--name-field-content-page-paragraphs field--type-entity-reference-revisions field--label-hidden field__items"> 
+           <div class="paragraph paragraph--type--basic-content-paragraph paragraph--view-mode--default"> 
+            <div class="field field--name-field-content field--type-text-long field--label-hidden field__item">
+             <p>Blackboard is fully committed to ensuring all products and services we deliver are both usable and accessible to all users regardless of age, ability, or situation. In keeping with our strong tradition of leadership around accessibility, our products are designed and developed in accordance with the internationally recognized Web Content Accessibility Guidelines (WCAG) 2.1&nbsp;Level AA as well as the Section 508 standards in the United States. A third party conducts regular audits of our software to ensure quality expectations are being met and maintained.</p> 
+             <p class="note">All documents are available in English only.</p> 
+             <h2><a id="original_compliance"></a>Accessibility compliance: Blackboard Learn with the Original experience</h2> 
+             <ul>
+              <li> 
+               <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="c7582972-03a3-4bcd-af74-0d03acbfc072" data-langcode="en" class="embedded-entity">
+                <div> 
+                 <div class="field field--name-field-media-display-text field--type-string field--label-hidden field__item">
+                  <a href="https://help.blackboard.com/sites/default/files/documents/2018-09/Blackboard_Learn9.1_VPAT2.0_2018-09_final.docx">VPAT for Blackboard Learn Original experience (available in English only)</a>
+                 </div> 
+                </div> 
+               </div> </li> 
+             </ul>
+             <p class="LearnMore"><a class="external" href="http://www.blackboard.com/accessibility" title="http://www.blackboard.com/accessibility">More on Blackboard’s commitment to accessibility</a></p> 
+             <p>Please direct any questions and concerns to <a href="/cdn-cgi/l/email-protection#adcccecec8dedec4cfc4c1c4d9d4edcfc1cccec6cfc2ccdfc983cec2c0" title="mailto:accessibility@blackboard.com"><span class="__cf_email__" data-cfemail="543537373127273d363d383d202d14363835373f363b3526307a373b39">[email&nbsp;protected]</span></a>.</p> 
+             <hr class="no-clear">
+             <h2><a id="structure"></a>About the structure of Blackboard Learn pages</h2> 
+             <p>A logical heading structure is in place to properly structure the page and allow users to navigate using headings. Headings are used consistently throughout the application. This gives users the ability to understand the structure of any page in the application quickly, and move to the appropriate section of the page or content item easily.</p> 
+             <p>As is required, a single H1 is provided to identify the page the user is looking at. In Blackboard Learn, the page title, for example “Course Documents,” is always the H1.</p> 
+             <p>H2 headings are used to delineate major sections of a page. These headings are hidden and allow screen reader users to skip directly to each major page section. For example, a course page has two H2 headings: one for the course menu and one for the main content that is located immediately above the action bar on the content page.</p> 
+             <p>H3 headings are typically used as the title of content items or key content elements on a page. For example, the title of an assignment on a “Course Documents” page is an H3 so the user easily finds it.</p> 
+             <p class="note">To reduce the visual clutter on a page, a number of elements are hidden until they receive either mouse or keyboard focus. After focus is given, these elements become active and follow typical keyboard interaction models.</p> 
+             <h3>Frames removed and replaced with DIVs and iFrames</h3> 
+             <p>Technical changes to the primary navigation in Blackboard Learn make navigation easier for visually-impaired users.</p> 
+             <p>Frames have been completely removed from the Learn application and replaced with HTML5 compliant DIVs and iFrames. This change improves page printing, accessibility, and page navigation.</p> 
+             <p>This change results in improved accessibility for users of screen readers where identification of page location, navigation and page titles are necessary.</p> 
+             <hr>
+             <h2><a id="landmarks"></a>Landmarks</h2> 
+             <p>Landmarks are designated based on <a class="external" href="http://www.w3.org/WAI/intro/aria" title="http://www.w3.org/WAI/intro/aria">ARIA</a> (Accessible Rich Internet Applications Suite). ARIA defines a way to make web content and web applications more accessible to people with disabilities. Landmarks in Blackboard Learn include:</p> 
+             <ul>
+              <li>application</li> 
+              <li>banner</li> 
+              <li>complementary</li> 
+              <li>content info</li> 
+              <li>course menu</li> 
+              <li>content area</li> 
+              <li>form</li> 
+              <li>main</li> 
+              <li>navigation</li> 
+              <li>search</li> 
+             </ul>
+             <hr>
+             <h2><a id="keyboard_navigation"></a>Keyboard navigation in Blackboard Learn</h2> 
+             <p>Industry standard keyboard interactions are used throughout Blackboard Learn to move between menus, open menus, and select items within a menu. Keyboard navigation patterns differ between browsers (Internet Explorer, Firefox, Safari, Chrome), but the interactions within any particular browser are common and consistent. In the sections below, notes are used to indicate where interactions may differ between experiences and course views in Blackboard Learn.</p> 
+             <p class="note">If you are using a Mac with Firefox or Safari and are having difficulty navigating using your keyboard, review and update your operating system and browser settings. This ensures they are properly configured for keyboard navigation. To learn more, see this information:</p> 
+             <ul>
+              <li><a class="external" href="http://support.mozilla.org/en-US/kb/Pressing%20Tab%20key%20does%20not%20select%20menus%20or%20buttons" title="http://support.mozilla.org/en-US/kb/Pressing%20Tab%20key%20does%20not%20select%20menus%20or%20buttons">Firefox setup</a></li> 
+              <li><a class="external" href="http://support.mozilla.org/en-US/kb/Keyboard%20shortcuts" title="http://support.mozilla.org/en-US/kb/Keyboard%20shortcuts">Firefox keyboard navigation tips</a></li> 
+              <li><a class="external" href="http://abilitynet.wikifoundry.com/page/Mac+OS+X+-+Enabling++keyboard+access+in+web+browsers" title="http://abilitynet.wikifoundry.com/page/Mac+OS+X+-+Enabling++keyboard+access+in+web+browsers">Mac general setup</a></li> 
+             </ul>
+             <h3><a id="content_editor"></a>Keyboard navigation within the content editor</h3> 
+             <p>The content editor in Blackboard Learn is based on third-party technology from TinyMCE. It provides accessible controls, as well as keyboard shortcuts for formatting content created within it. The content editor appears throughout your courses, such as when you participate in a discussion.</p> 
+             <p>To use your keyboard to jump to the content editor toolbar, press ALT + F10. On a Mac, press Fn + ALT + F10. Use the arrow keys to select an option, such as a bulleted list.</p> 
+             <h3><a id="quick_setup"></a>About keyboard navigation for the Course Quick Setup Guide</h3> 
+             <p>The <span class="interface">Quick Setup Guide</span> wizard is an accordion object and uses the standard navigation. The wizard opens by default when an instructor opens their course for the first time. You can also access it from the <span class="interface">Control Panel</span> by expanding the <span class="interface">Customization</span> section. Type "Welcome" in your browser's Find tool and press <span class="keyboard">ESC</span> on your keyboard.</p> 
+             <h4><a id="navigate_quick_setup"></a>Navigating within the Quick Setup Guide</h4> 
+             <p>Within the <span class="interface">Quick Setup Guide</span>, press the following keys to navigate:</p> 
+             <ul>
+              <li><span class="keyboard">Up</span> and <span class="keyboard">Down Arrow</span> keys on your keyboard to move between the names of the sections in the accordion.</li> 
+              <li><span class="keyboard">Spacebar</span> or <span class="keyboard">Enter</span> on your keyboard to open a section. After the section is open, the focus will still be on the heading, press <span class="keyboard">Tab</span> to navigate to the sublist. The sublist is coded as radio buttons allowing you to use arrow keys to navigate between items. Stopping on the item selects it.</li> 
+              <li><span class="keyboard">Spacebar</span> on your keyboard to make an item active or inactive.</li> 
+              <li><span class="keyboard">Tab</span> on your keyboard to enter the open section of the accordion and change the options within the section. After you have reached the end of a section, selecting <span class="keyboard">tab</span> again will take you to the title of the next accordion section.</li> 
+             </ul>
+             <h4><a id="navigate_structures"></a>Navigating within the Structures step</h4> 
+             <p>Within the <span class="interface">Structures</span> step, you must select a structure to use it. If you do not select a structure, the current structure is used.</p> 
+             <p>Navigate to each structure to read about and preview it. To open the link to learn more about the course structures, press the following keys in the order listed:</p> 
+             <ol>
+              <li>Press <span class="keyboard">Tab</span> on your keyboard to open a list of links. Press <span class="keyboard">Spacebar</span> on your keyboard for a description.</li> 
+              <li>Press <span class="keyboard">Tab</span> again to proceed to the next link, the Help page.</li> 
+              <li>Press <span class="keyboard">Tab</span> to proceed to sample content. This is the last link in the step.</li> 
+              <li>Press <span class="keyboard">Tab</span> to return to the structures step.</li> 
+             </ol>
+             <p class="note">If you leave the <span class="interface">Structures</span> step, the current selected structure opens when you return to that step.</p> 
+             <p>To select a structure to use, press the <span class="keyboard">Spacebar</span> on your keyboard to select it. Press the <span class="keyboard">Spacebar</span> again to deselect the structure. Visually, this turns the <span class="interface">Use this structure</span> button on and off.</p> 
+             <h3><a id="keyboard_reorder"></a>Keyboard accessible reordering</h3> 
+             <p>Wherever the drag-and-drop function exists to reorder items in a list, you have a keyboard alternative. The keyboard accessible reordering tool displays the items on the page as a list. You can use keyboard commands to reorder the items.</p> 
+             <div lang="ultra" xml:lang="ultra"> 
+              <h3><a id="ultra_keyboard"></a></h3> 
+              <h3><a id="ultra_content_page"></a></h3> 
+             </div> 
+             <hr>
+             <h2><a id="screen_readers"></a>Screen readers</h2> 
+             <p>For the best experience with your screen reader, use Firefox<sup>®</sup> and JAWS<sup>®</sup> on a Windows<sup>®</sup> system, and use Safari<sup>®</sup> and VoiceOver On a Mac<sup>®</sup>.</p> 
+             <p>Blackboard Learn has created a <a class="external" href="http://library.blackboard.com/d?eb3b04cd-4d39-4af0-9d2d-a3f32a95430f" title="http://library.blackboard.com/d?eb3b04cd-4d39-4af0-9d2d-a3f32a95430f">Screen Reader Tutorial</a> to provide users who access the application through a screen reader with information to help them use the system successfully.</p> 
+             <hr>
+             <h2><a id="quick_links"></a>Quick links</h2> 
+             <p>The Quick Links tool allows a user to quickly locate any heading or section within any page in the Blackboard Learn application and jump directly to it. Located in the top left, the Quick Links icon opens a pop-up window that displays the landmark and navigation links on the page.</p> 
+             <p>To open the Quick Links Tool using a keyboard, press SHIFT + ALT + L to open Quick Links. To open the Global Navigation Menu, press CTRL + ALT + M. Other available keyboard shortcuts for the page also appear within the Quick Links tool.</p> 
+             <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="5fc29e93-e78d-4b87-a145-e7e845ab9de1" data-langcode="en" class="embedded-entity">
+              <div> 
+               <div lang="optional" style="max-width: 100%; width: 830px" class="internal default field field--name-image field--type-image field--label-hidden field__item" xml:lang="optional"> 
+                <img src="/sites/default/files/images/2018-02/quick-links-1.png" width="1818" height="1156" alt="" typeof="foaf:Image">
+               </div> 
+              </div> 
+             </div> 
+             <hr>
+             <h2><a id="content_editor_math"></a>Content editor math formulas</h2> 
+             <p>WIRIS provides the Math formula editing capabilities of the Content Editor introduced in SP 10. In SP 10, the WIRIS plugin came in the form of a Java Applet. This meant that math editing was not available on platforms that couldn't support Java. In SP 12, the WIRIS editor is based on JavaScript, removing the dependence on Java and enabling full math-editing capabilities on platforms that can’t run Java in browsers, including iOS. The functionality of the WIRIS math editor is not extended to all platforms capable of running a JavaScript enabled browser.</p> 
+             <p>The move from the non-accessible applet-based editor to a JavaScript-based editor improves accessibility.</p> 
+             <hr>
+             <h2><a id="interactive_tools"></a>Interactive tools</h2> 
+             <p>We have improved the usability of all of our interactive tools (discussion boards, wikis, blogs and journals). Each release introduces usability improvements for everyone, especially those customers that use assistive technology. The new experience of reading a thread is simple to consume with screen reader technology. We also removed clutter on the page, so screen reader and keyboard-only users have less to sift through as they navigate the interface.</p> 
+             <p>To learn more about Blackboard's commitment to accessibility, see <a class="external" href="http://www.blackboard.com/accessibility" title="http://www.blackboard.com/accessibility">http://www.blackboard.com/accessibility</a>.</p> 
+             <hr>
+             <h2><a id="accessibility_training"></a>Accessibility training resources</h2> 
+             <p>Enroll in our synchronous course, <a href="http://accessibility.mrooms.net/">The Accessibility MOOC: Inclusive Online Course Design</a>. Learn how to deliver more accessible online courses and content to your students.</p> 
+             <p>Enroll in our free self-paced course, <span class="emphasize">Universal Design and Accessibility for Online Learning</span>, available through <a class="external" href="https://www.coursesites.com/webapps/Bb-sites-course-creation-BBLEARN/courseHomepage.htmlx?course_id=_1263_1" title="https://www.coursesites.com/webapps/Bb-sites-course-creation-BBLEARN/courseHomepage.htmlx?course_id=_1263_1">CourseSites</a>, for guidance in building courses that are accessible. Select <span class="interface">Self-Enroll</span>.</p> 
+             <h3>Universal design and accessibility for online learning course archive</h3> 
+             <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="8cf4c381-3d5c-4742-a829-473e906fc34d" data-langcode="en" class="embedded-entity">
+              <div> 
+               <div class="field field--name-field-media-display-text field--type-string field--label-hidden field__item">
+                <a href="https://help.blackboard.com/sites/default/files/bb_assets_embed/3000/ArchiveFile_U_D_A_20130805023042.zip">Online Learning Course Archive for Accessibility (available in English only)</a>
+               </div> 
+              </div> 
+             </div> 
+             <p>Download a copy of the course archive to customize and facilitate at your own institution. This archive (1.9 MB) is compatible with Blackboard Learn 9.1 SP 8 and later. Do not unzip or open the archive. A system administrator must restore the course to the system.</p> 
+             <hr>
+             <p>*Statements regarding our product development initiatives, including new products and future product upgrades, updates or enhancements represent our current intentions, but may be modified, delayed or abandoned without prior notice and there is no assurance that such offering, upgrades, updates or functionality will become available unless and until they have been made generally available to our customers.</p> 
+             <p></p>
+             <div class="view view--child-nodes view-child-nodes view-id-child_nodes view-display-id-default js-view-dom-id-9415092adb96bd964a4bd808784b5e0c021c60efa2a1795a053af6810b99847a"> 
+              <div class="view-content"> 
+               <div class="views-row"> 
+                <div class="views-field views-field-field-nav-label">
+                 <div class="field-content">
+                  <a href="/Learn/Administrator/Hosting/Accessibility/Functional_Testing" hreflang="en">Functional Tests</a>
+                 </div>
+                </div> 
+               </div> 
+               <div class="views-row"> 
+                <div class="views-field views-field-field-nav-label">
+                 <div class="field-content">
+                  <a href="/Learn/Administrator/Hosting/Accessibility/Accessibility_Features" hreflang="en">Features</a>
+                 </div>
+                </div> 
+               </div> 
+               <div class="views-row"> 
+                <div class="views-field views-field-field-nav-label">
+                 <div class="field-content">
+                  <a href="/Learn/Administrator/Hosting/Accessibility/Learn_Accessibility_Conformance_Statement" hreflang="en">Conformance Statement</a>
+                 </div>
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </article> 
+       </div> 
+      </div> 
+      <div class="sidebar-content"> 
+       <aside class="layout-sidebar-first" role="complementary"> 
+        <div class="region region-sidebar-first"> 
+         <div class="block block--block-blackboardtoc " id="block-blackboardtoc" data-block-plugin-id="block_content:4f34edb4-a6a1-4e3f-8c03-8d5a8128855b"> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <div class="table-of-contents" id="table-of-contents"> 
+            <h3 class="table-of-contents__title">On this page</h3> 
+            <ul class="table-of-contents__list"></ul>
+           </div>
+          </div> 
+         </div> 
+        </div> 
+       </aside> 
+      </div> 
+     </div> 
+    </main> 
+    <div class="pre-footer"> 
+     <div class="pre-footer__second"> 
+      <div class="region region-prefooter-second"> 
+       <div class="block block--block-floatingbuttons " id="block-floatingbuttons" data-block-plugin-id="block_content:de7e5770-c178-4c6a-9ae2-9342ebdc76c1"> 
+        <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+         <div id="floating-buttons" class="fb-buttons"> 
+          <div class="fb-container"> 
+           <span class="fb-button"> <a class="fb-button-link page-header__print" aria-label="Print this page"> <img class="fb-button-icon" src="/themes/blackboard/img/icon-print.svg"> </a> </span> 
+          </div> 
+          <div class="fb-container"> 
+           <span id="fbb-help" class="fb-button"> <a class="fb-button-link" href="#block-prefootercontentblock" aria-label="Need more help?"> <img class="fb-button-icon" src="/themes/blackboard/img/icon-help_hc_dark.svg"> </a> </span> 
+          </div> 
+          <div class="fb-container"> 
+           <span id="fbb-follow" class="fb-button"> <a class="fb-button-link" href="#node-subscribe-form" aria-label="Follow this page"> <img class="fb-button-icon" src="/themes/blackboard/img/icon-notification_hc_dark.svg"> </a> </span> 
+          </div> 
+         </div>
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="pre-footer__third"> 
+      <div class="region region-prefooter-third"> 
+       <div class="block block--block-prefootercontentblock " id="block-prefootercontentblock" data-block-plugin-id="bb_widgets_pre_footer_content_block"> 
+        <article role="article" about="/node/23951"> 
+         <h2> <a href="/node/23951" rel="bookmark"><span>Learn - admin</span> </a> </h2> 
+         <div> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <div class="more-help"> 
+            <div class="more-help__container"> 
+             <h2>Need more help with <span data-localize="locked">Learn</span>?</h2> 
+             <ul> 
+              <li> <a href="https://blackboard.secure.force.com/login" target="_blank" rel="noopener noreferrer"> 
+                <div class="more-help__icon"> 
+                 <i class="icon-password"></i> 
+                </div> <span>Log in to Behind the Blackboard for support</span> </a> </li> 
+              <li> <a href="https://community.blackboard.com/community/systemadministrator" target="_blank" rel="noopener noreferrer"> 
+                <div class="more-help__icon"> 
+                 <i class="icon-users-3"></i> 
+                </div> <span>Join the Community</span> </a> </li> 
+              <li> <a href="https://community.blackboard.com/community/developers/learn" target="_blank" rel="noopener noreferrer"> 
+                <div class="more-help__icon"> 
+                 <i class="icon-files"></i> 
+                </div> <span>Find developer docs</span> </a> </li> 
+              <li> <a href="https://www.youtube.com/user/BlackboardTV/playlists" target="_blank" rel="noopener noreferrer"> 
+                <div class="more-help__icon"> 
+                 <i class="icon-video2"></i> 
+                </div> <span>Find videos for your users</span> </a> </li> 
+             </ul> 
+            </div> 
+           </div>
+          </div> 
+         </div> 
+        </article> 
+       </div> 
+       <div class="block block--block-nodesubscribeblock " id="block-nodesubscribeblock" data-block-plugin-id="node_subscribe"> 
+        <div id="node-subscribe-form"></div> 
+       </div> 
+       <div class="block block--block-bbschoolhelpdeskblock " id="block-bbschoolhelpdeskblock" data-block-plugin-id="bb_school_help_desk_block"> 
+        <div aria-hidden="true" data-description="Provides ReactJS Script as BB School Help Desk Block" class="hidden"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <footer class="page-footer" role="contentinfo"> 
+     <div class="page-footer__content"> 
+      <div class="page-footer__first"> 
+       <div class="region region-footer-first"> 
+        <div class="block block--block-blackboard-visitblackboardcomlink " id="block-blackboard-visitblackboardcomlink" data-block-plugin-id="block_content:db947466-941f-49b3-9bef-7afbe943663a"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <h3><a href="http://www.blackboard.com/" target="_blank">Visit Blackboard.com</a></h3> 
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-blackboardcopyright " id="block-blackboard-blackboardcopyright" data-block-plugin-id="block_content:1ac0d952-50f6-484c-bff0-961ee5b22d49"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <p>Copyright©2018. Blackboard&nbsp;Inc.<br> <a href="/Copyright_Notice">Legal Disclaimers</a><br> <a href="/1000en_US">Privacy Statement</a></p>
+         </div> 
+        </div> 
+        <div class="block block--block-views-block-footer-menu-view-footer-block views-element-container" id="block-views-block-footer-menu-view-footer-block" data-block-plugin-id="views_block:footer_menu_view-footer_block"> 
+         <div>
+          <div class="footer-block view view-footer-menu-view view-id-footer_menu_view view-display-id-footer_block js-view-dom-id-17db47c974243e6ebbbee069c2f640314b4b36ef9be0992a0cb433855179d611"> 
+           <div class="view-content"> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/About_Help" hreflang="en">About Help</a>
+              </div>
+             </div> 
+            </div> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/Accessibility" hreflang="en">Accessibility</a>
+              </div>
+             </div> 
+            </div> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/Client_Resources" hreflang="en">Client Resources</a>
+              </div>
+             </div> 
+            </div> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/Product_Security" hreflang="en">Product Security</a>
+              </div>
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <nav role="navigation" aria-labelledby="block-blackboard-account-menu-menu" id="block-blackboard-account-menu" data-block-plugin-id="system_menu_block:account"> 
+         <h2 class="visually-hidden" id="block-blackboard-account-menu-menu">User account menu</h2> 
+         <ul class="menu"> 
+          <li class="menu-item"> <a href="/user/login" data-drupal-link-system-path="user/login">Log in</a> </li> 
+         </ul> 
+        </nav> 
+       </div> 
+      </div> 
+      <div class="page-footer__second-third-container"> 
+       <div class="page-footer__second"> 
+        <div class="region region-footer-second"> 
+         <nav role="navigation" aria-labelledby="block-blackboard-helpforblackboardproducts-menu" id="block-blackboard-helpforblackboardproducts" data-block-plugin-id="system_menu_block:help-for-blackboard-product"> 
+          <h2 id="block-blackboard-helpforblackboardproducts-menu">Help for Blackboard Products</h2> 
+          <ul class="menu"> 
+           <li class="menu-item"> <a href="/Ally" data-drupal-link-system-path="node/25571">Ally</a> </li> 
+           <li class="menu-item"> <a href="http://www.blackboard.com/education-analytics/index.aspx">Analytics</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_App" data-drupal-link-system-path="node/469">Blackboard App</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_Instructor" data-drupal-link-system-path="node/13118">Blackboard Instructor</a> </li> 
+           <li class="menu-item"> <a href="/Collaborate" data-drupal-link-system-path="node/477">Collaborate</a> </li> 
+           <li class="menu-item"> <a href="/Community_Engagement" data-drupal-link-system-path="node/10745">Community Engagement</a> </li> 
+           <li class="menu-item"> <a href="/Connect" data-drupal-link-system-path="node/2253">Connect</a> </li> 
+           <li class="menu-item"> <a href="/Learn" data-drupal-link-system-path="node/3271">CourseSites</a> </li> 
+           <li class="menu-item"> <a href="/Drive" data-drupal-link-system-path="node/2514">Drive</a> </li> 
+           <li class="menu-item"> <a href="/Learn" data-drupal-link-system-path="node/3271">Learn</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_Open_Content" data-drupal-link-system-path="node/10671">Open Content</a> </li> 
+           <li class="menu-item"> <a href="/Open_Education" data-drupal-link-system-path="node/10564">Open Education</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_Open_LMS" data-drupal-link-system-path="node/10375">Open LMS</a> </li> 
+           <li class="menu-item"> <a href="/Predict" data-drupal-link-system-path="node/19816">Predict</a> </li> 
+           <li class="menu-item"> <a href="/SafeAssign" data-drupal-link-system-path="node/26316">SafeAssign</a> </li> 
+           <li class="menu-item"> <a href="/SIS_Central/Connect" data-drupal-link-system-path="node/10576">SIS Central - Connect</a> </li> 
+           <li class="menu-item"> <a href="/SmartView" data-drupal-link-system-path="node/11788">SmartView</a> </li> 
+           <li class="menu-item"> <a href="/Web_Community_Manager" data-drupal-link-system-path="node/21691">Web Community Manager</a> </li> 
+          </ul> 
+         </nav> 
+         <div class="block block--block-backtotop " id="block-backtotop" data-block-plugin-id="block_content:61c42d5b-62bf-4b74-8152-b080e41a3292"> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <a class="back-to-top" href="#top"><span class="icon-chevron-up"></span> Back to top</a>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="page-footer__third"> 
+        <div class="region region-footer-third"> 
+         <div class="block block--block-blackboardfindproduct " id="block-blackboardfindproduct" data-block-plugin-id="block_content:2177ea62-5c1e-49df-91f2-e00f28235364"> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <div class="find-product"> 
+            <h2>Not sure which product?</h2> 
+            <p>Blackboard has many products. Let&nbsp;us help you find what you need.</p> 
+            <a class="button" href="/" title="Find My Product">Find My Product</a>
+           </div>
+          </div> 
+         </div> 
+         <div class="block block--block-allyjs " id="block-allyjs" data-block-plugin-id="block_content:a43b54be-3874-4322-b717-e5e187d70041"> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+           <script data-ally-loader data-ally-platform-name="web" data-ally-client-id="4826" data-ally-af-style="flag_small" src="https://prod.ally.ac/integration/api/ally.ui.js">
+</script>
+          </div> 
+         </div> 
+         <div class="block block--block-bbuserfeedbackblock " id="block-bbuserfeedbackblock" data-block-plugin-id="bb_user_feedback_block"> 
+          <div aria-hidden="true" data-description="Provides ReactJS Script as BB User Feedbacks Block" class="hidden"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+  </div> 
+  <script src="/sites/default/files/js/js_Akazc-aZWDLBMdo4wALDLhuyTBX-5p3NP55qPOxsWxE.js"></script> 
+  <script src="/modules/custom/bb_widgets/bb_user_feedback_block/js/user-feedback.bundle.js?v=1.x"></script> 
+  <script src="/modules/custom/bb_widgets/bb_school_help_desk_block/js/school-help-desk-search.bundle.js?v=1.x"></script> 
+  <script src="/sites/default/files/js/js_UFFnI5kYZO66EsJr619F2naa1hyo-rMVPm0Jr9KUyOs.js"></script> 
+  <script src="/modules/custom/bb_widgets/bb_algolia_search_ui/js/app.bundle.js?v=1.x"></script> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fb66a3283b","applicationID":"70695766","transactionName":"YQcBNxcEV0RYVhdeXFhNIgARDFZZFlERQkNXDjwTFwBmRVxbB1JBaQ4KDQ4W","queueTime":0,"applicationTime":869,"atts":"TUACQV8eREo=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;rayId&quot;:&quot;539f65892fc4ca94&quot;,&quot;version&quot;:&quot;2019.10.2&quot;,&quot;startTime&quot;:1574472824289}"></script>   
+ </body>
+</html>

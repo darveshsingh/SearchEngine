@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <!--  <meta http-equiv="content-type" content="text/html; charset=utf-8" /> --> 
+  <meta http-equiv="Expires: 0" content=""> 
+  <meta http-equiv="Pragma: no-cache" content=""> 
+  <meta http-equiv="Cache-Control: no-store,no-cache,must-revalidate,post-check=0,pre-check=0" content=""> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <title>Event selection</title> 
+  <link href="_media/css/bootstrap.css" rel="stylesheet" type="text/css"> 
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.min.css" rel="stylesheet"> 
+  <!-- Ionicons --> 
+  <link href="https://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet" type="text/css"> 
+  <!-- Theme style --> 
+  <link href="_media/css/AdminLTE.css" rel="stylesheet" type="text/css"> 
+  <link href="_media/css/skins/skin-blue.css" rel="stylesheet" type="text/css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+  <script src="_media/js/plugins/slimScroll/jquery.slimscroll.js"></script> 
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]--> 
+  <link href="_media/css/AdminLTE_Custom.css" rel="stylesheet" type="text/css"> 
+  <link href="_media/css/custom/filmstrip.css" rel="stylesheet" type="text/css"> 
+  <link href="_media/css/custom/ticket.css" rel="stylesheet" type="text/css"> 
+  <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script> 
+  <link href="https://printjs-4de6.kxcdn.com/print.min.css" rel="stylesheet" type="text/css"> 
+  <link href="_media/js/plugins/datatables.1.10.13/datatables.min.css" rel="stylesheet" type="text/css"> 
+  <link href="_media/js/plugins/fullcalendar-3.0.0/fullcalendar.min.css" rel="stylesheet" type="text/css"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+  <link href="_media/css/custom/public.css" rel="stylesheet" type="text/css"> 
+  <link href="_media/css/custom/page_header.css" rel="stylesheet" type="text/css"> 
+  <link href="_media/css/custom/purchase_stage.css" rel="stylesheet" type="text/css"> 
+  <link href="_media/css/custom/page_footer.css" rel="stylesheet" type="text/css"> 
+  <link href="_media/css/custom/error_message.css" rel="stylesheet" type="text/css"> 
+  <link href="_media/css/custom/events.css" rel="stylesheet" type="text/css"> 
+ </head> 
+ <body class="skin-blue layout-boxed layout-top-nav"> 
+  <div class="wrapper"> 
+   <header class="main-header" style="min-height: 200px"> 
+    <div class="wrapper boxed-layout"> 
+     <nav class="navbar navbar-static-top" role="navigation" style="background-color: #f26629; text-align: center;"> 
+      <a href="https://www.universityplayers.com/"><img src="_media/UpLogo2.jpg" min-height: 300px;></a> 
+     </nav> 
+    </div> 
+   </header> 
+   <section class="content"> 
+    <div class="row text-center hidden-xs"> 
+     <div class="col-xs-12"> 
+      <div class="breadcrumb flat"> 
+       <a href="#" class="active">Select event</a> 
+       <a href="#">Performance</a> 
+       <a href="#">Select tickets</a> 
+       <a href="#">Patron information</a> 
+       <a href="#">Payment</a> 
+       <a href="#">Receipt</a> 
+      </div> 
+     </div> 
+    </div> 
+    <noscript> 
+     <div class="row"> 
+      <div class="col-xs-12"> 
+       <div class="box box-solid box-danger"> 
+        <div class="box-header"> 
+         <h4 class="box-title"><i class="fa fa-ban"></i> BROWSER ERROR</h4> 
+        </div> 
+        <div class="box-body">
+          Your browser either has Javascript turned off or is unable to run Javascript code.
+         <br>
+         <strong>Javascript needs to be turned on.</strong> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </noscript> 
+    <div class="col-xs-12 event-box"> 
+     <div class="row event_row" style="height: 70px; padding-top: 10px"> 
+      <div class="col-sm-6 col-xs-8"> 
+       <strong style="font-size: 16px">Already have an account, please login.</strong> 
+      </div> 
+      <div class="col-sm-6 col-xs-4 pull-right"> 
+       <a class="btn btn-block btn-success btn-flat btn_purchase" href="customer.php"> Login </a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="row"> 
+     <div class="col-xs-12"> 
+      <div class="btn-group pull-right"> 
+       <a type="button" class="btn btn-default" title="Show Event list View" href="#eventlist" data-toggle="tab"><i class="fa fa-lg fa-list"></i></a> 
+       <a type="button" class="btn btn-default" title="Show Calendar View" href="#calendar" data-toggle="tab" onclick="reloadCalendar();"><i class="fa fa-lg fa-calendar"></i></a> 
+      </div> 
+     </div> 
+     <div class="col-xs-12"> 
+      <div class="nav-tabs-custom" style="background-color: transparent"> 
+       <div class="tab-content" style="background-color: transparent"> 
+        <div class="tab-pane " id="calendar" style="background: white"> 
+         <div id="cswt6_calendar"></div>
+         <script> var cswt6_events='[{"master_id":"535","title":"BEAUTY AND THE BEAST","start":"2019-11-29","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"November 29, 2019","evturl":"tickets.php?type=interactive-chart&c=472&amp;domain=INTERNET&e=535&d=1992","domain":"INTERNET"},{"master_id":"535","title":"BEAUTY AND THE BEAST","start":"2019-11-30","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"November 30, 2019","evturl":"tickets.php?type=interactive-chart&c=473&amp;domain=INTERNET&e=535&d=1993","domain":"INTERNET"},{"master_id":"535","title":"BEAUTY AND THE BEAST","start":"2019-11-30","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"November 30, 2019","evturl":"tickets.php?type=interactive-chart&c=474&amp;domain=INTERNET&e=535&d=1994","domain":"INTERNET"},{"master_id":"535","title":"BEAUTY AND THE BEAST","start":"2019-12-01","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"December 01, 2019","evturl":"tickets.php?type=interactive-chart&c=470&amp;domain=INTERNET&e=535&d=1995","domain":"INTERNET"},{"master_id":"535","title":"BEAUTY AND THE BEAST","start":"2019-12-04","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"December 04, 2019","evturl":"tickets.php?type=interactive-chart&c=476&amp;domain=INTERNET&e=535&d=1996","domain":"INTERNET"},{"master_id":"535","title":"BEAUTY AND THE BEAST","start":"2019-12-05","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"December 05, 2019","evturl":"tickets.php?type=interactive-chart&c=477&amp;domain=INTERNET&e=535&d=1997","domain":"INTERNET"},{"master_id":"535","title":"BEAUTY AND THE BEAST","start":"2019-12-06","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"December 06, 2019","evturl":"tickets.php?type=interactive-chart&c=478&amp;domain=INTERNET&e=535&d=1998","domain":"INTERNET"},{"master_id":"535","title":"BEAUTY AND THE BEAST","start":"2019-12-07","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"December 07, 2019","evturl":"tickets.php?type=interactive-chart&c=479&amp;domain=INTERNET&e=535&d=1999","domain":"INTERNET"},{"master_id":"535","title":"BEAUTY AND THE BEAST","start":"2019-12-07","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"December 07, 2019","evturl":"tickets.php?type=interactive-chart&c=480&amp;domain=INTERNET&e=535&d=2000","domain":"INTERNET"},{"master_id":"535","title":"BEAUTY AND THE BEAST","start":"2019-12-08","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"December 08, 2019","evturl":"tickets.php?type=interactive-chart&c=481&amp;domain=INTERNET&e=535&d=2001","domain":"INTERNET"},{"master_id":"536","title":"THE CASSILIS ENGAGEMENT","start":"2020-01-31","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"January 31, 2020","evturl":"tickets.php?type=interactive-chart&c=494&amp;domain=INTERNET&e=536&d=2003","domain":"INTERNET"},{"master_id":"536","title":"THE CASSILIS ENGAGEMENT","start":"2020-02-01","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"February 01, 2020","evturl":"tickets.php?type=interactive-chart&c=495&amp;domain=INTERNET&e=536&d=2004","domain":"INTERNET"},{"master_id":"536","title":"THE CASSILIS ENGAGEMENT","start":"2020-02-01","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"February 01, 2020","evturl":"tickets.php?type=interactive-chart&c=496&amp;domain=INTERNET&e=536&d=2005","domain":"INTERNET"},{"master_id":"536","title":"THE CASSILIS ENGAGEMENT","start":"2020-02-02","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"February 02, 2020","evturl":"tickets.php?type=interactive-chart&c=497&amp;domain=INTERNET&e=536&d=2006","domain":"INTERNET"},{"master_id":"536","title":"THE CASSILIS ENGAGEMENT","start":"2020-02-05","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"February 05, 2020","evturl":"tickets.php?type=interactive-chart&c=498&amp;domain=INTERNET&e=536&d=2007","domain":"INTERNET"},{"master_id":"536","title":"THE CASSILIS ENGAGEMENT","start":"2020-02-06","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"February 06, 2020","evturl":"tickets.php?type=interactive-chart&c=499&amp;domain=INTERNET&e=536&d=2008","domain":"INTERNET"},{"master_id":"536","title":"THE CASSILIS ENGAGEMENT","start":"2020-02-07","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"February 07, 2020","evturl":"tickets.php?type=interactive-chart&c=500&amp;domain=INTERNET&e=536&d=2009","domain":"INTERNET"},{"master_id":"536","title":"THE CASSILIS ENGAGEMENT","start":"2020-02-08","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"February 08, 2020","evturl":"tickets.php?type=interactive-chart&c=501&amp;domain=INTERNET&e=536&d=2010","domain":"INTERNET"},{"master_id":"536","title":"THE CASSILIS ENGAGEMENT","start":"2020-02-08","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"February 08, 2020","evturl":"tickets.php?type=interactive-chart&c=502&amp;domain=INTERNET&e=536&d=2011","domain":"INTERNET"},{"master_id":"536","title":"THE CASSILIS ENGAGEMENT","start":"2020-02-09","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"February 09, 2020","evturl":"tickets.php?type=interactive-chart&c=503&amp;domain=INTERNET&e=536&d=2012","domain":"INTERNET"},{"master_id":"537","title":"MORNING SACRIFICE","start":"2020-02-28","theatre":"Hatch Studio Theatre","location":"University of Windsor","formattedDate":"February 28, 2020","evturl":"tickets.php?type=interactive-chart&c=516&amp;domain=INTERNET&e=537&d=2014","domain":"INTERNET"},{"master_id":"537","title":"MORNING SACRIFICE","start":"2020-02-29","theatre":"Hatch Studio Theatre","location":"University of Windsor","formattedDate":"February 29, 2020","evturl":"tickets.php?type=interactive-chart&c=517&amp;domain=INTERNET&e=537&d=2015","domain":"INTERNET"},{"master_id":"537","title":"MORNING SACRIFICE","start":"2020-02-29","theatre":"Hatch Studio Theatre","location":"University of Windsor","formattedDate":"February 29, 2020","evturl":"tickets.php?type=interactive-chart&c=518&amp;domain=INTERNET&e=537&d=2016","domain":"INTERNET"},{"master_id":"537","title":"MORNING SACRIFICE","start":"2020-03-01","theatre":"Hatch Studio Theatre","location":"University of Windsor","formattedDate":"March 01, 2020","evturl":"tickets.php?type=interactive-chart&c=519&amp;domain=INTERNET&e=537&d=2017","domain":"INTERNET"},{"master_id":"537","title":"MORNING SACRIFICE","start":"2020-03-04","theatre":"Hatch Studio Theatre","location":"University of Windsor","formattedDate":"March 04, 2020","evturl":"tickets.php?type=interactive-chart&c=520&amp;domain=INTERNET&e=537&d=2018","domain":"INTERNET"},{"master_id":"537","title":"MORNING SACRIFICE","start":"2020-03-05","theatre":"Hatch Studio Theatre","location":"University of Windsor","formattedDate":"March 05, 2020","evturl":"tickets.php?type=interactive-chart&c=521&amp;domain=INTERNET&e=537&d=2019","domain":"INTERNET"},{"master_id":"537","title":"MORNING SACRIFICE","start":"2020-03-06","theatre":"Hatch Studio Theatre","location":"University of Windsor","formattedDate":"March 06, 2020","evturl":"tickets.php?type=interactive-chart&c=522&amp;domain=INTERNET&e=537&d=2020","domain":"INTERNET"},{"master_id":"537","title":"MORNING SACRIFICE","start":"2020-03-07","theatre":"Hatch Studio Theatre","location":"University of Windsor","formattedDate":"March 07, 2020","evturl":"tickets.php?type=interactive-chart&c=523&amp;domain=INTERNET&e=537&d=2021","domain":"INTERNET"},{"master_id":"537","title":"MORNING SACRIFICE","start":"2020-03-07","theatre":"Hatch Studio Theatre","location":"University of Windsor","formattedDate":"March 07, 2020","evturl":"tickets.php?type=interactive-chart&c=524&amp;domain=INTERNET&e=537&d=2022","domain":"INTERNET"},{"master_id":"537","title":"MORNING SACRIFICE","start":"2020-03-08","theatre":"Hatch Studio Theatre","location":"University of Windsor","formattedDate":"March 08, 2020","evturl":"tickets.php?type=interactive-chart&c=525&amp;domain=INTERNET&e=537&d=2023","domain":"INTERNET"},{"master_id":"538","title":"STAG AND DOE","start":"2020-03-27","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"March 27, 2020","evturl":"tickets.php?type=interactive-chart&c=538&amp;domain=INTERNET&e=538&d=2025","domain":"INTERNET"},{"master_id":"538","title":"STAG AND DOE","start":"2020-03-28","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"March 28, 2020","evturl":"tickets.php?type=interactive-chart&c=539&amp;domain=INTERNET&e=538&d=2026","domain":"INTERNET"},{"master_id":"538","title":"STAG AND DOE","start":"2020-03-28","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"March 28, 2020","evturl":"tickets.php?type=interactive-chart&c=540&amp;domain=INTERNET&e=538&d=2027","domain":"INTERNET"},{"master_id":"538","title":"STAG AND DOE","start":"2020-03-29","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"March 29, 2020","evturl":"tickets.php?type=interactive-chart&c=541&amp;domain=INTERNET&e=538&d=2028","domain":"INTERNET"},{"master_id":"538","title":"STAG AND DOE","start":"2020-04-01","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"April 01, 2020","evturl":"tickets.php?type=interactive-chart&c=542&amp;domain=INTERNET&e=538&d=2029","domain":"INTERNET"},{"master_id":"538","title":"STAG AND DOE","start":"2020-04-02","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"April 02, 2020","evturl":"tickets.php?type=interactive-chart&c=543&amp;domain=INTERNET&e=538&d=2030","domain":"INTERNET"},{"master_id":"538","title":"STAG AND DOE","start":"2020-04-03","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"April 03, 2020","evturl":"tickets.php?type=interactive-chart&c=544&amp;domain=INTERNET&e=538&d=2031","domain":"INTERNET"},{"master_id":"538","title":"STAG AND DOE","start":"2020-04-04","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"April 04, 2020","evturl":"tickets.php?type=interactive-chart&c=545&amp;domain=INTERNET&e=538&d=2032","domain":"INTERNET"},{"master_id":"538","title":"STAG AND DOE","start":"2020-04-04","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"April 04, 2020","evturl":"tickets.php?type=interactive-chart&c=546&amp;domain=INTERNET&e=538&d=2033","domain":"INTERNET"},{"master_id":"538","title":"STAG AND DOE","start":"2020-04-05","theatre":"Essex Hall Theatre","location":"University of Windsor","formattedDate":"April 05, 2020","evturl":"tickets.php?type=interactive-chart&c=547&amp;domain=INTERNET&e=538&d=2034","domain":"INTERNET"}]';</script> 
+        </div> 
+        <div class="tab-pane active" id="eventlist"> 
+         <div class="row"> 
+          <div class="col-xs-12 event-box"> 
+           <div class="row event_row"> 
+            <div class="col-sm-2 hidden-xs"> 
+             <div style="margin: 1px; position: relative; height: 100px;"> 
+              <img class="img-responsive" style="padding: 5px 0; max-width: 100%; max-height: 100px; display: block; margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0; " src="image.php?type=show1&amp;id=535" alt="BEAUTY AND THE BEAST (Image)"> 
+             </div> 
+            </div> 
+            <div class="col-sm-8 col-xs-12"> 
+             <div class="row"> 
+              <div class="col-sm-8 col-xs-12"> 
+               <h4><strong>BEAUTY AND THE BEAST</strong></h4> Essex Hall Theatre
+               <br> University of Windsor 
+              </div> 
+              <div class="col-sm-4 hidden-xs txt-middle event_dates">
+                Nov 29, 2019
+               <br>through
+               <br>Dec 08, 2019 
+              </div> 
+             </div> 
+            </div> 
+            <div class="col-sm-2 col-xs-12"> 
+             <div class="row"> 
+              <div class="col-sm-12 col-xs-6 pull-right"> 
+               <a class="btn btn-block btn-success btn-flat btn_purchase" href="event-details.php?e=535"> Purchase </a> 
+              </div> 
+              <div class="col-sm-12 col-xs-6"> 
+               <a class="btn btn-block btn-info btn-flat btn_purchase" onclick="showEventDetail(535, true)"> Event Details </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="col-xs-12"> 
+            <div class="row event_detail" id="eventdetail_535" style="display: none; background-color: white; margin-bottom: 10px; padding-bottom: 10px"> 
+             <div class="col-xs-6"> 
+              <h4><strong>Event Details</strong></h4> 
+             </div> 
+             <div class="col-xs-6"> 
+              <button type="button" class="btn btn-box-tool pull-right" onclick="showEventDetail(535, false)"><i class="fa fa-times"></i></button> 
+             </div> 
+             <div class="col-xs-12">
+               Audiences of all ages will be thrilled by this dramatic retelling of the classic tale through movement and music.
+              <br>
+              <br> Here we encounter two worlds - the domestic world of Beauty's family in mid-eighteenth-century France, safe and familiar - and another world, first stumbled upon by her merchant father: a place of great riches and disturbing nightmares, dominated by the fearsome and tragic Beast. Uniting the two is Beauty's humility and sense of duty, which slowly matures into transforming love.
+              <br>
+              <br>NOVEMBER 30 2PM MATINEE will be a RELAXED PERFORMANCE 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="col-xs-12 event-box"> 
+           <div class="row event_row"> 
+            <div class="col-sm-2 hidden-xs"> 
+             <div style="margin: 1px; position: relative; height: 100px;"> 
+              <img class="img-responsive" style="padding: 5px 0; max-width: 100%; max-height: 100px; display: block; margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0; " src="image.php?type=show1&amp;id=536" alt="THE CASSILIS ENGAGEMENT (Image)"> 
+             </div> 
+            </div> 
+            <div class="col-sm-8 col-xs-12"> 
+             <div class="row"> 
+              <div class="col-sm-8 col-xs-12"> 
+               <h4><strong>THE CASSILIS ENGAGEMENT</strong></h4> Essex Hall Theatre
+               <br> University of Windsor 
+              </div> 
+              <div class="col-sm-4 hidden-xs txt-middle event_dates">
+                Jan 31, 2020
+               <br>through
+               <br>Feb 09, 2020 
+              </div> 
+             </div> 
+            </div> 
+            <div class="col-sm-2 col-xs-12"> 
+             <div class="row"> 
+              <div class="col-sm-12 col-xs-6 pull-right"> 
+               <a class="btn btn-block btn-success btn-flat btn_purchase" href="event-details.php?e=536"> Purchase </a> 
+              </div> 
+              <div class="col-sm-12 col-xs-6"> 
+               <a class="btn btn-block btn-info btn-flat btn_purchase" onclick="showEventDetail(536, true)"> Event Details </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="col-xs-12"> 
+            <div class="row event_detail" id="eventdetail_536" style="display: none; background-color: white; margin-bottom: 10px; padding-bottom: 10px"> 
+             <div class="col-xs-6"> 
+              <h4><strong>Event Details</strong></h4> 
+             </div> 
+             <div class="col-xs-6"> 
+              <button type="button" class="btn btn-box-tool pull-right" onclick="showEventDetail(536, false)"><i class="fa fa-times"></i></button> 
+             </div> 
+             <div class="col-xs-12">
+               A period comedy in 4 acts.
+              <br>
+              <br> Young Geoffrey Cassilis, the widowed Mrs. Cassilis' only son and heir to a vast country estate and fortune, has fallen in love with Ethel Borridge, a lowly shopgirl he met during an omnibus accident in London. Mrs. Cassilis' friends and relations in the country around the family seat at Milverton are appalled both at the engagement and at Mrs. Cassilis' seeming approval of it. "Seeming" is indeed the key word. Mrs. Cassilis is afraid that if she were to let her true feelings of opposition be known and object openly to the engagement, Geoffrey might marry the girl out of spite. Instead, Mrs. Cassilis' strategy is to invite Ethel and her mother to stay with them in the country to see if the lowborn city girl can really stand the dull kind of life her fiance will live. 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="col-xs-12 event-box"> 
+           <div class="row event_row"> 
+            <div class="col-sm-2 hidden-xs"> 
+             <div style="margin: 1px; position: relative; height: 100px;"> 
+              <img class="img-responsive" style="padding: 5px 0; max-width: 100%; max-height: 100px; display: block; margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0; " src="image.php?type=show1&amp;id=537" alt="MORNING SACRIFICE (Image)"> 
+             </div> 
+            </div> 
+            <div class="col-sm-8 col-xs-12"> 
+             <div class="row"> 
+              <div class="col-sm-8 col-xs-12"> 
+               <h4><strong>MORNING SACRIFICE</strong></h4> Hatch Studio Theatre
+               <br> University of Windsor 
+              </div> 
+              <div class="col-sm-4 hidden-xs txt-middle event_dates">
+                Feb 28, 2020
+               <br>through
+               <br>Mar 08, 2020 
+              </div> 
+             </div> 
+            </div> 
+            <div class="col-sm-2 col-xs-12"> 
+             <div class="row"> 
+              <div class="col-sm-12 col-xs-6 pull-right"> 
+               <a class="btn btn-block btn-success btn-flat btn_purchase" href="event-details.php?e=537"> Purchase </a> 
+              </div> 
+              <div class="col-sm-12 col-xs-6"> 
+               <a class="btn btn-block btn-info btn-flat btn_purchase" onclick="showEventDetail(537, true)"> Event Details </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="col-xs-12"> 
+            <div class="row event_detail" id="eventdetail_537" style="display: none; background-color: white; margin-bottom: 10px; padding-bottom: 10px"> 
+             <div class="col-xs-6"> 
+              <h4><strong>Event Details</strong></h4> 
+             </div> 
+             <div class="col-xs-6"> 
+              <button type="button" class="btn btn-box-tool pull-right" onclick="showEventDetail(537, false)"><i class="fa fa-times"></i></button> 
+             </div> 
+             <div class="col-xs-12">
+               Morning Sacrifice is set in the staff room of a girls high school, on the eve of the Second World War in September 1939. Cusack's skill at characterization and the creating of escalating tension make the play a fascinating study in day to day routine which is stripped away to reveal a hall of horrors, nastiness and hypocrisy. The action alternates between comedy and horror as the teachers battle tooth and nail for the good of the pupils and the reputation of the school. 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="col-xs-12 event-box"> 
+           <div class="row event_row"> 
+            <div class="col-sm-2 hidden-xs"> 
+             <div style="margin: 1px; position: relative; height: 100px;"> 
+              <img class="img-responsive" style="padding: 5px 0; max-width: 100%; max-height: 100px; display: block; margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0; " src="image.php?type=show1&amp;id=538" alt="STAG AND DOE (Image)"> 
+             </div> 
+            </div> 
+            <div class="col-sm-8 col-xs-12"> 
+             <div class="row"> 
+              <div class="col-sm-8 col-xs-12"> 
+               <h4><strong>STAG AND DOE</strong></h4> Essex Hall Theatre
+               <br> University of Windsor 
+              </div> 
+              <div class="col-sm-4 hidden-xs txt-middle event_dates">
+                Mar 27, 2020
+               <br>through
+               <br>Apr 05, 2020 
+              </div> 
+             </div> 
+            </div> 
+            <div class="col-sm-2 col-xs-12"> 
+             <div class="row"> 
+              <div class="col-sm-12 col-xs-6 pull-right"> 
+               <a class="btn btn-block btn-success btn-flat btn_purchase" href="event-details.php?e=538"> Purchase </a> 
+              </div> 
+              <div class="col-sm-12 col-xs-6"> 
+               <a class="btn btn-block btn-info btn-flat btn_purchase" onclick="showEventDetail(538, true)"> Event Details </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="col-xs-12"> 
+            <div class="row event_detail" id="eventdetail_538" style="display: none; background-color: white; margin-bottom: 10px; padding-bottom: 10px"> 
+             <div class="col-xs-6"> 
+              <h4><strong>Event Details</strong></h4> 
+             </div> 
+             <div class="col-xs-6"> 
+              <button type="button" class="btn btn-box-tool pull-right" onclick="showEventDetail(538, false)"><i class="fa fa-times"></i></button> 
+             </div> 
+             <div class="col-xs-12">
+               Bonnie and Brad are having a party to raise money for their upcoming wedding, the cost of which has secretly gotten out of control. Their wisecracking Maid of Honour, Dee, is still getting over being left at the altar seven years ago - and now she has to come face-to-face with her ex. Bridezilla Mandy and her doting groom Rob are getting married today - even though their big white tent blew away in last night's storm. And oh yeah.single dad Jay just found out his entire catering staff is in jail! It's all happening at the same time, in the same community hall kitchen, in the same small town.
+              <br>
+              <br>Taking place over one eventful Saturday in June, the two couples strike a deal to share the local reception hall for their Stag and Doe and wedding. Among the unset Jell-o shots, a missing wedding cake, and a disastrous first dance, past relationships are examined, current couples are put to the test, and new romance blossoms.
+              <br>
+              <br>By turns wildly funny and unexpectedly touching, Stag and Doe offers a look at a distinctly rural Canadian prenuptial tradition and shines a light on the nature of love, marriage, and weddings. 
+             </div> 
+            </div> 
+           </div> 
+          </div>  
+         </div> 
+        </div> 
+        <!-- /.tab-pane --> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <script type="text/javascript">
+	function showEventDetail(id, visible)
+	{
+		if (visible)
+		{
+			$("#eventdetail_" + id).show();
+		}
+		else
+		{
+			$("#eventdetail_" + id).hide();
+		}
+	}
+    
+	function event_locationChange(element)
+	{
+    	if ($(element).find("option:selected").attr('value') === undefined)
+    	{
+    		window.location.href = "events.php";
+    	}
+    	else
+    	{
+    		window.location.href = "?location=" + $(element).find("option:selected").attr('value');
+    	}
+	}
+
+	function event_theatreChange(element)
+	{
+    	if ($(element).find("option:selected").attr('value') === undefined)
+    	{
+    		window.location.href = "events.php";
+    	}
+    	else
+    	{
+    		window.location.href = "?theatre=" + $(element).find("option:selected").attr('value');
+    	}
+	}
+
+	function event_typeChange(element)
+	{
+    	if ($(element).find("option:selected").attr('value') === undefined)
+    	{
+    		window.location.href = "events.php";
+    	}
+    	else
+    	{
+    		window.location.href = "?eventType=" + $(element).find("option:selected").attr('value');
+    	}
+	}
+	
+</script> 
+   <footer class="footer"> 
+    <div class="row text-center"> 
+     <div class="col-xs-12">
+      <b>University Players - University of Windsor</b>
+      <br>Essex Hall Theatre
+      <br>401 Sunset Avenue, Windsor, ON N9B 3P4
+      <br>Box Office Phone: 519-253-3000 Ext. 2808
+      <br>Box Office Hours: During Show Times - M-F 2-8 PM, Sat 11 AM-8 PM, Sun 11 AM-2 PM
+      <br> 
+     </div> 
+    </div> 
+   </footer> 
+  </div> 
+  <div id="cswt6_modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"> 
+  </div> 
+  <!-- Scripts to run after page as loaded  -- Reduces Page load time --> 
+  <script src="_media/js/plugins/moment.2.14.1/moment.2.14.1.js"></script> 
+  <script src="_media/js/plugins/fullcalendar-3.0.0/fullcalendar.min.js"></script> 
+  <script src="_media/js/plugins/ImageMapResizer/js/imageMapResizer.js"></script> 
+  <script src="_media/js/plugins/Mapify/build/jquery.mapify.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script> 
+  <script src="_media/js/plugins/input-mask/jquery.inputmask.js"></script> 
+  <script src="_media/js/plugins/input-mask/jquery.inputmask.phone.extensions.js"></script> 
+  <script>
+
+	function reloadCalendar()
+	{
+		
+	}
+
+	
+		$(document).ready(function()
+		{
+			
+			$(".select-control").select2({
+				theme: "bootstrap"
+			});
+
+			
+			if ($("#cswt6_calendar").length > 0)
+			{
+				$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				    // TODO: check href of e.target to detect your tab
+				    $('#cswt6_calendar').fullCalendar('render');
+
+				    if ($(this).attr("href") == "#eventlist")
+				    {
+						$("div.nav-tabs-custom").css('background', 'transparent');
+				    }
+				    else
+				    {
+				    	$("div.nav-tabs-custom").css('background', '');
+				    }
+					console.log($(this).attr('href'));
+				    
+				});
+				
+
+				
+				$("#cswt6_calendar").fullCalendar({
+					events: JSON.parse(cswt6_events),
+					eventClick: function(event, jsEvent, view)
+					{
+						console.log(event);
+						
+						var content = "<div class='modal-dialog' role='document'>"
+										+ "<div class='modal-content'>"
+											+ "<div class='modal-header'>"
+												+ "<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>"
+												+ "<h4 class='modal-title' id='myModalLabel'>" + event.title + "</h4>"
+											+ "</div>"
+											+ "<div class='modal-body'>"
+												+ "<div class='row event_row'>"
+													+ "<div class='event_ImageFrame hidden-xs'>"
+        												+ "<img class='event_Image' src='image.php?type=show1&amp;id=" + event.master_id + "'>"
+    												+ "</div>"
+    												+ "<div class='event_ContentFrame'>"
+    													+ "<div class='row'>"
+    														+ "<div class='col-xs-12'>"
+                                                                + "Theatre: " + event.theatre + "<br>"
+                                                                + "Location: " + event.location + "<br>"
+                                                                + "Date: " + event.formattedDate + "<br>"
+    														+ "</div>"
+    													+ "</div>"
+    												+ "</div>"
+												+ "</div>"
+											+ "</div>"
+    										+ "<div class='modal-footer'>"
+    											+ "<button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>"
+    											+ "<a class='btn btn-info' href='" + event.evturl + "'>"
+    					        				+ "Purchase"
+    					            			+ "</a>"
+    										+ "</div>"
+										+ "</div>"
+									+ "</div>"
+
+						// Load the content into the modal
+						$("#cswt6_modal").html(content);
+						$('#cswt6_modal').modal({
+							  keyboard: false
+						});
+						
+						//window.location.href = "event-details.php?e=" + event.master_id;
+					}
+				});
+			}
+		});
+
+		function showinfo(element)
+		{
+			var event = $(element).closest(".row").find("#showinfo").html();
+			event = JSON.parse(event);
+						
+			var content = "<div class='modal-dialog' role='document'>"
+				+ "<div class='modal-content'>"
+					+ "<div class='modal-header'>"
+						+ "<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>"
+						+ "<h4 class='modal-title' id='myModalLabel'>" + event.title + "</h4>"
+					+ "</div>"
+					+ "<div class='modal-body'>"
+						+ "<div class='row event_row'>"
+							+ "<div class='event_ImageFrame hidden-xs'>"
+								+ "<img class='event_Image' src='image.php?type=show1&amp;id=" + event.master_id + "'>"
+							+ "</div>"
+							+ "<div class='event_ContentFrame'>"
+    							+ "<div class='row'>"
+        							+ "<div class='col-xs-12'>"
+                                        + "Theatre: " + event.theatre + "<br>"
+                                        + "Location: " + event.location + "<br>"
+                                        + "Date: " + event.formattedDate + "<br>"
+        							+ "</div>"
+        						+ "</div>"
+        						+ "<br>"
+        						+ "<div class='row'>"
+            						+ "<div class='col-xs-12'>"
+                                        + event.showinfo
+            						+ "</div>"
+            					+ "</div>"
+							+ "</div>"
+						+ "</div>"
+					+ "</div>"
+					+ "<div class='modal-footer'>"
+						+ "<button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>"
+						+ "<a class='btn btn-info' href='" + event.evturl + "'>"
+        				+ "Purchase"
+            			+ "</a>"
+					+ "</div>"
+				+ "</div>"
+			+ "</div>"
+
+            // Load the content into the modal
+            $("#cswt6_modal").html(content);
+            $('#cswt6_modal').modal({
+            	  keyboard: false
+            });
+
+		}
+	</script> 
+  <script src="_media/js/plugins/FilmStripJS/filmstrip.js">
+		filmsjQuery(document).ready(function($) {
+ 	 	  $('#filmstrip').filmstrip({
+  	      interval: 3000
+  	  });
+	});
+	</script>    
+ </body>
+</html>

@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+ <head> 
+  <!-- Google Tag Manager --> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5G8Z8WS');</script> 
+  <!-- End Google Tag Manager --> 
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"fb66a3283b",applicationID:"70695766"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script> 
+  <script>window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = '4KT8J';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m && m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'); return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(c,d,i){if(!c || document.cookie.match('fs_uid=[`;`]*`[`;`]*`[`;`]*`')){
+    d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
+    ';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
+})(window,document,window['_fs_namespace'],'script','user');</script> 
+  <meta itemprop="acquia_lift:content_title" content="Search"> 
+  <meta itemprop="acquia_lift:content_type" content="page"> 
+  <meta itemprop="acquia_lift:page_type" content="content page"> 
+  <meta itemprop="acquia_lift:context_language" content="en"> 
+  <meta itemprop="acquia_lift:content_section" content=""> 
+  <meta itemprop="acquia_lift:content_keywords" content=""> 
+  <meta itemprop="acquia_lift:post_id" content=""> 
+  <meta itemprop="acquia_lift:content_uuid" content=""> 
+  <meta itemprop="acquia_lift:published_date" content=""> 
+  <meta itemprop="acquia_lift:persona" content=""> 
+  <meta itemprop="acquia_lift:engagement_score" content="1"> 
+  <meta itemprop="acquia_lift:account_id" content="BLACKBOARD"> 
+  <meta itemprop="acquia_lift:site_id" content="blackboardprod"> 
+  <meta itemprop="acquia_lift:contentOrigin" content="8480a1a7-d4ab-4a9f-7700-d38f23a3ba6a"> 
+  <meta itemprop="acquia_lift:liftAssetsURL" content="https://lift3assets.lift.acquia.com/stable"> 
+  <meta itemprop="acquia_lift:bootstrapMode" content="auto"> 
+  <meta itemprop="acquia_lift:contentReplacementMode" content="trusted"> 
+  <script src="https://lift3assets.lift.acquia.com/stable/lift.js" async></script> 
+  <script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","/sites/default/files/google_analytics/analytics.js?q0pw5k","ga");ga("create", "UA-1394520-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script> 
+  <meta name="title" content="Search | Blackboard Help"> 
+  <meta name="Generator" content="Drupal 8 (https://www.drupal.org)"> 
+  <meta name="MobileOptimized" content="width"> 
+  <meta name="HandheldFriendly" content="true"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta> 
+  <link rel="shortcut icon" href="/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon"> 
+  <title>Search | Blackboard Help</title> 
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_JmE5k1BnZts6fYkjLHPANzcup0ZP78Q4_wt5i6bTpyo.css?q0pw5k"> 
+  <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic&amp;subset=latin,cyrillic,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext"> 
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_pwMl3ukEBmQzKHa_P-R3NMTsibG2Ka6ggG88TdmsMKs.css?q0pw5k"> 
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"search","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","currentQuery":{"f":["",""],"search":"accessibility"}},"pluralDelimiter":"\u0003","bb_algolia_search_ui_block":{"algolia":{"clientId":"","apiKey":""},"searchButton":"Search","searchInputPlaceholder":null,"debug":0,"ga_id":"UA-1394520-1"},"bb_school_help_desk_block":{"placeholder_text":"Type institution name to get support","button_text":"Go","search_hint_text":"Press enter to search","debug":null,"ga_id":"UA-1394520-1"},"bb_user_feedback_block":{"firebase":{"apiKey":"AIzaSyAwRR0lNtqG8BYSYvhTP80Ai1By8XLpjbM","authDomain":"help-user-feedback.firebaseapp.com","databaseURL":"https:\/\/help-user-feedback.firebaseio.com","projectId":"help-user-feedback","storageBucket":"","messagingSenderId":"","appId":"1:567988132324:web:774f65db53e24c06"},"helpfulToolTipText":"Helpful?","unhelpfulToolTipText":"Not Helpful?","unhelpfulModalHeading":"Not helpful?","unhelpfulModalBody":"Sorry this wasn\u0027t helpful. Let us know how to improve this section.","unhelpfulPlaceholderText":"What\u0027s missing or not helpful?","submitButtonText":"Send","cancelButtonText":"No, Thanks","showCancelButton":1,"debug":0,"ga_id":"UA-1394520-1"},"cookieconsent":{"message":"This website uses cookies to ensure you get the best experience. Click \u201cAccept\u201d to agree to our cookie policy. You can manage and opt out of cookies using your browser or device settings.","dismiss":"Accept","learnMore":"Learn more","link":"\/1004en_US","path":"","expiry":365,"target":"_blank","domain":".help.blackboard.com","markup":"\u003Cdiv class=\u0022cc_banner cc_container cc_container--open\u0022\u003E\n    \u003Ca href=\u0022#null\u0022 data-cc-event=\u0022click:dismiss\u0022 target=\u0022_blank\u0022 class=\u0022cc_btn cc_btn_accept_all\u0022\u003EAccept\u003C\/a\u003E\n    \u003Cp class=\u0022cc_message\u0022\u003EThis website uses cookies to ensure you get the best experience. Click \u201cAccept\u201d to agree to our cookie policy. You can manage and opt out of cookies using your browser or device settings. \u003Ca data-cc-if=\u0022options.link\u0022 target=\u0022_blank\u0022 class=\u0022cc_more_info\u0022 href=\u0022\/1004en_US\u0022\u003ELearn more\u003C\/a\u003E\u003C\/p\u003E\n    \u003Ca class=\u0022cc_logo\u0022 target=\u0022_blank\u0022 href=\u0022http:\/\/silktide.com\/cookieconsent\u0022\u003ECookie Consent plugin for the EU cookie law\u003C\/a\u003E\n\u003C\/div\u003E\n","container":".page-header","theme":"\/themes\/blackboard\/css\/cookieconsent.css"},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"thematic_release_notes_filter":{"message":"This product doesn\u0027t have any recently released features that match the selected filter."},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":null,"extNofollow":null,"extFollowNoOverride":null,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":".block--block-blackboard-content","extAlert":false,"extAlertText":"","mailtoClass":"0","mailtoLabel":"(link sends email)"}},"langPrefixes":{"en":"","ar":"ar-sa","ca":"ca-es","de":"de-de","es":"es-es","fi":"fi-fi","fr":"fr-fr","ja":"ja-jp","ko":"ko-kr","nl":"nl-nl","nb":"nb-no","pt-br":"pt-br","ru":"ru-ru","sv":"sv-se","tr":"tr-tr","zh-hans":"zh-hans","nn":"nn-no","cy":"cy-gb"},"langMapping":{"jp":"ja-jp","zh":"zh-hans"},"domainExceptions":{"bbcollab.com":{"ca":"en-us"}},"ajax":[],"user":{"uid":0,"permissionsHash":"d0487089e11c14032c2364e00e59b4a41f3c228bf4d43b2147b9c4581a71d156"}}</script> 
+  <!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]--> 
+  <script src="/sites/default/files/js/js_pn3aoKzHAtG5jrUppZewBdFDGcnQjVyjz1oGxWoi1ds.js"></script> 
+  <script src="//use.typekit.net/bnp0oul.js"></script> 
+  <script>try{Typekit.load({ async: true });}catch(e){}</script> 
+ </head> 
+ <body class="role-anonymous path-search"> 
+  <!-- Google Tag Manager (noscript) --> 
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5G8Z8WS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <!-- End Google Tag Manager (noscript) --> 
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas> 
+   <div class="layout-container"> 
+    <a href="#main-content" class="visually-hidden focusable"> Skip to main content </a> 
+    <a id="top"></a> 
+    <header class="page-header" role="banner"> 
+     <div class="page-header__content"> 
+      <div class="page-header__first"> 
+       <div class="region region-header-first"> 
+        <div class="block block--block-blackboardnavtoggle-2 " id="block-blackboardnavtoggle-2" data-block-plugin-id="block_content:b7d0db1b-b49c-4f8b-879f-9e74d8b06381"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <a class="nav-toggle"></a>
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-blackboardbranding " id="block-blackboard-blackboardbranding" data-block-plugin-id="block_content:2c8604e2-130e-4604-9dd5-dd92f52aaba3"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <span class="branding branding--medium"><a href="/"><strong>Blackboard</strong> Help</a></span> 
+          <span class="branding branding--small"><a href="/"><strong>Bb</strong> Help</a></span>
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-languageswitcher language-switcher-language-url" id="block-blackboard-languageswitcher" role="navigation" data-block-plugin-id="language_block:language_interface"> 
+         <h2>Language</h2> 
+         <ul class="links">
+          <li hreflang="en" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search" class="is-active"><a href="/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link is-active" hreflang="en" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">English</a></li>
+          <li hreflang="ar" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/ar-sa/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="ar" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">?????</a></li>
+          <li hreflang="ca" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/ca-es/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="ca" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">Català</a></li>
+          <li hreflang="cy" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/cy-gb/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="cy" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">Cymraeg</a></li>
+          <li hreflang="de" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/de-de/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="de" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">Deutsch</a></li>
+          <li hreflang="es" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/es-es/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="es" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">Español</a></li>
+          <li hreflang="fi" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/fi-fi/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="fi" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">suomi</a></li>
+          <li hreflang="fr" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/fr-fr/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="fr" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">Français</a></li>
+          <li hreflang="ja" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/ja-jp/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="ja" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">???</a></li>
+          <li hreflang="ko" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/ko-kr/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="ko" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">???</a></li>
+          <li hreflang="nl" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/nl-nl/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="nl" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">Nederlands</a></li>
+          <li hreflang="nb" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/nb-no/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="nb" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">Norsk (Bokmål)</a></li>
+          <li hreflang="pt-br" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/pt-br/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="pt-br" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">Português, Brasil</a></li>
+          <li hreflang="ru" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/ru-ru/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="ru" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">???????</a></li>
+          <li hreflang="sv" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/sv-se/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="sv" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">Svenska</a></li>
+          <li hreflang="tr" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/tr-tr/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="tr" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search">Türkçe</a></li>
+          <li hreflang="zh-hans" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"><a href="/zh-hans/search?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=" class="language-link" hreflang="zh-hans" data-drupal-link-query="{&quot;f&quot;:[&quot;&quot;,&quot;&quot;],&quot;search&quot;:&quot;accessibility&quot;}" data-drupal-link-system-path="search"> ????</a></li>
+         </ul> 
+        </div> 
+        <div class="block block--block-bbalgoliasearchui " id="block-bbalgoliasearchui" data-block-plugin-id="bb_algolia_search_ui_block"> 
+         <div id="algolia-search-ui" data-description="Provides ReactJS Script as BB Algolia Search UI Block"></div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="breadcrumb-container"> 
+       <div class="region region-breadcrumb"> 
+        <div class="block block--block-blackboardnavtoggle " id="block-blackboardnavtoggle" data-block-plugin-id="block_content:b7d0db1b-b49c-4f8b-879f-9e74d8b06381"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <a class="nav-toggle"></a>
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-breadcrumbs " id="block-blackboard-breadcrumbs" data-block-plugin-id="system_breadcrumb_block"> 
+         <nav role="navigation" aria-labelledby="system-breadcrumb"> 
+          <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2> 
+          <ol> 
+           <li> <a href="/">Home</a> </li> 
+          </ol> 
+         </nav> 
+        </div> 
+        <div class="block block--block-booknavigationsorted " id="block-booknavigationsorted" data-block-plugin-id="full_book_navigation"> 
+         <div class="blackboard_books-navigation" data-page-type=""> 
+          <nav id="book-block-menu-25571" class="book-block-menu" role="navigation" data-product="Ally" aria-label="Book outline for Blackboard Ally Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-25571" class="menu-item menu-item--expanded"> <a href="/Ally" hreflang="en">Ally</a> 
+             <ul class="menu"> 
+              <li id="nid-20901" class="menu-item menu-item--collapsed lazy folder"> <a href="/Ally/Ally_for_LMS" hreflang="en">Ally for LMS</a> </li> 
+              <li id="nid-25506" class="menu-item menu-item--collapsed lazy folder"> <a href="/Ally/Ally_for_Websites" hreflang="en">Ally for Websites</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-469" class="book-block-menu" role="navigation" data-product="Blackboard App" aria-label="Book outline for Blackboard App Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-469" class="menu-item menu-item--expanded"> <a href="/Blackboard_App" hreflang="en">Blackboard App</a> 
+             <ul class="menu"> 
+              <li id="nid-470" class="menu-item"> <a href="/Blackboard_App/Quick_Start" hreflang="en">Quick Start</a> </li> 
+              <li id="nid-471" class="menu-item"> <a href="/Blackboard_App/Feature_Guide" hreflang="en">Feature Guide</a> </li> 
+              <li id="nid-21041" class="menu-item"> <a href="/Blackboard_App/Activity_Stream" hreflang="en">Activity Stream</a> </li> 
+              <li id="nid-13051" class="menu-item"> <a href="/Blackboard_App/Course_List" hreflang="en">Courses and Organizations</a> </li> 
+              <li id="nid-21026" class="menu-item"> <a href="/Blackboard_App/Course_Content" hreflang="en">Course Content</a> </li> 
+              <li id="nid-23321" class="menu-item"> <a href="/Blackboard_App/Offline_Content" hreflang="en">Offline Content</a> </li> 
+              <li id="nid-21886" class="menu-item"> <a href="/Blackboard_App/Announcements" hreflang="en">Announcements</a> </li> 
+              <li id="nid-12438" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Collaborate" hreflang="en">Collaborate</a> </li> 
+              <li id="nid-15644" class="menu-item"> <a href="/Blackboard_App/Discussions" hreflang="en">Discussions</a> </li> 
+              <li id="nid-21896" class="menu-item"> <a href="/Blackboard_App/Due_Dates" hreflang="en">Due Dates</a> </li> 
+              <li id="nid-21891" class="menu-item"> <a href="/Blackboard_App/Grades" hreflang="en">Grades</a> </li> 
+              <li id="nid-12544" class="menu-item"> <a href="/Blackboard_App/Link_to_Cloud_Storage" hreflang="en">Link to Cloud Storage</a> </li> 
+              <li id="nid-21031" class="menu-item"> <a href="/Blackboard_App/Profile" hreflang="en">Profile</a> </li> 
+              <li id="nid-21036" class="menu-item"> <a href="/Blackboard_App/Push_Notifications" hreflang="en">Push Notifications</a> </li> 
+              <li id="nid-21021" class="menu-item"> <a href="/Blackboard_App/Tests_and_Assignments" hreflang="en">Tests and Assignments</a> </li> 
+              <li id="nid-26381" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Whats_New" hreflang="en">What's New</a> </li> 
+              <li id="nid-15931" class="menu-item"> <a href="/Blackboard_App/FAQs" hreflang="en">Common Questions</a> </li> 
+              <li id="nid-20461" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Accessibility" hreflang="en">Accessibility</a> </li> 
+              <li id="nid-21726" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Windows" hreflang="en">Windows Devices</a> </li> 
+              <li id="nid-20731" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Transition_to_New_Apps" hreflang="en">Transition to New Blackboard Apps</a> </li> 
+              <li id="nid-15603" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Administrator_Info" hreflang="en">Administrator Info</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-30671" class="book-block-menu" role="navigation" data-product="Blackboard Data" aria-label="Book outline for Blackboard Data"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-30671" class="menu-item menu-item--expanded"> <a href="/Blackboard_Data" hreflang="en">Blackboard Data</a> 
+             <ul class="menu"> 
+              <li id="nid-30491" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Data/Administrator" hreflang="en">Blackboard Data for Developers</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-13118" class="book-block-menu" role="navigation" data-product="Blackboard Instructor" aria-label="Book outline for Blackboard Instructor Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-13118" class="menu-item menu-item--expanded"> <a href="/Blackboard_Instructor" hreflang="en">Blackboard Instructor</a> 
+             <ul class="menu"> 
+              <li id="nid-20696" class="menu-item"> <a href="/Blackboard_Instructor/Quick_Start" hreflang="en">Quick Start</a> </li> 
+              <li id="nid-20701" class="menu-item"> <a href="/Blackboard_Instructor/Feature_Guide" hreflang="en">Feature Guide</a> </li> 
+              <li id="nid-20966" class="menu-item"> <a href="/Blackboard_Instructor/Course_List" hreflang="en">Courses and Organizations</a> </li> 
+              <li id="nid-20951" class="menu-item"> <a href="/Blackboard_Instructor/Course_Content" hreflang="en">Course Content</a> </li> 
+              <li id="nid-24111" class="menu-item"> <a href="/Blackboard_Instructor/Offline_Content" hreflang="en">Offline Content</a> </li> 
+              <li id="nid-20946" class="menu-item"> <a href="/Blackboard_Instructor/Announcements" hreflang="en">Announcements</a> </li> 
+              <li id="nid-13127" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Collaborate" hreflang="en">Collaborate</a> </li> 
+              <li id="nid-20956" class="menu-item"> <a href="/Blackboard_Instructor/Discussions" hreflang="en">Discussions</a> </li> 
+              <li id="nid-25806" class="menu-item"> <a href="/Blackboard_Instructor/Grading" hreflang="en">Grading</a> </li> 
+              <li id="nid-25781" class="menu-item"> <a href="/Blackboard_Instructor/Link_to_Cloud_Storage" hreflang="en">Link to Cloud Storage</a> </li> 
+              <li id="nid-28906" class="menu-item"> <a href="/Blackboard_Instructor/Push_Notifications" hreflang="en">Push Notifications</a> </li> 
+              <li id="nid-20961" class="menu-item"> <a href="/Blackboard_Instructor/Tests_and_Assignments" hreflang="en">Tests and Assignments</a> </li> 
+              <li id="nid-26761" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Whats_New" hreflang="en">What's New</a> </li> 
+              <li id="nid-21006" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Accessibility" hreflang="en">Accessibility</a> </li> 
+              <li id="nid-23806" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Administrator_Info" hreflang="en">Administrator Info</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-477" class="book-block-menu" role="navigation" data-product="Collaborate" aria-label="Book outline for Blackboard Collaborate Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-477" class="menu-item menu-item--expanded"> <a href="/Collaborate" hreflang="en">Collaborate</a> 
+             <ul class="menu"> 
+              <li id="nid-478" class="menu-item menu-item--collapsed lazy folder"> <a href="/Collaborate/Ultra" hreflang="en">Ultra Experience</a> </li> 
+              <li id="nid-528" class="menu-item menu-item--collapsed lazy folder"> <a href="/Collaborate/v12" hreflang="en">Original Experience</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10745" class="book-block-menu" role="navigation" data-product="Community Engagement" aria-label="Book outline for Blackboard Community Engagement"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10745" class="menu-item menu-item--expanded"> <a href="/Community_Engagement" hreflang="en">Community Engagement</a> 
+             <ul class="menu"> 
+              <li id="nid-10891" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Parent_Community_Member" hreflang="en">Parent/Community Member</a> </li> 
+              <li id="nid-10892" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-10890" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Teacher" hreflang="en">Teacher</a> </li> 
+              <li id="nid-10889" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-2253" class="book-block-menu" role="navigation" data-product="Connect" aria-label="Book outline for Blackboard Connect"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-2253" class="menu-item menu-item--expanded"> <a href="/Connect" hreflang="en">Connect</a> 
+             <ul class="menu"> 
+              <li id="nid-2254" class="menu-item menu-item--collapsed lazy folder"> <a href="/Connect/Connect_5" hreflang="en">Connect 5</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-28221" class="book-block-menu" role="navigation" data-product="CourseSites" aria-label="Book outline for Blackboard CourseSites"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-28221" class="menu-item menu-item--expanded"> <a href="/CourseSites" hreflang="en">CourseSites</a> 
+             <ul class="menu"> 
+              <li id="nid-28216" class="menu-item menu-item--collapsed lazy folder"> <a href="/CourseSites/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-28226" class="menu-item menu-item--collapsed lazy folder"> <a href="/CourseSites/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-28231" class="menu-item"> <a href="/CourseSites/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-2514" class="book-block-menu" role="navigation" data-product="Drive" aria-label="Book outline for Blackboard Drive"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-2514" class="menu-item menu-item--expanded"> <a href="/Drive" hreflang="en">Drive</a> 
+             <ul class="menu"> 
+              <li id="nid-2549" class="menu-item"> <a href="/Drive/Bb_Drive_Product_Update" hreflang="en">Product Updates</a> </li> 
+              <li id="nid-21566" class="menu-item menu-item--collapsed lazy folder"> <a href="/Drive/Drive_1.7" hreflang="en">Release 1.7</a> </li> 
+              <li id="nid-2528" class="menu-item menu-item--collapsed lazy folder"> <a href="/Drive/1.6" hreflang="en">Release 1.6</a> </li> 
+              <li id="nid-2515" class="menu-item menu-item--collapsed lazy folder"> <a href="/Drive/1.5" hreflang="en">Release 1.5</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-3271" class="book-block-menu" role="navigation" data-product="Learn" aria-label="Book outline for Blackboard Learn Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-3271" class="menu-item menu-item--expanded"> <a href="/Learn" hreflang="en">Learn</a> 
+             <ul class="menu"> 
+              <li id="nid-13376" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-14045" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-13425" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10671" class="book-block-menu" role="navigation" data-product="Open Content" aria-label="Book outline for Blackboard Open Content"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10671" class="menu-item menu-item--expanded"> <a href="/Blackboard_Open_Content" hreflang="en">Open Content</a> 
+             <ul class="menu"> 
+              <li id="nid-10703" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_Content/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-10672" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_Content/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10564" class="book-block-menu" role="navigation" data-product="Open Education" aria-label="Book outline for Blackboard Open Education"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10564" class="menu-item menu-item--expanded"> <a href="/Open_Education" hreflang="en">Open Education</a> 
+             <ul class="menu"> 
+              <li id="nid-10572" class="menu-item menu-item--collapsed lazy folder"> <a href="/Open_Education/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-10565" class="menu-item menu-item--collapsed lazy folder"> <a href="/Open_Education/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10375" class="book-block-menu" role="navigation" data-product="Open LMS" aria-label="Book outline for Blackboard Open LMS "> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10375" class="menu-item menu-item--expanded"> <a href="/Blackboard_Open_LMS" hreflang="en">Open LMS </a> 
+             <ul class="menu"> 
+              <li id="nid-10451" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_LMS/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-10478" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_LMS/Teacher" hreflang="en">Teacher</a> </li> 
+              <li id="nid-10376" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_LMS/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-19816" class="book-block-menu" role="navigation" data-product="Predict" aria-label="Book outline for Blackboard Predict"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-19816" class="menu-item menu-item--expanded"> <a href="/Predict" hreflang="en">Predict</a> 
+             <ul class="menu"> 
+              <li id="nid-19091" class="menu-item menu-item--collapsed lazy folder"> <a href="/Predict/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-19090" class="menu-item menu-item--collapsed lazy folder"> <a href="/Predict/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-19096" class="menu-item menu-item--collapsed lazy folder"> <a href="/Predict/Advisor" hreflang="en">Advisor</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-26316" class="book-block-menu" role="navigation" data-product="SafeAssign" aria-label="Book outline for Blackboard SafeAssign"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-26316" class="menu-item menu-item--expanded"> <a href="/SafeAssign" hreflang="en">SafeAssign</a> 
+             <ul class="menu"> 
+              <li id="nid-26116" class="menu-item menu-item--collapsed lazy folder"> <a href="/SafeAssign/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-26111" class="menu-item menu-item--collapsed lazy folder"> <a href="/SafeAssign/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-26056" class="menu-item menu-item--collapsed lazy folder"> <a href="/SafeAssign/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10576" class="book-block-menu" role="navigation" data-product="SIS Central" aria-label="Book outline for Blackboard SIS Central for Connect"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10576" class="menu-item menu-item--expanded"> <a href="/SIS_Central/Connect" hreflang="en">SIS Central for Connect</a> 
+             <ul class="menu"> 
+              <li id="nid-10577" class="menu-item menu-item--collapsed lazy folder"> <a href="/SIS_Central/Connect/PowerSchool_Integration" hreflang="en">PowerSchool Integration</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-11788" class="book-block-menu" role="navigation" data-product="SmartView" aria-label="Book outline for Blackboard SmartView"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-11788" class="menu-item menu-item--expanded"> <a href="/SmartView" hreflang="en">SmartView</a> 
+             <ul class="menu"> 
+              <li id="nid-11790" class="menu-item"> <a href="/SmartView/Authentication_Logging_In" hreflang="en">Logging In</a> </li> 
+              <li id="nid-11791" class="menu-item menu-item--collapsed lazy folder"> <a href="/SmartView/Advisor_Desktop_Interface" hreflang="en">Advisor Desktop</a> </li> 
+              <li id="nid-11797" class="menu-item menu-item--collapsed lazy folder"> <a href="/SmartView/Service_Desk_Interface" hreflang="en">Service Desk</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-21691" class="book-block-menu" role="navigation" data-product="Web Community Manager" aria-label="Book outline for Blackboard Web Community Manager"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-21691" class="menu-item menu-item--expanded"> <a href="/Web_Community_Manager" hreflang="en">Web Community Manager</a> 
+             <ul class="menu"> 
+              <li id="nid-21696" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Parent_Community_Member" hreflang="en">Parent/Community Member</a> </li> 
+              <li id="nid-21701" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-22326" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Teacher_Editor" hreflang="en">Teacher/Editor</a> </li> 
+              <li id="nid-21711" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Administrator" hreflang="en">Administrator</a> </li> 
+              <li id="nid-31421" class="menu-item"> <a href="/Web_Community_Manager/Teacher_Editor/Section_Workspace" hreflang="en">Section Workspace</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="page-header__second"> 
+       <div class="region region-header-second"> 
+        <div class="block block--block-blackboardtools " id="block-blackboardtools" data-block-plugin-id="block_content:4089d30d-1c4e-4ceb-bf0e-4199adc0a900"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div class="page-header__tools">
+           <a class="page-header__home" href="/" title="Home"><span class="icon-home" aria-hidden="true"></span>Home</a> 
+           <a class="page-header__print" title="Print"><span class="icon-printer" aria-hidden="true"></span>Print</a>
+          </div>
+         </div> 
+        </div> 
+        <div class="block block--block-liftslot-fullspanbanner " id="block-liftslot-fullspanbanner" data-block-plugin-id="block_content:582f9bde-be9a-4fe6-b87f-1314126a7021"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div data-lift-slot="fb2baad0-4af7-11e7-b2aa-9d057867a0b0"></div>
+         </div> 
+        </div> 
+        <div class="block block--block-liftslot-studentlandingbanner " id="block-liftslot-studentlandingbanner" data-block-plugin-id="block_content:36968852-eb69-4598-8fc0-afc21978c52f"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div data-lift-slot="077642d0-89bb-11e7-8902-7de7c872c496"></div>
+         </div> 
+        </div> 
+        <div class="block block--block-liftslot-instructorlandingbanner " id="block-liftslot-instructorlandingbanner" data-block-plugin-id="block_content:896a174e-6094-4226-8825-122d884ecc5f"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div data-lift-slot="535c7f70-89bb-11e7-9aa3-ef6c45e0fd72"></div>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <main role="main"> 
+     <a id="main-content" tabindex="-1"></a> 
+     <div class="page-content"> 
+      <ul class="visually-hidden accessible-navigation__content"> 
+      </ul> 
+      <div class="region region-content"> 
+       <div data-drupal-messages-fallback class="hidden"></div> 
+       <div class="block block--block-product block-facet--links" id="block-product" data-block-plugin-id="facet_block:product"> 
+        <h2>Filter by product</h2> 
+        <div class="facets-widget-links"> 
+         <ul data-drupal-facet-id="product" data-drupal-facet-alias="product" class="js-facets-links item-list__links">
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A66" rel="nofollow" data-drupal-facet-item-id="product-66" data-drupal-facet-item-value="66" id="search-facet-product-66"><span class="facet-item__value">Learn</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A76" rel="nofollow" data-drupal-facet-item-id="product-76" data-drupal-facet-item-value="76" id="search-facet-product-76"><span class="facet-item__value">Open LMS</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A486" rel="nofollow" data-drupal-facet-item-id="product-486" data-drupal-facet-item-value="486" id="search-facet-product-486"><span class="facet-item__value">Web Community Manager</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A11" rel="nofollow" data-drupal-facet-item-id="product-11" data-drupal-facet-item-value="11" id="search-facet-product-11"><span class="facet-item__value">Collaborate</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A431" rel="nofollow" data-drupal-facet-item-id="product-431" data-drupal-facet-item-value="431" id="search-facet-product-431"><span class="facet-item__value">Ally</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A31" rel="nofollow" data-drupal-facet-item-id="product-31" data-drupal-facet-item-value="31" id="search-facet-product-31"><span class="facet-item__value">Community Engagement</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A671" rel="nofollow" data-drupal-facet-item-id="product-671" data-drupal-facet-item-value="671" id="search-facet-product-671"><span class="facet-item__value">Ally for LMS</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A21" rel="nofollow" data-drupal-facet-item-id="product-21" data-drupal-facet-item-value="21" id="search-facet-product-21"><span class="facet-item__value">Collaborate Original Experience</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A471" rel="nofollow" data-drupal-facet-item-id="product-471" data-drupal-facet-item-value="471" id="search-facet-product-471"><span class="facet-item__value">Blackboard App</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A16" rel="nofollow" data-drupal-facet-item-id="product-16" data-drupal-facet-item-value="16" id="search-facet-product-16"><span class="facet-item__value">Collaborate Ultra Experience</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A41" rel="nofollow" data-drupal-facet-item-id="product-41" data-drupal-facet-item-value="41" id="search-facet-product-41"><span class="facet-item__value">Drive</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A81" rel="nofollow" data-drupal-facet-item-id="product-81" data-drupal-facet-item-value="81" id="search-facet-product-81"><span class="facet-item__value">Open Content</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A666" rel="nofollow" data-drupal-facet-item-id="product-666" data-drupal-facet-item-value="666" id="search-facet-product-666"><span class="facet-item__value">Ally for Websites</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A356" rel="nofollow" data-drupal-facet-item-id="product-356" data-drupal-facet-item-value="356" id="search-facet-product-356"><span class="facet-item__value">Blackboard Instructor</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A51" rel="nofollow" data-drupal-facet-item-id="product-51" data-drupal-facet-item-value="51" id="search-facet-product-51"><span class="facet-item__value">Drive 1.6</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A46" rel="nofollow" data-drupal-facet-item-id="product-46" data-drupal-facet-item-value="46" id="search-facet-product-46"><span class="facet-item__value">Drive 1.7</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A686" rel="nofollow" data-drupal-facet-item-id="product-686" data-drupal-facet-item-value="686" id="search-facet-product-686"><span class="facet-item__value">SafeAssign</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A101" rel="nofollow" data-drupal-facet-item-id="product-101" data-drupal-facet-item-value="101" id="search-facet-product-101"><span class="facet-item__value">SmartView</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A36" rel="nofollow" data-drupal-facet-item-id="product-36" data-drupal-facet-item-value="36" id="search-facet-product-36"><span class="facet-item__value">Connect</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A86" rel="nofollow" data-drupal-facet-item-id="product-86" data-drupal-facet-item-value="86" id="search-facet-product-86"><span class="facet-item__value">Open Education</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A56" rel="nofollow" data-drupal-facet-item-id="product-56" data-drupal-facet-item-value="56" id="search-facet-product-56"><span class="facet-item__value">Drive 1.5</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A351" rel="nofollow" data-drupal-facet-item-id="product-351" data-drupal-facet-item-value="351" id="search-facet-product-351"><span class="facet-item__value">Predict</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A711" rel="nofollow" data-drupal-facet-item-id="product-711" data-drupal-facet-item-value="711" id="search-facet-product-711"><span class="facet-item__value">CourseSites</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=product%3A96" rel="nofollow" data-drupal-facet-item-id="product-96" data-drupal-facet-item-value="96" id="search-facet-product-96"><span class="facet-item__value">SIS Central</span> </a></li>
+         </ul> 
+        </div> 
+       </div> 
+       <div class="block block--block-role block-facet--links" id="block-role" data-block-plugin-id="facet_block:role"> 
+        <h2>Filter by role</h2> 
+        <div class="facets-widget-links"> 
+         <ul data-drupal-facet-id="role" data-drupal-facet-alias="role" class="js-facets-links item-list__links">
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=role%3A106" rel="nofollow" data-drupal-facet-item-id="role-106" data-drupal-facet-item-value="106" id="search-facet-role-106"><span class="facet-item__value">Administrator</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=role%3A131" rel="nofollow" data-drupal-facet-item-id="role-131" data-drupal-facet-item-value="131" id="search-facet-role-131"><span class="facet-item__value">Instructor</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=role%3A151" rel="nofollow" data-drupal-facet-item-id="role-151" data-drupal-facet-item-value="151" id="search-facet-role-151"><span class="facet-item__value">Student</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=role%3A136" rel="nofollow" data-drupal-facet-item-id="role-136" data-drupal-facet-item-value="136" id="search-facet-role-136"><span class="facet-item__value">Moderator</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=role%3A146" rel="nofollow" data-drupal-facet-item-id="role-146" data-drupal-facet-item-value="146" id="search-facet-role-146"><span class="facet-item__value">Participant</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=role%3A116" rel="nofollow" data-drupal-facet-item-id="role-116" data-drupal-facet-item-value="116" id="search-facet-role-116"><span class="facet-item__value">Community Member</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=role%3A141" rel="nofollow" data-drupal-facet-item-id="role-141" data-drupal-facet-item-value="141" id="search-facet-role-141"><span class="facet-item__value">Parent</span> </a></li>
+          <li class="facet-item"><a href="/search?search=accessibility&amp;f%5B0%5D=role%3A301" rel="nofollow" data-drupal-facet-item-id="role-301" data-drupal-facet-item-value="301" id="search-facet-role-301"><span class="facet-item__value">Advisor</span> </a></li>
+         </ul> 
+        </div> 
+       </div> 
+       <div class="block block--block-blackboard-content " id="block-blackboard-content" data-block-plugin-id="system_main_block"> 
+        <div class="views-element-container">
+         <div class="view view-acquia-search view-id-acquia_search view-display-id-page js-view-dom-id-d903c84a963db989bfc19868520be7f2233130756eb02c3633910ba470161992"> 
+          <div class="view-content"> 
+           <div class="views-row"> 
+            <div class="views-field views-field-title">
+             <span class="field-content"><a href="/Web_Community_Manager/Administrator/Accessibility" hreflang="en">Accessibility</a></span>
+            </div>
+            <div class="views-field views-field-field-summary">
+             <span class="field-content">Learn about accessibility in the Web Community Manager.</span>
+            </div>
+            <div class="views-field views-field-field-product">
+             <span class="field-content">Web Community Manager</span>
+            </div>
+            <div class="views-field views-field-field-role">
+             <span class="field-content">Administrator</span>
+            </div>
+            <div class="views-field views-field-filename">
+             <span class="field-content"></span>
+            </div>
+            <div class="views-field views-field-filemime">
+             <span class="field-content"></span>
+            </div> 
+           </div> 
+           <div class="views-row"> 
+            <div class="views-field views-field-title">
+             <span class="field-content"><a href="/Web_Community_Manager/Teacher_Editor/Accessibility" hreflang="en">Accessibility</a></span>
+            </div>
+            <div class="views-field views-field-field-summary">
+             <span class="field-content">Learn about accessibility in the Web Community Manager.</span>
+            </div>
+            <div class="views-field views-field-field-product">
+             <span class="field-content">Web Community Manager</span>
+            </div>
+            <div class="views-field views-field-field-role">
+             <span class="field-content">Instructor</span>
+            </div>
+            <div class="views-field views-field-filename">
+             <span class="field-content"></span>
+            </div>
+            <div class="views-field views-field-filemime">
+             <span class="field-content"></span>
+            </div> 
+           </div> 
+           <div class="views-row"> 
+            <div class="views-field views-field-title">
+             <span class="field-content"><a href="/Web_Community_Manager/Parent_Community_Member/Accessibility" hreflang="en">Accessibility</a></span>
+            </div>
+            <div class="views-field views-field-field-summary">
+             <span class="field-content">Web Community Manager accessibility</span>
+            </div>
+            <div class="views-field views-field-field-product">
+             <span class="field-content">Web Community Manager</span>
+            </div>
+            <div class="views-field views-field-field-role">
+             <span class="field-content">Community Member</span>
+            </div>
+            <div class="views-field views-field-filename">
+             <span class="field-content"></span>
+            </div>
+            <div class="views-field views-field-filemime">
+             <span class="field-content"></span>
+            </div> 
+           </div> 
+           <div class="views-row"> 
+            <div class="views-field views-field-title">
+             <span class="field-content"><a href="/Web_Community_Manager/Student/Accessibility" hreflang="en">Accessibility</a></span>
+            </div>
+            <div class="views-field views-field-field-summary">
+             <span class="field-content">Learn about accessibility in the Web Community Manager.</span>
+            </div>
+            <div class="views-field views-field-field-product">
+             <span class="field-content">Web Community Manager</span>
+            </div>
+            <div class="views-field views-field-field-role">
+             <span class="field-content">Community Member</span>
+            </div>
+            <div class="views-field views-field-filename">
+             <span class="field-content"></span>
+            </div>
+            <div class="views-field views-field-filemime">
+             <span class="field-content"></span>
+            </div> 
+           </div> 
+           <div class="views-row"> 
+            <div class="views-field views-field-title">
+             <span class="field-content"><a href="/Community_Engagement/Teacher/Accessibility" hreflang="en">Accessibility</a></span>
+            </div>
+            <div class="views-field views-field-field-summary">
+             <span class="field-content">Learn about accessibility in the Community Engagement product suite.</span>
+            </div>
+            <div class="views-field views-field-field-product">
+             <span class="field-content">Community Engagement</span>
+            </div>
+            <div class="views-field views-field-field-role">
+             <span class="field-content">Instructor</span>
+            </div>
+            <div class="views-field views-field-filename">
+             <span class="field-content"></span>
+            </div>
+            <div class="views-field views-field-filemime">
+             <span class="field-content"></span>
+            </div> 
+           </div> 
+           <div class="views-row"> 
+            <div class="views-field views-field-title">
+             <span class="field-content"><a href="/Ally/Ally_for_LMS/Instructor/Improve_File_Accessibility/Accessibility_Checklist" hreflang="en">Accessibility Checklist</a></span>
+            </div>
+            <div class="views-field views-field-field-summary">
+             <span class="field-content">Use the accessibility checklist to improve your accessibility score.</span>
+            </div>
+            <div class="views-field views-field-field-product">
+             <span class="field-content">Ally, Ally for LMS</span>
+            </div>
+            <div class="views-field views-field-field-role">
+             <span class="field-content">Instructor</span>
+            </div>
+            <div class="views-field views-field-filename">
+             <span class="field-content"></span>
+            </div>
+            <div class="views-field views-field-filemime">
+             <span class="field-content"></span>
+            </div> 
+           </div> 
+           <div class="views-row"> 
+            <div class="views-field views-field-title">
+             <span class="field-content"><a href="/Web_Community_Manager/Administrator/Blackboard_Ally/Improve_Content_Accessibility/Accessibility_Checklist" hreflang="en">Accessibility Checklist</a></span>
+            </div>
+            <div class="views-field views-field-field-summary">
+             <span class="field-content">Use the accessibility checklist to improve your accessibility score.</span>
+            </div>
+            <div class="views-field views-field-field-product">
+             <span class="field-content">Web Community Manager</span>
+            </div>
+            <div class="views-field views-field-field-role">
+             <span class="field-content">Administrator</span>
+            </div>
+            <div class="views-field views-field-filename">
+             <span class="field-content"></span>
+            </div>
+            <div class="views-field views-field-filemime">
+             <span class="field-content"></span>
+            </div> 
+           </div> 
+           <div class="views-row"> 
+            <div class="views-field views-field-title">
+             <span class="field-content"><a href="/Web_Community_Manager/Teacher_Editor/Blackboard_Ally/Accessibility_Scores" hreflang="en">Accessibility Scores</a></span>
+            </div>
+            <div class="views-field views-field-field-summary">
+             <span class="field-content">Accessibility scores are determined by the severity of issues in each file. </span>
+            </div>
+            <div class="views-field views-field-field-product">
+             <span class="field-content">Web Community Manager</span>
+            </div>
+            <div class="views-field views-field-field-role">
+             <span class="field-content">Instructor</span>
+            </div>
+            <div class="views-field views-field-filename">
+             <span class="field-content"></span>
+            </div>
+            <div class="views-field views-field-filemime">
+             <span class="field-content"></span>
+            </div> 
+           </div> 
+           <div class="views-row"> 
+            <div class="views-field views-field-title">
+             <span class="field-content"><a href="/Web_Community_Manager/Administrator/Blackboard_Ally/Accessibility_Scores" hreflang="en">Accessibility Scores</a></span>
+            </div>
+            <div class="views-field views-field-field-summary">
+             <span class="field-content">Accessibility scores are determined by the severity of issues in each file. </span>
+            </div>
+            <div class="views-field views-field-field-product">
+             <span class="field-content">Web Community Manager</span>
+            </div>
+            <div class="views-field views-field-field-role">
+             <span class="field-content">Instructor</span>
+            </div>
+            <div class="views-field views-field-filename">
+             <span class="field-content"></span>
+            </div>
+            <div class="views-field views-field-filemime">
+             <span class="field-content"></span>
+            </div> 
+           </div> 
+           <div class="views-row"> 
+            <div class="views-field views-field-title">
+             <span class="field-content"><a href="/Web_Community_Manager/Teacher_Editor/Set_Up_Pages/Editing_Best_Practices/Accessible_Content" hreflang="en">Accessible Content</a></span>
+            </div>
+            <div class="views-field views-field-field-summary">
+             <span class="field-content">Learn how to write content that is accessible to all users.</span>
+            </div>
+            <div class="views-field views-field-field-product">
+             <span class="field-content">Web Community Manager</span>
+            </div>
+            <div class="views-field views-field-field-role">
+             <span class="field-content">Instructor</span>
+            </div>
+            <div class="views-field views-field-filename">
+             <span class="field-content"></span>
+            </div>
+            <div class="views-field views-field-filemime">
+             <span class="field-content"></span>
+            </div> 
+           </div> 
+          </div> 
+          <div class="pager" role="navigation" aria-labelledby="pagination-heading"> 
+           <h4 id="pagination-heading" class="visually-hidden">Pagination</h4> 
+           <ul class="pager__items js-pager__items"> 
+            <li class="pager__item is-active"> <a href="?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=&amp;page=0" title="Current page"> <span class="visually-hidden"> Current page </span>1</a> </li> 
+            <li class="pager__item"> <a href="?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=&amp;page=1" title="Go to page 2"> <span class="visually-hidden"> Page </span>2</a> </li> 
+            <li class="pager__item"> <a href="?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=&amp;page=2" title="Go to page 3"> <span class="visually-hidden"> Page </span>3</a> </li> 
+            <li class="pager__item"> <a href="?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=&amp;page=3" title="Go to page 4"> <span class="visually-hidden"> Page </span>4</a> </li> 
+            <li class="pager__item"> <a href="?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=&amp;page=4" title="Go to page 5"> <span class="visually-hidden"> Page </span>5</a> </li> 
+            <li class="pager__item"> <a href="?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=&amp;page=5" title="Go to page 6"> <span class="visually-hidden"> Page </span>6</a> </li> 
+            <li class="pager__item"> <a href="?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=&amp;page=6" title="Go to page 7"> <span class="visually-hidden"> Page </span>7</a> </li> 
+            <li class="pager__item"> <a href="?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=&amp;page=7" title="Go to page 8"> <span class="visually-hidden"> Page </span>8</a> </li> 
+            <li class="pager__item"> <a href="?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=&amp;page=8" title="Go to page 9"> <span class="visually-hidden"> Page </span>9</a> </li> 
+            <li class="pager__item pager__item--ellipsis" role="presentation">…</li> 
+            <li class="pager__item pager__item--next"> <a href="?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=&amp;page=1" title="Go to next page" rel="next"> <span class="visually-hidden">Next page</span> <span aria-hidden="true"><span>Next </span>›</span> </a> </li> 
+            <li class="pager__item pager__item--last"> <a href="?search=accessibility&amp;f%5B0%5D=&amp;f%5B1%5D=&amp;page=145" title="Go to last page"> <span class="visually-hidden">Last page</span> <span aria-hidden="true"><span>Last </span>»</span> </a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="sidebar-content"> 
+      </div> 
+     </div> 
+    </main> 
+    <footer class="page-footer" role="contentinfo"> 
+     <div class="page-footer__content"> 
+      <div class="page-footer__first"> 
+       <div class="region region-footer-first"> 
+        <div class="block block--block-blackboard-visitblackboardcomlink " id="block-blackboard-visitblackboardcomlink" data-block-plugin-id="block_content:db947466-941f-49b3-9bef-7afbe943663a"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <h3><a href="http://www.blackboard.com/" target="_blank">Visit Blackboard.com</a></h3> 
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-blackboardcopyright " id="block-blackboard-blackboardcopyright" data-block-plugin-id="block_content:1ac0d952-50f6-484c-bff0-961ee5b22d49"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <p>Copyright©2018. Blackboard&nbsp;Inc.<br> <a href="/Copyright_Notice">Legal Disclaimers</a><br> <a href="/1000en_US">Privacy Statement</a></p>
+         </div> 
+        </div> 
+        <div class="block block--block-views-block-footer-menu-view-footer-block views-element-container" id="block-views-block-footer-menu-view-footer-block" data-block-plugin-id="views_block:footer_menu_view-footer_block"> 
+         <div>
+          <div class="footer-block view view-footer-menu-view view-id-footer_menu_view view-display-id-footer_block js-view-dom-id-17db47c974243e6ebbbee069c2f640314b4b36ef9be0992a0cb433855179d611"> 
+           <div class="view-content"> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/About_Help" hreflang="en">About Help</a>
+              </div>
+             </div> 
+            </div> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/Accessibility" hreflang="en">Accessibility</a>
+              </div>
+             </div> 
+            </div> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/Client_Resources" hreflang="en">Client Resources</a>
+              </div>
+             </div> 
+            </div> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/Product_Security" hreflang="en">Product Security</a>
+              </div>
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <nav role="navigation" aria-labelledby="block-blackboard-account-menu-menu" id="block-blackboard-account-menu" data-block-plugin-id="system_menu_block:account"> 
+         <h2 class="visually-hidden" id="block-blackboard-account-menu-menu">User account menu</h2> 
+         <ul class="menu"> 
+          <li class="menu-item"> <a href="/user/login" data-drupal-link-system-path="user/login">Log in</a> </li> 
+         </ul> 
+        </nav> 
+       </div> 
+      </div> 
+      <div class="page-footer__second-third-container"> 
+       <div class="page-footer__second"> 
+        <div class="region region-footer-second"> 
+         <nav role="navigation" aria-labelledby="block-blackboard-helpforblackboardproducts-menu" id="block-blackboard-helpforblackboardproducts" data-block-plugin-id="system_menu_block:help-for-blackboard-product"> 
+          <h2 id="block-blackboard-helpforblackboardproducts-menu">Help for Blackboard Products</h2> 
+          <ul class="menu"> 
+           <li class="menu-item"> <a href="/Ally" data-drupal-link-system-path="node/25571">Ally</a> </li> 
+           <li class="menu-item"> <a href="http://www.blackboard.com/education-analytics/index.aspx">Analytics</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_App" data-drupal-link-system-path="node/469">Blackboard App</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_Instructor" data-drupal-link-system-path="node/13118">Blackboard Instructor</a> </li> 
+           <li class="menu-item"> <a href="/Collaborate" data-drupal-link-system-path="node/477">Collaborate</a> </li> 
+           <li class="menu-item"> <a href="/Community_Engagement" data-drupal-link-system-path="node/10745">Community Engagement</a> </li> 
+           <li class="menu-item"> <a href="/Connect" data-drupal-link-system-path="node/2253">Connect</a> </li> 
+           <li class="menu-item"> <a href="/Learn" data-drupal-link-system-path="node/3271">CourseSites</a> </li> 
+           <li class="menu-item"> <a href="/Drive" data-drupal-link-system-path="node/2514">Drive</a> </li> 
+           <li class="menu-item"> <a href="/Learn" data-drupal-link-system-path="node/3271">Learn</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_Open_Content" data-drupal-link-system-path="node/10671">Open Content</a> </li> 
+           <li class="menu-item"> <a href="/Open_Education" data-drupal-link-system-path="node/10564">Open Education</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_Open_LMS" data-drupal-link-system-path="node/10375">Open LMS</a> </li> 
+           <li class="menu-item"> <a href="/Predict" data-drupal-link-system-path="node/19816">Predict</a> </li> 
+           <li class="menu-item"> <a href="/SafeAssign" data-drupal-link-system-path="node/26316">SafeAssign</a> </li> 
+           <li class="menu-item"> <a href="/SIS_Central/Connect" data-drupal-link-system-path="node/10576">SIS Central - Connect</a> </li> 
+           <li class="menu-item"> <a href="/SmartView" data-drupal-link-system-path="node/11788">SmartView</a> </li> 
+           <li class="menu-item"> <a href="/Web_Community_Manager" data-drupal-link-system-path="node/21691">Web Community Manager</a> </li> 
+          </ul> 
+         </nav> 
+         <div class="block block--block-backtotop " id="block-backtotop" data-block-plugin-id="block_content:61c42d5b-62bf-4b74-8152-b080e41a3292"> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <a class="back-to-top" href="#top"><span class="icon-chevron-up"></span> Back to top</a>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="page-footer__third"> 
+        <div class="region region-footer-third"> 
+         <div class="block block--block-allyjs " id="block-allyjs" data-block-plugin-id="block_content:a43b54be-3874-4322-b717-e5e187d70041"> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <script data-ally-loader data-ally-platform-name="web" data-ally-client-id="4826" data-ally-af-style="flag_small" src="https://prod.ally.ac/integration/api/ally.ui.js">
+</script>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+  </div> 
+  <script src="/sites/default/files/js/js_Akazc-aZWDLBMdo4wALDLhuyTBX-5p3NP55qPOxsWxE.js"></script> 
+  <script src="/modules/custom/bb_widgets/bb_algolia_search_ui/js/app.bundle.js?v=1.x"></script> 
+  <script src="/sites/default/files/js/js_sPox9l2WM37eGgdGCcXdIwl4hUUqAKErWiULd-6Bl2Q.js"></script> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fb66a3283b","applicationID":"70695766","transactionName":"YQcBNxcEV0RYVhdeXFhNIgARDFZZFnERQkNXDj8VDABORGVnDEJHXwwEPzMMXEBpVARScFkMFxEKCVVSSxhdX1JYBg8G","queueTime":0,"applicationTime":996,"atts":"TUACQV8eREo=","errorBeacon":"bam.nr-data.net","agent":""}</script>  
+ </body>
+</html>

@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/TDPortal/Content/Scripts/jquery/1.11.2/jquery.min.js?v=20191115204103"></script>
+  <script src="/TDPortal/Content/Scripts/jquery-migrate/1.2.1/jquery-migrate.min.js?v=20191115204103"></script>
+  <script src="/TDPortal/Content/Scripts/jquery-ui/1.11.4/jquery-ui-1.11.4.custom.timepicker.min.js?v=20191115204101"></script>
+  <link href="/TDPortal/Content/Styles/jquery-ui/1.11.4/jquery-ui.compiled.min.css?v=20191115204033" rel="stylesheet" type="text/css">
+  <link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20191115204033" rel="stylesheet" type="text/css" id="lnkBootstrapCSS">
+  <script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20191115204034"></script>
+  <link href="/TDPortal/Content/Styles/font-awesome.min.css?v=20191115204033" rel="stylesheet" type="text/css" id="lnkFontAwesome">
+  <script src="/TDClient/Scripts/json2.min.js?v=20191115204010"></script> 
+  <script src="/TDClient/Scripts/underscore-min.js?v=20191115204010"></script> 
+  <script src="/TDClient/Scripts/TDJSFramework.compiled.min.js?v=20191115204008"></script> 
+  <script src="/TDClient/Scripts/clientOS.min.js?v=20191115204009"></script> 
+  <script src="/TDClient/Scripts/collapseMe.min.js?v=20191115204009"></script> 
+  <script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20191115204009"></script> 
+  <script src="/TDClient/Scripts/SiteSearch.min.js?v=20191115204009"></script> 
+  <link href="/TDClient/Styles/bootstrap_custom.min.css?v=20191115204006" rel="stylesheet" type="text/css">
+  <link href="/TDClient/Styles/TDStyles.min.css?v=20191115204006" rel="stylesheet" type="text/css">
+  <link href="https://uwindsor.teamdynamix.com/TDPortal/BE/Style/93/TDClient/1975?v=20171025204019" rel="stylesheet" type="text/css">
+  <link id="ctl00_ctl00_lnkFavicon" rel="shortcut icon" href="https://uwindsor.teamdynamix.com/TDPortal/BE/Icon/93/1975?v=20150226204704"> 
+  <script async src="//www.googletagmanager.com/gtag/js?id=UA-67479808-1"></script> 
+  <script>
+
+      $(function () {
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        // Be sure to set the proper cookie domain to the customer's full subdomain when sending the pageview hit.
+        gtag('config', 'UA-67479808-1', { 'cookie_domain': 'uwindsor.teamdynamix.com' });
+
+        });
+
+    </script> 
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+        baseUrl: '/TDClient/',
+        isTdGoogleAnalyticsEnabled: true,
+        isAuthenticated: false
+        });
+
+      $('#collapseMe').collapseMe({
+        toggleVisibilitySelector: '.navbar-toggle'
+      });
+
+    });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script> 
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20191115204104"></script>
+  <link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20191115204104" rel="stylesheet" type="text/css" id="lnkSelect2"> 
+  <style type="text/css">
+    .honey-pot-div {
+      display: none;
+    }
+  </style> 
+  <script>
+
+    
+
+    function checkRecipients() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#divShareModal').modal('toggle')
+      }
+    }
+
+    function toggleFeedback(isHelpful) {
+      $('#divHelpfulComments').show();
+      $('#divHelpfulYesNo').hide();
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsHelpful').val(isHelpful);
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').focus();
+    }
+
+    function toggleFeedbackResult() {
+      $('#divWasHelpful, #divFeedbackRecorded, #divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    // The following two functions were added as a result of ticket ID: 1392522. We are generating these buttons dynamically to 
+    // prevent bots from clicking them and posting feedback on an article. Additionally, we have an input that is hidden from
+    // the user. If a bot enters text in that input, which it likely will (bots love filling out forms), then we don't accept the
+    // form submission
+    function generateFeedbackButtons() {
+      var $btnHelpfulYes = $('<button id="btnHelpfulYes" type="button" class="btn btn-primary gutter-left" onclick="toggleFeedback(1);">Yes</button>');
+      var $btnHelpfulNo = $('<button id="btnHelpfulNo" type="button" class="btn btn-primary gutter-left-sm" onclick="toggleFeedback(0);">No</button>');
+
+      $('#divWasHelpful').append($btnHelpfulYes);
+      $('#divWasHelpful').append($btnHelpfulNo);
+    }
+    function attemptAddFeedback(e) {
+      if ($('#honeyPot').val() !== '') {
+        e.preventDefault();
+        window.location.reload();
+      }
+    }
+
+    $(function () {
+      
+
+      generateFeedbackButtons();
+      $('[data-toggle="popover"]').popover();
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divBody table:not(.SkipTableFixup)').each(function () {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function () { $(this).css('padding', padding + 'px') });
+      });
+
+      
+    });
+
+    
+  </script> 
+  <link rel="stylesheet" type="text/css" href="/TDClient/WebResource.axd?d=W635ydP1zPpneCzu2xYPRxBVzOuwjMhqDC05HApv5S9qGe3BFof4lBm7tnXyPzx6kUYjdwGmfJDlVNT-ifGW-enOMVCxRbKkEjXWMC3x3O9JzaYhjq3Qo4rwL6df2H9pMXb0dQ2&amp;t=637094295786185142">
+  <meta property="og:title" content="How to access and update my tickets on Client Portal?"> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:url" content="https://uwindsor.teamdynamix.com/TDClient/1975/Portal/KB/ArticleDet?ID=11375"> 
+  <meta property="og:image" content="https://uwindsor.teamdynamix.com/TDPortal/BE/Logo/93/1975"> 
+  <meta property="og:description" content="Users can track progress on their tickets and provide feedback directly to staff assigned to work on their requests."> 
+  <meta property="og:site_name" content="University of Windsor - Knowledge Base"> 
+  <meta property="article:published_time" content="2016-02-25T22:35Z"> 
+  <meta property="article:modified_time" content="2018-05-16T17:48Z"> 
+  <meta property="article:tag" content="ticket"> 
+  <meta property="article:tag" content="request"> 
+  <meta property="article:tag" content="portal">
+  <title>
+	Article - How to access and update my...
+</title>
+ </head> 
+ <body> 
+  <form method="post" action="/TDClient/1975/Portal/KB/ArticleDet?ID=11375" id="aspnetForm"> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""> 
+    <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""> 
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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"> 
+   </div> 
+   <script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script> 
+   <script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=636939809766230707" type="text/javascript"></script> 
+   <script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=ffffffffa580202a" type="text/javascript"></script> 
+   <script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=ffffffffa580202a" type="text/javascript"></script> 
+   <script src="/TDClient/WebResource.axd?d=5nB8CG0WfggiiLl9i90T5jyLUi_adV-Nbz5BHUxfJ92OiPi7r5J8ONuFFbHA6jjqZX0cT8H_DbC2qBUBD7R1mGqZ0sFXVczfloHVQP0R9esYoFIgFglQpTHFmNhE1DfB6TYnA9eJHHskINa4m56Z3I8PaTM1&amp;t=637094295786185142" type="text/javascript"></script> 
+   <script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=637094295786185142" type="text/javascript"></script> 
+   <script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=637094295786185142" type="text/javascript"></script> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="784CA02E"> 
+   </div> 
+   <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel1','','tctl00$ctl00$cpContent$cpContent$upFeedbackGrid','','tctl00$ctl00$cpContent$cpContent$upFeed','','tctl00$ctl00$cpContent$cpContent$UpdatePanel2','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnSubmitComments','','ctl00$ctl00$cpContent$cpContent$btnToggleFavorite',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script> 
+   <div id="ctl00_ctl00_upMain" style="display:none;"> 
+    <div id="ctl00_ctl00_pbMain" style="position: fixed; top: 50%; left: 0px; width: 100%; height: 1px; overflow: visible; z-index: 2000; display: block;">
+     <div style="margin-left: -125px; position: fixed; top: 50%; left: 50%; width: 250px; height: 90px;">
+      <div class="well shadow">
+       <h2 class="h4 gutter-top-none">Updating...</h2>
+       <div class="progress" style="margin-bottom: 0;">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+       </div>
+      </div>
+     </div>
+    </div> 
+   </div> 
+   <header role="banner"> 
+    <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;"> 
+     <div class="logo-header-full hidden-xs"> 
+      <div class="pull-left"> 
+       <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a> 
+      </div> 
+      <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;"> 
+       <div id="divLogo" class="pull-left logo-container"> 
+        <a href="http://www.uwindsor.ca" target="_blank"> <img src="/TDPortal/BE/Logo/93/1975" alt="University of Windsor Logo" class="js-logo img-responsive"> </a> 
+       </div> 
+       <div class="master-header-right pull-right padding-top padding-bottom"> 
+        <div class="pull-left topLevelSearch input-group"> 
+         <div id="SiteSearch-bf71a210f079473badd13e9dfac0c68a" class="gutter-bottom input-group site-search" style="max-width: 400px;"> 
+          <div id="SiteSearch-dropdown-bf71a210f079473badd13e9dfac0c68a" class="input-group-btn"> 
+           <button type="button" id="SiteSearch-filter-bf71a210f079473badd13e9dfac0c68a" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Filter your search by categories" data-component="all"> <span class="fa fa-globe"></span><span class="fa fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span> <span class="sr-only">Filter your search by categories</span> </button> 
+           <ul class="dropdown-menu"> 
+            <li> <a href="javascript:void(0);" data-component="all" data-component-icon="fa-globe" title="Search all areas"> <span class="fa fa-fw fa-nopad fa-globe" aria-hidden="true"></span> All </a> </li> 
+            <li role="separator" class="divider"></li> 
+            <li> <a href="javascript:void(0);" data-component="kb" data-component-icon="fa-lightbulb-o" title="Search Knowledge Base"> <span class="fa fa-fw fa-nopad fa-lightbulb-o" aria-hidden="true"></span> Knowledge Base </a> </li> 
+            <li> <a href="javascript:void(0);" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog"> <span class="fa fa-fw fa-nopad fa-compass" aria-hidden="true"></span> Service Catalog </a> </li> 
+            <li> <a href="javascript:void(0);" data-component="q" data-component-icon="fa-comments" title="Search Questions"> <span class="fa fa-fw fa-nopad fa-comments" aria-hidden="true"></span> Questions </a> </li> 
+           </ul> 
+          </div> 
+          <input id="SiteSearch-text-bf71a210f079473badd13e9dfac0c68a" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" aria-label="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag."> 
+          <span class="input-group-btn"> <button id="SiteSearch-button-bf71a210f079473badd13e9dfac0c68a" class="btn btn-default" type="button" title="Search"> <span class="fa fa-fw fa-nopad fa-search blue" aria-hidden="true"></span> <span class="sr-only">Search</span> </button> </span> 
+         </div> 
+         <script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/1975/Portal/Shared/Search",
+      tagLookupServiceUrl: "/TDClient/1975/Portal/WebServices/JSON/TagLookupService.asmx/GetItems",
+      searchTextBoxSelector: '#SiteSearch-text-bf71a210f079473badd13e9dfac0c68a',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-bf71a210f079473badd13e9dfac0c68a',
+      searchButtonSelector: '#SiteSearch-button-bf71a210f079473badd13e9dfac0c68a',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-bf71a210f079473badd13e9dfac0c68a',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: true,
+      autoFocusSearch: false
+    });
+  });
+</script> 
+        </div> 
+        <div title="Sign In" class="pull-right gutter-top-sm"> 
+         <a href="/TDClient/1975/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1975%2fPortal%2fKB%2fArticleDet%3fID%3d11375">Sign In </a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary"> 
+      <div id="navContainer" class="container"> 
+       <div class="navbar-header"> 
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse"> <span class="tdbar-button-anchored icon-bar"></span> <span class="tdbar-button-anchored icon-bar"></span> <span class="tdbar-button-anchored icon-bar"></span> <span class="sr-only">Show Applications Menu</span> </button> 
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#"> Client Portal </a> 
+       </div> 
+       <div id="td-navbar-collapse" class="collapse navbar-collapse"> 
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe"> 
+         <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg"> <a href="/TDClient/1975/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1975%2fPortal%2fKB%2fArticleDet%3fID%3d11375">Sign In</a> </li> 
+         <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg"> <a href="/TDClient/1975/Portal/Shared/Search" title="search">Search</a> </li> 
+         <li id="divDesktopc6761c8c-7ac3-49af-a678-485e8a47f4fe" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/">Home</a> </li> 
+         <li id="divDesktop6752d70c-2547-4111-b28d-55e8a0f26f3d" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=6752d70c-2547-4111-b28d-55e8a0f26f3d">|</a> </li> 
+         <li id="divDesktopec55dfbf-78f6-48cf-86ae-b4b4cf201a44" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=ec55dfbf-78f6-48cf-86ae-b4b4cf201a44">Help</a> </li> 
+         <li id="divDesktop37b7390b-cc5d-4a6a-aa5c-49b8924066de" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=37b7390b-cc5d-4a6a-aa5c-49b8924066de">|</a> </li> 
+         <li id="divDesktopc5b8214f-8f71-4492-bb14-64e2db562678" class="themed tdbar-button-anchored"> <a href="/TDClient/1975/Portal/Home/?ID=c5b8214f-8f71-4492-bb14-64e2db562678">Notifications</a> </li> 
+         <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable"> <a href="/TDClient/1975/Portal/Requests/ServiceCatalog">Services</a> </li> 
+         <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable"> <a href="/TDClient/1975/Portal/KB/">Knowledge Base</a> </li> 
+         <li id="divTDQuestions" class="themed tdbar-button-anchored sr-focusable"> <a href="/TDClient/1975/Portal/Forums/Questions/?Filter=all">Questions</a> </li> 
+         <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu"> <a class="dropdown-toggle" data-toggle="dropdown" title="More Applications" href="#"> <span class="sr-only">More Applications</span> <span class="fa fa-ellipsis-h" aria-hidden="true"></span> </a> 
+          <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul> </li> 
+        </ul> 
+       </div> 
+      </div> 
+     </nav> 
+    </div> 
+   </header> 
+   <div id="navShim" class="hidden-xs hidden-sm"></div> 
+   <main role="main"> 
+    <div id="content" tabindex="-1"> 
+     <nav id="divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base"> 
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a> 
+      <div class="container clearfix"> 
+       <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;"> 
+        <li> <a href="/TDClient/1975/Portal/KB/Search">Search <span class="sr-only">Articles</span></a> </li> 
+       </ul> 
+      </div> 
+     </nav> 
+     <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;"> 
+      <span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red"></span></span> 
+      <div class="clearfix"> 
+       <ol class="breadcrumb pull-left"> 
+        <li><a href="/TDClient/1975/Portal/KB/">Knowledge Base</a></li>
+        <li class="active">How to access and update my tickets on Client Portal?</li> 
+       </ol> 
+       <span class="js-open-monitor" style="display: none;"></span> 
+      </div> 
+      <div class="row gutter-top"> 
+       <div id="divMainContent" class="col-md-8"> 
+        <h1 class="gutter-top" style="-ms-word-wrap: break-word; word-wrap: break-word;"> How to access and update my tickets on Client Portal? </h1> 
+        <div id="ctl00_ctl00_cpContent_cpContent_divTags"> 
+         <span class="sr-only">Tags</span> 
+         <span class="fa fa-tags gray gutter-right-sm" aria-hidden="true" title="Tags"></span> 
+         <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23ticket" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl00_TagControl1_lnkDisplay" title="ticket">ticket</a> 
+         <span class="fa fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span> 
+         <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23request" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl02_TagControl1_lnkDisplay" title="request">request</a> 
+         <span class="fa fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span> 
+         <a href="/TDClient/1975/Portal/KB/Search?SearchText=%23portal" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl04_TagControl1_lnkDisplay" title="portal">portal</a> 
+        </div> 
+        <div id="ctl00_ctl00_cpContent_cpContent_divBody" class="gutter-top break-word ckeShim clearfix">
+         <p>The Client Portal allows you to access all ticket requests&nbsp;you have created in the past as well as those created on your behalf&nbsp;by others on which you are listed as the requestor. You can open each ticket to see its current status, to add more information to it, or to provide feedback to the staff assigned to work on your ticket. In order to see your tickets, you have to sign in first. Click the <strong>Sign In</strong> link that appears in the top right corner of the portal page and sign in with your UWin&nbsp;Account.</p> 
+         <h2>Accessing Tickets</h2> 
+         <p>The listing of your tickets can be found in two places on the portal.</p> 
+         <h3>Portal Home Page</h3> 
+         <p>To see a summary of all tickets that list you as a requestor&nbsp;that are currently open, go to the home page of this portal (i.e. click <strong>Home&nbsp;</strong>on the menu ribbon). You will then see a summary of your tickets displayed in the middle column of the home page under the header <strong>My Submitted Tickets</strong>.</p> 
+         <h3>Services Page</h3> 
+         <p>To see a full list of all tickets that list you as a requestor&nbsp;(including closed tickets), go to the Service Catalogue page of this portal (i.e. click <strong>Services&nbsp;</strong>on the menu ribbon).</p> 
+         <p><br> <img alt src="data:image/png;base64,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"><br> &nbsp;</p> 
+         <p>Next, click on the <strong>Ticket Requests</strong>&nbsp;link on the menu ribbon.<br> <br> <img alt src="data:image/png;base64,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"></p> 
+         <p><br> By default, only tickets that are marked as Open or In Process will be displayed on the screen. If you want to see all of your tickets, including those that are already marked as Completed or Cancelled, pick <strong>Select Al</strong>l in a drop-down list in Status Class attribute, then click on <strong>Search</strong>:</p> 
+         <p><img style="border-width: 1px; border-style: solid; width: 424px; height: 410px;" alt src="https://uwindsor.teamdynamix.com/TDPortal/Images/Viewer?fileName=efcda551-572f-4b0c-ad99-22c638c261b6.PNG"></p> 
+         <h2>Updating Tickets</h2> 
+         <p>To open a ticket on the screen, click&nbsp;on the ticket title.</p> 
+         <p>You can attach a file, such as a screen capture, by clicking&nbsp;on the <strong>Add Attachment</strong> button near the top and selecting the file either from your computer or your OneDrive.</p> 
+         <p>You can also add a comment to the ticket by by clicking on the <strong>Comment</strong> button on the bottom. While adding a comment, you can also select names of people from the list that should receive an e-mail with your comment. The list contains names of people assigned to work on this ticket and those that were added as contacts.</p> 
+         <p>If is not possible for you to reopen a ticket that was previously marked as Resolved or Closed. If you believe that your ticket was marked as Resolved or Closed in error, please leave a comment on the ticket requesting that the ticket be re-opened and provide as much information about the issue as possible. Please be sure to select the name of the person responsible for your ticket before saving your comment, to ensure that this person gets notified by e-mail.</p> 
+         <p>&nbsp;</p>
+        </div> 
+        <div id="divFeedback2" class="well gutter-top-lg"> 
+         <div class="row" id="divHelpfulYesNo"> 
+          <div class="col-sm-7"> 
+           <div> 
+            <a href="/TDClient/1975/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1975%2fPortal%2fKB%2fArticleDet%3fID%3d11375">Sign in to leave feedback</a> 
+           </div> 
+          </div> 
+          <div class="col-sm-5 text-right"> 
+           <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel1" aria-live="polite" aria-atomic="true">
+             0 reviews 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="tab-content gutter-top gutter-bottom"> 
+         <div id="ctl00_ctl00_cpContent_cpContent_upFeedbackGrid"> 
+         </div> 
+         <div id="ctl00_ctl00_cpContent_cpContent_upFeed"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-md-4"> 
+        <a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:__doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','')"></a> 
+        <div id="divDetails" class="panel panel-default"> 
+         <div class="panel-heading"> 
+          <h3 class="panel-title">Details</h3> 
+         </div> 
+         <div class="panel-body"> 
+          <div id="ArticleID"> 
+           <span class="control-label gutter-bottom-xs">Article ID: </span> 11375 
+          </div> 
+          <div id="divAuthor" class="disp-group"> 
+           <span class="control-label gutter-bottom-xs"> Created </span> 
+           <div> 
+            <span id="ctl00_ctl00_cpContent_cpContent_udtCreatedDate">Thu 2/25/16 5:35 PM</span>
+            <span id="ctl00_ctl00_cpContent_cpContent_lblCreatedBy"></span> 
+           </div> 
+          </div> 
+          <div id="ctl00_ctl00_cpContent_cpContent_divModified" class="disp-group"> 
+           <span class="control-label gutter-bottom-xs"> Modified </span> 
+           <div> 
+            <span id="ctl00_ctl00_cpContent_cpContent_udtModifiedDate">Wed 5/16/18 1:48 PM</span>
+            <span id="ctl00_ctl00_cpContent_cpContent_lblModifiedBy"></span> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div id="ctl00_ctl00_cpContent_cpContent_divKB" class="panel panel-default"> 
+         <div class="panel-heading"> 
+          <h3 class="panel-title">Related Articles (1)</h3> 
+         </div> 
+         <div class="panel-body"> 
+          <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg"> 
+           <div class="clearfix"> 
+            <div class="pull-left font-md"> 
+             <a target="_blank" href="https://uwindsor.teamdynamix.com/TDClient/1975/Portal/KB/ArticleDet?ID=11372">How to open a ticket on the self-service Client Portal?</a> 
+            </div> 
+            <div class="pull-right"> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="ctl00_ctl00_cpContent_cpContent_divProgress" style="display: none; z-index: 60;"> 
+       <div id="ctl00_ctl00_cpContent_cpContent_pbMain" style="position: fixed; top: 50%; left: 0px; width: 100%; height: 1px; overflow: visible; z-index: 2000; display: block;">
+        <div style="margin-left: -125px; position: fixed; top: 50%; left: 50%; width: 250px; height: 90px;">
+         <div class="well shadow">
+          <h2 class="h4 gutter-top-none">Deleting...</h2>
+          <div class="progress" style="margin-bottom: 0;">
+           <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+          </div>
+         </div>
+        </div>
+       </div> 
+      </div> 
+      <div class="modal fade" id="divShareModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> 
+       <div class="modal-dialog"> 
+        <div class="modal-content"> 
+         <div class="modal-header"> 
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> 
+          <h4 class="modal-title" id="myModalLabel"> <span class="fa fa-share-alt fa-fw" aria-hidden="true"></span>Share </h4> 
+         </div> 
+         <div class="modal-body"> 
+          <div class="form-group"> 
+           <label class="control-label" for="ctl00_ctl00_cpContent_cpContent_shareRecipients">Recipient(s) <small>- separate email addresses with a comma</small></label> 
+           <input name="ctl00$ctl00$cpContent$cpContent$shareRecipients" type="text" id="ctl00_ctl00_cpContent_cpContent_shareRecipients" class="form-control"> 
+          </div> 
+          <div class="form-group"> 
+           <label for="ctl00_ctl00_cpContent_cpContent_shareBody" class="control-label">Message</label> 
+           <textarea name="ctl00$ctl00$cpContent$cpContent$shareBody" id="ctl00_ctl00_cpContent_cpContent_shareBody" class="form-control" style="height: 175px;">Check out this knowledge base article I found in the University of Windsor knowledge base.
+
+https://uwindsor.teamdynamix.com/TDClient/1975/Portal/KB/ArticleDet?ID=11375
+
+How to access and update my tickets on Client Portal?
+
+Users can track progress on their tickets and provide feedback directly to staff assigned to work on their requests.</textarea> 
+          </div> 
+         </div> 
+         <div class="modal-footer text-left"> 
+          <button onclick="checkRecipients(); __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare','')" id="ctl00_ctl00_cpContent_cpContent_btnSendShare" type="button" class="btn btn-primary"> <span class="fa fa-paper-plane-o" aria-hidden="true"></span> Send </button> 
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </main> 
+   <script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script> 
+  </form> 
+  <footer role="contentinfo"> 
+  </footer> 
+  <script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        })
+          .blur(function () {
+            $beLogo.removeClass('accessibility-focus-on-logo');
+          })
+      })(jQuery);
+
+  </script>   
+ </body>
+</html>

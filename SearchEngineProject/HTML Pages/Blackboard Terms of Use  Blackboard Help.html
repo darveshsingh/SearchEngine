@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+ <head> 
+  <!-- Google Tag Manager --> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5G8Z8WS');</script> 
+  <!-- End Google Tag Manager --> 
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"fb66a3283b",applicationID:"70695766"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script> 
+  <script>window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = '4KT8J';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m && m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'); return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(c,d,i){if(!c || document.cookie.match('fs_uid=[`;`]*`[`;`]*`[`;`]*`')){
+    d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
+    ';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
+})(window,document,window['_fs_namespace'],'script','user');</script> 
+  <meta itemprop="acquia_lift:content_title" content="Blackboard Terms of Use"> 
+  <meta itemprop="acquia_lift:content_type" content="content_page"> 
+  <meta itemprop="acquia_lift:page_type" content="node page"> 
+  <meta itemprop="acquia_lift:context_language" content="en"> 
+  <meta itemprop="acquia_lift:content_section" content=""> 
+  <meta itemprop="acquia_lift:content_keywords" content=""> 
+  <meta itemprop="acquia_lift:post_id" content="25776"> 
+  <meta itemprop="acquia_lift:content_uuid" content="7a59c5da-e8e1-4f94-87b7-5c2619306d36"> 
+  <meta itemprop="acquia_lift:published_date" content="1527690424"> 
+  <meta itemprop="acquia_lift:persona" content=""> 
+  <meta itemprop="acquia_lift:engagement_score" content="1"> 
+  <meta itemprop="acquia_lift:account_id" content="BLACKBOARD"> 
+  <meta itemprop="acquia_lift:site_id" content="blackboardprod"> 
+  <meta itemprop="acquia_lift:contentOrigin" content="8480a1a7-d4ab-4a9f-7700-d38f23a3ba6a"> 
+  <meta itemprop="acquia_lift:liftAssetsURL" content="https://lift3assets.lift.acquia.com/stable"> 
+  <meta itemprop="acquia_lift:bootstrapMode" content="auto"> 
+  <meta itemprop="acquia_lift:contentReplacementMode" content="trusted"> 
+  <script src="https://lift3assets.lift.acquia.com/stable/lift.js" async></script> 
+  <script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","/sites/default/files/google_analytics/analytics.js?q0pw5k","ga");ga("create", "UA-1394520-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script> 
+  <meta name="title" content="Blackboard Terms of Use | Blackboard Help"> 
+  <meta name="Generator" content="Drupal 8 (https://www.drupal.org)"> 
+  <meta name="MobileOptimized" content="width"> 
+  <meta name="HandheldFriendly" content="true"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta> 
+  <link rel="shortcut icon" href="/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon"> 
+  <link rel="alternate" hreflang="en" href="https://help.blackboard.com/Terms_of_Use"> 
+  <link rel="alternate" hreflang="ar" href="https://help.blackboard.com/ar-sa/Terms_of_Use"> 
+  <link rel="alternate" hreflang="ca" href="https://help.blackboard.com/ca-es/Terms_of_Use"> 
+  <link rel="alternate" hreflang="cy" href="https://help.blackboard.com/cy-gb/Terms_of_Use"> 
+  <link rel="alternate" hreflang="de" href="https://help.blackboard.com/de-de/Terms_of_Use"> 
+  <link rel="alternate" hreflang="es" href="https://help.blackboard.com/es-es/Terms_of_Use"> 
+  <link rel="alternate" hreflang="fi" href="https://help.blackboard.com/fi-fi/Terms_of_Use"> 
+  <link rel="alternate" hreflang="fr" href="https://help.blackboard.com/fr-fr/Terms_of_Use"> 
+  <link rel="alternate" hreflang="ja" href="https://help.blackboard.com/ja-jp/Terms_of_Use"> 
+  <link rel="alternate" hreflang="ko" href="https://help.blackboard.com/ko-kr/Terms_of_Use"> 
+  <link rel="alternate" hreflang="nl" href="https://help.blackboard.com/nl-nl/Terms_of_Use"> 
+  <link rel="alternate" hreflang="nb" href="https://help.blackboard.com/nb-no/Terms_of_Use"> 
+  <link rel="alternate" hreflang="pt-br" href="https://help.blackboard.com/pt-br/Terms_of_Use"> 
+  <link rel="alternate" hreflang="ru" href="https://help.blackboard.com/ru-ru/Terms_of_Use"> 
+  <link rel="alternate" hreflang="sv" href="https://help.blackboard.com/sv-se/Terms_of_Use"> 
+  <link rel="alternate" hreflang="tr" href="https://help.blackboard.com/tr-tr/Terms_of_Use"> 
+  <link rel="alternate" hreflang="zh-hans" href="https://help.blackboard.com/zh-hans/Terms_of_Use"> 
+  <link rel="canonical" href="https://help.blackboard.com/Terms_of_Use"> 
+  <link rel="shortlink" href="https://help.blackboard.com/node/25776"> 
+  <link rel="revision" href="https://help.blackboard.com/Terms_of_Use"> 
+  <title>Blackboard Terms of Use | Blackboard Help</title> 
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_wI-_T3CJvmDdD8edCjVWCuSWfUHX1VBJXUP0rf5Symc.css?q0pw5k"> 
+  <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic&amp;subset=latin,cyrillic,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext"> 
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_pwMl3ukEBmQzKHa_P-R3NMTsibG2Ka6ggG88TdmsMKs.css?q0pw5k"> 
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/25776","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","bb_algolia_search_ui_block":{"algolia":{"clientId":"","apiKey":""},"searchButton":"Search","searchInputPlaceholder":null,"debug":0,"ga_id":"UA-1394520-1"},"bb_school_help_desk_block":{"placeholder_text":"Type institution name to get support","button_text":"Go","search_hint_text":"Press enter to search","debug":null,"ga_id":"UA-1394520-1"},"bb_user_feedback_block":{"firebase":{"apiKey":"AIzaSyAwRR0lNtqG8BYSYvhTP80Ai1By8XLpjbM","authDomain":"help-user-feedback.firebaseapp.com","databaseURL":"https:\/\/help-user-feedback.firebaseio.com","projectId":"help-user-feedback","storageBucket":"","messagingSenderId":"","appId":"1:567988132324:web:774f65db53e24c06"},"helpfulToolTipText":"Helpful?","unhelpfulToolTipText":"Not Helpful?","unhelpfulModalHeading":"Not helpful?","unhelpfulModalBody":"Sorry this wasn\u0027t helpful. Let us know how to improve this section.","unhelpfulPlaceholderText":"What\u0027s missing or not helpful?","submitButtonText":"Send","cancelButtonText":"No, Thanks","showCancelButton":1,"debug":0,"ga_id":"UA-1394520-1"},"cookieconsent":{"message":"This website uses cookies to ensure you get the best experience. Click \u201cAccept\u201d to agree to our cookie policy. You can manage and opt out of cookies using your browser or device settings.","dismiss":"Accept","learnMore":"Learn more","link":"\/1004en_US","path":"","expiry":365,"target":"_blank","domain":".help.blackboard.com","markup":"\u003Cdiv class=\u0022cc_banner cc_container cc_container--open\u0022\u003E\n    \u003Ca href=\u0022#null\u0022 data-cc-event=\u0022click:dismiss\u0022 target=\u0022_blank\u0022 class=\u0022cc_btn cc_btn_accept_all\u0022\u003EAccept\u003C\/a\u003E\n    \u003Cp class=\u0022cc_message\u0022\u003EThis website uses cookies to ensure you get the best experience. Click \u201cAccept\u201d to agree to our cookie policy. You can manage and opt out of cookies using your browser or device settings. \u003Ca data-cc-if=\u0022options.link\u0022 target=\u0022_blank\u0022 class=\u0022cc_more_info\u0022 href=\u0022\/1004en_US\u0022\u003ELearn more\u003C\/a\u003E\u003C\/p\u003E\n    \u003Ca class=\u0022cc_logo\u0022 target=\u0022_blank\u0022 href=\u0022http:\/\/silktide.com\/cookieconsent\u0022\u003ECookie Consent plugin for the EU cookie law\u003C\/a\u003E\n\u003C\/div\u003E\n","container":".page-header","theme":"\/themes\/blackboard\/css\/cookieconsent.css"},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"thematic_release_notes_filter":{"message":"This product doesn\u0027t have any recently released features that match the selected filter."},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":null,"extNofollow":null,"extFollowNoOverride":null,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":".block--block-blackboard-content","extAlert":false,"extAlertText":"","mailtoClass":"0","mailtoLabel":"(link sends email)"}},"langPrefixes":{"en":"","ar":"ar-sa","ca":"ca-es","de":"de-de","es":"es-es","fi":"fi-fi","fr":"fr-fr","ja":"ja-jp","ko":"ko-kr","nl":"nl-nl","nb":"nb-no","pt-br":"pt-br","ru":"ru-ru","sv":"sv-se","tr":"tr-tr","zh-hans":"zh-hans","nn":"nn-no","cy":"cy-gb"},"langMapping":{"jp":"ja-jp","zh":"zh-hans"},"domainExceptions":{"bbcollab.com":{"ca":"en-us"}},"ajax":[],"user":{"uid":0,"permissionsHash":"d0487089e11c14032c2364e00e59b4a41f3c228bf4d43b2147b9c4581a71d156"}}</script> 
+  <!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]--> 
+  <script src="/sites/default/files/js/js_pn3aoKzHAtG5jrUppZewBdFDGcnQjVyjz1oGxWoi1ds.js"></script> 
+  <script src="//use.typekit.net/bnp0oul.js"></script> 
+  <script>try{Typekit.load({ async: true });}catch(e){}</script> 
+ </head> 
+ <body class="role-anonymous path-node page-node-type-content-page"> 
+  <!-- Google Tag Manager (noscript) --> 
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5G8Z8WS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <!-- End Google Tag Manager (noscript) --> 
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas> 
+   <div class="layout-container"> 
+    <a href="#main-content" class="visually-hidden focusable"> Skip to main content </a> 
+    <a id="top"></a> 
+    <header class="page-header" role="banner"> 
+     <div class="page-header__content"> 
+      <div class="page-header__first"> 
+       <div class="region region-header-first"> 
+        <div class="block block--block-blackboardnavtoggle-2 " id="block-blackboardnavtoggle-2" data-block-plugin-id="block_content:b7d0db1b-b49c-4f8b-879f-9e74d8b06381"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <a class="nav-toggle"></a>
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-blackboardbranding " id="block-blackboard-blackboardbranding" data-block-plugin-id="block_content:2c8604e2-130e-4604-9dd5-dd92f52aaba3"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <span class="branding branding--medium"><a href="/"><strong>Blackboard</strong> Help</a></span> 
+          <span class="branding branding--small"><a href="/"><strong>Bb</strong> Help</a></span>
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-languageswitcher language-switcher-language-url" id="block-blackboard-languageswitcher" role="navigation" data-block-plugin-id="language_block:language_interface"> 
+         <h2>Language</h2> 
+         <ul class="links">
+          <li hreflang="en" data-drupal-link-system-path="node/25776" class="is-active"><a href="/Terms_of_Use" class="language-link is-active" hreflang="en" data-drupal-link-system-path="node/25776">English</a></li>
+          <li hreflang="ar" data-drupal-link-system-path="node/25776"><a href="/ar-sa/Terms_of_Use" class="language-link" hreflang="ar" data-drupal-link-system-path="node/25776">?????</a></li>
+          <li hreflang="ca" data-drupal-link-system-path="node/25776"><a href="/ca-es/Terms_of_Use" class="language-link" hreflang="ca" data-drupal-link-system-path="node/25776">Català</a></li>
+          <li hreflang="cy" data-drupal-link-system-path="node/25776"><a href="/cy-gb/Terms_of_Use" class="language-link" hreflang="cy" data-drupal-link-system-path="node/25776">Cymraeg</a></li>
+          <li hreflang="de" data-drupal-link-system-path="node/25776"><a href="/de-de/Terms_of_Use" class="language-link" hreflang="de" data-drupal-link-system-path="node/25776">Deutsch</a></li>
+          <li hreflang="es" data-drupal-link-system-path="node/25776"><a href="/es-es/Terms_of_Use" class="language-link" hreflang="es" data-drupal-link-system-path="node/25776">Español</a></li>
+          <li hreflang="fi" data-drupal-link-system-path="node/25776"><a href="/fi-fi/Terms_of_Use" class="language-link" hreflang="fi" data-drupal-link-system-path="node/25776">suomi</a></li>
+          <li hreflang="fr" data-drupal-link-system-path="node/25776"><a href="/fr-fr/Terms_of_Use" class="language-link" hreflang="fr" data-drupal-link-system-path="node/25776">Français</a></li>
+          <li hreflang="ja" data-drupal-link-system-path="node/25776"><a href="/ja-jp/Terms_of_Use" class="language-link" hreflang="ja" data-drupal-link-system-path="node/25776">???</a></li>
+          <li hreflang="ko" data-drupal-link-system-path="node/25776"><a href="/ko-kr/Terms_of_Use" class="language-link" hreflang="ko" data-drupal-link-system-path="node/25776">???</a></li>
+          <li hreflang="nl" data-drupal-link-system-path="node/25776"><a href="/nl-nl/Terms_of_Use" class="language-link" hreflang="nl" data-drupal-link-system-path="node/25776">Nederlands</a></li>
+          <li hreflang="nb" data-drupal-link-system-path="node/25776"><a href="/nb-no/Terms_of_Use" class="language-link" hreflang="nb" data-drupal-link-system-path="node/25776">Norsk (Bokmål)</a></li>
+          <li hreflang="pt-br" data-drupal-link-system-path="node/25776"><a href="/pt-br/Terms_of_Use" class="language-link" hreflang="pt-br" data-drupal-link-system-path="node/25776">Português, Brasil</a></li>
+          <li hreflang="ru" data-drupal-link-system-path="node/25776"><a href="/ru-ru/Terms_of_Use" class="language-link" hreflang="ru" data-drupal-link-system-path="node/25776">???????</a></li>
+          <li hreflang="sv" data-drupal-link-system-path="node/25776"><a href="/sv-se/Terms_of_Use" class="language-link" hreflang="sv" data-drupal-link-system-path="node/25776">Svenska</a></li>
+          <li hreflang="tr" data-drupal-link-system-path="node/25776"><a href="/tr-tr/Terms_of_Use" class="language-link" hreflang="tr" data-drupal-link-system-path="node/25776">Türkçe</a></li>
+          <li hreflang="zh-hans" data-drupal-link-system-path="node/25776"><a href="/zh-hans/Terms_of_Use" class="language-link" hreflang="zh-hans" data-drupal-link-system-path="node/25776"> ????</a></li>
+         </ul> 
+        </div> 
+        <div class="block block--block-bbalgoliasearchui " id="block-bbalgoliasearchui" data-block-plugin-id="bb_algolia_search_ui_block"> 
+         <div id="algolia-search-ui" data-description="Provides ReactJS Script as BB Algolia Search UI Block"></div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="breadcrumb-container"> 
+       <div class="region region-breadcrumb"> 
+        <div class="block block--block-blackboardnavtoggle " id="block-blackboardnavtoggle" data-block-plugin-id="block_content:b7d0db1b-b49c-4f8b-879f-9e74d8b06381"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <a class="nav-toggle"></a>
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-breadcrumbs " id="block-blackboard-breadcrumbs" data-block-plugin-id="system_breadcrumb_block"> 
+         <nav role="navigation" aria-labelledby="system-breadcrumb"> 
+          <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2> 
+          <ol> 
+           <li> <a href="/">Home</a> </li> 
+          </ol> 
+         </nav> 
+        </div> 
+        <div class="block block--block-booknavigationsorted " id="block-booknavigationsorted" data-block-plugin-id="full_book_navigation"> 
+         <div class="blackboard_books-navigation" data-page-type=""> 
+          <nav id="book-block-menu-25571" class="book-block-menu" role="navigation" data-product="Ally" aria-label="Book outline for Blackboard Ally Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-25571" class="menu-item menu-item--expanded"> <a href="/Ally" hreflang="en">Ally</a> 
+             <ul class="menu"> 
+              <li id="nid-20901" class="menu-item menu-item--collapsed lazy folder"> <a href="/Ally/Ally_for_LMS" hreflang="en">Ally for LMS</a> </li> 
+              <li id="nid-25506" class="menu-item menu-item--collapsed lazy folder"> <a href="/Ally/Ally_for_Websites" hreflang="en">Ally for Websites</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-469" class="book-block-menu" role="navigation" data-product="Blackboard App" aria-label="Book outline for Blackboard App Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-469" class="menu-item menu-item--expanded"> <a href="/Blackboard_App" hreflang="en">Blackboard App</a> 
+             <ul class="menu"> 
+              <li id="nid-470" class="menu-item"> <a href="/Blackboard_App/Quick_Start" hreflang="en">Quick Start</a> </li> 
+              <li id="nid-471" class="menu-item"> <a href="/Blackboard_App/Feature_Guide" hreflang="en">Feature Guide</a> </li> 
+              <li id="nid-21041" class="menu-item"> <a href="/Blackboard_App/Activity_Stream" hreflang="en">Activity Stream</a> </li> 
+              <li id="nid-13051" class="menu-item"> <a href="/Blackboard_App/Course_List" hreflang="en">Courses and Organizations</a> </li> 
+              <li id="nid-21026" class="menu-item"> <a href="/Blackboard_App/Course_Content" hreflang="en">Course Content</a> </li> 
+              <li id="nid-23321" class="menu-item"> <a href="/Blackboard_App/Offline_Content" hreflang="en">Offline Content</a> </li> 
+              <li id="nid-21886" class="menu-item"> <a href="/Blackboard_App/Announcements" hreflang="en">Announcements</a> </li> 
+              <li id="nid-12438" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Collaborate" hreflang="en">Collaborate</a> </li> 
+              <li id="nid-15644" class="menu-item"> <a href="/Blackboard_App/Discussions" hreflang="en">Discussions</a> </li> 
+              <li id="nid-21896" class="menu-item"> <a href="/Blackboard_App/Due_Dates" hreflang="en">Due Dates</a> </li> 
+              <li id="nid-21891" class="menu-item"> <a href="/Blackboard_App/Grades" hreflang="en">Grades</a> </li> 
+              <li id="nid-12544" class="menu-item"> <a href="/Blackboard_App/Link_to_Cloud_Storage" hreflang="en">Link to Cloud Storage</a> </li> 
+              <li id="nid-21031" class="menu-item"> <a href="/Blackboard_App/Profile" hreflang="en">Profile</a> </li> 
+              <li id="nid-21036" class="menu-item"> <a href="/Blackboard_App/Push_Notifications" hreflang="en">Push Notifications</a> </li> 
+              <li id="nid-21021" class="menu-item"> <a href="/Blackboard_App/Tests_and_Assignments" hreflang="en">Tests and Assignments</a> </li> 
+              <li id="nid-26381" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Whats_New" hreflang="en">What's New</a> </li> 
+              <li id="nid-15931" class="menu-item"> <a href="/Blackboard_App/FAQs" hreflang="en">Common Questions</a> </li> 
+              <li id="nid-20461" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Accessibility" hreflang="en">Accessibility</a> </li> 
+              <li id="nid-21726" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Windows" hreflang="en">Windows Devices</a> </li> 
+              <li id="nid-20731" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Transition_to_New_Apps" hreflang="en">Transition to New Blackboard Apps</a> </li> 
+              <li id="nid-15603" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_App/Administrator_Info" hreflang="en">Administrator Info</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-30671" class="book-block-menu" role="navigation" data-product="Blackboard Data" aria-label="Book outline for Blackboard Data"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-30671" class="menu-item menu-item--expanded"> <a href="/Blackboard_Data" hreflang="en">Blackboard Data</a> 
+             <ul class="menu"> 
+              <li id="nid-30491" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Data/Administrator" hreflang="en">Blackboard Data for Developers</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-13118" class="book-block-menu" role="navigation" data-product="Blackboard Instructor" aria-label="Book outline for Blackboard Instructor Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-13118" class="menu-item menu-item--expanded"> <a href="/Blackboard_Instructor" hreflang="en">Blackboard Instructor</a> 
+             <ul class="menu"> 
+              <li id="nid-20696" class="menu-item"> <a href="/Blackboard_Instructor/Quick_Start" hreflang="en">Quick Start</a> </li> 
+              <li id="nid-20701" class="menu-item"> <a href="/Blackboard_Instructor/Feature_Guide" hreflang="en">Feature Guide</a> </li> 
+              <li id="nid-20966" class="menu-item"> <a href="/Blackboard_Instructor/Course_List" hreflang="en">Courses and Organizations</a> </li> 
+              <li id="nid-20951" class="menu-item"> <a href="/Blackboard_Instructor/Course_Content" hreflang="en">Course Content</a> </li> 
+              <li id="nid-24111" class="menu-item"> <a href="/Blackboard_Instructor/Offline_Content" hreflang="en">Offline Content</a> </li> 
+              <li id="nid-20946" class="menu-item"> <a href="/Blackboard_Instructor/Announcements" hreflang="en">Announcements</a> </li> 
+              <li id="nid-13127" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Collaborate" hreflang="en">Collaborate</a> </li> 
+              <li id="nid-20956" class="menu-item"> <a href="/Blackboard_Instructor/Discussions" hreflang="en">Discussions</a> </li> 
+              <li id="nid-25806" class="menu-item"> <a href="/Blackboard_Instructor/Grading" hreflang="en">Grading</a> </li> 
+              <li id="nid-25781" class="menu-item"> <a href="/Blackboard_Instructor/Link_to_Cloud_Storage" hreflang="en">Link to Cloud Storage</a> </li> 
+              <li id="nid-28906" class="menu-item"> <a href="/Blackboard_Instructor/Push_Notifications" hreflang="en">Push Notifications</a> </li> 
+              <li id="nid-20961" class="menu-item"> <a href="/Blackboard_Instructor/Tests_and_Assignments" hreflang="en">Tests and Assignments</a> </li> 
+              <li id="nid-26761" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Whats_New" hreflang="en">What's New</a> </li> 
+              <li id="nid-21006" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Accessibility" hreflang="en">Accessibility</a> </li> 
+              <li id="nid-23806" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Instructor/Administrator_Info" hreflang="en">Administrator Info</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-477" class="book-block-menu" role="navigation" data-product="Collaborate" aria-label="Book outline for Blackboard Collaborate Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-477" class="menu-item menu-item--expanded"> <a href="/Collaborate" hreflang="en">Collaborate</a> 
+             <ul class="menu"> 
+              <li id="nid-478" class="menu-item menu-item--collapsed lazy folder"> <a href="/Collaborate/Ultra" hreflang="en">Ultra Experience</a> </li> 
+              <li id="nid-528" class="menu-item menu-item--collapsed lazy folder"> <a href="/Collaborate/v12" hreflang="en">Original Experience</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10745" class="book-block-menu" role="navigation" data-product="Community Engagement" aria-label="Book outline for Blackboard Community Engagement"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10745" class="menu-item menu-item--expanded"> <a href="/Community_Engagement" hreflang="en">Community Engagement</a> 
+             <ul class="menu"> 
+              <li id="nid-10891" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Parent_Community_Member" hreflang="en">Parent/Community Member</a> </li> 
+              <li id="nid-10892" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-10890" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Teacher" hreflang="en">Teacher</a> </li> 
+              <li id="nid-10889" class="menu-item menu-item--collapsed lazy folder"> <a href="/Community_Engagement/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-2253" class="book-block-menu" role="navigation" data-product="Connect" aria-label="Book outline for Blackboard Connect"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-2253" class="menu-item menu-item--expanded"> <a href="/Connect" hreflang="en">Connect</a> 
+             <ul class="menu"> 
+              <li id="nid-2254" class="menu-item menu-item--collapsed lazy folder"> <a href="/Connect/Connect_5" hreflang="en">Connect 5</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-28221" class="book-block-menu" role="navigation" data-product="CourseSites" aria-label="Book outline for Blackboard CourseSites"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-28221" class="menu-item menu-item--expanded"> <a href="/CourseSites" hreflang="en">CourseSites</a> 
+             <ul class="menu"> 
+              <li id="nid-28216" class="menu-item menu-item--collapsed lazy folder"> <a href="/CourseSites/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-28226" class="menu-item menu-item--collapsed lazy folder"> <a href="/CourseSites/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-28231" class="menu-item"> <a href="/CourseSites/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-2514" class="book-block-menu" role="navigation" data-product="Drive" aria-label="Book outline for Blackboard Drive"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-2514" class="menu-item menu-item--expanded"> <a href="/Drive" hreflang="en">Drive</a> 
+             <ul class="menu"> 
+              <li id="nid-2549" class="menu-item"> <a href="/Drive/Bb_Drive_Product_Update" hreflang="en">Product Updates</a> </li> 
+              <li id="nid-21566" class="menu-item menu-item--collapsed lazy folder"> <a href="/Drive/Drive_1.7" hreflang="en">Release 1.7</a> </li> 
+              <li id="nid-2528" class="menu-item menu-item--collapsed lazy folder"> <a href="/Drive/1.6" hreflang="en">Release 1.6</a> </li> 
+              <li id="nid-2515" class="menu-item menu-item--collapsed lazy folder"> <a href="/Drive/1.5" hreflang="en">Release 1.5</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-3271" class="book-block-menu" role="navigation" data-product="Learn" aria-label="Book outline for Blackboard Learn Help"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-3271" class="menu-item menu-item--expanded"> <a href="/Learn" hreflang="en">Learn</a> 
+             <ul class="menu"> 
+              <li id="nid-13376" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-14045" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-13425" class="menu-item menu-item--collapsed lazy folder"> <a href="/Learn/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10671" class="book-block-menu" role="navigation" data-product="Open Content" aria-label="Book outline for Blackboard Open Content"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10671" class="menu-item menu-item--expanded"> <a href="/Blackboard_Open_Content" hreflang="en">Open Content</a> 
+             <ul class="menu"> 
+              <li id="nid-10703" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_Content/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-10672" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_Content/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10564" class="book-block-menu" role="navigation" data-product="Open Education" aria-label="Book outline for Blackboard Open Education"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10564" class="menu-item menu-item--expanded"> <a href="/Open_Education" hreflang="en">Open Education</a> 
+             <ul class="menu"> 
+              <li id="nid-10572" class="menu-item menu-item--collapsed lazy folder"> <a href="/Open_Education/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-10565" class="menu-item menu-item--collapsed lazy folder"> <a href="/Open_Education/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10375" class="book-block-menu" role="navigation" data-product="Open LMS" aria-label="Book outline for Blackboard Open LMS "> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10375" class="menu-item menu-item--expanded"> <a href="/Blackboard_Open_LMS" hreflang="en">Open LMS </a> 
+             <ul class="menu"> 
+              <li id="nid-10451" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_LMS/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-10478" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_LMS/Teacher" hreflang="en">Teacher</a> </li> 
+              <li id="nid-10376" class="menu-item menu-item--collapsed lazy folder"> <a href="/Blackboard_Open_LMS/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-19816" class="book-block-menu" role="navigation" data-product="Predict" aria-label="Book outline for Blackboard Predict"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-19816" class="menu-item menu-item--expanded"> <a href="/Predict" hreflang="en">Predict</a> 
+             <ul class="menu"> 
+              <li id="nid-19091" class="menu-item menu-item--collapsed lazy folder"> <a href="/Predict/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-19090" class="menu-item menu-item--collapsed lazy folder"> <a href="/Predict/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-19096" class="menu-item menu-item--collapsed lazy folder"> <a href="/Predict/Advisor" hreflang="en">Advisor</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-26316" class="book-block-menu" role="navigation" data-product="SafeAssign" aria-label="Book outline for Blackboard SafeAssign"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-26316" class="menu-item menu-item--expanded"> <a href="/SafeAssign" hreflang="en">SafeAssign</a> 
+             <ul class="menu"> 
+              <li id="nid-26116" class="menu-item menu-item--collapsed lazy folder"> <a href="/SafeAssign/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-26111" class="menu-item menu-item--collapsed lazy folder"> <a href="/SafeAssign/Instructor" hreflang="en">Instructor</a> </li> 
+              <li id="nid-26056" class="menu-item menu-item--collapsed lazy folder"> <a href="/SafeAssign/Administrator" hreflang="en">Administrator</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-10576" class="book-block-menu" role="navigation" data-product="SIS Central" aria-label="Book outline for Blackboard SIS Central for Connect"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-10576" class="menu-item menu-item--expanded"> <a href="/SIS_Central/Connect" hreflang="en">SIS Central for Connect</a> 
+             <ul class="menu"> 
+              <li id="nid-10577" class="menu-item menu-item--collapsed lazy folder"> <a href="/SIS_Central/Connect/PowerSchool_Integration" hreflang="en">PowerSchool Integration</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-11788" class="book-block-menu" role="navigation" data-product="SmartView" aria-label="Book outline for Blackboard SmartView"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-11788" class="menu-item menu-item--expanded"> <a href="/SmartView" hreflang="en">SmartView</a> 
+             <ul class="menu"> 
+              <li id="nid-11790" class="menu-item"> <a href="/SmartView/Authentication_Logging_In" hreflang="en">Logging In</a> </li> 
+              <li id="nid-11791" class="menu-item menu-item--collapsed lazy folder"> <a href="/SmartView/Advisor_Desktop_Interface" hreflang="en">Advisor Desktop</a> </li> 
+              <li id="nid-11797" class="menu-item menu-item--collapsed lazy folder"> <a href="/SmartView/Service_Desk_Interface" hreflang="en">Service Desk</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+          <nav id="book-block-menu-21691" class="book-block-menu" role="navigation" data-product="Web Community Manager" aria-label="Book outline for Blackboard Web Community Manager"> 
+           <ul class="menu my-book-menu non-active-book"> 
+            <li id="nid-21691" class="menu-item menu-item--expanded"> <a href="/Web_Community_Manager" hreflang="en">Web Community Manager</a> 
+             <ul class="menu"> 
+              <li id="nid-21696" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Parent_Community_Member" hreflang="en">Parent/Community Member</a> </li> 
+              <li id="nid-21701" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Student" hreflang="en">Student</a> </li> 
+              <li id="nid-22326" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Teacher_Editor" hreflang="en">Teacher/Editor</a> </li> 
+              <li id="nid-21711" class="menu-item menu-item--collapsed lazy folder"> <a href="/Web_Community_Manager/Administrator" hreflang="en">Administrator</a> </li> 
+              <li id="nid-31421" class="menu-item"> <a href="/Web_Community_Manager/Teacher_Editor/Section_Workspace" hreflang="en">Section Workspace</a> </li> 
+             </ul> </li> 
+           </ul> 
+          </nav> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="page-header__second"> 
+       <div class="region region-header-second"> 
+        <div class="block block--block-blackboardtools " id="block-blackboardtools" data-block-plugin-id="block_content:4089d30d-1c4e-4ceb-bf0e-4199adc0a900"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div class="page-header__tools">
+           <a class="page-header__home" href="/" title="Home"><span class="icon-home" aria-hidden="true"></span>Home</a> 
+           <a class="page-header__print" title="Print"><span class="icon-printer" aria-hidden="true"></span>Print</a>
+          </div>
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-page-title " id="block-blackboard-page-title" data-block-plugin-id="page_title_block"> 
+         <h1><span>Blackboard Terms of Use</span> </h1> 
+        </div> 
+        <div class="block block--block-liftslot-fullspanbanner " id="block-liftslot-fullspanbanner" data-block-plugin-id="block_content:582f9bde-be9a-4fe6-b87f-1314126a7021"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div data-lift-slot="fb2baad0-4af7-11e7-b2aa-9d057867a0b0"></div>
+         </div> 
+        </div> 
+        <div class="block block--block-liftslot-studentlandingbanner " id="block-liftslot-studentlandingbanner" data-block-plugin-id="block_content:36968852-eb69-4598-8fc0-afc21978c52f"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div data-lift-slot="077642d0-89bb-11e7-8902-7de7c872c496"></div>
+         </div> 
+        </div> 
+        <div class="block block--block-liftslot-instructorlandingbanner " id="block-liftslot-instructorlandingbanner" data-block-plugin-id="block_content:896a174e-6094-4226-8825-122d884ecc5f"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div data-lift-slot="535c7f70-89bb-11e7-9aa3-ef6c45e0fd72"></div>
+         </div> 
+        </div> 
+        <div class="block block--block-liftslot-sidebarblock2 " id="block-liftslot-sidebarblock2" data-block-plugin-id="block_content:4a3e2310-bee3-4a7d-bb63-8543c0365657"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div class="block--block-lift-sidebarblock"> 
+           <div data-lift-slot="c6a9fca0-fa31-11e7-9ba6-db640d383e63"></div> 
+          </div>
+         </div> 
+        </div> 
+        <div class="block block--block-liftslot-sidebarblock3 " id="block-liftslot-sidebarblock3" data-block-plugin-id="block_content:78e9893a-652c-4f9f-9ea2-39d6ae91d839"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <div class="block--block-lift-sidebarblock"> 
+           <div data-lift-slot="112e5f50-fa32-11e7-9ba6-db640d383e63"></div> 
+          </div>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <main role="main"> 
+     <a id="main-content" tabindex="-1"></a> 
+     <div class="page-content"> 
+      <ul class="visually-hidden accessible-navigation__content"> 
+      </ul> 
+      <div class="region region-content"> 
+       <div data-drupal-messages-fallback class="hidden"></div> 
+       <div class="block block--block-views-block-view-applies-to-original-course-view-admin-block-1 views-element-container" id="block-views-block-view-applies-to-original-course-view-admin-block-1" data-block-plugin-id="views_block:view_applies_to_original_course_view_admin-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-original-course-view-admin view-id-view_applies_to_original_course_view_admin view-display-id-block_1 js-view-dom-id-24c4ad74a74485f6d9156f52364c0fd3f2bb2d6441d5a554571a8a09f8f08772"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-orig-course-inst-block-1 views-element-container" id="block-views-block-view-applies-orig-course-inst-block-1" data-block-plugin-id="views_block:view_applies_orig_course_inst-block_1"> 
+        <div>
+         <div class="view view-view-applies-orig-course-inst view-id-view_applies_orig_course_inst view-display-id-block_1 js-view-dom-id-1025798bfa9cbc7d51143da365c88c05abf6aa3ba2befdc133e2de4b35494ecf"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-orig-course-stud-block-1 views-element-container" id="block-views-block-view-applies-orig-course-stud-block-1" data-block-plugin-id="views_block:view_applies_orig_course_stud-block_1"> 
+        <div>
+         <div class="view view-view-applies-orig-course-stud view-id-view_applies_orig_course_stud view-display-id-block_1 js-view-dom-id-637374f24908653026688ede4ca150f96aae47828b9ec11506377e39b604c7bd"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-orig-exp-inst-block-1 views-element-container" id="block-views-block-view-applies-orig-exp-inst-block-1" data-block-plugin-id="views_block:view_applies_orig_exp_inst-block_1"> 
+        <div>
+         <div class="view view-view-applies-orig-exp-inst view-id-view_applies_orig_exp_inst view-display-id-block_1 js-view-dom-id-c9f172d4823a0bb02eb2dc218b405e12019c4d9560c345cc317644a5457897f2"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-orig-exp-stud-block-1 views-element-container" id="block-views-block-view-applies-orig-exp-stud-block-1" data-block-plugin-id="views_block:view_applies_orig_exp_stud-block_1"> 
+        <div>
+         <div class="view view-view-applies-orig-exp-stud view-id-view_applies_orig_exp_stud view-display-id-block_1 js-view-dom-id-f8c52970b7aa173d0fa91a4d6b7498821cd552b0f9b65aacc696cbfa97608e8c"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-original-experience-admin-block-1 views-element-container" id="block-views-block-view-applies-to-original-experience-admin-block-1" data-block-plugin-id="views_block:view_applies_to_original_experience_admin-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-original-experience-admin view-id-view_applies_to_original_experience_admin view-display-id-block_1 js-view-dom-id-5ccddd9598478b6e7bd89c89778e020284757a4194ae956ca292a2f688c4f5d0"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-ultra-course-inst-block-1 views-element-container" id="block-views-block-view-applies-ultra-course-inst-block-1" data-block-plugin-id="views_block:view_applies_ultra_course_inst-block_1"> 
+        <div>
+         <div class="view view-view-applies-ultra-course-inst view-id-view_applies_ultra_course_inst view-display-id-block_1 js-view-dom-id-54660a9c8d4027da74fa9b842820dc77d0b1123d476a36ae39ca474586b0d69d"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-ultra-course-stud-block-1 views-element-container" id="block-views-block-view-applies-ultra-course-stud-block-1" data-block-plugin-id="views_block:view_applies_ultra_course_stud-block_1"> 
+        <div>
+         <div class="view view-view-applies-ultra-course-stud view-id-view_applies_ultra_course_stud view-display-id-block_1 js-view-dom-id-7cba001dd1c688366fc1420027f7414204c9298baf086c4687a60caac0fdda25"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-ultra-exp-admin-block-1 views-element-container" id="block-views-block-view-applies-ultra-exp-admin-block-1" data-block-plugin-id="views_block:view_applies_ultra_exp_admin-block_1"> 
+        <div>
+         <div class="view view-view-applies-ultra-exp-admin view-id-view_applies_ultra_exp_admin view-display-id-block_1 js-view-dom-id-30a1ad8d8e02d70f29f895ccc8c5339cb6e205ba24bb4d6703bf46829e0b097e"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-ultra-exp-inst-block-1 views-element-container" id="block-views-block-view-applies-ultra-exp-inst-block-1" data-block-plugin-id="views_block:view_applies_ultra_exp_inst-block_1"> 
+        <div>
+         <div class="view view-view-applies-ultra-exp-inst view-id-view_applies_ultra_exp_inst view-display-id-block_1 js-view-dom-id-c24692e1c6191bc3af5cc776ec129488cf3738ee235f681827ed951c0b0a2121"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-ultra-exp-stud-block-1 views-element-container" id="block-views-block-view-applies-ultra-exp-stud-block-1" data-block-plugin-id="views_block:view_applies_ultra_exp_stud-block_1"> 
+        <div>
+         <div class="view view-view-applies-ultra-exp-stud view-id-view_applies_ultra_exp_stud view-display-id-block_1 js-view-dom-id-8b84ea7458de0eb144a0da33d7abd74e5c79c921d39657b96b27892568626d55"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-institution-controls-assignments-1 views-element-container" id="block-views-block-view-applies-to-institution-controls-assignments-1" data-block-plugin-id="views_block:view_applies_to_institution_controls_assignments-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-institution-controls-assignments view-id-view_applies_to_institution_controls_assignments view-display-id-block_1 js-view-dom-id-32dd965740d65c82bb8a394f1d0366670664c719629a5482c8e8ea95fb607739"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-institution-controls-gradebook-1 views-element-container" id="block-views-block-view-applies-to-institution-controls-gradebook-1" data-block-plugin-id="views_block:view_applies_to_institution_controls_gradebook-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-institution-controls-gradebook view-id-view_applies_to_institution_controls_gradebook view-display-id-block_1 js-view-dom-id-29ae0cd6d55ef7145ec7e1e907bb4603152662515db770de76445ab0c73c4009"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-institution-controls-rubrics-1 views-element-container" id="block-views-block-view-applies-to-institution-controls-rubrics-1" data-block-plugin-id="views_block:view_applies_to_institution_controls_gradebook_and_rubrics-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-institution-controls-gradebook-and-rubrics view-id-view_applies_to_institution_controls_gradebook_and_rubrics view-display-id-block_1 js-view-dom-id-b282f655b379886aefebe3a7abefead448ce3a54a4b14dfe61f8a7735ecc142b"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-institution-controls-rubrics-2 views-element-container" id="block-views-block-view-applies-to-institution-controls-rubrics-2" data-block-plugin-id="views_block:view_applies_to_institution_controls_rubrics-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-institution-controls-rubrics view-id-view_applies_to_institution_controls_rubrics view-display-id-block_1 js-view-dom-id-c9bb79a6429626a447fd180ce05b4c3678be129f8015b9e7042ae08c353bf2c1"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-institution-controls-tests-block-1 views-element-container" id="block-views-block-view-applies-to-institution-controls-tests-block-1" data-block-plugin-id="views_block:view_applies_to_institution_controls_tests-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-institution-controls-tests view-id-view_applies_to_institution_controls_tests view-display-id-block_1 js-view-dom-id-2ea7bdfa5c17a76afb2f31b3d8f249fff0b755e86e4636668f2aa73ee30567d0"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-views-block-view-applies-to-self-hosting-block-1 views-element-container" id="block-views-block-view-applies-to-self-hosting-block-1" data-block-plugin-id="views_block:view_applies_to_self_hosting-block_1"> 
+        <div>
+         <div class="view view-view-applies-to-self-hosting view-id-view_applies_to_self_hosting view-display-id-block_1 js-view-dom-id-a88f87fef6f15f0f43fc595a5de89974d13b1c167a860213c648810ae91ab47a"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="block block--block-blackboard-content " id="block-blackboard-content" data-block-plugin-id="system_main_block"> 
+        <article role="article" about="/Terms_of_Use"> 
+         <div> 
+          <div class="field field--name-field-content-page-paragraphs field--type-entity-reference-revisions field--label-hidden field__items"> 
+           <div class="paragraph paragraph--type--basic-content-paragraph paragraph--view-mode--default"> 
+            <div class="field field--name-field-content field--type-text-long field--label-hidden field__item">
+             <h2>Welcome to Blackboard<sup>®</sup></h2> 
+             <p><span class="emphasize">IMPORTANT--PLEASE READ CAREFULLY</span>. If you are a resident of or have your principal place of business in the European Economic Area, these Terms of Use ("<span class="emphasize">Terms</span>") are an agreement between you and Blackboard International B.V., a private company formed and existing under the laws of the Netherlands. Otherwise, these Terms are an agreement between you and Blackboard Inc., a Delaware corporation. References to "<span class="emphasize">us</span>", "<span class="emphasize">we</span>", "<span class="emphasize">our</span>", and "<span class="emphasize">Blackboard</span>" shall mean either Blackboard International B.V. or Blackboard Inc., as appropriate.</p> 
+             <p>These Terms govern your access to and use of Blackboard software, products, and/or services (individually or collectively, the "<span class="emphasize">Products</span>") and any information, content, text, graphics, photos or other materials uploaded, downloaded, purchased, or appearing on or through the Products (collectively referred to as "<span class="emphasize">Content</span>"). Additional terms or product requirements may apply to our individual Products and are available with the relevant Product. These Terms apply to all visitors, users, and others who access and use the Products ("<span class="emphasize">Users</span>").</p> 
+             <p>By accessing or using the Products you agree to be bound by these Terms.</p> 
+             <p>PLEASE READ THESE TERMS CAREFULLY TO ENSURE THAT YOU UNDERSTAND EACH PROVISION. THESE TERMS CONTAIN A MANDATORY INDIVIDUAL ARBITRATION AND CLASS ACTION/JURY TRIAL WAIVER PROVISION THAT, TO THE EXTENT APPLICABLE TO YOU, REQUIRES THE USE OF ARBITRATION ON AN INDIVIDUAL BASIS TO RESOLVE DISPUTES, RATHER THAN JURY TRIALS OR CLASS ACTIONS.</p> 
+             <p>Notwithstanding the foregoing, nothing in these Terms supersedes or limits your rights under (1) the terms and conditions of any written agreement you have entered into with Blackboard regarding the use of Products, or (2) applicable laws or regulations to the extent these Terms are prohibited by such laws or regulations. In the event of any conflict between these Terms and the terms and conditions of an applicable written agreement you have entered into with Blackboard, the terms and conditions of the written agreement shall control.</p> 
+             <hr>
+             <h2>1. Basic terms &amp; accounts</h2> 
+             <p>You are responsible for your use of the Products. You may use the Products only if you can form a binding contract with Blackboard. Your account with Blackboard (and use of the Product) gives you access to the services and functionality that we may establish and maintain from time to time and in our sole discretion. We may maintain different types of accounts for different types of Users. If you are accepting these Terms and using the Products on behalf of a company, organization, government, or other legal entity, then (a) “you” includes you and that entity, and (b) you represent and warrant that you are an authorized representative of the entity with the authority to bind the entity to these Terms, and that you agree to these Terms on the entity’s behalf. You may use the Products only in compliance with these Terms, any agreement entered into by your institution relating to the Products, and all applicable local, state, national, and international laws, rules and regulations.</p> 
+             <p>In cases where you have authorized or registered another individual, including a minor, to use your account(s), you are fully responsible for (i) the online conduct of such User; (ii) controlling the User’s access to and use of the Products; and (iii) the consequences of any misuse. Blackboard requires that the parents, guardian, or other authorized adult or educational institution of a minor affirmatively consent to the use of a Blackboard Product by such minor. Blackboard reserves the right to provide access to the minor’s account to the minor’s parents, guardian or other authorized adult or educational institution, upon such adult’s request. For additional information on how we use your information, please see our <a href="/Privacy_Statement">Privacy Policy</a>.</p> 
+             <p>You are solely responsible for your interactions with other Users. We reserve the right, but have no obligation, to monitor disputes between you and other Users. Blackboard shall have no liability for your interactions with other Users, nor for any User’s acts or omissions.</p> 
+             <hr>
+             <h2>2. Privacy &amp; use of personal information</h2> 
+             <p>Any information that you provide to Blackboard, including first name, last name, email address, and any other information including personal information you have provided, may provide, or may be collected by us in connection with your use of the Products (“<span class="emphasize"><strong>Your Information</strong></span>”), will be collected, maintained and used in order to provide the Products to you or your institution, or in accordance with these Terms, our privacy policy located <a href="/Privacy_Statement">here</a> ("<span class="emphasize">Privacy Policy</span>"), any additional terms applicable to an individual Product, and any agreement entered into by your institution relating to the Product. You understand that, through your use of the Products, you consent to the collection and use (as set forth in these Terms, the Privacy Policy and any agreement entered into by your institution relating to the Product) of Your Information, including the transfer of Your Information to the United States and/or other countries for storage, hosting, processing, and use by Blackboard.</p> 
+             <p>For the avoidance of doubt, personal information that includes Student Data (defined below) provided to Blackboard through the use of these Products is governed by the terms of the agreement between Blackboard and the educational institution relevant to your use of the Products. As between Blackboard and you, you and/or the educational institution own all right, title and interest to all Student Data you provide or otherwise make available to us, and we do not own, control, or license such Student Data, except so as to provide the Products to you and to the educational institution that provides the products and controls Student Data from the educational records, if applicable, and as described herein. “<span class="emphasize">Student Data</span>” is any information (in any format) that is directly related to an identifiable current or former student that is maintained by a school, school district, or related entity or organization, or by us, as part of the provision of the Products. Student Data may include “educational records” as defined by the Family Educational Rights and Privacy Act (“<span class="emphasize">FERPA</span>”), 20 U.S.C. § 1232(g). Blackboard agrees to treat Student Data as confidential and not to share it with third parties other than as described in Blackboard’s agreement with the educational institution.</p> 
+             <p>If you have any questions regarding the privacy and use of Your Information, please contact us at <a href="/cdn-cgi/l/email-protection#69191b001f080a10290b05080a020b06081b0d470a0604"><span class="__cf_email__" data-cfemail="3545475c4354564c75575954565e575a5447511b565a58">[email&nbsp;protected]</span></a>, or your educational institution.</p> 
+             <hr>
+             <h2>3. Content &amp; your rights</h2> 
+             <p>You are responsible for Content that you post to the Products, and any consequences thereof. The Content you submit, post, or display may be viewed by other Users of the Products. You may be able to control the Content that other Users of certain Products may access through the privacy options in certain Products.</p> 
+             <p>You retain your rights to any Content you submit, post, or display on or through the Products. By submitting, posting or displaying Content on or through the Products, you grant us a worldwide, non-exclusive, royalty-free license (with the right to sublicense) to use, host, store, copy, reproduce, process, adapt, modify, publish, transmit, create derivative works from, communicate, display, and/or distribute such Content in any and all media or distribution methods (now known or later developed) as part of providing any of the Products. You agree that this license includes the right for Blackboard to provide, promote, and improve the Products and to make Content submitted to or through the Products available to other institutions or individuals as part of providing the Products (including after termination of your use of the Products) and in accordance with your privacy settings. You represent and warrant that you have all the rights, power and authority necessary to grant the rights granted herein to any Content that you submit.</p> 
+             <p>All Content, whether publicly posted or privately transmitted, is the sole responsibility of the person who originated such Content. We may not monitor or control the Content posted via the Products, and we do not take responsibility for such Content. Any use or reliance on any Content or materials posted via the Products or obtained by you through the Products is at your own risk.</p> 
+             <p>Further, in connection with Content you submit, post, or display on or through the Products, you affirm, represent, and warrant the following: (a) you have the written consent of each and every natural person who is identifiable in the Content, if any, to use such person’s name or likeness in the manner contemplated by any Product and these Terms, and each such person has released you from any liability that may arise in relation to such use; (b) you have obtained and are solely responsible for obtaining all consents as may be required by law to post any Content relating to third parties; (c) your Content and Blackboard’s use thereof as contemplated by these Terms and any Product will not violate any law or infringe any rights of any third party, including but not limited to any intellectual property rights and privacy rights; and (d) Blackboard may exercise the rights to your Content granted under these Terms without liability for payment of any guild fees, residuals, payments, fees, or royalties payable under any collective bargaining agreement, licensing arrangement or otherwise.</p> 
+             <p>Blackboard respects the intellectual property rights of others and expects Users of the Products to do the same. We will respond to notices of alleged copyright infringement that comply with applicable law and are properly provided to us. If you believe that your Content has been copied in a way that constitutes copyright infringement, please provide us with the following information: (i) a physical or electronic signature of the copyright owner or a person authorized to act on their behalf; (ii) identification of the copyrighted work claimed to have been infringed; (iii) identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit us to locate the material; (iv) your contact information, including your address, telephone number, and an email address; (v) a statement by you that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law; and (vi) a statement that the information in the notification is accurate, and, under penalty of perjury, that you are authorized to act on behalf of the copyright owner.</p> 
+             <p>We reserve the right to remove Content alleged to be infringing without prior notice, at our sole discretion, and without liability to you. Our designated copyright agent for notice of alleged copyright infringement appearing on the Products is:</p> 
+             <p>Blackboard Inc.<br> Attn: General Counsel<br> 1111 19th Street, N.W.<br> Washington, D.C. 20006<br> Email: <a href="/cdn-cgi/l/email-protection#074062696275666b4468726974626b47656b66646c65686675632964686a"><span class="__cf_email__" data-cfemail="266143484354474a6549534855434a66444a47454d44494754420845494b">[email&nbsp;protected]</span></a></p> 
+             <hr>
+             <h2>4. Your license to use the products</h2> 
+             <h3>A. License</h3> 
+             <p>Blackboard gives you a personal, worldwide, royalty-free, non-assignable, and non-exclusive license to use the Products, subject to these Terms and any agreement entered into by your institution relating to the Products, solely for the intended use of the Products, and not for competitive intelligence, analysis, or demonstrations. You may not copy, modify, distribute, sell, or lease any part of our Products, nor may you reverse engineer or attempt to extract the source code of any Product, unless laws prohibit those restrictions or you have our written permission.</p> 
+             <h3>B. Acceptable use</h3> 
+             <p>When using the Products you must not: (i) circumvent, disable or otherwise interfere with any security related features of the Products or features that prevent or restrict use or copying of the content accessible via the Products; (ii) create more than one account for use with a particular Product (however, you may connect all your social networks or other Product accounts, in each case that we support, to your account for use with such Product); (iii) give any false or misleading information or permit another person to use a Product under your name or on your behalf; (iv) impersonate any person, or misrepresent your identity or affiliation with any person or give the impression they are linked to Blackboard, if this is not the case; (v) use a Product if we have suspended or banned you from using it; (vi) send junk, spam, repetitive messages, unsolicited advertising or marketing email, call, or text messages, or engage in any activities that violate anti-spamming laws and regulations, including but not limited to, the CAN-SPAM Act or 2003, the Telephone Consumer Protection Act, or other federal, state or local laws relating to emails, calls, or text messages; (vii) advocate, promote or engage in any illegal or unlawful conduct or conduct that causes damage or injury to any person or property; (viii) modify, interfere, intercept, disrupt or hack any Product or collect any data from a Product other than in accordance with these Terms of Use; (ix) misuse the Products by knowingly introducing viruses, Trojans, worms, logic bombs or other material which would harm the Products or any User of the Products' equipment; (x) submit or contribute any Content that contains nudity or violence or is abusive, threatening, obscene, misleading, untrue or offensive (in each case unless such Content is submitted or contributed for a predominantly educational purpose, such as, for example, historical materials contributed via a Product for class discussion); (xi) submit or contribute any Content without the permission of the content owner or otherwise infringe the copyright, trademark, privacy, publicity, or other rights of third parties; (xii) use any Content in violation of any licensing terms specified by the owner; (xiii) submit or contribute any information or commentary about another person without that person's permission; (xiv) threaten, abuse or invade another's privacy, or cause annoyance, inconvenience or needless anxiety or take any action that is likely to harass, upset, embarrass, alarm or annoy any other person; or (xv) use any automated system, including without limitation "robots", "spiders" or "offline readers" to access a Product in a manner that sends more request messages to the Product than a human can reasonably produce in the same period of time.</p> 
+             <p>Failure to comply with these rules of acceptable use constitutes a serious breach of these Terms of Use, and may result in our taking all or any of the following actions (with or without notice): (a) immediate, temporary or permanent withdrawal of your right to use our Products; (b) immediate, temporary or permanent removal of any Content; (c) issuing of a warning to you; (d) legal action against you including proceedings for reimbursement of all costs (including, but not limited to, reasonable administrative and legal costs) resulting from the breach; and (e) disclosure of such information to law enforcement authorities as we reasonably feel is necessary.</p> 
+             <p>The responses described in this Section are not limited, and we may take any other action we reasonably deem appropriate.</p> 
+             <h3>C. Changes to the products</h3> 
+             <p>We may, without prior notice, change any Product; stop providing any Product or features of any Product, to you or to Users generally; or create usage limits for any Product. We may permanently or temporarily terminate or suspend your access to any Product without notice or liability for any reason, including if in our sole determination you violate any provision of these Terms, or for no reason. Upon termination for any reason or no reason, you continue to be bound by these Terms.</p> 
+             <hr>
+             <h2>5. Mobile software</h2> 
+             <h3>A. Mobile software</h3> 
+             <p>We may make available software to access the Products via a mobile device (“<span class="emphasize">Mobile Software</span>”). To use the Mobile Software you must have a mobile device that is compatible with the Mobile Software. Blackboard does not warrant that the Mobile Software will be compatible with your mobile device. You may use mobile data in connection with the Mobile Software and may incur additional charges from your wireless provider for these services. You agree that you are solely responsible for any such charges. Blackboard hereby grants you a non-exclusive, non-transferable, revocable license to use a compiled code copy of the Mobile Software for one account on one mobile device owned or leased solely by you, for your personal use. You may not: (i) modify, disassemble, decompile or reverse engineer the Mobile Software, except to the extent that such restriction is expressly prohibited by law; (ii) rent, lease, loan, resell, sublicense, distribute or otherwise transfer the Mobile Software to any third party or use the Mobile Software to provide time sharing or similar services for any third party; (iii) make any copies of the Mobile Software; (iv) remove, circumvent, disable, damage or otherwise interfere with security-related features of the Mobile Software, features that prevent or restrict use or copying of any content accessible through the Mobile Software, or features that enforce limitations on use of the Mobile Software; or (v) delete the copyright and other proprietary rights notices on the Mobile Software. You acknowledge that Blackboard may from time to time issue upgraded versions of the Mobile Software, and may automatically electronically upgrade the version of the Mobile Software that you are using on your mobile device. You consent to such automatic upgrading on your mobile device, and agree that the terms and conditions of these Terms will apply to all such upgrades. Any third-party code that may be incorporated in the Mobile Software is covered by the applicable open source or third-party license EULA, if any, authorizing use of such code. The foregoing license grant is not a sale of the Mobile Software or any copy thereof, and Blackboard or its third-party partners or suppliers retain all right, title, and interest in the Mobile Software (and any copy thereof). Any attempt by you to transfer any of the rights, duties or obligations hereunder, except as expressly provided for in these Terms, is void. Blackboard reserves all rights not expressly granted under these Terms. The Mobile Software originates in the United States, and is subject to United States export laws and regulations. The Mobile Software may not be exported or re-exported to certain countries or those persons or entities prohibited from receiving exports from the United States. In addition, the Mobile Software may be subject to the import and export laws of other countries. You agree to comply with all United States and foreign laws related to use of the Mobile Software and the Products.</p> 
+             <h3>B. Mobile software from Apple’s App Store</h3> 
+             <p>The following applies to any Mobile Software you acquire from the App Store (“<span class="emphasize">App Store-Sourced Software</span>”): You acknowledge and agree that these Terms are solely between you and Blackboard, not Apple, Inc. (“<span class="emphasize">Apple</span>”) and that Apple has no responsibility for the App Store-Sourced Software or content thereof. Your use of the App Store-Sourced Software must comply with the App Store Terms of Service. You acknowledge that Apple has no obligation whatsoever to furnish any maintenance and support services with respect to the App Store-Sourced Software. In the event of any failure of the App Store-Sourced Software to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price for the App Store-Sourced Software to you; to the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the App Store-Sourced Software, and any other claims, losses, liabilities, damages, costs or expenses attributable to any failure to conform to any warranty will be solely governed by these Terms and any law applicable to Blackboard as provider of the software. You acknowledge that Apple is not responsible for addressing any of your claims or those of any third party relating to the App Store-Sourced Software or your possession and/or use of the App Store-Sourced Software, including, but not limited to: (i) product liability claims; (ii) any claim that the App Store-Sourced Software fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection or similar legislation; and all such claims are governed solely by these Terms and any law applicable to Blackboard as provider of the software. You acknowledge that, in the event of any third-party claim that the App Store-Sourced Software or your possession and use of that App Store-Sourced Software infringes that third party’s intellectual property rights, Blackboard, not Apple, will be solely responsible for the investigation, defense, settlement and discharge of any such intellectual property infringement claim to the extent required by these Terms. You and Blackboard acknowledge and agree that Apple, and Apple’s subsidiaries, are third-party beneficiaries of these Terms as relates to your license of the App Store-Sourced Software, and that, upon your acceptance of the Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms as relates to your license of the App Store-Sourced Software against you as a third-party beneficiary thereof.</p> 
+             <h3>C. Mobile software from Google Play Store</h3> 
+             <p>The following applies to any Mobile Software you acquire from the Google Play Store (“<span class="emphasize">Google-Sourced Software</span>”): (i) you acknowledge that the Terms are between you and Blackboard only, and not with Google, Inc. (“<span class="emphasize">Google</span>”); (ii) your use of Google-Sourced Software must comply with Google’s then-current Google Play Store Terms of Service; (iii) Google is only a provider of the Google Play Store where you obtained the Google-Sourced Software; (iv) Blackboard, and not Google, is solely responsible for its Google-Sourced Software; (v) Google has no obligation or liability to you with respect to Google-Sourced Software or the Terms; and (vi) you acknowledge and agree that Google is a third-party beneficiary to the Terms as relates to Blackboard’s Google-Sourced Software.</p> 
+             <h3>D. Mobile software from Microsoft Store</h3> 
+             <p>The following applies to any Mobile Software you acquire from the Microsoft Store ("<span class="emphasize">MS-Sourced Software</span>"): (i) you acknowledge that these Terms is between you and Blackboard only, and not with Microsoft Corporation ("<span class="emphasize">Microsoft</span>"); (ii) your use of MS-Sourced Software must comply with Microsoft's then-current Microsoft Store Terms of Service; (iii) Microsoft is only a provider of the Microsoft Store where you obtained the MS-Sourced Software; (iv) Blackboard, and not Microsoft, is solely responsible for its MS-Sourced Software; (v) Microsoft has no obligation or liability to you with respect to MS-Sourced Software or these Terms; and (vi) you acknowledge and agree that Microsoft is a third-party beneficiary to these Terms as it relates to Blackboard’s MS-Sourced Software.</p> 
+             <hr>
+             <h2>6. Blackboard rights</h2> 
+             <p>The Products are always evolving and the form, nature, and/or functionality of the Products may change from time to time without prior notice to you. In addition, Blackboard may stop (permanently or temporarily) providing the Products (or any features within the Products) to you or to Users generally and may not be able to provide you with prior notice. We also retain the right to create limits on use and storage at our sole discretion at any time without prior notice to you.</p> 
+             <p>All right, title, and interest in and to the Products (excluding Content provided by Users or other third parties) are and will remain the exclusive property of Blackboard and its licensors. The Products are protected by copyright, trademark, and other laws of both the United States and foreign countries. Nothing in the Terms gives you a right to use the Blackboard name or any of the Blackboard trademarks, logos, domain names, and other distinctive brand features. Any feedback, comments, or suggestions you may provide regarding Blackboard, or the Products is entirely voluntary and we will be free to use such feedback, comments or suggestions as we see fit and without any obligation to you.</p> 
+             <hr>
+             <h2>7. Registration obligations &amp; passwords</h2> 
+             <p>You may never use another User’s account without permission from Blackboard. In consideration of your use of the Products, you agree (a) that Your Information will be true, accurate, current and complete, and (b) to maintain and promptly update Your Information to keep it true, accurate, current and complete. You are responsible for safeguarding any password that you use to access the Products (including passwords used on other Blackboard products that permit single sign-on to the Products) and for any activities or actions under your password. We encourage you to use “strong” passwords (passwords that use a combination of upper and lower case letters, numbers and symbols, and have at least eight (8) characters) with your account. You agree to (a) notify Blackboard of any unauthorized use of your password or User identification and any other breach of security, and (b) ensure that you exit from your account at the end of each session.</p> 
+             <hr>
+             <h2>8. Export controls</h2> 
+             <p>As required by the laws of the United States and other countries: (a) you understand that the Products are subject to export controls under the U.S. Commerce Department's Export Administration Regulations ("EAR"); (b) you are not located in a prohibited destination country under the EAR or U.S. sanctions regulations; and (c) you will not export, re-export, or transfer the Products to any prohibited destination or persons or entities on the U.S. Bureau of Industry and Security Denied Parties List or Entity List, or the U.S. Office of Foreign Assets Control list of Specially Designated Nationals and Blocked Persons, or any similar lists maintained by other countries, without the necessary export license(s) or authorization(s).</p> 
+             <hr>
+             <h2>9. Termination</h2> 
+             <p>We may suspend or terminate your accounts or cease providing you with all or part of the Products at any time for any reason, including, but not limited to, if we reasonably believe: (i) you have violated these Terms, (ii) you create risk or possible legal exposure for us; or (iii) our provision of the Products is no longer commercially viable. In such a termination event, the license granted hereunder shall automatically terminate. In all such cases, the Terms shall terminate, including, without limitation, your license to use the Products, except that the following Sections shall continue to apply: 2, 3, 5, 6, 9, 10, and 11.</p> 
+             <p>Further, if you stop using the Products for more than 60 days, your accounts may be deleted and Blackboard assumes no responsibility for Content deleted following inactivity. If you wish to delete your Blackboard Product account(s) in their entirety(ies), you may contact us via <a href="/cdn-cgi/l/email-protection#9ddaf8f3f8effcf1def2e8f3eef8f1ddfff1fcfef6fff2fceff9b3fef2f0"><span class="__cf_email__" data-cfemail="2562404b40574449664a504b56404965474944464e474a4457410b464a48">[email&nbsp;protected]</span></a> and specify which Blackboard Product account(s) you wish to delete. We will delete your specified accounts within a reasonable time, unless prohibited by law.</p> 
+             <p>Nothing in this Section shall affect Blackboard’s rights to change, limit, or stop the provision of the Products without prior notice, as provided elsewhere in these Terms.</p> 
+             <h2>10. Disclaimers &amp; limitations of liability</h2> 
+             <p>Please read this Section carefully since it limits the liability of Blackboard and its parents, subsidiaries, affiliates, related companies, officers, directors, employees, agents, representatives, partners, and/or licensors (collectively, the “<span class="emphasize">Blackboard Entities</span>”). Each of the Subsections below only applies up to the maximum extent permitted under applicable law. Nothing in this Section is intended to limit any rights you may have which may not be lawfully limited.</p> 
+             <h3>A. The products are available “AS-IS”</h3> 
+             <p>Your access to and use of the Products or any Content are at your own risk. You understand and agree that the Products are provided to you on an “AS IS” and “AS AVAILABLE” basis. Without limiting the foregoing, to the maximum extent permitted under applicable law, THE BLACKBOARD ENTITIES DISCLAIM ALL WARRANTIES AND CONDITIONS, WHETHER EXPRESS OR IMPLIED, OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. No advice or information, whether oral or written, obtained from any of the Blackboard Entities or through the Products will create any warranty not expressly made herein.</p> 
+             <h3>B. HIPAA disclaimer</h3> 
+             <p>Blackboard does not warrant or provide any assurances that your use of the Products will comply with the Health Insurance Portability and Accountability Act of 1996, as amended (“<span class="emphasize">HIPAA</span>”). If you are a health care provider, health plan, insurer, health care information clearinghouse or other entity that may be considered a “covered entity” under HIPAA or a “business associate” of a “covered entity” under HIPAA, you shall take all steps necessary to comply with HIPAA and shall be responsible for any applicable compliance with HIPAA. You agree that you will not provide Blackboard with any protected health information (as that term is defined under HIPAA) and that Blackboard is therefore not deemed to be a business associate of you and/or your institution for purposes of compliance with HIPAA.</p> 
+             <h3>C. Third-Party links and resources</h3> 
+             <p>The Products may contain links to third-party websites or resources. You acknowledge and agree that the Blackboard Entities are not responsible or liable for: (i) the availability or accuracy of such websites or resources; or (ii) the content, products, or services on or available from such websites or resources. Links to such websites or resources do not imply any endorsement by the Blackboard Entities of such websites or resources or the content, products, or services available from such websites or resources. You acknowledge sole responsibility for and assume all risk arising from your use of any such websites or resources. If you access a third-party website or service from a Product or share your Content on or through any third-party website or service, you do so at your own risk, and you understand that these Terms and the Privacy Policy do not apply to your use of such sites.</p> 
+             <h3>D. Limitation of liability</h3> 
+             <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE BLACKBOARD ENTITIES SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOOD-WILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM (i) YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE PRODUCTS; (ii) ANY CONDUCT OR CONTENT OF ANY USER OR OTHER THIRD PARTY ON, THROUGH, OR ASSOCIATED WITH THE PRODUCTS, INCLUDING WITHOUT LIMITATION, ANY DEFAMATORY, OFFENSIVE OR ILLEGAL CONDUCT OF OTHER USERS OR THIRD PARTIES; (iii) ANY CONTENT OBTAINED FROM THE PRODUCTS; OR (iv) UNAUTHORIZED ACCESS, USE OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT.</p> 
+             <p>IN NO EVENT SHALL THE AGGREGATE LIABILITY OF THE BLACKBOARD ENTITIES EXCEED THE GREATER OF ONE HUNDRED U.S. DOLLARS (U.S. $100.00) OR THE AMOUNT YOU PAID BLACKBOARD, IF ANY, IN THE PAST SIX MONTHS FOR THE PRODUCTS GIVING RISE TO THE CLAIM.</p> 
+             <p>THE LIMITATIONS OF THIS SUBSECTION SHALL APPLY TO ANY THEORY OF LIABILITY, WHETHER BASED ON WARRANTY, CONTRACT, STATUTE, TORT (INCLUDING NEGLIGENCE) OR OTHERWISE, AND WHETHER OR NOT THE BLACKBOARD ENTITIES HAVE BEEN INFORMED OF THE POSSIBILITY OF ANY SUCH DAMAGE, AND EVEN IF A REMEDY SET FORTH HEREIN IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE.</p> 
+             <p>FEDERAL LAW, SOME STATES, PROVINCES, AND OTHER JURISDICTIONS DO NOT ALLOW THE EXCLUSION AND LIMITATIONS OF CERTAIN IMPLIED WARRANTIES, SO THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU. THESE TERMS GIVE YOU SPECIFIC LEGAL RIGHTS, AND YOU MAY ALSO HAVE OTHER RIGHTS WHICH VARY FROM JURISDICTION TO JURISDICTION. FURTHER, SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATIONS OR EXCLUSIONS MAY NOT APPLY TO YOU. THE DISCLAIMERS, EXCLUSIONS, AND LIMITATIONS OF LIABILITY UNDER THESE TERMS WILL NOT APPLY TO THE EXTENT PROHIBITED BY APPLICABLE LAW.</p> 
+             <h3>E. Indemnity</h3> 
+             <p>You agree to defend, indemnify and hold harmless Blackboard and its subsidiaries, agents, licensors, managers, and other affiliated companies, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney’s fees) arising from: (i) your use of and access to a Product, including any data or content transmitted or received by you; (ii) your violation of any provision of these Terms, including without limitation your breach of any of the representations and warranties above; (iii) your violation of any third-party right, including without limitation any right of privacy or intellectual property rights; (iv) your violation of any applicable law, rule or regulation; (v) any Content that is submitted via your User Account including without limitation misleading, false, or inaccurate information; (vi) your willful misconduct; or (vii) any other party’s access and use of a Product with your unique username, password or other appropriate security code.</p> 
+             <hr>
+             <h2>11. General terms</h2> 
+             <h3>A. Waiver &amp; severability</h3> 
+             <p>The failure of Blackboard to enforce any right or provision of these Terms will not be deemed a waiver of such right or provision. In the event that any provision of these Terms is held to be invalid or unenforceable, then that provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions of these Terms will remain in full force and effect; except that in the event of unenforceability of the universal class action/jury trial waiver set forth in Section 11(B)(iii) below, the entire arbitration agreement shall be unenforceable.</p> 
+             <h3>B. Governing law; dispute resolution</h3> 
+             <p><em><span class="emphasize">(i) Governing Law</span>.</em> These Terms and any action related thereto will be governed by the laws of the State of New York without regard to or application of its conflict of law provisions or your state or country of residence. All claims, legal proceedings, or litigation arising in connection with the Products will be brought solely in the federal or state courts located in Washington, D.C., United States, and you consent to the jurisdiction of and venue in such courts and waive any objection as to inconvenient forum.<br><em><span class="emphasize">(ii) Arbitration</span>.</em> READ THIS SECTION CAREFULLY BECAUSE IT REQUIRES THE PARTIES TO ARBITRATE THEIR DISPUTES AND LIMITS THE MANNER IN WHICH YOU CAN SEEK RELIEF FROM BLACKBOARD. For any dispute with Blackboard, you agree to first contact us at <a href="/cdn-cgi/l/email-protection#cb8caea5aeb9aaa788a4bea5b8aea78ba9a7aaa8a0a9a4aab9afe5a8a4a6"><span class="__cf_email__" data-cfemail="cc8ba9a2a9beada08fa3b9a2bfa9a08caea0adafa7aea3adbea8e2afa3a1">[email&nbsp;protected]</span></a> and attempt to resolve the dispute with us informally. In the unlikely event that Blackboard has not been able to resolve a dispute it has with you after sixty (60) days, we each agree to resolve any claim, dispute, or controversy (excluding any claims for injunctive or other equitable relief as provided below) arising out of or in connection with or relating to these Terms, or the breach or alleged breach thereof, by binding arbitration by JAMS, under the Optional Expedited Arbitration Procedures then in effect for JAMS, except as provided herein. JAMS may be contacted at <a href="https://www.jamsadr.com/">www.jamsadr.com</a>. The arbitration will be conducted in Washington, D.C., United States, unless you and Blackboard agree otherwise. If you are using the Products for commercial purposes, each party will be responsible for paying any JAMS filing, administrative and arbitrator fees in accordance with JAMS rules, and the award rendered by the arbitrator shall include costs of arbitration, reasonable attorneys’ fees and reasonable costs for expert and other witnesses. If you are an individual using the Products for non-commercial purposes: (i) JAMS may require you to pay a fee for the initiation of your case, unless you apply for and successfully obtain a fee waiver from JAMS; (ii) the award rendered by the arbitrator may include your costs of arbitration, your reasonable attorney’s fees, and your reasonable costs for expert and other witnesses; and (iii) you may sue in a small claims court of competent jurisdiction without first engaging in arbitration, but this does not absolve you of your commitment to engage in the informal dispute resolution process. Any judgment on the award rendered by the arbitrator may be entered in any court of competent jurisdiction. Nothing in this Section shall be deemed as preventing Blackboard from seeking injunctive or other equitable relief from the courts as necessary to prevent the actual or threatened infringement, misappropriation, or violation of our data security, Intellectual Property Rights or other proprietary rights.<br><em><span class="emphasize">(iii) Class Action/Jury Trial Waiver</span>.</em> WITH RESPECT TO ALL PERSON AND ENTITIES, REGARDLESS WHETHER THEY HAVE OBTAINED OR USED THE PRODUCTS FOR PERSONAL, COMMERCIAL, OR OTHER PURPOSES, ALL CLAIMS MUST BE BROUGHT IN THE PARTIES’ INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS ACTION, COLLECTIVE ACTION, PRIVATE ATTORNEY GENERAL ACTION, OR OTHER REPRESENTATIVE PROCEEDING. THIS WAIVER APPLIES TO CLASS ARBITRATION, AND UNLESS WE AGREE OTHERWISE, THE ARBITRATOR MAY NOT CONSOLIDATE MORE THAN ONE (1) PERSON’S CLAIMS. YOU AGREE THAT, BY ENTERING INTO THESE TERMS, YOU AND BLACKBOARD ARE EACH WAIVING THE RIGHT TO A TRIAL BY JURY OR TO PARTICIPATE IN A CLASS ACTION, COLLECTIVE ACTION, PRIVATE ATTORNEY GENERAL ACTION, OR OTHER REPRESENTATIVE PROCEEDING OF ANY KIND RELATING TO THE PRODUCTS OR THESE TERMS.<br><em><span class="emphasize">(iv) Limited Applicability of Arbitration and Class Action/Jury Trial Waiver</span>.</em> Certain laws, rules, and regulations that may apply to you may not allow you to pre-agree to binding arbitration or waive your rights to join in a representative proceeding or waive your rights to a jury trial. If such laws apply to you, the arbitration requirements set forth in subsection (ii) and/or the class action/jury trial waiver set forth in subsection (iii) do not apply to you.</p> 
+             <h3>C. U.S. Government users &amp; U.S. Government restricted rights</h3> 
+             <p>Certain of the components that comprise the Products are “commercial items” as that term is defined at 48 C.F.R. 2.101, consisting of “commercial computer software” and/or “commercial computer software documentation” as such terms are used in 48 C.F.R. 12.212. Consistent with 48 C.F.R. 12.212 and 48 C.F.R. 227.7202-1 through 227.7202-4, all U.S. Government end users acquire the Software with only those rights set forth herein.</p> 
+             <p>The Products, any Mobile Software and all upgrades to the foregoing (if any) are provided with restricted rights. Use, duplication, or disclosure by the U.S. Government is subject to restrictions as set forth in subparagraph (c)(1)(ii) of the Rights in Technical Data and Computer Software clause at DFARS 252.227-7013 or subparagraphs (c)(1) and (2) of the Commercial Computer Software-Restricted Rights at 48 CFR 52.227-19, as applicable.</p> 
+             <p>Contractor/manufacturer is Blackboard Inc., 1111 19th Street N.W., Washington, D.C. 20036. All rights not specifically granted in these Terms are reserved by Blackboard.</p> 
+             <h3>D. Entire agreement</h3> 
+             <p>These Terms and our <a href="/Privacy_Statement">Privacy Policy</a> are the entire and exclusive agreement between Blackboard and you regarding the Products, and these Terms supersede and replace any prior agreements between Blackboard and you regarding the Products. Other than members of the group of companies of which Blackboard Inc. is the parent, no other person or company will be third party beneficiaries to the Terms.</p> 
+             <p>Notwithstanding the foregoing, nothing in these Terms supersedes or limits your rights under (1) the terms and conditions of any written agreement you have entered into with Blackboard regarding the use of Products, or (2) applicable laws or regulations to the extent these Terms are prohibited by such laws or regulations. In the event of any conflict between these Terms and the terms and conditions of an applicable written agreement you have entered into with Blackboard, the terms and conditions of the written agreement shall control.</p> 
+             <p>We may revise these Terms from time-to-time, the most current version will always be linked to at https://www.blackboard.com/. If the revision, in our sole discretion, is material we will notify you through the Products or through the email associated with your profile. By continuing to access or use the Products after those revisions become effective, you agree to be bound by the revised Terms.</p> 
+             <p>These Products are operated and provided by Blackboard:</p> 
+             <p>Blackboard Inc.<br> 1111 19th Street N.W.<br> Washington, D.C. 20036 USA<br><strong>or</strong><br> Blackboard International B.V.<br> Paleisstraat 1, 1012 RB<br> Amsterdam, Netherlands</p> 
+             <p>If you have any questions about these Terms, please email: <a href="/cdn-cgi/l/email-protection#1354767d7661727f507c667d60767f53517f727078717c7261773d707c7e"><span class="__cf_email__" data-cfemail="0c4b6962697e6d604f6379627f69604c4e606d6f676e636d7e68226f6361">[email&nbsp;protected]</span></a>.</p> 
+             <p>Effective: January 17, 2018</p>
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </article> 
+       </div> 
+      </div> 
+      <div class="sidebar-content"> 
+       <aside class="layout-sidebar-first" role="complementary"> 
+        <div class="region region-sidebar-first"> 
+         <div class="block block--block-blackboardtoc " id="block-blackboardtoc" data-block-plugin-id="block_content:4f34edb4-a6a1-4e3f-8c03-8d5a8128855b"> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <div class="table-of-contents" id="table-of-contents"> 
+            <h3 class="table-of-contents__title">On this page</h3> 
+            <ul class="table-of-contents__list"></ul>
+           </div>
+          </div> 
+         </div> 
+        </div> 
+       </aside> 
+      </div> 
+     </div> 
+    </main> 
+    <div class="pre-footer"> 
+     <div class="pre-footer__second"> 
+      <div class="region region-prefooter-second"> 
+       <div class="block block--block-floatingbuttons " id="block-floatingbuttons" data-block-plugin-id="block_content:de7e5770-c178-4c6a-9ae2-9342ebdc76c1"> 
+        <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+         <div id="floating-buttons" class="fb-buttons"> 
+          <div class="fb-container"> 
+           <span class="fb-button"> <a class="fb-button-link page-header__print" aria-label="Print this page"> <img class="fb-button-icon" src="/themes/blackboard/img/icon-print.svg"> </a> </span> 
+          </div> 
+          <div class="fb-container"> 
+           <span id="fbb-help" class="fb-button"> <a class="fb-button-link" href="#block-prefootercontentblock" aria-label="Need more help?"> <img class="fb-button-icon" src="/themes/blackboard/img/icon-help_hc_dark.svg"> </a> </span> 
+          </div> 
+          <div class="fb-container"> 
+           <span id="fbb-follow" class="fb-button"> <a class="fb-button-link" href="#node-subscribe-form" aria-label="Follow this page"> <img class="fb-button-icon" src="/themes/blackboard/img/icon-notification_hc_dark.svg"> </a> </span> 
+          </div> 
+         </div>
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="pre-footer__third"> 
+      <div class="region region-prefooter-third"> 
+       <div class="block block--block-prefootercontentblock " id="block-prefootercontentblock" data-block-plugin-id="bb_widgets_pre_footer_content_block"> 
+       </div> 
+       <div class="block block--block-nodesubscribeblock " id="block-nodesubscribeblock" data-block-plugin-id="node_subscribe"> 
+        <div id="node-subscribe-form"></div> 
+       </div> 
+       <div class="block block--block-bbschoolhelpdeskblock " id="block-bbschoolhelpdeskblock" data-block-plugin-id="bb_school_help_desk_block"> 
+        <div aria-hidden="true" data-description="Provides ReactJS Script as BB School Help Desk Block" class="hidden"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <footer class="page-footer" role="contentinfo"> 
+     <div class="page-footer__content"> 
+      <div class="page-footer__first"> 
+       <div class="region region-footer-first"> 
+        <div class="block block--block-blackboard-visitblackboardcomlink " id="block-blackboard-visitblackboardcomlink" data-block-plugin-id="block_content:db947466-941f-49b3-9bef-7afbe943663a"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <h3><a href="http://www.blackboard.com/" target="_blank">Visit Blackboard.com</a></h3> 
+         </div> 
+        </div> 
+        <div class="block block--block-blackboard-blackboardcopyright " id="block-blackboard-blackboardcopyright" data-block-plugin-id="block_content:1ac0d952-50f6-484c-bff0-961ee5b22d49"> 
+         <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <p>Copyright©2018. Blackboard&nbsp;Inc.<br> <a href="/Copyright_Notice">Legal Disclaimers</a><br> <a href="/1000en_US">Privacy Statement</a></p>
+         </div> 
+        </div> 
+        <div class="block block--block-views-block-footer-menu-view-footer-block views-element-container" id="block-views-block-footer-menu-view-footer-block" data-block-plugin-id="views_block:footer_menu_view-footer_block"> 
+         <div>
+          <div class="footer-block view view-footer-menu-view view-id-footer_menu_view view-display-id-footer_block js-view-dom-id-17db47c974243e6ebbbee069c2f640314b4b36ef9be0992a0cb433855179d611"> 
+           <div class="view-content"> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/About_Help" hreflang="en">About Help</a>
+              </div>
+             </div> 
+            </div> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/Accessibility" hreflang="en">Accessibility</a>
+              </div>
+             </div> 
+            </div> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/Client_Resources" hreflang="en">Client Resources</a>
+              </div>
+             </div> 
+            </div> 
+            <div class="views-row"> 
+             <div class="views-field views-field-field-nav-label">
+              <div class="field-content">
+               <a href="/Product_Security" hreflang="en">Product Security</a>
+              </div>
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <nav role="navigation" aria-labelledby="block-blackboard-account-menu-menu" id="block-blackboard-account-menu" data-block-plugin-id="system_menu_block:account"> 
+         <h2 class="visually-hidden" id="block-blackboard-account-menu-menu">User account menu</h2> 
+         <ul class="menu"> 
+          <li class="menu-item"> <a href="/user/login" data-drupal-link-system-path="user/login">Log in</a> </li> 
+         </ul> 
+        </nav> 
+       </div> 
+      </div> 
+      <div class="page-footer__second-third-container"> 
+       <div class="page-footer__second"> 
+        <div class="region region-footer-second"> 
+         <nav role="navigation" aria-labelledby="block-blackboard-helpforblackboardproducts-menu" id="block-blackboard-helpforblackboardproducts" data-block-plugin-id="system_menu_block:help-for-blackboard-product"> 
+          <h2 id="block-blackboard-helpforblackboardproducts-menu">Help for Blackboard Products</h2> 
+          <ul class="menu"> 
+           <li class="menu-item"> <a href="/Ally" data-drupal-link-system-path="node/25571">Ally</a> </li> 
+           <li class="menu-item"> <a href="http://www.blackboard.com/education-analytics/index.aspx">Analytics</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_App" data-drupal-link-system-path="node/469">Blackboard App</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_Instructor" data-drupal-link-system-path="node/13118">Blackboard Instructor</a> </li> 
+           <li class="menu-item"> <a href="/Collaborate" data-drupal-link-system-path="node/477">Collaborate</a> </li> 
+           <li class="menu-item"> <a href="/Community_Engagement" data-drupal-link-system-path="node/10745">Community Engagement</a> </li> 
+           <li class="menu-item"> <a href="/Connect" data-drupal-link-system-path="node/2253">Connect</a> </li> 
+           <li class="menu-item"> <a href="/Learn" data-drupal-link-system-path="node/3271">CourseSites</a> </li> 
+           <li class="menu-item"> <a href="/Drive" data-drupal-link-system-path="node/2514">Drive</a> </li> 
+           <li class="menu-item"> <a href="/Learn" data-drupal-link-system-path="node/3271">Learn</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_Open_Content" data-drupal-link-system-path="node/10671">Open Content</a> </li> 
+           <li class="menu-item"> <a href="/Open_Education" data-drupal-link-system-path="node/10564">Open Education</a> </li> 
+           <li class="menu-item"> <a href="/Blackboard_Open_LMS" data-drupal-link-system-path="node/10375">Open LMS</a> </li> 
+           <li class="menu-item"> <a href="/Predict" data-drupal-link-system-path="node/19816">Predict</a> </li> 
+           <li class="menu-item"> <a href="/SafeAssign" data-drupal-link-system-path="node/26316">SafeAssign</a> </li> 
+           <li class="menu-item"> <a href="/SIS_Central/Connect" data-drupal-link-system-path="node/10576">SIS Central - Connect</a> </li> 
+           <li class="menu-item"> <a href="/SmartView" data-drupal-link-system-path="node/11788">SmartView</a> </li> 
+           <li class="menu-item"> <a href="/Web_Community_Manager" data-drupal-link-system-path="node/21691">Web Community Manager</a> </li> 
+          </ul> 
+         </nav> 
+         <div class="block block--block-backtotop " id="block-backtotop" data-block-plugin-id="block_content:61c42d5b-62bf-4b74-8152-b080e41a3292"> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <a class="back-to-top" href="#top"><span class="icon-chevron-up"></span> Back to top</a>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="page-footer__third"> 
+        <div class="region region-footer-third"> 
+         <div class="block block--block-blackboardfindproduct " id="block-blackboardfindproduct" data-block-plugin-id="block_content:2177ea62-5c1e-49df-91f2-e00f28235364"> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <div class="find-product"> 
+            <h2>Not sure which product?</h2> 
+            <p>Blackboard has many products. Let&nbsp;us help you find what you need.</p> 
+            <a class="button" href="/" title="Find My Product">Find My Product</a>
+           </div>
+          </div> 
+         </div> 
+         <div class="block block--block-allyjs " id="block-allyjs" data-block-plugin-id="block_content:a43b54be-3874-4322-b717-e5e187d70041"> 
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+           <script data-ally-loader data-ally-platform-name="web" data-ally-client-id="4826" data-ally-af-style="flag_small" src="https://prod.ally.ac/integration/api/ally.ui.js">
+</script>
+          </div> 
+         </div> 
+         <div class="block block--block-bbuserfeedbackblock " id="block-bbuserfeedbackblock" data-block-plugin-id="bb_user_feedback_block"> 
+          <div aria-hidden="true" data-description="Provides ReactJS Script as BB User Feedbacks Block" class="hidden"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+  </div> 
+  <script src="/sites/default/files/js/js_Akazc-aZWDLBMdo4wALDLhuyTBX-5p3NP55qPOxsWxE.js"></script> 
+  <script src="/modules/custom/bb_widgets/bb_user_feedback_block/js/user-feedback.bundle.js?v=1.x"></script> 
+  <script src="/modules/custom/bb_widgets/bb_school_help_desk_block/js/school-help-desk-search.bundle.js?v=1.x"></script> 
+  <script src="/sites/default/files/js/js_UFFnI5kYZO66EsJr619F2naa1hyo-rMVPm0Jr9KUyOs.js"></script> 
+  <script src="/modules/custom/bb_widgets/bb_algolia_search_ui/js/app.bundle.js?v=1.x"></script> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fb66a3283b","applicationID":"70695766","transactionName":"YQcBNxcEV0RYVhdeXFhNIgARDFZZFnERQkNXDj8NCgFca3paDUNBWQ4PBhc5d1hdUDVeVkEhDA0RF1ZbVVARGg1ACwYU","queueTime":0,"applicationTime":541,"atts":"TUACQV8eREo=","errorBeacon":"bam.nr-data.net","agent":""}</script>  
+ </body>
+</html>
