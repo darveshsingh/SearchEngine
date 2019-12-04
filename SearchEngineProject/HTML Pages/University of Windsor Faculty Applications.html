@@ -1,933 +1,0 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
- <head> 
-  <title>University of Windsor Faculty Applications</title> 
-  <meta NAME="Keywords" CONTENT="">
-  <meta NAME="Description" CONTENT="University of Windsor    ">
-  <style type="text/css">@import url('/units/ofrr/apps.nsf/bannerPrefForNonNE4.css');</style>
-  <link rel="stylesheet" href="/uweb/TopLevels.nsf/uofwTop.css" type="text/css"> 
-  <!-- if they import flash based images, they need this js file--> 
-  <script language="JavaScript" src="/uweb/TopLevels.nsf/Dispatcher.js"></script> 
-  <script language="JavaScript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
-  <script> var is = new Is(); function Is() {  var agent = navigator.userAgent.toLowerCase();  this.major = parseInt(navigator.appVersion);  this.minor = parseFloat(navigator.appVersion);  this.ns = ((agent.indexOf('mozilla')!=-1) && ((agent.indexOf('spoofer')==-1) && (agent.indexOf('compatible') == -1)));  this.ns2 = (this.ns && (this.major == 2));  this.ns3 = (this.ns && (this.major == 3));  this.ns4 = (this.ns && (this.major == 4));  this.ns5 = (this.ns && (this.major > 4 && this.major < 5));  this.ns6 = (this.ns && (agent.indexOf('netscape6')!=-1) );  this.ns7 = (this.ns && (agent.indexOf('netscape/7')!=-1) );  this.ns7pr = (this.ns && (agent.indexOf('netscape/7.0b1')!=-1) );  this.ie = (agent.indexOf("msie") != -1);  this.ie3 = (this.ie && (this.major == 2));  this.ie4 = (this.ie && (this.major >= 4));  this.op3 = (agent.indexOf("opera") != -1);  this.pc  = (agent.indexOf("win") != -1); } if (is.ns5 || is.ns4) { location.href='/units/ofrr/apps.nsf/inTocNetscape/A59B0DE24C8AC1E8852584BB0008B16A' } </script> 
-  <script language="JavaScript" type="text/javascript">
-<!-- 
-// allow only numbers in the ext fieldfunction numbersonly(myfield, e, dec){	var key;	var keychar;	if (window.event)   		key = window.event.keyCode;	else if (e)   		key = e.which;	else   		return true;	keychar = String.fromCharCode(key);	// control keys	if ((key==null) || (key==0) || (key==8) || (key==9) || (key==13) || (key==27) )   		return true;	// numbers	else if ((("0123456789-").indexOf(keychar) > -1))	return true;	   	// decimal point jump	else if (dec && (keychar == ".")){   		myfield.form.elements[dec].focus();   	return false;   	}	else   		return false;} // end check for numbers - no strings allowedfunction echeck(str){	var at="@";	var dot=".";	var lat=str.indexOf(at);	var lstr=str.length;	var ldot=str.indexOf(dot);			if (str.indexOf(at)==-1)		return false;	if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr)	   return false;	if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr)	    return false;	 if (str.indexOf(at,(lat+1))!=-1)	    return false;	 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot)	    return false;	 if (str.indexOf(dot,(lat+2))==-1)	    return false;			 if (str.indexOf(" ")!=-1)	    return false;	 return true;} // end check e-mail address$(document).ready(function() {	updateDeptName();	$('#JobNumberOptions').change(function() {		updateDeptName();	});});function updateDeptName() {	idx = $('#JobNumberOptions').prop('selectedIndex');	$('#DeptOptions').prop('selectedIndex',idx);	$('#FacOptions').prop('selectedIndex',idx);	$('#Department').val(($('#DeptOptions').val()));	$('#JobNumber').val(($('#JobNumberOptions').val()));	$('#Faculty').val(($('#FacOptions').val()));}
-// -->
-</script> 
-  <script language="JavaScript" type="text/javascript">
-<!-- 
-document._domino_target = "_self";
-function _doClick(v, o, t, h) {
-  var form = document._Applications;
-  if (form.onsubmit) {
-     var retVal = form.onsubmit();
-     if (typeof retVal == "boolean" && retVal == false)
-       return false;
-  }
-  var target = document._domino_target;
-  if (o.href != null) {
-    if (o.target != null)
-       target = o.target;
-  } else {
-    if (t != null)
-      target = t;
-  }
-  form.target = target;
-  form.__Click.value = v;
-  if (h != null)
-    form.action += h;
-  form.submit();
-  return false;
-}
-// -->
-</script> 
- </head> 
- <body text="#000000" bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" link="#000000" alink="#000000" vlink="#000000"> 
-  <form method="post" action="/units/ofrr/apps.nsf/Applications!OpenForm&amp;Seq=1" enctype="multipart/form-data" name="_Applications"> 
-   <input type="hidden" name="__Click" value="0"> 
-   <link rel="stylesheet" type="text/css" href="/units/ofrr/apps.nsf/survey.css"> 
-   <table border="0" cellspacing="0" cellpadding="0"> 
-    <tbody>
-     <tr valign="top">
-      <td width="730" colspan="2">
-       <table border="0" cellspacing="0" cellpadding="0"> 
-        <tbody>
-         <tr valign="top">
-          <td class="logoLines" width="200">
-           <div align="center">
-            <a href="http://www.uwindsor.ca"><img src="https://www.uwindsor.ca/logo_small.png" border="0" align="bottom" alt="University Logo"></a>
-           </div></td>
-          <td class="imageLines" width="533" bgcolor="#FFFFFF"><img src="/units/ofrr/apps.nsf/SIFB/E7A52EC9FD3E3CA78525778F004C2725/$File/recruitment_banner3550x90.jpg" alt="top banner image"></td>
-         </tr> 
-        </tbody>
-       </table></td>
-     </tr> 
-     <tr valign="top">
-      <td width="24"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-      <td width="706"><br><font size="2" face="Arial"> </font>
-       <center>
-        <b><font face="Arial">Online Faculty Application</font></b>
-       </center>
-       <div align="center">
-        <b><font size="2" color="#800000" face="Arial">Items marked with a red asterisk * are required.</font></b>
-       </div><b><font color="#000080" face="Arial">Position Details</font></b> 
-       <table class="tableOutline" border="0" cellspacing="0" cellpadding="0"> 
-        <tbody>
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Select Position Number</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="%%Surrogate_JobNumberOptions" type="hidden" value="1"> <select name="JobNumberOptions" id="JobNumberOptions"> <option>- Select Job Number - </option><option>002142TT-2019-ECE </option><option>002143TT-2019-ECE </option><option>002144TT-2019-ECE </option><option>002195ADM60-2020-NUR </option><option>002196LT36-2020-WGS </option><option>002197AAS-2020-SWK </option><option>002198TT-2020-NUR </option><option>002201TT-2020-PSY </option><option>002202ADM60-2020-PHI</option></select> </font><br> <font size="2" face="Arial"> <input name="JobNumber" value="" id="JobNumber" class="lgWidths" style="display: none"></font><br> <b><font size="1" color="#FF0000" face="Arial">THE JOB NUMBER CAN BE FOUND UNDER THE APPLICATION REQUIREMENTS OF THE JOB ADVERTISEMENT </font></b><b><font size="1" face="Arial">(</font></b><a href="HTTP://www.uwindsor.ca/FACULTYPOSITIONS"><b><font size="1" face="Arial">HTTP://WWW.UWINDSOR.CA/FACULTYPOSITIONS</font></b></a><b><font size="1" face="Arial">)</font></b></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="2" face="Arial">Selected Department </font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="Department" value="" id="Department" style="width: 300px;" readonly></font><br> <br> <b><font size="1" color="#FF0000" face="Arial">PLEASE ENSURE THAT THE CORRECT DEPARTMENT FOR THE JOB NUMBER IS LISTED.</font></b></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="2" face="Arial">Selected Faculty </font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="Faculty" value="" id="Faculty" style="width: 300px;" readonly></font><br> <br> <b><font size="1" color="#FF0000" face="Arial">PLEASE ENSURE THAT THE CORRECT FACULTY FOR THE JOB NUMBER IS LISTED.</font></b></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-        </tbody>
-       </table> <br> <b><font color="#000080" face="Arial">Personal Information</font></b> 
-       <table class="tableOutline" border="0" cellspacing="0" cellpadding="0"> 
-        <tbody>
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="2" face="Arial">Preferred Title</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="%%Surrogate_title" type="hidden" value="1"><label> <input type="radio" name="title" value="Dr">Dr</label><label> <input type="radio" name="title" value="Mr">Mr</label><label> <input type="radio" name="title" value="Mrs">Mrs</label><label> <input type="radio" name="title" value="Ms">Ms</label><label> <input type="radio" name="title" value="Miss">Miss</label></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Given First Name</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="FirstName" value="" class="lgWidths"></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="2" face="Arial">Given Middle Name</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="MiddleInitial" value="" class="lgWidths"></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Last Name</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="LastName" value="" class="lgWidths"></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="2" face="Arial">Preferred First Name</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="PreferredName" value="" class="lgWidths"></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial">The University of Windsor is a welcoming community that is committed to equity and that supports diversity in its teaching, learning, and work environments. </font><br> <br> <font size="2" face="Arial">In pursuit of our Employment and Educational Equity Policy, we encourage candidates from </font><a href="javascript: var w = window.open('','','height=300,width=450,scrollbars=1');w.document.open();w.document.write(&quot;Designated Groups <br /><br />Canada's Employment Equity Act seeks to correct the conditions of disadvantage in employment experienced by women, aboriginal peoples, persons with disabilities and members of visible minorities. <br /><br />The Government of Canada provides definitions (http://jobs-emplois.gc.ca/centres/inside-ausein/ee-eng.php) of a number of these designated groups.  According to the Act: <br /><br />An Aboriginal person is a North American Indian or a member of a First Nation, Métis or Inuit. North American Indians or members of a First Nation include treaty, status or registered Indians, as well as non-status and non-registered Indians.<br /><br />A person with a disability has a long term or recurring physical, mental, sensory, psychiatric or learning impairment and:<br /><br /><ul><li>considers himself/herself to be disadvantaged in employment by reason of that impairment;</li><li>believes that an employer or potential employer is likely to consider him/her to be disadvantaged in employment by reason of that impairment.</li></ul><br /><br />This definition also includes persons whose functional limitations owing to their impairment have been accommodated in their current job or workplace.<br /><br />A person in a visible minority group is defined as someone (other than an Aboriginal person as defined above) who is non-white in colour/race, regardless of place of birth.<br /><br />While not included in the designated groups identified by the Government of Canada, the University also recognizes individuals who identify as belonging to a sexual minority (e.g. lesbian, gay, bisexual, two-spirited, queer, or transgender) as members of a designated group for employment equity purposes.&quot;);w.document.close();"><b><font size="2" color="#00BFFF" face="Arial">designated groups</font></b></a><font size="2" face="Arial"> (women, Aboriginal peoples, members of visible minorities, persons with disabilities, and members of sexual minorities) and individuals who have experienced minor </font><a href="javascript: var w = window.open('','','height=300,width=450,scrollbars=1');w.document.open();w.document.write(&quot;Career interruptions occur when a faculty member or candidate for a faculty position has been taken away from his or her [scholarly] work for a period of time. &quot;);w.document.close();"><b><font size="2" color="#00BFFF" face="Arial">career interruptions</font></b></a><font size="2" face="Arial"> caused by </font><a href="javascript: var w = window.open('','','height=300,width=450,scrollbars=1');w.document.open();w.document.write(&quot;Family responsibility is defined as the primary responsibility for providing personal care to a dependent family member (e.g., pre-school children, infirm spouse or parent).&quot;);w.document.close();"><b><font size="2" color="#00BFFF" face="Arial">family responsibilities</font></b></a><font size="2" face="Arial"> to apply and to self-identify. </font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="2" face="Arial">Designated Group</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="%%Surrogate_DesignatedGroup" type="hidden" value="1"><label> <input type="checkbox" name="DesignatedGroup" value="an Aboriginal person">an Aboriginal person</label><br> <label> <input type="checkbox" name="DesignatedGroup" value="a person with a disability">a person with a disability</label><br> <label> <input type="checkbox" name="DesignatedGroup" value="a person from a sexual minority">a person from a sexual minority</label><br> <label> <input type="checkbox" name="DesignatedGroup" value="a person who is a member of a visible minority">a person who is a member of a visible minority</label><br> <label> <input type="checkbox" name="DesignatedGroup" value="a woman">a woman</label></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="2" face="Arial">Minor Career Interruptions</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial">Do you wish to claim minor career interruptions caused by family responsibilities?</font><br> <br> <font size="2" face="Arial"> <input name="%%Surrogate_MinorCareerInterrupt" type="hidden" value="1"><label> <input type="radio" name="MinorCareerInterrupt" value="Yes">Yes</label><label> <input type="radio" name="MinorCareerInterrupt" value="No">No</label></font><br> <br> <font size="2" face="Arial">If yes, please identify the estimated duration of the career interruption in months. If there has been more than one interruption, please provide the sum total of the interruptions in months. </font><br> <br> <font size="2" face="Arial"> <input name="MonthsInterrupt" value=""></font><font size="2" face="Arial"> months </font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="2" face="Arial">Gender</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="%%Surrogate_Gender" type="hidden" value="1"><label> <input type="radio" name="Gender" value="Male">Male</label><label> <input type="radio" name="Gender" value="Female">Female</label><label> <input type="radio" name="Gender" value="Transgender">Transgender</label></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="2" face="Arial">Enter where you saw the advertisement</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="Advertised" value="" class="lgWidths"></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="650" colspan="3">
-           <div align="center">
-            <b><i><font size="2" color="#FF0000" face="Arial">International candidates are encouraged to apply;</font></i></b>
-            <br> 
-            <b><i><font size="2" color="#FF0000" face="Arial">however, Canadians and permanent residents will be given priority.</font></i></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Are you eligible to work in Canada?</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="%%Surrogate_Status" type="hidden" value="1"><label> <input type="radio" name="Status" value="Canadian Citizen">Canadian Citizen</label><label> <input type="radio" name="Status" value="Permanent Resident">Permanent Resident</label><label> <input type="radio" name="Status" value="Non-Canadian">Non-Canadian</label></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-        </tbody>
-       </table> <br> <b><font color="#000080" face="Arial">Mailing Address</font></b> 
-       <table class="tableOutline" border="0" cellspacing="0" cellpadding="0"> 
-        <tbody>
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="660" colspan="7"><br></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Street Address</font></b>
-            <br> 
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="456" colspan="5"><font size="2" face="Arial"> <input name="Street" value="" class="lgWidths"></font></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="660" colspan="7"><br></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="2" face="Arial">Street Address (2)</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="456" colspan="5"><font size="2" face="Arial"> <input name="Street2" value="" class="lgWidths"></font></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="660" colspan="7"><br></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">City</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="456" colspan="5"><font size="2" face="Arial"> <input name="City" value="" class="lgWidths"></font></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="660" colspan="7"><br></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Province, State or</font></b>
-            <br> 
-            <b><font size="2" face="Arial">Region</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="456" colspan="5"><font size="2" face="Arial"> <input name="ProvStateRegion" value="" class="lgWidths"></font></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="456" colspan="5"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Country</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="456" colspan="5"><font size="2" face="Arial"> <input name="Country" value=""></font><font size="2" face="Arial"> </font></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="660" colspan="7"><br></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Postal/Zip Code</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="456" colspan="5"><font size="2" face="Arial"> <input name="PostalCode" value="" class="pcWidths"></font> </td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="660" colspan="7"><br></td>
-         </tr> 
-        </tbody>
-       </table> <br> <b><font color="#000080" face="Arial">Contact Information</font></b> 
-       <table class="tableOutline" border="0" cellspacing="0" cellpadding="0"> 
-        <tbody>
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Home Phone</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="HomePhone" value="" onkeypress="return  numbersonly(this,event);"></font><font size="2" face="Arial"> </font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Business Phone</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="WorkPhone" value="" onkeypress="return  numbersonly(this,event);"></font><font size="2" face="Arial"> ext. </font><font size="2" face="Arial"> <input name="Ext" value="" onkeypress="return  numbersonly(this,event);" onblur="return  numbersonly(this,event);" class="smWidths"></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Email Address</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="EmailAddress" value="" class="lgWidths"></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><b><font size="2" face="Arial">(if you need to add more than one separate using a COMMA)</font></b></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">CONFIRM Email Address</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="EmailAddressConfirm" value="" class="lgWidths"></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-        </tbody>
-       </table> <br> <b><font color="#000080" face="Arial">Education Information</font></b> 
-       <table class="tableOutline" border="0" cellspacing="0" cellpadding="0"> 
-        <tbody>
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Highest Degree</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="%%Surrogate_HighestDegree" type="hidden" value="1"><label> <input type="radio" name="HighestDegree" value="Doctorate" id="HighestDegree">Doctorate</label><br> <label> <input type="radio" name="HighestDegree" value="Master's" id="HighestDegree">Master's</label><br> <label> <input type="radio" name="HighestDegree" value="Master's of Fine Arts" id="HighestDegree">Master's of Fine Arts</label><br> <label> <input type="radio" name="HighestDegree" value="Other" id="HighestDegree">Other</label></font><font size="2" face="Arial"> <input name="HighestDegreeOther" value="" class="lgWidths"></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Degree Date</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><b><font size="2" face="Arial">Month:</font></b><font size="2" face="Arial"> </font><font size="2" face="Arial"> <input name="%%Surrogate_HighestDegreeMonth" type="hidden" value="1"> <select name="HighestDegreeMonth"> <option>(Select Month) </option><option>January </option><option>February </option><option>March </option><option>April </option><option>May </option><option>June </option><option>July </option><option>August </option><option>September </option><option>October </option><option>November </option><option>December</option></select> </font><font size="2" face="Arial"> </font><b><font size="2" face="Arial">Year:</font></b><font size="2" face="Arial"> </font><font size="2" face="Arial"> <input name="%%Surrogate_HighestDegreeYear" type="hidden" value="1"> <select name="HighestDegreeYear"> <option>(Select Year) </option><option>1950 </option><option>1951 </option><option>1952 </option><option>1953 </option><option>1954 </option><option>1955 </option><option>1956 </option><option>1957 </option><option>1958 </option><option>1959 </option><option>1960 </option><option>1961 </option><option>1962 </option><option>1963 </option><option>1964 </option><option>1965 </option><option>1966 </option><option>1967 </option><option>1968 </option><option>1969 </option><option>1970 </option><option>1971 </option><option>1972 </option><option>1973 </option><option>1974 </option><option>1975 </option><option>1976 </option><option>1977 </option><option>1978 </option><option>1979 </option><option>1980 </option><option>1981 </option><option>1982 </option><option>1983 </option><option>1984 </option><option>1985 </option><option>1986 </option><option>1987 </option><option>1988 </option><option>1989 </option><option>1990 </option><option>1991 </option><option>1992 </option><option>1993 </option><option>1994 </option><option>1995 </option><option>1996 </option><option>1997 </option><option>1998 </option><option>1999 </option><option>2000 </option><option>2001 </option><option>2002 </option><option>2003 </option><option>2004 </option><option>2005 </option><option>2006 </option><option>2007 </option><option>2008 </option><option>2009 </option><option>2010 </option><option>2011 </option><option>2012 </option><option>2013 </option><option>2014 </option><option>2015 </option><option>2016 </option><option>2017 </option><option>2018 </option><option>2019 </option><option>2020</option></select> </font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Issuing Institution</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="IssuingInstitution" value="" class="lgWidths"></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Dissertation Title</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="DissertationTitle" value="" class="lgWidths"></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Degree Field</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"> <textarea name="DegreeField" class="lgWidths" rows="7" cols="50"></textarea> </td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-        </tbody>
-       </table> <br> <b><font color="#000080" face="Arial">Employment Information</font></b> 
-       <table class="tableOutline" border="0" cellspacing="0" cellpadding="0"> 
-        <tbody>
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Current Employer</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="CurrentEmployer" value="" class="lgWidths"></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Current Title</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><font size="2" face="Arial"> <input name="CurrentTitle" value="" class="lgWidths"></font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192">
-           <div align="right">
-            <b><font size="4" color="#800000" face="Arial">* </font></b>
-            <b><font size="2" face="Arial">Brief Job Description</font></b>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"> <textarea name="BriefJobDesc" class="lgWidths" rows="7" cols="50"></textarea> </td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-        </tbody>
-       </table> <br> <b><font color="#000080" face="Arial">File Upload</font></b> <b><font size="2" face="Arial"> </font></b> 
-       <table class="tableOutline" border="0" cellspacing="0" cellpadding="0"> 
-        <tbody>
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><font size="2" face="Arial">Attach only one (1) Adobe PDF file that includes all application requirements indicated in the job advertisement. (Cover Letter, Curriculum Vitae, research statement, teaching dossier etc.)</font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"> <input type="file" name="%%File.852573630066f453.7fa400f4bcf669a9852573d80052e7af.$Body.0.AF6E"></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-        </tbody>
-       </table> <br><b><font color="#000080" face="Arial">Letters of Recommendation</font></b> 
-       <table class="tableOutline" border="0" cellspacing="0" cellpadding="0"> 
-        <tbody>
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="650" colspan="3"><font size="2" face="Arial">If applicable, Letters of Recommendation should be mailed/emailed by the referees directly to the address affiliated with the position. Refer to the application submission requirements to determine if Letters of Reference/Recommendation are necessary or if you simply are required to submit the Names of Referees. <br> <br> Please ensure that the Letters of Recommendation are received by the application deadline indicated on the position description. All Letters of Recommendation will be treated as confidential documents. Under the authority of the University Act, personal information that is required by the University for academic appointment competitions will be collected.</font></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-        </tbody>
-       </table> <br><b><font color="#000080" face="Arial">Spam Reduction</font></b> 
-       <table class="tableOutline" border="0" cellspacing="0" cellpadding="0"> 
-        <tbody>
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="650" colspan="3">I<font size="2" face="Arial">n an on-going effort to reduce the persistence of spam, we ask each applicant to complete the mathematical question below:</font><br> 
-           <div align="center">
-            <font size="2" face="Arial"> <input name="one" value="3" id="one" style="width: 30px;" readOnly="readonly"></font>
-            <font size="2" face="Arial"> + </font>
-            <font size="2" face="Arial"> <input name="two" value="8" id="two" style="width: 30px;" readOnly="readonly"></font>
-            <font size="2" face="Arial"> = </font>
-            <font size="2" face="Arial"> <input name="three" value="" id="three" style="width: 30px;"></font>
-           </div></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-         <tr valign="top">
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="192"><br></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="446"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-          <td width="12"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td>
-         </tr> 
-        </tbody>
-       </table> 
-       <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
-        <tbody>
-         <tr valign="top">
-          <td width="100%">
-           <div id="wait" style="display: none;">
-            <div align="center">
-             <b><font size="2" color="#800000" face="Arial">Please wait while you are re-directed to your receipt...</font></b>
-            </div>
-           </div></td>
-         </tr> 
-         <tr valign="top">
-          <td width="100%">
-           <div id="saveit">
-            <br>
-            <br>
-            <div align="center"> 
-             <input type="button" onclick="// check required fieldsvar df = document.forms[0];// check Department Applying Toif(df.Department.selectedIndex == 0){	alert(&quot;Please choose a Department from the list.&quot;);	scroll(0,0);	return false;}/*// check Specializationif(df.Specialization.value == &quot;&quot;){	alert(&quot;Please enter your Specialization.&quot;);	df.Specialization.focus();	return false;} // end for*/// check Job Numberif(df.JobNumber.value == &quot;&quot;){	alert(&quot;Please enter job number.&quot;);	df.JobNumber.focus();	return false;}/*// check Position Typeif(df.PositionApplyingFor_2.selectedIndex == 0){	alert(&quot;Please choose a Position from the list.&quot;);	scroll(0,0);	return false;}// check Position Termvar countNotChecked = 0;for(i=0; i < document.forms[0].PositionApplyingFor.length; i++){	// Looping through radio buttons to find checked	if(document.forms[0].PositionApplyingFor[i].checked)		countNotChecked++;} // end for	if(countNotChecked == 0){	alert(&quot;Please choose a Position Term from the list&quot;);	scroll(0,0);	return false;}*/// check First Nameif(df.FirstName.value == &quot;&quot;){	alert(&quot;Please enter your First Name.&quot;);	df.FirstName.focus();	return false;}// check Last Nameif(df.LastName.value == &quot;&quot;){	alert(&quot;Please enter your Last Name.&quot;);	df.LastName.focus();	return false;}// check Last Nameif(df.LastName.value == &quot;&quot;){	alert(&quot;Please enter your Last Name.&quot;);	df.LastName.focus();	return false;}// check work statusvar countNotChecked = 0;for(i=0; i < document.forms[0].Status.length; i++){	// Looping through radio buttons to find checked	if(document.forms[0].Status[i].checked)		countNotChecked++;} // end for	if(countNotChecked == 0){	alert(&quot;Please choose your work eligibility&quot;);	document.forms[0].Status[0].focus();	return false;}// check Streetif(df.Street.value == &quot;&quot;){	alert(&quot;Please enter your Street Address.&quot;);	df.Street.focus();	return false;}// check Cityif(df.City.value == &quot;&quot;){	alert(&quot;Please enter your City.&quot;);	df.City.focus();	return false;}// check Province / State / Regionif(df.ProvStateRegion.value == &quot;&quot;){	alert(&quot;Please enter your Province / State / Region.&quot;);	df.ProvStateRegion.focus();	return false;}// check Countryif(df.Country.value == &quot;&quot;){	alert(&quot;Please enter your Country.&quot;);	df.Country.focus();	return false;}// check Postal / Zip Codeif(df.PostalCode.value == &quot;&quot;){	alert(&quot;Please enter your Postal / Zip Code.&quot;);	df.PostalCode.focus();	return false;}// check Home Numberif(df.HomePhone.value == &quot;&quot;){	alert(&quot;Please enter your Home Phone number.&quot;);	df.HomePhone.focus();	return false;}// check Business Phone Numberif(df.WorkPhone.value == &quot;&quot;){	alert(&quot;Please enter your Business Phone number.&quot;);	df.WorkPhone.focus();	return false;}// check emailif(df.EmailAddress.value == &quot;&quot;){	alert(&quot;Please enter your Email Address.&quot;);	df.EmailAddress.focus();	return false;}/*else	if (echeck(document.forms[0].EmailAddress.value) == false){		alert(&quot;Please enter a valid E-mail Address.&quot;);		df.EmailAddress.value = &quot;&quot;;		df.EmailAddress.focus();		return false;	}	*/// check email confirmif(df.EmailAddressConfirm.value == &quot;&quot;){	alert(&quot;Please confirm your Email Address in the field provided.&quot;);	df.EmailAddressConfirm.focus();	return false;}// check email confirm matches e-mailif(df.EmailAddress.value != df.EmailAddressConfirm.value){	alert(&quot;Please ensure your Email Address and E-mail Confirmation Address match.&quot;);	df.EmailAddressConfirm.focus();	return false;}// check Highest Degreevar countNotChecked = 0;for(i=0; i < document.forms[0].HighestDegree.length; i++){	// Looping through radio buttons to find checked	if(document.forms[0].HighestDegree[i].checked)		countNotChecked++;} // end for	if(countNotChecked == 0){	alert(&quot;Please choose Highest Degree from the list&quot;);	document.forms[0].Website.focus();	return false;}// when other is check (last option), see if they filled out the text fieldif (document.forms[0].HighestDegree[document.forms[0].HighestDegree.length-1].checked == true) {	if (document.forms[0].HighestDegreeOther.value == &quot;&quot;) {		alert(&quot;Please name your Highest Degree if it is not in the list.&quot;);		document.forms[0].HighestDegreeOther.focus();		return false;	}}// check Degree Date -Monthif(df.HighestDegreeMonth.selectedIndex  == 0){	alert(&quot;Please choose a Degree Month.&quot;);	return false;}if(df.HighestDegreeYear.selectedIndex  == 0){	alert(&quot;Please choose a Degree Year.&quot;);	return false;}// check Issuing Institutionif(df.IssuingInstitution.value == &quot;&quot;){	alert(&quot;Please enter your Issuing Institution.&quot;);	df.IssuingInstitution.focus();	return false;}// check Dissertaion Titleif(df.DissertationTitle.value == &quot;&quot;){	alert(&quot;Please enter your Dissertation Title.&quot;);	df.DissertationTitle.focus();	return false;}// check Degree Fieldif(df.DegreeField.value == &quot;&quot;){	alert(&quot;Please enter your Degree Field.&quot;);	df.DegreeField.focus();	return false;}// check Current Employerif(df.CurrentEmployer.value == &quot;&quot;){	alert(&quot;Please enter your Current Employer.&quot;);	df.CurrentEmployer.focus();	return false;}// check Current Titleif(df.CurrentTitle.value == &quot;&quot;){	alert(&quot;Please enter your Current Title.&quot;);	df.CurrentTitle.focus();	return false;}// check Brief Job Descriptionif(df.BriefJobDesc.value == &quot;&quot;){	alert(&quot;Please enter a Brief Job Description.&quot;);	df.BriefJobDesc.focus();	return false;}var o = document.forms[0].one.value;var t = document.forms[0].two.valueif( parseInt(o) + parseInt(t) != document.forms[0].three.value){	alert(&quot;Please provide the correct answer to the addition question.&quot;);	document.forms[0].three.focus();	return false;}//if they have made it this far, set SaveOptions to 1 so the form will save// document.forms[0].SaveOptions.value = 1;var y = confirm(&quot;Thank you for completing your application on-line.  Are you sure that you are ready to continue?&quot;);if(y){	document.getElementById('SaveOptions').value = 1;	document.forms[0].submit();	//document.getElementById(&quot;wait&quot;).style.display = &quot;&quot;;	document.getElementById(&quot;saveit&quot;).style.display = &quot;none&quot;;}" value="Submit"> 
-            </div>
-            <br>
-           </div></td>
-         </tr> 
-        </tbody>
-       </table> <br>
-       <div align="center">
-        <font size="2" face="Arial">Please send any questions about this interface to <a href="mailto:recruit@uwindsor.ca">recruit@uwindsor.ca</a></font>
-        <br>
-        <br>
-       </div></td>
-     </tr> 
-    </tbody>
-   </table> 
-   <div style="display: none;"> 
-    <font size="2" face="Arial"> <input name="SaveOptions" value="0" id="SaveOptions" style="display: none;"></font> 
-    <font size="2" face="Arial"> <input name="%%Surrogate_DeptOptions" type="hidden" value="1"> <select name="DeptOptions" id="DeptOptions" style="display: none;"> <option selected> </option><option>Electrical &amp; Computer Engineering </option><option>Electrical &amp; Computer Engineering </option><option>Electrical &amp; Computer Engineering </option><option>Nursing </option><option>Women's and Gender Studies </option><option>Social Work </option><option>Nursing </option><option>Psychology </option><option>Philosophy</option></select> </font>
-    <font size="2" face="Arial"> <input name="%%Surrogate_FacOptions" type="hidden" value="1"> <select name="FacOptions" id="FacOptions" style="display: none;"> <option selected> </option><option>Engineering </option><option>Engineering </option><option>Engineering </option><option>Nursing </option><option>Arts Humanities and Social Sciences </option><option>Arts Humanities and Social Sciences </option><option>Nursing </option><option>Arts Humanities and Social Sciences </option><option>Arts Humanities and Social Sciences</option></select> </font>
-   </div>
-  </form>   
- </body>
-</html>
